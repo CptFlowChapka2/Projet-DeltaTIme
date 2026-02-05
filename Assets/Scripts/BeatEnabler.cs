@@ -6,21 +6,22 @@ public class BeatEnabler : MonoBehaviour
 {
     private MusicParameters musicParameters;
     private GameObject player;
+    private PlayerMovement playerMovement;
     [SerializeField] private float timingWindow;
     [SerializeField] private Color onBeatColor;
+    [SerializeField] private Color errorColor;
     public bool onBeat = false;
     public List<int> currentPattern;
     public int measureCounter = 1;
     private Color originalColor;
-    private Color currentColor;
     private float t;
 
     private void Start()
     {
         musicParameters = GetComponent<MusicParameters>();
         player = GameObject.FindGameObjectWithTag("Player");
-        originalColor = player.GetComponent<Renderer>().material.color;
-        currentColor = player.GetComponent<Renderer>().material.color;
+        playerMovement = player.GetComponent<PlayerMovement>();
+        originalColor = player.GetComponent<MeshRenderer>().material.color;
         currentPattern = new List<int>(musicParameters.beatPattern1);
     }
 
@@ -29,15 +30,20 @@ public class BeatEnabler : MonoBehaviour
         t += Time.deltaTime;
         ActivateBeatOnPattern();
 
-        if (onBeat)
+        if (onBeat && !playerMovement.hasMadeAnError)
         {
             player.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
-            currentColor = onBeatColor;
+            player.GetComponent<MeshRenderer>().material.color = onBeatColor;
+        }
+        else if (playerMovement.hasMadeAnError)
+        {
+            player.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+            player.GetComponent<MeshRenderer>().material.color = errorColor;
         }
         else
         {
             player.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
-            currentColor = originalColor;
+            player.GetComponent<MeshRenderer>().material.color = originalColor;
         }
     }
 
@@ -80,6 +86,11 @@ public class BeatEnabler : MonoBehaviour
             {
                 onBeat = false;
                 currentPattern.RemoveAt(0);
+                playerMovement.alreadyMovedThisBeat = false;
+                if (playerMovement.hasMadeAnError)
+                {
+                    playerMovement.beatsSinceError++;
+                }
             }
             //Quand la fenêtre de timing d'un beat s'ouvre
             else if (t >= ((60 * currentPattern[0]) / (musicParameters.beatsPerMinute * musicParameters.subdivMaxPerBeat) -

@@ -6,7 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private GridParameters gridParameters;
     [SerializeField] private InputReader inputReader;
+    [SerializeField] private BeatEnabler beatEnabler;
+    [SerializeField] private int numberOfBeatsBeforeRecovery;
     private int gridSize;
+    public bool alreadyMovedThisBeat;
+    public bool hasMadeAnError;
+    public int beatsSinceError;
 
     private void Start()
     {
@@ -18,10 +23,35 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!alreadyMovedThisBeat && !hasMadeAnError)
+        {
+            MoveOnGrid();
+            ClampingOnGrid();
+        }
+
+        if (beatsSinceError == numberOfBeatsBeforeRecovery)
+        {
+            hasMadeAnError = false;
+            beatsSinceError = 0;
+        }
+    }
+
+    private void MoveOnGrid()
+    {
+        //Au moment d'appuyer sur une direction...
+        if (inputReader.HorizontalMove != 0 || inputReader.VerticalMove != 0)
+        {
+            //...On fait en sorte que cette direction soit la seule enregistrée avant le prochain beat...
+            alreadyMovedThisBeat = true;
+            //... et si c'est hors beat, on appelle une erreur.
+            if (!beatEnabler.onBeat)
+            {
+                hasMadeAnError = true;
+            }
+        }
         Vector3 pos = transform.position;
         pos = new Vector3(pos.x + inputReader.HorizontalMove, pos.y, pos.z + inputReader.VerticalMove);
         transform.position = pos;
-        ClampingOnGrid();
     }
 
     private void ClampingOnGrid()

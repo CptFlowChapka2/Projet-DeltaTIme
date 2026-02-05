@@ -307,6 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   timingWindow: 0.04
   onBeatColor: {r: 0, g: 0.98490566, b: 0.123596, a: 1}
+  errorColor: {r: 1, g: 0, b: 0, a: 1}
   onBeat: 0
   currentPattern: 
   measureCounter: 1
@@ -653,6 +654,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   gridParameters: {fileID: 3230842}
   inputReader: {fileID: 3230844}
+  beatEnabler: {fileID: 468209460}
+  numberOfBeatsBeforeRecovery: 2
+  alreadyMovedThisBeat: 0
+  hasMadeAnError: 0
+  beatsSinceError: 0
 --- !u!1 &1810079428
 GameObject:
   m_ObjectHideFlags: 0
