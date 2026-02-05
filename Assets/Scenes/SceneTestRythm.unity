@@ -129,10 +129,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3230841}
   - component: {fileID: 3230844}
+  - component: {fileID: 3230847}
   - component: {fileID: 3230842}
   - component: {fileID: 3230843}
   - component: {fileID: 3230845}
   - component: {fileID: 3230846}
+  - component: {fileID: 3230848}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -208,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1505a55320db9c149986968a9c672ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletSpawner
-  bpm: 140
+  musicParameters: {fileID: 3230847}
   bulletPrefab: {fileID: 8360906474110872237, guid: 02115b097c98b6d44810e3d65b9fc7d3, type: 3}
   spawners: []
 --- !u!114 &3230846
@@ -225,6 +227,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   counterText: {fileID: 1810079430}
   counter: 0
+--- !u!114 &3230847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01375bd4a9bcee41a0e16a2519cbaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  beatsPerMinute: 140
+  beatsPerMesure: 4
+  subdivMaxPerBeat: 4
+--- !u!114 &3230848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3230840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530fe6fc9abc23e46a3265535faaeb35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  hitsCounter: 0
+  numberOfCollectiblesLostPerHit: 1
 --- !u!1 &937544064
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +371,7 @@ SphereCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5

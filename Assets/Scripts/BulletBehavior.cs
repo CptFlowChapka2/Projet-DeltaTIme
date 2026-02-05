@@ -1,19 +1,26 @@
 using System;
 using UnityEngine;
 
-public class BulletMovement : MonoBehaviour
+public class BulletBehavior : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float activationTime;
+    [SerializeField] private float touchDetection;
+    private GameObject player;
     private GameObject gm;
+    private CollectibleCounter collectibleCounter;
+    private HitsCounter hitsCounter;
     private float gridSize;
     private bool isActivated;
     private float t;
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         gm = GameObject.Find("GM");
         gridSize = gm.GetComponent<GridParameters>().gridSize;
+        collectibleCounter = gm.GetComponent<CollectibleCounter>();
+        hitsCounter = gm.GetComponent<HitsCounter>();
     }
 
     private void Update()
@@ -38,6 +45,13 @@ public class BulletMovement : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+
+        if ((transform.position - player.transform.position).magnitude <= touchDetection)
+        {
+            hitsCounter.hitsCounter++;
+            collectibleCounter.counter -= hitsCounter.numberOfCollectiblesLostPerHit;
+            Destroy(gameObject);
         }
     }
 }
