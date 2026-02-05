@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GridSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject gridTile;
     [SerializeField] private GameObject spawner;
+    [SerializeField] private GameObject collectiblePrefab;
     [SerializeField] private BulletSpawner bulletSpawner;
     private GridParameters gridParameters;
     private int gridSize;
@@ -36,5 +38,9 @@ public class GridSpawner : MonoBehaviour
             spawner4.transform.Rotate(new Vector3(0, 270, 0));
             bulletSpawner.spawners.Add(spawner4);
         }
+        
+        int randX = Random.Range(0, gridSize);
+        int randZ = Random.Range(0, gridSize);
+        Instantiate(collectiblePrefab, new Vector3(randX, transform.position.y, randZ), Quaternion.identity);
     }
 }

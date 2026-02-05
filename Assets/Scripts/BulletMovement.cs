@@ -4,8 +4,11 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float activationTime;
     private GameObject gm;
     private float gridSize;
+    private bool isActivated;
+    private float t;
 
     private void Start()
     {
@@ -15,14 +18,26 @@ public class BulletMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.forward * (Time.deltaTime * speed));
-
-        if (transform.position.x < -1 ||
-            transform.position.x > gridSize ||
-            transform.position.z < -1 ||
-            transform.position.z > gridSize)
+        if (!isActivated)
         {
-            Destroy(gameObject);
+            t += Time.deltaTime;
+            if (t >= activationTime)
+            {
+                t = 0;
+                isActivated = true;
+            }
+        }
+        else
+        {
+            transform.Translate(Vector3.forward * (Time.deltaTime * speed));
+            
+            if (transform.position.x < -1 ||
+                transform.position.x > gridSize ||
+                transform.position.z < -1 ||
+                transform.position.z > gridSize)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
