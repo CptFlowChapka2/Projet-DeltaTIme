@@ -9,6 +9,10 @@ public class CollectibleCounter : MonoBehaviour
 
     private void Update()
     {
+        if (counter < 0)
+        {
+            counter = 0;
+        }
         counterText.text = "Collectibles : " + counter.ToString();
     }
 }
