@@ -1,25 +1,22 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletSpawner : MonoBehaviour
 {
+    [SerializeField] private float bpm;
     [SerializeField] private GameObject bulletPrefab;
-    private float randomTime;
+    public List<GameObject> spawners = new List<GameObject>();
     private float t;
-
-    private void Start()
-    {
-        randomTime = Random.Range(1, 10);
-    }
 
     private void Update()
     {
         t += Time.deltaTime;
-        if (t >= randomTime)
+        if (t >= 60 / bpm)
         {
             t = 0;
-            randomTime = Random.Range(1, 10);
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            bullet.transform.rotation = transform.rotation;
+            int randomID = Random.Range(0, spawners.Count);
+            GameObject bullet = Instantiate(bulletPrefab, spawners[randomID].transform.position, Quaternion.identity);
+            bullet.transform.rotation = spawners[randomID].transform.rotation;
         }
     }
 
