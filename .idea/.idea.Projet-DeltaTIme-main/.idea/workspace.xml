@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneTestRythm.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneTestRythm.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BeatEnabler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BeatEnabler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +108,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1770293181243</updated>
-      <workItem from="1770293183156" duration="12188000" />
+      <workItem from="1770293183156" duration="13395000" />
     </task>
     <servers />
   </component>

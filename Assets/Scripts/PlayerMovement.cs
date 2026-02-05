@@ -44,10 +44,10 @@ public class PlayerMovement : MonoBehaviour
             //...On fait en sorte que cette direction soit la seule enregistrée avant le prochain beat...
             alreadyMovedThisBeat = true;
             //... et si c'est hors beat, on appelle une erreur.
-            if (!beatEnabler.onBeat)
-            {
-                hasMadeAnError = true;
-            }
+            // if (!beatEnabler.onBeat)
+            // {
+            //     hasMadeAnError = true;
+            // }
         }
         Vector3 pos = transform.position;
         pos = new Vector3(pos.x + inputReader.HorizontalMove, pos.y, pos.z + inputReader.VerticalMove);
