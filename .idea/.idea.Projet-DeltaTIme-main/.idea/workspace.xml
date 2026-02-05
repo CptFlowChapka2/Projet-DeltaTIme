@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneTestRythm.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneTestRythm.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BeatEnabler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BeatEnabler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1770293181243</updated>
-      <workItem from="1770293183156" duration="10467000" />
+      <workItem from="1770293183156" duration="12188000" />
     </task>
     <servers />
   </component>

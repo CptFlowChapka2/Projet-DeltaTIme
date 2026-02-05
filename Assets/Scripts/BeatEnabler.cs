@@ -73,7 +73,7 @@ public class BeatEnabler : MonoBehaviour
             }
         }
         //Juste avant qu'une mesure soit terminée
-        else if (t >= (60 * musicParameters.beatsPerMesure / musicParameters.beatsPerMinute) - timingWindow)
+        else if (t >= (60 * musicParameters.beatsPerMesure / musicParameters.beatsPerMinute) - timingWindow * 1.5f)
         {
             onBeat = true;
         }
@@ -82,7 +82,7 @@ public class BeatEnabler : MonoBehaviour
         {
             //Quand la fenêtre de timing d'un beat se referme
             if (t >= ((60 * currentPattern[0]) / (musicParameters.beatsPerMinute * musicParameters.subdivMaxPerBeat) +
-                      timingWindow))
+                      timingWindow * 1.5f))
             {
                 onBeat = false;
                 currentPattern.RemoveAt(0);
@@ -94,7 +94,7 @@ public class BeatEnabler : MonoBehaviour
             }
             //Quand la fenêtre de timing d'un beat s'ouvre
             else if (t >= ((60 * currentPattern[0]) / (musicParameters.beatsPerMinute * musicParameters.subdivMaxPerBeat) -
-                       timingWindow))
+                       timingWindow * 1.5f))
             {
                 onBeat = true;
             }
