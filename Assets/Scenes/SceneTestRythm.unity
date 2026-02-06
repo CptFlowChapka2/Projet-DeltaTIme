@@ -344,7 +344,7 @@ MonoBehaviour:
       Data2: 1153515339
       Data3: 1106126728
       Data4: -1973774604
-    Path: event:/New Event
+    Path: event:/MusicPlay
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
