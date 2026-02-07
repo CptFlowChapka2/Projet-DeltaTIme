@@ -54,22 +54,20 @@ public class BeatEnabler : MonoBehaviour
         {
             t = 0;
             measureCounter++;
-            if (measureCounter < musicParameters.patternsProgression.Length)
+            if (measureCounter >= musicParameters.patternsProgression.Length) return;
+            switch (musicParameters.patternsProgression[measureCounter])
             {
-                switch (musicParameters.patternsProgression[measureCounter])
-                {
-                    case 1:
-                        currentPattern = new List<int>(musicParameters.beatPattern1);
-                        break;
-                    case 2:
-                        currentPattern = new List<int>(musicParameters.beatPattern2);
-                        break;
-                    case 3:
-                        currentPattern = new List<int>(musicParameters.beatPattern3);
-                        break;
-                    default:
-                        break;
-                }
+                case 1:
+                    currentPattern = new List<int>(musicParameters.beatPattern1);
+                    break;
+                case 2:
+                    currentPattern = new List<int>(musicParameters.beatPattern2);
+                    break;
+                case 3:
+                    currentPattern = new List<int>(musicParameters.beatPattern3);
+                    break;
+                default:
+                    break;
             }
         }
         //Juste avant qu'une mesure soit terminée
