@@ -10,6 +10,6 @@ public class CameraStartPosition : MonoBehaviour
     {
         gridSize = gridParameters.gridSize;
         float halfSize = (gridParameters.gridSize / 2f) - 0.5f;
-        transform.position = new Vector3(halfSize, transform.position.y, halfSize);
+        transform.position = new Vector3(gridSize, transform.position.y, halfSize);
     }
 }
