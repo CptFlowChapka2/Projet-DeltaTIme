@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneTestFMOD.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneTestFMOD.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts Proto 1/CameraStartPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts Proto 1/CameraStartPosition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts Proto 1/InputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts Proto 1/InputReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts Proto 1/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts Proto 1/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +17,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BeatClock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DOC.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DanceFloorSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NewPlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -115,7 +112,7 @@
       <workItem from="1770293183156" duration="14079000" />
       <workItem from="1770453359244" duration="269000" />
       <workItem from="1770498696336" duration="5981000" />
-      <workItem from="1770649351598" duration="7433000" />
+      <workItem from="1770649351598" duration="8578000" />
     </task>
     <servers />
   </component>

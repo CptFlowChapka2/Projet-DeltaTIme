@@ -1,0 +1,23 @@
+DOCU TECHNIQUE : DeltaTime
+
+================================================================================
+
+InputReader => Le gestionnaire d'inputs du projet. Il contient des inputs de mouvements horizontaux et verticaux,
+séparés pour chaque joueur (séparation indiquée par P1 et P2).
+
+GridParameters => Stocke les variables liées à la grille (pour l'instant juste la taille)
+
+DanceFloorSpawner => Fait apparaître les deux grilles en prenant en compte la taille stockée,
+et place les deux joueurs au centre de chacune d'entre elles. La caméra, elle, se recentre avec un script
+spécifique, CameraStartPosition.
+
+MasterClockByFMOD => Récupère la position de la Timeline FMOD de l'EventInstance correspondant à
+la musique en train de jouer, puis la convertit en secondes en temps réel.
+
+MusicParametersForFMOD => Stocke les paramètres de la musique (BPM, beat par mesure pour le moment).
+
+BeatClock => Récupère le temps indiqué par la MasterClock, puis l'interprète sous forme de beats et mesures
+selon les MusicParameters. A chaque nouveau beat, il lance un Event OnBeat.
+
+NewPlayerMovement => Nouvelle version du script de mouvement, prenant en compte les deux joueurs. Déplace chaque joueur
+de case en case selon les inputs reçus, et les clampe à la limite de leur grille respective.
