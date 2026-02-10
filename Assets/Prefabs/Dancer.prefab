@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2518656822316377565}
   - component: {fileID: 3827866710330546047}
   - component: {fileID: -4167575681557387152}
+  - component: {fileID: 1475818512820548077}
   m_Layer: 0
   m_Name: Dancer
   m_TagString: Player
@@ -125,10 +126,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fa67dc3aea0c648b00e8187fc89624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewPlayerMovement
-  gridParameters: {fileID: 0}
-  inputReader: {fileID: 0}
-  beatEnabler: {fileID: 0}
-  numberOfBeatsBeforeRecovery: 0
-  alreadyMovedThisBeat: 0
-  hasMadeAnError: 0
-  beatsSinceError: 0
+--- !u!114 &1475818512820548077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6101557864559080566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6535bb389ede8284b91787ef4d2bcaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MajorityVerifier

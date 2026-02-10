@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="" />
+    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DOCU TECH.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOCU TECH.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dancer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dancer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneTestFMOD.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneTestFMOD.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BeatClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BeatClock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputPerPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputPerPlayer.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +119,7 @@
       <workItem from="1770453359244" duration="269000" />
       <workItem from="1770498696336" duration="5981000" />
       <workItem from="1770649351598" duration="8578000" />
-      <workItem from="1770746559949" duration="370000" />
+      <workItem from="1770746559949" duration="5328000" />
     </task>
     <servers />
   </component>

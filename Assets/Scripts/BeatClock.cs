@@ -7,6 +7,7 @@ public class BeatClock : MonoBehaviour
     public int beat = 1;
     public int measure = 1;
     public UnityEvent onBeat;
+    public UnityEvent onMeasure;
     private MasterClockByFMOD masterClock;
     private MusicParametersForFMOD musicParameters;
     private int currentBPM;
@@ -27,11 +28,10 @@ public class BeatClock : MonoBehaviour
         {
             beat++;
             onBeat.Invoke();
-            if (beat > musicParameters.beatsPerMeasure)
-            {
-                beat = 1;
-                measure++;
-            }
+            if (beat <= musicParameters.beatsPerMeasure) return;
+            beat = 1;
+            measure++;
+            onMeasure.Invoke();
         }
     }
 }

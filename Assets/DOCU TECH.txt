@@ -5,7 +5,8 @@ DOCU TECHNIQUE : DeltaTime
 InputReader => Le gestionnaire d'inputs du projet. Il contient des inputs de mouvements horizontaux et verticaux,
 séparés pour chaque joueur (séparation indiquée par P1 et P2).
 
-InputPerPlayer => Indique aux deux joueurs quels inputs ils doivent écouter.
+InputPerPlayer => Indique aux deux joueurs quels inputs ils doivent écouter. Compte ensuite chaque itération de chaque
+input et les stocke.
 
 GridParameters => Stocke les variables liées à la grille (pour l'instant juste la taille)
 
@@ -19,7 +20,10 @@ la musique en train de jouer, puis la convertit en secondes en temps réel.
 MusicParametersForFMOD => Stocke les paramètres de la musique (BPM, beat par mesure pour le moment).
 
 BeatClock => Récupère le temps indiqué par la MasterClock, puis l'interprète sous forme de beats et mesures
-selon les MusicParameters. A chaque nouveau beat, il lance un Event OnBeat.
+selon les MusicParameters. A chaque nouveau beat, il lance un Event OnBeat, et à chaque mesure, un Event OnMeasure..
 
 NewPlayerMovement => Nouvelle version du script de mouvement, prenant en compte les deux joueurs. Déplace chaque joueur
 de case en case selon les inputs reçus, et les clampe à la limite de leur grille respective.
+
+MajorityVerifier => Sur l'Event OnMeasure, trie les inputs pour garder les 2 plus utilisés, puis les assigne chacun à une
+variable indiquant leur majorité. Réinitialise ensuite les compteurs dans InputPerPlayer.

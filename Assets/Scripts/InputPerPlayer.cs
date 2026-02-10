@@ -8,6 +8,11 @@ public class InputPerPlayer : MonoBehaviour
     private GameObject gm;
     private InputReader inputReader;
 
+    public int numberOfLeftInputsThisMeasure = 0;
+    public int numberOfRightInputsThisMeasure = 0;
+    public int numberOfUpInputsThisMeasure = 0;
+    public int numberOfDownInputsThisMeasure = 0;
+
     private void Start()
     {
         gm = GameObject.Find("GM");
@@ -15,6 +20,34 @@ public class InputPerPlayer : MonoBehaviour
     }
 
     private void Update()
+    {
+        movement = Vector2.zero;
+        SplittingInputsBeetweenPlayers();
+        CountingEveryIterationsOfMovements();
+    }
+
+    private void CountingEveryIterationsOfMovements()
+    {
+        if (movement.x < 0)
+        {
+            numberOfLeftInputsThisMeasure++;
+        }
+        else if (movement.x > 0)
+        {
+            numberOfRightInputsThisMeasure++;
+        }
+
+        if (movement.y < 0)
+        {
+            numberOfDownInputsThisMeasure++;
+        }
+        else if (movement.y > 0)
+        { 
+            numberOfUpInputsThisMeasure++;
+        }
+    }
+
+    private void SplittingInputsBeetweenPlayers()
     {
         if (playerNumber == 1)
         {
