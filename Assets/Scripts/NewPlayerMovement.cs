@@ -6,14 +6,14 @@ public class NewPlayerMovement : MonoBehaviour
 {
     private GameObject gm;
     private GridParameters gridParameters;
-    private InputReader inputReader;
+    private InputPerPlayer inputPerPlayer;
     private int gridSize;
 
     private void Start()
     {
         gm = GameObject.Find("GM");
         gridParameters = gm.GetComponent<GridParameters>();
-        inputReader = gm.GetComponent<InputReader>();
+        inputPerPlayer = GetComponent<InputPerPlayer>();
     }
 
     private void Update()
@@ -24,19 +24,8 @@ public class NewPlayerMovement : MonoBehaviour
 
     private void MoveOnGrid()
     {
-        Vector2 currentMove = Vector2.zero;
-
-        if (this.name == "Dancer1")
-        {
-            currentMove = new Vector2(inputReader.HorizontalMoveP1, inputReader.VerticalMoveP1);
-        }
-        else if (this.name == "Dancer2")
-        {
-            currentMove = new Vector2(inputReader.HorizontalMoveP2, inputReader.VerticalMoveP2);
-        }
-        
         Vector3 pos = transform.position;
-        pos = new Vector3(pos.x + currentMove.x, pos.y, pos.z + currentMove.y);
+        pos = new Vector3(pos.x + inputPerPlayer.movement.x, pos.y, pos.z + inputPerPlayer.movement.y);
         transform.position = pos;
     }
 

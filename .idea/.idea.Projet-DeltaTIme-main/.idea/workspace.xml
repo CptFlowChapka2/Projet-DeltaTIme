@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +33,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Setup-FMOD",
+    "git-widget-placeholder": "Reconnaissance-des-mouvements-et-patterns",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -113,6 +111,7 @@
       <workItem from="1770453359244" duration="269000" />
       <workItem from="1770498696336" duration="5981000" />
       <workItem from="1770649351598" duration="8578000" />
+      <workItem from="1770746559949" duration="370000" />
     </task>
     <servers />
   </component>

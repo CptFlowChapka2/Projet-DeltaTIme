@@ -5,6 +5,8 @@ DOCU TECHNIQUE : DeltaTime
 InputReader => Le gestionnaire d'inputs du projet. Il contient des inputs de mouvements horizontaux et verticaux,
 séparés pour chaque joueur (séparation indiquée par P1 et P2).
 
+InputPerPlayer => Indique aux deux joueurs quels inputs ils doivent écouter.
+
 GridParameters => Stocke les variables liées à la grille (pour l'instant juste la taille)
 
 DanceFloorSpawner => Fait apparaître les deux grilles en prenant en compte la taille stockée,
