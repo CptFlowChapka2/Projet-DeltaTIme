@@ -41,19 +41,23 @@ public class NewPlayerMovement : MonoBehaviour
         if (transform.position.x >= gridParameters.gridSize + offset)
         {
             transform.position = new Vector3(gridParameters.gridSize + offset - 1, transform.position.y, transform.position.z);
+            inputPerPlayer.numberOfRightThisMeasure--;
         }
         else if (transform.position.x < offset)
         {
             transform.position = new Vector3(offset, transform.position.y, transform.position.z);
+            inputPerPlayer.numberOfLeftThisMeasure--;
         }
 
         if (transform.position.z >= gridParameters.gridSize)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, gridParameters.gridSize - 1);
+            inputPerPlayer.numberOfUpThisMeasure--;
         }
         else if (transform.position.z < 0)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+            inputPerPlayer.numberOfDownThisMeasure--;
         }
     }
 }

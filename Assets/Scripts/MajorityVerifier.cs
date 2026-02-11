@@ -37,10 +37,10 @@ public class MajorityVerifier : MonoBehaviour
 
     private void ReinitializingNumberOfInputs()
     {
-        inputPerPlayer.numberOfLeftInputsThisMeasure = 0;
-        inputPerPlayer.numberOfRightInputsThisMeasure = 0;
-        inputPerPlayer.numberOfUpInputsThisMeasure = 0;
-        inputPerPlayer.numberOfDownInputsThisMeasure = 0;
+        inputPerPlayer.numberOfLeftThisMeasure = 0;
+        inputPerPlayer.numberOfRightThisMeasure = 0;
+        inputPerPlayer.numberOfUpThisMeasure = 0;
+        inputPerPlayer.numberOfDownThisMeasure = 0;
     }
     
     private void ChoosingDirectionsInRegardsOf(int maj, int subMaj)
@@ -92,7 +92,7 @@ public class MajorityVerifier : MonoBehaviour
         
         for (int i = 0; i < globalInputsDuringLastMeasure.Count; i++)
         {
-            if (globalInputsDuringLastMeasure[i] > numberMax)
+            if (globalInputsDuringLastMeasure[i] > numberMax || (globalInputsDuringLastMeasure[i] == numberMax && i == inputPerPlayer.indexLastInputPlayed))
             {
                 numberMax = globalInputsDuringLastMeasure[i];
                 highestV = i;
@@ -114,9 +114,9 @@ public class MajorityVerifier : MonoBehaviour
     public void TakingInputInfosInList()
     {
         globalInputsDuringLastMeasure = new List<int>();
-        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfLeftInputsThisMeasure);
-        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfRightInputsThisMeasure);
-        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfUpInputsThisMeasure);
-        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfDownInputsThisMeasure);
+        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfLeftThisMeasure);
+        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfRightThisMeasure);
+        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfUpThisMeasure);
+        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfDownThisMeasure);
     }
 }

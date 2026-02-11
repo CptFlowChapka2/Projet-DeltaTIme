@@ -8,10 +8,12 @@ public class InputPerPlayer : MonoBehaviour
     private GameObject gm;
     private InputReader inputReader;
 
-    public int numberOfLeftInputsThisMeasure = 0;
-    public int numberOfRightInputsThisMeasure = 0;
-    public int numberOfUpInputsThisMeasure = 0;
-    public int numberOfDownInputsThisMeasure = 0;
+    public int numberOfLeftThisMeasure = 0;
+    public int numberOfRightThisMeasure = 0;
+    public int numberOfUpThisMeasure = 0;
+    public int numberOfDownThisMeasure = 0;
+
+    public int indexLastInputPlayed;
 
     private void Start()
     {
@@ -30,20 +32,24 @@ public class InputPerPlayer : MonoBehaviour
     {
         if (movement.x < 0)
         {
-            numberOfLeftInputsThisMeasure++;
+            numberOfLeftThisMeasure++;
+            indexLastInputPlayed = 0;
         }
         else if (movement.x > 0)
         {
-            numberOfRightInputsThisMeasure++;
+            numberOfRightThisMeasure++;
+            indexLastInputPlayed = 1;
         }
 
         if (movement.y < 0)
         {
-            numberOfDownInputsThisMeasure++;
+            numberOfDownThisMeasure++;
+            indexLastInputPlayed = 3;
         }
         else if (movement.y > 0)
         { 
-            numberOfUpInputsThisMeasure++;
+            numberOfUpThisMeasure++;
+            indexLastInputPlayed = 2;
         }
     }
 
