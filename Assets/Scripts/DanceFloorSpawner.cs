@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,6 +9,8 @@ public class DanceFloorSpawner : MonoBehaviour
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
     private GridParameters gridParameters;
+    private List<TileScript> tilesP1 = new List<TileScript>();
+    private List<TileScript> tilesP2 = new List<TileScript>();
     private int gridSize;
 
     private void Start()
@@ -31,9 +34,19 @@ public class DanceFloorSpawner : MonoBehaviour
         {
             for (int j = 0; j < gridParameters.gridSize; j++)
             {
-                Instantiate(gridTile, new Vector3(i, transform.position.y, j), Quaternion.identity);
-                Instantiate(gridTile, new Vector3(i + gridSize + 1, transform.position.y, j), Quaternion.identity);
+                Vector3 posP1 = new Vector3(i, transform.position.y, j);
+                Vector3 posP2 = new Vector3(i + gridSize + 1, transform.position.y, j);
+                CreateTile(posP1, i, j, tilesP1);
+                CreateTile(posP2, i, j, tilesP2);
             }
         }
+    }
+
+    private void CreateTile(Vector3 pos, int i, int j, List<TileScript> tiles)
+    {
+        TileScript tile = new TileScript();
+        tile = Instantiate(gridTile, pos, Quaternion.identity).GetComponent<TileScript>();
+        tile.Initialize(i, j);
+        tiles.Add(tile);
     }
 }

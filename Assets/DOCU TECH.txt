@@ -5,6 +5,9 @@ DOCU TECHNIQUE : DeltaTime
 InputReader => Le gestionnaire d'inputs du projet. Il contient des inputs de mouvements horizontaux et verticaux,
 séparés pour chaque joueur (séparation indiquée par P1 et P2).
 
+EnumVariables => Un script où sont créées les différentes variables enum, pour les réutiliser librement dans
+les autres scripts.
+
 InputPerPlayer => Indique aux deux joueurs quels inputs ils doivent écouter. Compte ensuite chaque itération de chaque
 input et les stocke.
 
@@ -27,3 +30,11 @@ de case en case selon les inputs reçus, et les clampe à la limite de leur gril
 
 MajorityVerifier => Sur l'Event OnMeasure, trie les inputs pour garder les 2 plus utilisés, puis les assigne chacun à une
 variable indiquant leur majorité. Réinitialise ensuite les compteurs dans InputPerPlayer.
+
+PatternSpawner => Sur l'Event OnMeasure, instantie un objet pattern sur chaque grille. Chaque player instantie
+son propre pattern pour l'adversaire, pour faciliter la reconnaissance
+
+PatternInitializer => Initialize le pattern, en lui donnant sa direction et le type de pattern à lancer
+
+PatternBank => Stocke quatre instances du struct Pattern, créé pour stocker les valeurs d'activation des tiles de chaque
+line du pattern. Chacune correspond au pattern attribué à une direction spécifique

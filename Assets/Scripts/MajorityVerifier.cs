@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class MajorityVerifier : MonoBehaviour
 {
-    public enum Direction { Undefined, Left, Right, Up, Down }
-    
     private InputPerPlayer inputPerPlayer;
     private List<int> globalInputsDuringLastMeasure = new List<int>();
     
