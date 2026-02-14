@@ -2276,9 +2276,9 @@ namespace FMODUnity
                 {
                     Platform platform = settings.FindPlatform(identifier);
 
+                    TreeViewItem item = CreateItem(platform);
                     if (platform.Active)
                     {
-                        TreeViewItem item = CreateItem(platform);
                         parent.AddChild(item);
 
                         CreateItems(item, platform.ChildIdentifiers);
