@@ -26,11 +26,14 @@ public class CrowdLvl : MonoBehaviour
 
     private void ChangeAllLvlByTags(TagRestriction tagRestriction,CrowdTags[] tagToFilter,int newLvl)
     {
+        
+        //groso merdo on choisis comment on filtre les tag
         switch (tagRestriction)
         {
             case TagRestriction.ContainAny:
                 _indidualCrowdScripts.FindAll(x=>tagToFilter.Any(compareTags => x.thisTags.Contains(compareTags)))
                     .ForEach(x=>x.TryChangeLvl(newLvl));
+                //puis  on cherche si dans nos tagfiltre y'en as qui sont dans les tag d'un object .
                 break;
             case TagRestriction.ContainAll:
                 _indidualCrowdScripts.FindAll(x=>tagToFilter.All(compareTags => x.thisTags.Contains(compareTags)))
