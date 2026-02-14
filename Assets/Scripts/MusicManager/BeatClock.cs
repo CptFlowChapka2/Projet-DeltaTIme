@@ -6,8 +6,8 @@ public class BeatClock : MonoBehaviour
 {
     public int beat = 1;
     public int measure = 1;
-    public UnityEvent onBeat;
-    public UnityEvent onMeasure;
+    public UnityEvent onBeat=new UnityEvent();
+    public UnityEvent onMeasure=new UnityEvent();
     private MasterClockByFMOD masterClock;
     private MusicParametersForFMOD musicParameters;
     private int currentBPM;

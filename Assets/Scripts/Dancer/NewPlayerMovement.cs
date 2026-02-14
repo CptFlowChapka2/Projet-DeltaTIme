@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class NewPlayerMovement : MonoBehaviour
@@ -7,6 +8,7 @@ public class NewPlayerMovement : MonoBehaviour
     private GameObject gm;
     private GridParameters gridParameters;
     private InputPerPlayer inputPerPlayer;
+    private UnityEvent<int> playerMooved=new UnityEvent<int>();
     private int gridSize;
 
     private void Start()
@@ -14,6 +16,7 @@ public class NewPlayerMovement : MonoBehaviour
         gm = GameObject.Find("GM");
         gridParameters = gm.GetComponent<GridParameters>();
         inputPerPlayer = GetComponent<InputPerPlayer>();
+        InitialisedLocalEvents();
     }
 
     private void Update()
@@ -59,5 +62,10 @@ public class NewPlayerMovement : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             inputPerPlayer.numberOfDownThisMeasure--;
         }
+    }
+
+    private void InitialisedLocalEvents()
+    {
+        playerMooved.AddListener(FindAnyObjectByType<EventSyncroniser>().ReceivePlayerMoove);
     }
 }
