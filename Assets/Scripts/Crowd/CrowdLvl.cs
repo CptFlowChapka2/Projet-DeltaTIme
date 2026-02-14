@@ -6,7 +6,9 @@ using UnityEngine;
 public class CrowdLvl : MonoBehaviour
 {
     private List<IndidualCrowdScript> _indidualCrowdScripts=new List<IndidualCrowdScript>();
-    public int currentLvl;
+    public int currentSumLvl;
+    public int currentP1Lvl;
+    public int currentP2Lvl;
 
 
     private void Start()
@@ -19,6 +21,21 @@ public class CrowdLvl : MonoBehaviour
         ChangeAllLvl(0);
     }
 
+    public void ReceivePlayerOnBeat(int playerI)
+    {
+        switch (playerI)
+        {
+            case 1:
+                ChangeAllLvlByTags(TagRestriction.ContainAny,new [] { CrowdTags.Left},currentP1Lvl);
+                break;
+            
+            case 2:
+                ChangeAllLvlByTags(TagRestriction.ContainAny,new [] { CrowdTags.Right},currentP2Lvl);
+                
+                break;
+        }
+    }
+    
     private void ChangeAllLvl(int newLvl)
     {
         _indidualCrowdScripts.ForEach(x=>x.TryChangeLvl(newLvl));

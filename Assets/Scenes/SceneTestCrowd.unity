@@ -228,7 +228,19 @@ MonoBehaviour:
   measure: 1
   onBeat:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1487537509}
+        m_TargetAssemblyTypeName: EventSyncroniser, Assembly-CSharp
+        m_MethodName: ReceiveBeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onMeasure:
     m_PersistentCalls:
       m_Calls:
@@ -776,7 +788,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bea3ce537b55946b17de7f669275eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  currentLvl: 0
+  currentSumLvl: 0
+  currentP1Lvl: 0
+  currentP2Lvl: 0
 --- !u!1 &1487537502
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +804,7 @@ GameObject:
   - component: {fileID: 1487537505}
   - component: {fileID: 1487537506}
   - component: {fileID: 1487537508}
+  - component: {fileID: 1487537509}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -884,6 +899,19 @@ MonoBehaviour:
     line2: 00000000000000
     line3: 00000000000000
     line4: 00000000000000
+--- !u!114 &1487537509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487537502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ca9b44a2a73104e9e9505924fd7387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  playerCoyoteBeat: 0.25
 --- !u!1001 &1535296480
 PrefabInstance:
   m_ObjectHideFlags: 0
