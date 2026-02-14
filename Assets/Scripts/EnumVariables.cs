@@ -9,3 +9,12 @@ public enum Direction
     Undefined
 }
 
+public enum TileState
+{
+    Unused,
+    Invisible,
+    Active,
+    ActiveNextBeat,
+    Undefined,
+}
+
