@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 1677547623791850411}
   - component: {fileID: 4782339430743031854}
   - component: {fileID: 9035180359798073350}
+  - component: {fileID: 7824639642046007235}
   - component: {fileID: 8352743294581438502}
   - component: {fileID: 249125704299117554}
   m_Layer: 0
@@ -161,6 +162,7 @@ MonoBehaviour:
     - {fileID: 6596909974640346569}
     - {fileID: 6181868340667210075}
     - {fileID: 5301798956152293241}
+  numberOfBeatOfLife: 0
 --- !u!114 &9035180359798073350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +176,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   playerNumber: 0
+--- !u!114 &7824639642046007235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2633760284288073898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca9f4864640628419896d48bd6428f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!33 &8352743294581438502
 MeshFilter:
   m_ObjectHideFlags: 0

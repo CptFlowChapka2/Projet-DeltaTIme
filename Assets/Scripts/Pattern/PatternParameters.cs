@@ -22,5 +22,6 @@ public struct GridPattern
 public class PatternParameters : MonoBehaviour
 {
     public GridPattern gridPattern;
+    public int numberOfBeatsOfLife;
 }
 
