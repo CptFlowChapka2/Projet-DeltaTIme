@@ -23,7 +23,7 @@ la musique en train de jouer, puis la convertit en secondes en temps réel.
 MusicParametersForFMOD => Stocke les paramètres de la musique (BPM, beat par mesure pour le moment).
 
 BeatClock => Récupère le temps indiqué par la MasterClock, puis l'interprète sous forme de beats et mesures
-selon les MusicParameters. A chaque nouveau beat, il lance un Event OnBeat, et à chaque mesure, un Event OnMeasure..
+selon les MusicParameters. A chaque nouveau beat, il lance un Event OnBeat, et à chaque mesure, un Event OnMeasure.
 
 NewPlayerMovement => Nouvelle version du script de mouvement, prenant en compte les deux joueurs. Déplace chaque joueur
 de case en case selon les inputs reçus, et les clampe à la limite de leur grille respective.
@@ -31,10 +31,16 @@ de case en case selon les inputs reçus, et les clampe à la limite de leur gril
 MajorityVerifier => Sur l'Event OnMeasure, trie les inputs pour garder les 2 plus utilisés, puis les assigne chacun à une
 variable indiquant leur majorité. Réinitialise ensuite les compteurs dans InputPerPlayer.
 
-PatternSpawner => Sur l'Event OnMeasure, instantie un objet pattern sur chaque grille. Chaque player instantie
-son propre pattern pour l'adversaire, pour faciliter la reconnaissance
-
-PatternInitializer => Initialize le pattern, en lui donnant sa direction et le type de pattern à lancer
-
 PatternBank => Stocke quatre instances du struct Pattern, créé pour stocker les valeurs d'activation des tiles de chaque
-line du pattern. Chacune correspond au pattern attribué à une direction spécifique
+line du pattern. Chacune correspond au pattern attribué à une direction spécifique.
+
+PatternSpawner => Sur l'Event OnMeasure, instantie un objet pattern sur chaque grille. Chaque player instantie
+son propre pattern pour l'adversaire, pour faciliter la reconnaissance.
+
+PatternInitializer => Initialize le pattern, en lui donnant sa direction et le type de pattern à lancer.
+
+PatternMovement => Sur l'Event OnBeat, fais avancer l'objet pattern et change le state des tiles lumineuses
+selon le beat. Détruit le pattern une fois arrivé au bout de sa course.
+
+LightStateChecker => Stocke le state de chaque tile lumineuse, et active/désactive leur renderer/collider en fonction
+du state choisi.

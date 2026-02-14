@@ -1,13 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PatternMovement : MonoBehaviour
 {
     private PatternParameters patternParameters;
+    private BeatClock beatClock;
 
     private void Start()
     {
         patternParameters = GetComponent<PatternParameters>();
+        beatClock = GameObject.Find("MusicManager").GetComponent<BeatClock>();
+        beatClock.onBeat.AddListener(Advance);
     }
 
     public void Advance()
@@ -40,6 +44,8 @@ public class PatternMovement : MonoBehaviour
                 break;
             case 11:
                 SwitchTilesStatesToInvisible(patternParameters.gridPattern.tilesLine4);
+                beatClock.onBeat.RemoveListener(Advance);
+                Destroy(gameObject);
                 break;
         }
     }
