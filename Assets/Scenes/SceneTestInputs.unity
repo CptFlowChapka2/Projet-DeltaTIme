@@ -541,6 +541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dancer2
       objectReference: {fileID: 0}
+    - target: {fileID: 6101557864559080566, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
     - target: {fileID: 6511748860784780931, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
       propertyPath: pattern
       value: 
@@ -618,7 +622,7 @@ GameObject:
   - component: {fileID: 1487537508}
   m_Layer: 0
   m_Name: GM
-  m_TagString: Untagged
+  m_TagString: GM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

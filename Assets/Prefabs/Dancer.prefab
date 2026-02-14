@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -4167575681557387152}
   - component: {fileID: 1475818512820548077}
   - component: {fileID: 6511748860784780931}
+  - component: {fileID: -4481912844825058025}
   m_Layer: 0
   m_Name: Dancer
   m_TagString: Player
@@ -151,5 +152,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c465e8f9352fa247ad0e6fdf26838ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  pattern: {fileID: 0}
+  playerNumber: 0
+--- !u!114 &-4481912844825058025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6101557864559080566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070cf587c2822124ba9799232ce85566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'

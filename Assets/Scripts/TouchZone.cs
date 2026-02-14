@@ -1,0 +1,47 @@
+using System;
+using UnityEngine;
+
+public class TouchZone : MonoBehaviour
+{
+    private BeatClock beatClock;
+    private NumberOfTimeTouched player1;
+    private NumberOfTimeTouched player2;
+    private bool alreadyTouched = false;
+
+    private void Start()
+    {
+        beatClock = GameObject.FindGameObjectWithTag("GM").GetComponent<BeatClock>();
+        player1 = GameObject.FindGameObjectWithTag("Player").GetComponent<NumberOfTimeTouched>();
+        player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<NumberOfTimeTouched>();
+    }
+
+    private void Update()
+    {
+        if (transform.position != new Vector3(player1.transform.position.x,
+                transform.position.y,
+                player1.transform.position.z) && 
+            transform.position != new Vector3 (player2.transform.position.x,
+                transform.position.y,
+                player2.transform.position.z))
+        {
+            alreadyTouched = false;
+        }
+        
+        if (alreadyTouched) return;
+        
+        if (transform.position == new Vector3(player1.transform.position.x,
+                transform.position.y,
+                player1.transform.position.z))
+        {
+            alreadyTouched = true;
+            player1.numberOfTimeTouched++;
+        }
+        else if (transform.position == new Vector3(player2.transform.position.x,
+                     transform.position.y,
+                     player2.transform.position.z))
+        {
+            alreadyTouched = true;
+            player2.numberOfTimeTouched++;
+        }
+    }
+}

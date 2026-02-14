@@ -44,3 +44,8 @@ selon le beat. Détruit le pattern une fois arrivé au bout de sa course.
 
 LightStateChecker => Stocke le state de chaque tile lumineuse, et active/désactive leur renderer/collider en fonction
 du state choisi.
+
+NumberOfTimeTouched => Stocke son titre dans chaque dancer
+
+TouchZone => Vérifie que la position d'une tile lumineuse est ou non à la même position qu'un dancer.
+Si oui, augmente son NumberOfTimeTouched et se "bloque", sinon se "débloque."
