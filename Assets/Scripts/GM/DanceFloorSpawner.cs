@@ -44,8 +44,7 @@ public class DanceFloorSpawner : MonoBehaviour
 
     private void CreateTile(Vector3 pos, int i, int j, List<TileScript> tiles)
     {
-        TileScript tile = new TileScript();
-        tile = Instantiate(gridTile, pos, Quaternion.identity).GetComponent<TileScript>();
+        TileScript tile = Instantiate(gridTile, pos, Quaternion.identity).GetComponent<TileScript>();
         tile.Initialize(i, j);
         tiles.Add(tile);
     }
