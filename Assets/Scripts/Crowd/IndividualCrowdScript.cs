@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class IndidualCrowdScript : MonoBehaviour
+public class IndividualCrowdScript : MonoBehaviour
 {
     [SerializeField] private List<Sprite> lvlsSprites;
     private SpriteRenderer thisSpriteRenderer;
@@ -16,7 +16,7 @@ public class IndidualCrowdScript : MonoBehaviour
 
     public void TryChangeLvl(int i)
     {
-        if(i>lvlsSprites.Count-1) return;
+        if(i > lvlsSprites.Count - 1) return;
         thisSpriteRenderer.sprite = lvlsSprites[i];
     }
 }

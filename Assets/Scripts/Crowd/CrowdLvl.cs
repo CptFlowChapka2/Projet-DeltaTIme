@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CrowdLvl : MonoBehaviour
 {
-    private List<IndidualCrowdScript> _indidualCrowdScripts=new List<IndidualCrowdScript>();
+    private List<IndividualCrowdScript> _indidualCrowdScripts=new List<IndividualCrowdScript>();
     public int currentSumLvl;
     public int currentP1Lvl;
     public int currentP2Lvl;
@@ -13,7 +13,7 @@ public class CrowdLvl : MonoBehaviour
 
     private void Start()
     {
-        foreach (var child in transform.GetComponentsInChildren<IndidualCrowdScript>())
+        foreach (var child in transform.GetComponentsInChildren<IndividualCrowdScript>())
         {
             _indidualCrowdScripts.Add(child);
         }
@@ -74,7 +74,6 @@ public class CrowdLvl : MonoBehaviour
         ContainAll,
         DoNotContainAny,
         DoNotContainAll
-    
     }
 }
 

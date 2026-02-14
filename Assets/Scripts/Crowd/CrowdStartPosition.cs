@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CrowdStarPosition : MonoBehaviour
+public class CrowdStartPosition : MonoBehaviour
 {
     [SerializeField] private GridParameters gridParameters;
     private float gridSize;
