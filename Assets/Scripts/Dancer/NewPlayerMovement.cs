@@ -10,6 +10,7 @@ public class NewPlayerMovement : MonoBehaviour
     private InputPerPlayer inputPerPlayer;
     private UnityEvent<int> playerMooved=new UnityEvent<int>();
     private int gridSize;
+    public int thisPLayer;
 
     private void Start()
     {

@@ -22,6 +22,8 @@ public class EventSyncroniser : MonoBehaviour
 
     public void ReceivePlayerMoove(int playerI)
     {
+        Debug.Log("ReceivedPlayer"+playerI+"Moove");
+        
         switch (playerI)
         {
             case 1:
@@ -54,6 +56,7 @@ public class EventSyncroniser : MonoBehaviour
 
     public void ReceiveBeat()
     {
+        Debug.Log("ReceivedBeat");
         if (player1CoyoteTimer > 0)
         {
             playerMoovedOnBeat.Invoke(1);

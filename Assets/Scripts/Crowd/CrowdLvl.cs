@@ -23,13 +23,16 @@ public class CrowdLvl : MonoBehaviour
 
     public void ReceivePlayerOnBeat(int playerI)
     {
+        Debug.Log("ReceivedPLayerOnBeat");
         switch (playerI)
         {
             case 1:
+                currentP1Lvl++;
                 ChangeAllLvlByTags(TagRestriction.ContainAny,new [] { CrowdTags.Left},currentP1Lvl);
                 break;
             
             case 2:
+                currentP2Lvl++;
                 ChangeAllLvlByTags(TagRestriction.ContainAny,new [] { CrowdTags.Right},currentP2Lvl);
                 
                 break;
