@@ -5,7 +5,7 @@ using FMOD.Studio;
 
 public class MasterClockByFMOD : MonoBehaviour
 {
-    public FMOD.Studio.EventInstance musicPlaying;
+    private FMOD.Studio.EventInstance musicPlaying;
     private int timeInMS;
     public double timeInSeconds;
 
