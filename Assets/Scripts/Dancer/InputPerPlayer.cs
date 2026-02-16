@@ -1,12 +1,15 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InputPerPlayer : MonoBehaviour
 {
-    [SerializeField] private int playerNumber;
+    public int playerNumber;
     public Vector2 movement;
     private GameObject gm;
     private InputReader inputReader;
+
+    private UnityEvent moveOrder = new UnityEvent();
 
     public int numberOfLeftThisMeasure = 0;
     public int numberOfRightThisMeasure = 0;
@@ -18,16 +21,9 @@ public class InputPerPlayer : MonoBehaviour
     private void Start()
     {
         gm = GameObject.Find("GM");
-        inputReader = gm.GetComponent<InputReader>();
+        moveOrder.AddListener(GetComponent<NewPlayerMovement>().ReceiveMoveOrder);
     }
-
-    private void Update()
-    {
-        movement = Vector2.zero;
-        SplittingInputsBeetweenPlayers();
-        CountingEveryIterationsOfMovements();
-    }
-
+    
     private void CountingEveryIterationsOfMovements()
     {
         if (movement.x < 0)
@@ -53,15 +49,14 @@ public class InputPerPlayer : MonoBehaviour
         }
     }
 
-    private void SplittingInputsBeetweenPlayers()
+    public void ReceiveInput(Vector2 input,int id)
     {
-        if (playerNumber == 1)
-        {
-            movement = new Vector2(inputReader.HorizontalMoveP1, inputReader.VerticalMoveP1);
-        }
-        else if (playerNumber == 2)
-        {
-            movement = new Vector2(inputReader.HorizontalMoveP2, inputReader.VerticalMoveP2);
-        }
+        movement = Vector2.zero;
+        if(id!=playerNumber)return;
+
+        movement = input;
+        CountingEveryIterationsOfMovements();
+        moveOrder.Invoke();
+        
     }
 }

@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!alreadyMovedThisBeat && !hasMadeAnError)
         {
-            MoveOnGrid();
+            // MoveOnGrid   ();
             ClampingOnGrid();
         }
 
@@ -36,23 +36,23 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void MoveOnGrid()
-    {
-        //Au moment d'appuyer sur une direction...
-        if (inputReader.HorizontalMoveP1 != 0 || inputReader.VerticalMoveP1 != 0)
-        {
-            //...On fait en sorte que cette direction soit la seule enregistrée avant le prochain beat...
-            alreadyMovedThisBeat = true;
-            //... et si c'est hors beat, on appelle une erreur.
-            // if (!beatEnabler.onBeat)
-            // {
-            //     hasMadeAnError = true;
-            // }
-        }
-        Vector3 pos = transform.position;
-        pos = new Vector3(pos.x + inputReader.HorizontalMoveP1, pos.y, pos.z + inputReader.VerticalMoveP1);
-        transform.position = pos;
-    }
+    // private void MoveOnGrid()
+    // {
+    //     //Au moment d'appuyer sur une direction...
+    //     if (inputReader.HorizontalMoveP1 != 0 || inputReader.VerticalMoveP1 != 0)
+    //     {
+    //         //...On fait en sorte que cette direction soit la seule enregistrée avant le prochain beat...
+    //         alreadyMovedThisBeat = true;
+    //         //... et si c'est hors beat, on appelle une erreur.
+    //         // if (!beatEnabler.onBeat)
+    //         // {
+    //         //     hasMadeAnError = true;
+    //         // }
+    //     }
+    //     Vector3 pos = transform.position;
+    //     pos = new Vector3(pos.x + inputReader.HorizontalMoveP1, pos.y, pos.z + inputReader.VerticalMoveP1);
+    //     transform.position = pos;
+    // }
 
     private void ClampingOnGrid()
     {

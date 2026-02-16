@@ -1,81 +1,41 @@
+using System;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class InputReader : MonoBehaviour
 {
-    public float HorizontalMoveP1
-    { 
-        get
-        {
-            if (Keyboard.current.dKey.wasPressedThisFrame)
-            {
-                return 1f;
-            }
-            else if (Keyboard.current.aKey.wasPressedThisFrame)
-            { 
-                return -1f;
-            }
-            else
-            {
-                return 0f;
-            }
-        }
-    }
-    
-    public float HorizontalMoveP2
-    { 
-        get
-        {
-            if (Keyboard.current.numpad6Key.wasPressedThisFrame)
-            {
-                return 1f;
-            }
-            else if (Keyboard.current.numpad4Key.wasPressedThisFrame)
-            { 
-                return -1f;
-            }
-            else
-            {
-                return 0f;
-            }
-        }
-    }
-    
-    public float VerticalMoveP1
+    private InputAction player1Move;
+    private InputAction player2Move;
+    private UnityEvent<Vector2,int> playerInput = new UnityEvent<Vector2, int>();
+
+
+    private void Start()
     {
-        get
-        {
-            if (Keyboard.current.wKey.wasPressedThisFrame)
-            {
-                return 1f;
-            }
-            else if (Keyboard.current.sKey.wasPressedThisFrame)
-            { 
-                return -1f;
-            }
-            else
-            {
-                return 0f;
-            }
-        }
+        AddEventListener();
+        player1Move = InputSystem.actions.FindAction("Player1Move");
+        player2Move = InputSystem.actions.FindAction("Player2Move");
     }
-    
-    public float VerticalMoveP2
+
+    private void Update()
     {
-        get
-        {
-            if (Keyboard.current.numpad8Key.wasPressedThisFrame)
-            {
-                return 1f;
-            }
-            else if (Keyboard.current.numpad5Key.wasPressedThisFrame)
-            { 
-                return -1f;
-            }
-            else
-            {
-                return 0f;
-            }
-        }
+        CheckPlayerInputs(player1Move,1);
+        CheckPlayerInputs(player2Move,2);
+    }
+
+    private void  CheckPlayerInputs(InputAction playerXMove,int playerID)
+    {
+        if(!playerXMove.WasPerformedThisFrame())return;
+        Vector2 playerRead = playerXMove.ReadValue<Vector2>();
+        
+        playerInput.Invoke(playerRead,playerID);
+        
+    }
+
+    private void AddEventListener()
+    {
+        FindObjectsByType<InputPerPlayer>(FindObjectsInactive.Exclude,FindObjectsSortMode.InstanceID).ToList().
+            ForEach(x=>playerInput.AddListener(x.ReceiveInput));
     }
 }
