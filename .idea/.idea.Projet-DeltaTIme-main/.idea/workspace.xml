@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Music.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Music.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Placeholders.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Placeholders.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MergeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MergeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MasterClockByFMOD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MasterClockByFMOD.cs" afterDir="false" />
-    </list>
+    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
