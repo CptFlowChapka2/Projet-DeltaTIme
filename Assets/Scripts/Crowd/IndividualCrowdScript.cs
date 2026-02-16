@@ -17,7 +17,7 @@ public class IndividualCrowdScript : MonoBehaviour
     public void TryChangeLvl(int i)
     {
         
-        if(i > lvlsSprites.Count - 1) return;
+        if(i > lvlsSprites.Count - 1 ||i < 0 ) return;
         thisSpriteRenderer.sprite = lvlsSprites[i];
     }
 }

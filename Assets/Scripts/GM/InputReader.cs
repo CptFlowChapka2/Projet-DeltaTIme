@@ -13,9 +13,10 @@ public class InputReader : MonoBehaviour
 
     private void Start()
     {
-        AddEventListener();
+        
         player1Move = InputSystem.actions.FindAction("Player1Move");
         player2Move = InputSystem.actions.FindAction("Player2Move");
+        AddEventListener();
     }
 
     private void Update()

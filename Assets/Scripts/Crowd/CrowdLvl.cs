@@ -6,9 +6,7 @@ using UnityEngine;
 public class CrowdLvl : MonoBehaviour
 {
     private List<IndividualCrowdScript> _indidualCrowdScripts=new List<IndividualCrowdScript>();
-    public int currentSumLvl;
-    public int currentP1Lvl;
-    public int currentP2Lvl;
+    public int[] currentLvl=new []{0,0,0};
 
 
     private void Start()
@@ -21,22 +19,27 @@ public class CrowdLvl : MonoBehaviour
         ChangeAllLvl(0);
     }
 
-    public void ReceivePlayerOnBeat(int playerI)
+    public void ReceivePlayerOnBeat(int playerI,bool onOff)
     {
-        Debug.Log("ReceivedPLayerOnBeat");
-        switch (playerI)
+        Debug.Log("ReceivedPLayerOnBeat  "+onOff);
+
+        CrowdTags leftRight = playerI switch
         {
-            case 1:
-                currentP1Lvl++;
-                ChangeAllLvlByTags(TagRestriction.ContainAny,new [] { CrowdTags.Left},currentP1Lvl);
-                break;
-            
-            case 2:
-                currentP2Lvl++;
-                ChangeAllLvlByTags(TagRestriction.ContainAny,new [] { CrowdTags.Right},currentP2Lvl);
-                
-                break;
+            1 => CrowdTags.Left,
+            2 => CrowdTags.Right,
+            _ => throw new ArgumentOutOfRangeException(nameof(playerI), playerI, null)
+        };
+        currentLvl[playerI] = onOff switch {
+            true => currentLvl[playerI]+1,
+            false => currentLvl[playerI]-1
+        };
+
+        for (int i = 0; i < currentLvl.Length-1; i++)
+        {
+            currentLvl[i] = Math.Clamp(currentLvl[i], 0, 2);
         }
+        currentLvl[0] = currentLvl[1] + currentLvl[2];
+        ChangeAllLvlByTags(TagRestriction.ContainAny,new [] {leftRight},currentLvl[playerI]);
     }
     
     private void ChangeAllLvl(int newLvl)
