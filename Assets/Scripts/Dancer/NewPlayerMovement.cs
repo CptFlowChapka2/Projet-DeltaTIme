@@ -18,11 +18,13 @@ public class NewPlayerMovement : MonoBehaviour
         inputPerPlayer = GetComponent<InputPerPlayer>();
         InitialisedLocalEvents();
     }
+    
 
-    private void Update()
+    public void ReceiveMoveOrder()
     {
         MoveOnGrid();
         ClampingOnGrid();
+        playerMooved.Invoke(inputPerPlayer.playerNumber);
     }
 
     private void MoveOnGrid()
