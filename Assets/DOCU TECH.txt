@@ -2,8 +2,7 @@ DOCU TECHNIQUE : DeltaTime
 
 ================================================================================
 
-InputReader => Le gestionnaire d'inputs du projet. Il contient des inputs de mouvements horizontaux et verticaux,
-séparés pour chaque joueur (séparation indiquée par P1 et P2).
+InputReader => Le gestionnaire d'inputs du projet.Sépare à la lecture les input des joueur dans des chaîne d'event différent.
 
 EnumVariables => Un script où sont créées les différentes variables enum, pour les réutiliser librement dans
 les autres scripts.
@@ -26,7 +25,8 @@ BeatClock => Récupère le temps indiqué par la MasterClock, puis l'interprète
 selon les MusicParameters. A chaque nouveau beat, il lance un Event OnBeat, et à chaque mesure, un Event OnMeasure.
 
 NewPlayerMovement => Nouvelle version du script de mouvement, prenant en compte les deux joueurs. Déplace chaque joueur
-de case en case selon les inputs reçus, et les clampe à la limite de leur grille respective.
+de case en case selon les inputs reçus, et les clampe à la limite de leur grille respective , envoi aussi un event pour 
+dire qu'un joueur à bougé.
 
 MajorityVerifier => Sur l'Event OnMeasure, trie les inputs pour garder les 2 plus utilisés, puis les assigne chacun à une
 variable indiquant leur majorité. Réinitialise ensuite les compteurs dans InputPerPlayer.
@@ -49,3 +49,10 @@ NumberOfTimeTouched => Stocke son titre dans chaque dancer
 
 TouchZone => Vérifie que la position d'une tile lumineuse est ou non à la même position qu'un dancer.
 Si oui, augmente son NumberOfTimeTouched et se "bloque", sinon se "débloque."
+
+EventSynchroniser=> Contient la logique des event  codépendant. Actuellemnt  sert au moove on beat .
+
+CrowdLvl=>Contient les logique  pour changer les feedback d'une crowd ,ébauche pour devenir un FeedbackManger .
+
+IndividualCrowdScript=> Contient les logique et operation pour varier les feedBack Crowd .
+
