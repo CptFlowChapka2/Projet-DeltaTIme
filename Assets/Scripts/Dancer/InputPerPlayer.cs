@@ -1,20 +1,18 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class InputPerPlayer : MonoBehaviour
 {
     public int playerNumber;
-    public Vector2 movement;
+    public Vector2Int movement;
     private GameObject gm;
     private InputReader inputReader;
 
-    private UnityEvent moveOrder = new UnityEvent();
-
-    public int numberOfLeftThisMeasure = 0;
-    public int numberOfRightThisMeasure = 0;
-    public int numberOfUpThisMeasure = 0;
-    public int numberOfDownThisMeasure = 0;
+    private UnityEvent<Vector2Int> moveOrder = new UnityEvent<Vector2Int>();
+    
+    
 
     public int indexLastInputPlayed;
 
@@ -24,39 +22,16 @@ public class InputPerPlayer : MonoBehaviour
         moveOrder.AddListener(GetComponent<NewPlayerMovement>().ReceiveMoveOrder);
     }
     
-    private void CountingEveryIterationsOfMovements()
-    {
-        if (movement.x < 0)
-        {
-            numberOfLeftThisMeasure++;
-            indexLastInputPlayed = 0;
-        }
-        else if (movement.x > 0)
-        {
-            numberOfRightThisMeasure++;
-            indexLastInputPlayed = 1;
-        }
+    
 
-        if (movement.y < 0)
-        {
-            numberOfDownThisMeasure++;
-            indexLastInputPlayed = 3;
-        }
-        else if (movement.y > 0)
-        { 
-            numberOfUpThisMeasure++;
-            indexLastInputPlayed = 2;
-        }
-    }
-
-    public void ReceiveInput(Vector2 input,int id)
+    public void ReceiveInput(Vector2Int input,int id)
     {
-        movement = Vector2.zero;
+        movement = Vector2Int.zero;
         if(id!=playerNumber)return;
 
         movement = input;
-        CountingEveryIterationsOfMovements();
-        moveOrder.Invoke();
+       
+        moveOrder.Invoke(input);
         
     }
 }

@@ -11,25 +11,46 @@ public class NewDanceFloorSpawner : MonoBehaviour
     [SerializeField] private GameObject player2;
     private GridParameters gridParameters;
     private Dictionary<Vector2Int,NewTileScript> tilesP1 = new Dictionary<Vector2Int, NewTileScript>();
+
+    private List<KeyValuePair<Vector2Int, NewTileScript>> allInvalideTileP1 =new List<KeyValuePair<Vector2Int, NewTileScript>>() ;
     private Dictionary<Vector2Int,NewTileScript> tilesP2 = new Dictionary<Vector2Int, NewTileScript>();
+    private List<KeyValuePair<Vector2Int, NewTileScript>> allInvalideTileP2 =new List<KeyValuePair<Vector2Int, NewTileScript>>() ;
     
-    private int gridSize;
+    
+    public int gridSize;
 
     private void Start()
     {
         gridParameters = GetComponent<GridParameters>();
         gridSize = (int)gridParameters.gridSize+2;
         SpawnGrid();
+        
+        MakeExtremityTileInvalid(tilesP1,allInvalideTileP1);
+        MakeExtremityTileInvalid(tilesP2,allInvalideTileP2);
         SpawnPlayers();
-        MakeExtremityTileInvalid(tilesP1);
-        MakeExtremityTileInvalid(tilesP2);
     }
 
     private void SpawnPlayers()
     {
-        float halfSize = (gridParameters.gridSize / 2f) - 0.5f;
-        player1.transform.position = new Vector3(halfSize, transform.position.y, halfSize);
-        player2.transform.position = new Vector3(gridSize + halfSize + 1, transform.position.y, halfSize);
+        int halfSize = (int)Math.Floor((float)gridSize / 2);
+        
+        NewPlayerMovement p1=player1.GetComponent<NewPlayerMovement>();
+        NewPlayerMovement p2=player2.GetComponent<NewPlayerMovement>();
+        
+        p1.currentTile = tilesP1[new Vector2Int(halfSize, halfSize)];
+        p2.currentTile = tilesP2[new Vector2Int(halfSize, halfSize)];
+
+        p1.transform.position = 
+            new Vector3(p1.currentTile.transform.position.x,p1.transform.position.y,p1.currentTile.transform.position.z);
+        p2.transform.position = 
+            new Vector3(p2.currentTile.transform.position.x,p2.transform.position.y,p2.currentTile.transform.position.z);
+
+        p1.tiles = tilesP1;
+        p2.tiles = tilesP2;
+        
+        p1.invalideTile = allInvalideTileP1;
+        p2.invalideTile = allInvalideTileP2;
+        
     }
 
     private void SpawnGrid()
@@ -54,10 +75,12 @@ public class NewDanceFloorSpawner : MonoBehaviour
     }
 
 
-    private void MakeExtremityTileInvalid( Dictionary<Vector2Int,NewTileScript> tiles)
+    private void MakeExtremityTileInvalid( Dictionary<Vector2Int,NewTileScript> tiles,
+        List<KeyValuePair<Vector2Int, NewTileScript>> allInvalideTile)
     {
-        tiles.Where(y=>
-            y.Key.x.Equals(0)||y.Key.x.Equals(gridSize)||y.Key.y.Equals(0)||y.Key.y.Equals(gridSize))
-            .ToList().ForEach(x=>x.Value.thisState=NewTileScript.TileState.Invalid);
+        allInvalideTile = tiles.Where(y =>
+                y.Key.x.Equals(0) || y.Key.x.Equals(gridSize - 1) || y.Key.y.Equals(0) || y.Key.y.Equals(gridSize - 1))
+            .ToList();
+        allInvalideTile.ForEach(x=>x.Value.thisState=NewTileScript.TileState.Invalid);
     }
 }

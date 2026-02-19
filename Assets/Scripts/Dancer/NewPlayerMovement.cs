@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -6,66 +7,43 @@ using Random = UnityEngine.Random;
 public class NewPlayerMovement : MonoBehaviour
 {
     private GameObject gm;
-    private GridParameters gridParameters;
+    private NewDanceFloorSpawner _danceFloorSpawner;
     private InputPerPlayer inputPerPlayer;
-    private UnityEvent<int> playerMooved=new UnityEvent<int>();
+    public NewTileScript currentTile;
+    private UnityEvent<int,Vector2Int> playerMooved=new UnityEvent<int,Vector2Int>();
+    public Dictionary<Vector2Int, NewTileScript> tiles = new Dictionary<Vector2Int, NewTileScript>();
+
+    public List<KeyValuePair<Vector2Int, NewTileScript>> invalideTile =
+        new List<KeyValuePair<Vector2Int, NewTileScript>>();
     private int gridSize;
     public int thisPLayer;
 
     private void Start()
     {
         gm = GameObject.Find("GM");
-        gridParameters = gm.GetComponent<GridParameters>();
+        _danceFloorSpawner = gm.GetComponent<NewDanceFloorSpawner>();
         inputPerPlayer = GetComponent<InputPerPlayer>();
         InitialisedLocalEvents();
     }
     
 
-    public void ReceiveMoveOrder()
+    public void ReceiveMoveOrder(Vector2Int input)
     {
-        MoveOnGrid();
-        ClampingOnGrid();
-        playerMooved.Invoke(inputPerPlayer.playerNumber);
+        MoveOnGrid(input);
     }
 
-    private void MoveOnGrid()
+    private void MoveOnGrid(Vector2Int input)
     {
-        Vector3 pos = transform.position;
-        pos = new Vector3(pos.x + inputPerPlayer.movement.x, pos.y, pos.z + inputPerPlayer.movement.y);
-        transform.position = pos;
-    }
+        if (!tiles.ContainsKey(currentTile.position+input)
+            &&tiles[currentTile.position+input].thisState!=NewTileScript.TileState.Invalid)return;
+        currentTile = tiles[currentTile.position + input];
 
-    private void ClampingOnGrid()
-    {
-        int offset = 0;
-
-        if (this.name == "Dancer2")
-        {
-            offset = (int)gridParameters.gridSize + 1;
-        }
+        transform.position = new Vector3(currentTile.transform.position.x, transform.position.y,
+            currentTile.transform.position.z);
         
-        if (transform.position.x >= gridParameters.gridSize + offset)
-        {
-            transform.position = new Vector3(gridParameters.gridSize + offset - 1, transform.position.y, transform.position.z);
-            inputPerPlayer.numberOfRightThisMeasure--;
-        }
-        else if (transform.position.x < offset)
-        {
-            transform.position = new Vector3(offset, transform.position.y, transform.position.z);
-            inputPerPlayer.numberOfLeftThisMeasure--;
-        }
-
-        if (transform.position.z >= gridParameters.gridSize)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, gridParameters.gridSize - 1);
-            inputPerPlayer.numberOfUpThisMeasure--;
-        }
-        else if (transform.position.z < 0)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-            inputPerPlayer.numberOfDownThisMeasure--;
-        }
+        playerMooved.Invoke(inputPerPlayer.playerNumber,input);
     }
+    
 
     private void InitialisedLocalEvents()
     {

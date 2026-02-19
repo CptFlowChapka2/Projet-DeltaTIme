@@ -8,7 +8,7 @@ public class InputReader : MonoBehaviour
 {
     private InputAction player1Move;
     private InputAction player2Move;
-    private UnityEvent<Vector2,int> playerInput = new UnityEvent<Vector2, int>();
+    private UnityEvent<Vector2Int,int> playerInput = new UnityEvent<Vector2Int, int>();
 
 
     private void Start()
@@ -29,8 +29,8 @@ public class InputReader : MonoBehaviour
     {
         if(!playerXMove.WasPerformedThisFrame())return;
         Vector2 playerRead = playerXMove.ReadValue<Vector2>();
-        
-        playerInput.Invoke(playerRead,playerID);
+        Vector2Int playerSend = new Vector2Int((int)Math.Floor(playerRead.x),(int)Math.Floor(playerRead.y));
+        playerInput.Invoke(playerSend,playerID);
         
     }
 

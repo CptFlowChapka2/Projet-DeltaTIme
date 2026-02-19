@@ -19,7 +19,7 @@ public class CrowdLvl : MonoBehaviour
         ChangeAllLvl(0);
     }
 
-    public void ReceivePlayerOnBeat(int playerI,bool onOff)
+    public void ReceivePlayerOnBeat(int playerI,bool onOff,Vector2Int ignore)
     {
         Debug.Log("ReceivedPLayerOnBeat  "+onOff);
 
