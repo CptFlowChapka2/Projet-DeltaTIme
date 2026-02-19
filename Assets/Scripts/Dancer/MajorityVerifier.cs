@@ -19,7 +19,7 @@ public class MajorityVerifier : MonoBehaviour
         majorityDirection = Direction.Undefined;
         subMajorityDirection = Direction.Undefined;
         
-        TakingInputInfosInList();
+        // TakingInputInfosInList();
 
         int maj = 0;
         int subMaj = 0;
@@ -28,18 +28,18 @@ public class MajorityVerifier : MonoBehaviour
         subMaj = ChoosingHighestValueAndExcludingItIfIsntAlone();
 
         ChoosingDirectionsInRegardsOf(maj, subMaj);
-        ReinitializingNumberOfInputs();
+        // ReinitializingNumberOfInputs();
         
         Debug.Log("Majority : " + majorityDirection + " SubMajority : " + subMajorityDirection);
     }
 
-    private void ReinitializingNumberOfInputs()
-    {
-        inputPerPlayer.numberOfLeftThisMeasure = 0;
-        inputPerPlayer.numberOfRightThisMeasure = 0;
-        inputPerPlayer.numberOfUpThisMeasure = 0;
-        inputPerPlayer.numberOfDownThisMeasure = 0;
-    }
+    // private void ReinitializingNumberOfInputs()
+    // {
+    //     inputPerPlayer.numberOfLeftThisMeasure = 0;
+    //     inputPerPlayer.numberOfRightThisMeasure = 0;
+    //     inputPerPlayer.numberOfUpThisMeasure = 0;
+    //     inputPerPlayer.numberOfDownThisMeasure = 0;
+    // }
     
     private void ChoosingDirectionsInRegardsOf(int maj, int subMaj)
     {
@@ -109,12 +109,12 @@ public class MajorityVerifier : MonoBehaviour
         return highestV;
     }
 
-    public void TakingInputInfosInList()
-    {
-        globalInputsDuringLastMeasure = new List<int>();
-        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfLeftThisMeasure);
-        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfRightThisMeasure);
-        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfUpThisMeasure);
-        globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfDownThisMeasure);
-    }
+    // public void TakingInputInfosInList()
+    // {
+    //     globalInputsDuringLastMeasure = new List<int>();
+    //     globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfLeftThisMeasure);
+    //     globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfRightThisMeasure);
+    //     globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfUpThisMeasure);
+    //     globalInputsDuringLastMeasure.Add(inputPerPlayer.numberOfDownThisMeasure);
+    // }
 }
