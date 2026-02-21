@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,6 +14,9 @@ public class EventSyncroniser : MonoBehaviour
     private void Start()
     {
         playerMoovedOnBeat.AddListener(FindAnyObjectByType<CrowdLvl>().ReceivePlayerOnBeat);
+        FindObjectsByType<NewPatterneSpawner>(FindObjectsInactive.Exclude,FindObjectsSortMode.InstanceID).ToList().ForEach(
+            x=>playerMoovedOnBeat.AddListener(x.ReceivePlayerInput)
+            );
     }
 
     public void ReceivePlayerMoove(int playerI,Vector2Int movement)

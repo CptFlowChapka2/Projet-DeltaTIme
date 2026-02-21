@@ -30,7 +30,7 @@ public class MajorityVerifier : MonoBehaviour
         ChoosingDirectionsInRegardsOf(maj, subMaj);
         // ReinitializingNumberOfInputs();
         
-        Debug.Log("Majority : " + majorityDirection + " SubMajority : " + subMajorityDirection);
+      //  Debug.Log("Majority : " + majorityDirection + " SubMajority : " + subMajorityDirection);
     }
 
     // private void ReinitializingNumberOfInputs()

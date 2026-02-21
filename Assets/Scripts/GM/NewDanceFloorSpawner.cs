@@ -25,8 +25,9 @@ public class NewDanceFloorSpawner : MonoBehaviour
         gridSize = (int)gridParameters.gridSize+2;
         SpawnGrid();
         
-        MakeExtremityTileInvalid(tilesP1,allInvalideTileP1);
-        MakeExtremityTileInvalid(tilesP2,allInvalideTileP2);
+        allInvalideTileP1=MakeExtremityTileInvalid(tilesP1);
+        
+        allInvalideTileP2=MakeExtremityTileInvalid(tilesP2);
         SpawnPlayers();
     }
 
@@ -55,16 +56,18 @@ public class NewDanceFloorSpawner : MonoBehaviour
 
     private void SpawnGrid()
     {
-        for (int i = 0; i < gridParameters.gridSize; i++)
+        for (int i = 0; i < gridSize; i++)
         {
-            for (int j = 0; j < gridParameters.gridSize; j++)
+            for (int j = 0; j < gridSize; j++)
             {
                 Vector3 posP1 = new Vector3(i, transform.position.y, j);
                 Vector3 posP2 = new Vector3(i + gridSize , transform.position.y, j);
                 CreateTile(posP1, i, j, tilesP1);
                 CreateTile(posP2, i, j, tilesP2);
+                
             }
         }
+        
     }
 
     private void CreateTile(Vector3 pos, int i, int j, Dictionary<Vector2Int,NewTileScript> tiles)
@@ -75,12 +78,12 @@ public class NewDanceFloorSpawner : MonoBehaviour
     }
 
 
-    private void MakeExtremityTileInvalid( Dictionary<Vector2Int,NewTileScript> tiles,
-        List<KeyValuePair<Vector2Int, NewTileScript>> allInvalideTile)
+    private List<KeyValuePair<Vector2Int, NewTileScript>> MakeExtremityTileInvalid( Dictionary<Vector2Int,NewTileScript> tiles)
     {
-        allInvalideTile = tiles.Where(y =>
+        var allInvalideTile = tiles.Where(y =>
                 y.Key.x.Equals(0) || y.Key.x.Equals(gridSize - 1) || y.Key.y.Equals(0) || y.Key.y.Equals(gridSize - 1))
             .ToList();
         allInvalideTile.ForEach(x=>x.Value.thisState=NewTileScript.TileState.Invalid);
+        return allInvalideTile;
     }
 }

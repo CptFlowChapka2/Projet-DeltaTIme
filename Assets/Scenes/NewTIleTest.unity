@@ -315,6 +315,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1535296487}
+        m_TargetAssemblyTypeName: NewPatterneSpawner, Assembly-CSharp
+        m_MethodName: SpawnPattern
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1134567150}
+        m_TargetAssemblyTypeName: NewPatterneSpawner, Assembly-CSharp
+        m_MethodName: SpawnPattern
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onMeasure:
     m_PersistentCalls:
       m_Calls:
@@ -342,9 +366,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1535296484}
-        m_TargetAssemblyTypeName: PatternSpawner, Assembly-CSharp
-        m_MethodName: SpawnPattern
+      - m_Target: {fileID: 1535296487}
+        m_TargetAssemblyTypeName: NewPatterneSpawner, Assembly-CSharp
+        m_MethodName: ReceiveMesure
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -354,9 +378,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1134567147}
-        m_TargetAssemblyTypeName: PatternSpawner, Assembly-CSharp
-        m_MethodName: SpawnPattern
+      - m_Target: {fileID: 1134567150}
+        m_TargetAssemblyTypeName: NewPatterneSpawner, Assembly-CSharp
+        m_MethodName: ReceiveMesure
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -367,18 +391,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1535296486}
-        m_TargetAssemblyTypeName: PlaceholderSoundManager, Assembly-CSharp
-        m_MethodName: PlayCorrespondingSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1134567149}
         m_TargetAssemblyTypeName: PlaceholderSoundManager, Assembly-CSharp
         m_MethodName: PlayCorrespondingSound
         m_Mode: 1
@@ -846,7 +858,8 @@ PrefabInstance:
       propertyPath: playerNumber
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6511748860784780931, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -859,6 +872,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6101557864559080566, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1134567148}
+    - targetCorrespondingSourceObject: {fileID: 6101557864559080566, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1134567150}
   m_SourcePrefab: {fileID: 100100000, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
 --- !u!1 &1134567144 stripped
 GameObject:
@@ -879,10 +895,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InputPerPlayer
   playerNumber: 2
   movement: {x: 0, y: 0}
-  numberOfLeftThisMeasure: 0
-  numberOfRightThisMeasure: 0
-  numberOfUpThisMeasure: 0
-  numberOfDownThisMeasure: 0
   indexLastInputPlayed: 0
 --- !u!114 &1134567146 stripped
 MonoBehaviour:
@@ -895,17 +907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6535bb389ede8284b91787ef4d2bcaa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MajorityVerifier
---- !u!114 &1134567147 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6511748860784780931, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
-  m_PrefabInstance: {fileID: 1134567143}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134567144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c465e8f9352fa247ad0e6fdf26838ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &1134567148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,6 +950,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8907d769aa29c2146bc638c56ec2ac8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaceholderSoundManager
+--- !u!114 &1134567150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134567144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f9aa34634cab842b19f40a3f80049a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewPatterneSpawner
+  inputThisMesure: []
 --- !u!1 &1487537502
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,9 +974,9 @@ GameObject:
   - component: {fileID: 1487537503}
   - component: {fileID: 1487537507}
   - component: {fileID: 1487537505}
-  - component: {fileID: 1487537506}
   - component: {fileID: 1487537508}
   - component: {fileID: 1487537509}
+  - component: {fileID: 1487537510}
   m_Layer: 0
   m_Name: GM
   m_TagString: GM
@@ -998,21 +1012,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridParameters
   gridSize: 7
---- !u!114 &1487537506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487537502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf1bcab0c917bfd46a92cbcd1bf8dcea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DanceFloorSpawner
-  gridTile: {fileID: 4807671647597357901, guid: 4f1bf09dc7bc1d34f93d4e57e5bb14c9, type: 3}
-  player1: {fileID: 1535296481}
-  player2: {fileID: 1134567144}
 --- !u!114 &1487537507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,6 +1069,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventSyncroniser
   playerCoyoteBeat: 0.25
+--- !u!114 &1487537510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487537502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d26568f890b8a541aa0e0ec103975fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewDanceFloorSpawner
+  gridTile: {fileID: 4807671647597357901, guid: 169d8ef07e2071149b9e4c1da69655e1, type: 3}
+  player1: {fileID: 1535296481}
+  player2: {fileID: 1134567144}
+  gridSize: 7
 --- !u!1001 &1535296480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1134,7 +1149,8 @@ PrefabInstance:
       propertyPath: playerNumber
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6511748860784780931, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1147,6 +1163,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6101557864559080566, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1535296485}
+    - targetCorrespondingSourceObject: {fileID: 6101557864559080566, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1535296487}
   m_SourcePrefab: {fileID: 100100000, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
 --- !u!1 &1535296481 stripped
 GameObject:
@@ -1167,10 +1186,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InputPerPlayer
   playerNumber: 1
   movement: {x: 0, y: 0}
-  numberOfLeftThisMeasure: 0
-  numberOfRightThisMeasure: 0
-  numberOfUpThisMeasure: 0
-  numberOfDownThisMeasure: 0
   indexLastInputPlayed: 0
 --- !u!114 &1535296483 stripped
 MonoBehaviour:
@@ -1183,17 +1198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6535bb389ede8284b91787ef4d2bcaa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MajorityVerifier
---- !u!114 &1535296484 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6511748860784780931, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
-  m_PrefabInstance: {fileID: 1535296480}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535296481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c465e8f9352fa247ad0e6fdf26838ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &1535296485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1237,6 +1241,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8907d769aa29c2146bc638c56ec2ac8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaceholderSoundManager
+--- !u!114 &1535296487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535296481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f9aa34634cab842b19f40a3f80049a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewPatterneSpawner
+  inputThisMesure: []
 --- !u!1 &1825530102
 GameObject:
   m_ObjectHideFlags: 0

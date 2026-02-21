@@ -35,7 +35,7 @@ public class NewPlayerMovement : MonoBehaviour
     private void MoveOnGrid(Vector2Int input)
     {
         if (!tiles.ContainsKey(currentTile.position+input)
-            &&tiles[currentTile.position+input].thisState!=NewTileScript.TileState.Invalid)return;
+            ||tiles[currentTile.position+input].thisState==NewTileScript.TileState.Invalid)return;
         currentTile = tiles[currentTile.position + input];
 
         transform.position = new Vector3(currentTile.transform.position.x, transform.position.y,

@@ -7,6 +7,7 @@ public class BeatClock : MonoBehaviour
     public int beat = 1;
     public int measure = 1;
     public UnityEvent onBeat=new UnityEvent();
+    public UnityEvent onEndBeat=new UnityEvent();
     public UnityEvent onMeasure=new UnityEvent();
     public UnityEvent startCoyoteTime=new UnityEvent();
     public UnityEvent endCoyoteTime=new UnityEvent();
@@ -43,7 +44,10 @@ public class BeatClock : MonoBehaviour
         if (masterClock.timeInSeconds - numberOfPreviousBeats * timePerBeat >= timePerBeat)
         {
             beat++;
+            Debug.Log( "beat was called");
+            
             onBeat.Invoke();
+            onEndBeat.Invoke();
             if (beat <= musicParameters.beatsPerMeasure) return;
             beat = 1;
             measure++;

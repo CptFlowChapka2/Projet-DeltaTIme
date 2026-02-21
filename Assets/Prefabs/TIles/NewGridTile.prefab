@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 202756527322983478}
   - component: {fileID: 4827178110003086459}
   - component: {fileID: 7077761383084001751}
-  - component: {fileID: -5380121377442530435}
+  - component: {fileID: 3914784185714828867}
   m_Layer: 0
   m_Name: NewGridTile
   m_TagString: Untagged
@@ -433,7 +433,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-5380121377442530435
+--- !u!114 &3914784185714828867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,9 +442,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4807671647597357901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92949a3e196f045439890ce4bd2fac47, type: 3}
+  m_Script: {fileID: 11500000, guid: 27f55cba36b5703438ceec17a5b584e6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::NewTileScript
+  position: {x: 0, y: 0}
+  thisState: 0
+  colorFeedback: {fileID: 1400893441011835011}
 --- !u!1 &6721509810672810752
 GameObject:
   m_ObjectHideFlags: 0

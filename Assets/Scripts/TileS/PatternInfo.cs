@@ -11,22 +11,23 @@ public class PatternInfo
         set => allTile = value;
     }
     
-    
 
     private Vector2Int _direction;
     
     private NewTileScript _currentTile;
     private NewTileScript _newTile;
     private Vector2Int _currentTileCoords;
+    private bool movedThisBeat=true;
 
-    public PatternInfo(Dictionary<Vector2Int, NewTileScript> constructorAllTile,Vector2Int dir,Vector2Int initialCoord)
+    public PatternInfo(Dictionary<Vector2Int, NewTileScript> constructorAllTile,Vector2Int dir,Vector2Int initialCoord,BeatClock beatClock)
     {
+        beatClock.onBeat.AddListener(ReceiveBeat);
         AllTile = constructorAllTile;
         _direction = dir;
         CurrentTile = AllTile[initialCoord];
     }
 
-    private NewTileScript CurrentTile
+    public NewTileScript CurrentTile
     {
         get => _currentTile;
         set
@@ -35,6 +36,8 @@ public class PatternInfo
             value.thisPatterneList.Add(this);
             _currentTile = value;
             _currentTileCoords = _currentTile.position;
+            _currentTile.CheckForPattern();
+            if(!AllTile.ContainsKey(_currentTileCoords+_direction)) return;
             NewTile = AllTile[_currentTileCoords+_direction];
         }
     }
@@ -46,21 +49,30 @@ public class PatternInfo
             _newTile?.thisPatternSignList.Remove(this);
             value?.thisPatternSignList.Add(this);
             _newTile = value;
+            _newTile?.CheckForPattern();
             
         }
     }
 
+    private void ReceiveBeat()
+    {
+        movedThisBeat = false;
+    }
+
     public void Move()
     {
-        if (AllTile[_currentTileCoords + _direction] !=null)
+        if(movedThisBeat)return;
+        movedThisBeat = true;
+        NewTile?.thisPatternSignList.RemoveAll(x=>x==this);
+        CurrentTile.thisPatterneList.RemoveAll(x=>x==this);
+        if (AllTile.ContainsKey(_currentTileCoords + _direction))
         {
+            Debug.Log("pattern at "+_currentTile.position+" is  moving toward "+_direction+" at "+Time.frameCount);
+            
             CurrentTile =NewTile;
             return;
         }
-
-        NewTile?.thisPatternSignList.Remove(this);
-        CurrentTile.thisPatterneList.Remove(this);
-
+        
     }
     
 }
