@@ -293,7 +293,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1487537509}
         m_TargetAssemblyTypeName: EventSyncroniser, Assembly-CSharp
-        m_MethodName: ReceiveBeat
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -302,7 +302,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 1037717966}
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
         m_MethodName: Play
@@ -339,6 +339,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onEndBeat:
+    m_PersistentCalls:
+      m_Calls: []
   onMeasure:
     m_PersistentCalls:
       m_Calls:
@@ -962,7 +965,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f9aa34634cab842b19f40a3f80049a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewPatterneSpawner
+  _playerMovement: {fileID: 1535296489}
   inputThisMesure: []
+--- !u!114 &1134567152 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4167575681557387152, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
+  m_PrefabInstance: {fileID: 1134567143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134567144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fa67dc3aea0c648b00e8187fc89624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewPlayerMovement
 --- !u!1 &1487537502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,7 +1268,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f9aa34634cab842b19f40a3f80049a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewPatterneSpawner
+  _playerMovement: {fileID: 1134567152}
   inputThisMesure: []
+--- !u!114 &1535296489 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4167575681557387152, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
+  m_PrefabInstance: {fileID: 1535296480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535296481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fa67dc3aea0c648b00e8187fc89624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewPlayerMovement
 --- !u!1 &1825530102
 GameObject:
   m_ObjectHideFlags: 0
