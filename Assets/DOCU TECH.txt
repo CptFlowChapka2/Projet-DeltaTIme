@@ -56,3 +56,14 @@ CrowdLvl=>Contient les logique  pour changer les feedback d'une crowd ,ébauche 
 
 IndividualCrowdScript=> Contient les logique et operation pour varier les feedBack Crowd .
 
+PatterneInfo=> stock  les information et méthode lié au patterne d'attque : notament la logique de mouvememt à chaque Beat .
+
+NewPatterneSpawner=> Fait apparaitre des patterne d'attaque sur des NewTileScript . récupére les inputs joueur fais on Beat sur une mesure
+puis à chaque beat instancie les patterns corespondant : Create origine crée un array contenant les case sur lequelle les pattene vont spawn ,selon la direction .
+
+NewTileScript =>  Nouveau Tile script fais pour stocker des PatterneInfo sous forme de list . à chaque endBEat verifie ses list de patterne pour changer d'état.
+
+NewDanceFloorSpawner => crée des danceFloor avec la bordure de spawn de patterne ,et stock les dancefloor sous forme de Dictionaire avec leur coordoné comme clé .
+
+NewPLayerMouvement => bouge le joueur  précisement sur les case du dancefloor .
+

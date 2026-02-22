@@ -97,7 +97,7 @@ public class NewPatterneSpawner : MonoBehaviour
     private void CreatePatterneInfo(List<Vector2Int> inputsThisMesure, KeyValuePair<Vector2Int, NewTileScript>[] origne)
     {
         for (int i = 0; i < _patternBank.AllPatternes[inputsThisMesure.First()].allLines
-                 [inputsThisMesure.ToList().FindAll(x => x == inputsThisMesure.First()).Count-1 ].Length - 1; i++)
+                 [inputsThisMesure.FindAll(x => x == inputsThisMesure.First()).Count-1 ].Length - 1; i++)
         {
             if (inputsThisMesure.First() == Vector2Int.zero)
             {
@@ -105,7 +105,7 @@ public class NewPatterneSpawner : MonoBehaviour
                 continue;
             }
             if (!_patternBank.AllPatternes[inputsThisMesure.First()]
-                    .allLines[inputsThisMesure.ToList().FindAll(x => x == inputsThisMesure.First()).Count - 1][i])
+                    .allLines[inputsThisMesure.FindAll(x => x == inputsThisMesure.First()).Count - 1][i])
                 continue;
             Debug.Log(origne.Length +" " +i);
             Debug.Log("patternInfoCreated at " + origne[i].Value.position);

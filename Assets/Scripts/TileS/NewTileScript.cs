@@ -22,25 +22,10 @@ public class NewTileScript : MonoBehaviour
         position = new Vector2Int(x, y);
         BeatClock beatClock=FindFirstObjectByType<BeatClock>();
         beatClock.onEndBeat.AddListener(this.CheckForPattern);
-       beatClock.onBeat.AddListener(this.MovePaterne);
+       
     }
 
-
-    private void MovePaterne()
-    { 
-        
-        List<PatternInfo> toMove = new List<PatternInfo>(thisPatterneList);
-        if (thisPatterneList.Count > 0)
-        {
-          toMove.ForEach(x=>x.Move());
-        }
-       
-       //Debug.Log("patterne at "+position+"were ordered to move. Number of Pattern to move "+toMove.Count);
-       
-        //thisPatterneList.RemoveAll(x => x.CurrentTile.thisState == TileState.Invalid);
-        thisPatterneList.TrimExcess();
-        
-    }
+    
 
     public void CheckForPattern()
     {

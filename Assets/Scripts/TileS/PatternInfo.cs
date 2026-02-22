@@ -17,7 +17,7 @@ public class PatternInfo
     private NewTileScript _currentTile;
     private NewTileScript _newTile;
     private Vector2Int _currentTileCoords;
-    private bool movedThisBeat=true;
+    
 
     public PatternInfo(Dictionary<Vector2Int, NewTileScript> constructorAllTile,Vector2Int dir,Vector2Int initialCoord,BeatClock beatClock)
     {
@@ -56,13 +56,11 @@ public class PatternInfo
 
     private void ReceiveBeat()
     {
-        movedThisBeat = false;
+        Move();
     }
 
     public void Move()
     {
-        if(movedThisBeat)return;
-        movedThisBeat = true;
         NewTile?.thisPatternSignList.RemoveAll(x=>x==this);
         CurrentTile.thisPatterneList.RemoveAll(x=>x==this);
         if (AllTile.ContainsKey(_currentTileCoords + _direction))
