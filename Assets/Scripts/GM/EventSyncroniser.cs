@@ -14,7 +14,7 @@ public class EventSyncroniser : MonoBehaviour
     private void Start()
     {
         playerMoovedOnBeat.AddListener(FindAnyObjectByType<CrowdLvl>().ReceivePlayerOnBeat);
-        FindObjectsByType<NewPatterneSpawner>(FindObjectsInactive.Exclude,FindObjectsSortMode.InstanceID).ToList().ForEach(
+        FindObjectsByType<NewPatternSpawner>(FindObjectsInactive.Exclude,FindObjectsSortMode.InstanceID).ToList().ForEach(
             x=>playerMoovedOnBeat.AddListener(x.ReceivePlayerInput)
             );
     }

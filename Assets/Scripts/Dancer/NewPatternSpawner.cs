@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class NewPatterneSpawner : MonoBehaviour
+public class NewPatternSpawner : MonoBehaviour
 {
     private PatternBank _patternBank;
     private NewDanceFloorSpawner _gridSpawner;

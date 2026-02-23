@@ -28,20 +28,22 @@ public class BeatClock : MonoBehaviour
         endCoyoteTime.AddListener(eventSyncroniser.ReceiveEndCoyote);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         int numberOfPreviousBeats = beat - 1 + (musicParameters.beatsPerMeasure * (measure - 1));
-
-        if (masterClock.timeInSeconds - numberOfPreviousBeats * timePerBeat >= timePerBeat - playerCoyoteBeat)//Debut CoyoteTime
+        double timeSinceLastBeat = masterClock.timeInSeconds - numberOfPreviousBeats * timePerBeat;
+        
+        if (timeSinceLastBeat >= playerCoyoteBeat)//Fin CoyoteTime
+        {
+            endCoyoteTime.Invoke();
+        }
+        
+        if (timeSinceLastBeat >= timePerBeat - playerCoyoteBeat)//Debut CoyoteTime
         {
             startCoyoteTime.Invoke();
         }
-        if (masterClock.timeInSeconds - numberOfPreviousBeats * timePerBeat >= timePerBeat + playerCoyoteBeat)//Fin CoyoteTime
-        {
-            endCoyoteTime.Invoke();
-            
-        }
-        if (masterClock.timeInSeconds - numberOfPreviousBeats * timePerBeat >= timePerBeat)
+        
+        if (timeSinceLastBeat >= timePerBeat)
         {
             beat++;
             Debug.Log( "beat was called");

@@ -411,7 +411,7 @@ MonoBehaviour:
   endCoyoteTime:
     m_PersistentCalls:
       m_Calls: []
-  playerCoyoteBeat: 0.01
+  playerCoyoteBeat: 0.25
 --- !u!1 &482601610
 GameObject:
   m_ObjectHideFlags: 0

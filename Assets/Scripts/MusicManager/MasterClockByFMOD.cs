@@ -14,7 +14,7 @@ public class MasterClockByFMOD : MonoBehaviour
         musicPlaying = GetComponent<StudioEventEmitter>().EventInstance;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         musicPlaying.getTimelinePosition(out timeInMS);
         timeInSeconds = (double)timeInMS / 1000;
