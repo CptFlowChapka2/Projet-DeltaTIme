@@ -40,12 +40,10 @@ public class NewPatternSpawner : MonoBehaviour
         
         allActivePattern.RemoveAll(x => x.Count < 1);
         if(allActivePattern.Count<1)return;
-        Debug.Log(allActivePattern.Count);
         foreach (List<Vector2Int> inputsThisMesure in allActivePattern)
         {
             KeyValuePair<Vector2Int, NewTileScript>[] origne = CreateOrigine(inputsThisMesure);
             if (origne == null) continue;
-            Debug.Log("pattern origine assigned");
             CreatePatterneInfo(inputsThisMesure, origne);
             inputsThisMesure.Remove(inputsThisMesure.First());
             
@@ -88,9 +86,7 @@ public class NewPatternSpawner : MonoBehaviour
             origne = list.ToArray();
         }
         
-
         
-        Debug.Log(origne.Length);
         return origne;
     }
 
@@ -107,10 +103,6 @@ public class NewPatternSpawner : MonoBehaviour
             if (!_patternBank.AllPatternes[inputsThisMesure.First()]
                     .allLines[inputsThisMesure.FindAll(x => x == inputsThisMesure.First()).Count - 1][i])
                 continue;
-            Debug.Log(origne.Length +" " +i);
-            Debug.Log("patternInfoCreated at " + origne[i].Value.position);
-
-            
            
             origne[i].Value.thisPatterneList.Add(new PatternInfo(_playerMovement.tiles, inputsThisMesure.First(),
                 origne[i].Value.position,_beatClock));

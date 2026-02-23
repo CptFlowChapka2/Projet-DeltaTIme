@@ -17,16 +17,19 @@ public class PatternInfo
     private NewTileScript _currentTile;
     private NewTileScript _newTile;
     private Vector2Int _currentTileCoords;
+    private BeatClock _beatClock;
     
 
     public PatternInfo(Dictionary<Vector2Int, NewTileScript> constructorAllTile,Vector2Int dir,Vector2Int initialCoord,BeatClock beatClock)
     {
-        beatClock.onBeat.AddListener(ReceiveBeat);
+        _beatClock = beatClock;
+        _beatClock.onBeat.AddListener(ReceiveBeat);
         AllTile = constructorAllTile;
         _direction = dir;
         CurrentTile = AllTile[initialCoord];
     }
 
+    
     public NewTileScript CurrentTile
     {
         get => _currentTile;
@@ -56,6 +59,11 @@ public class PatternInfo
 
     private void ReceiveBeat()
     {
+        // foreach (var newTileScript in AllTile)
+        // {
+        //     Debug.Log(newTileScript.Key +" "+newTileScript.Value.GetEntityId());
+        // }
+
         Move();
     }
 
@@ -65,12 +73,10 @@ public class PatternInfo
         CurrentTile.thisPatterneList.RemoveAll(x=>x==this);
         if (AllTile.ContainsKey(_currentTileCoords + _direction))
         {
-            Debug.Log("pattern at "+_currentTile.position+" is  moving toward "+_direction+" at "+Time.frameCount);
-            
             CurrentTile =NewTile;
             return;
         }
-        
+       _beatClock.onBeat.RemoveListener(ReceiveBeat);
     }
     
 }
