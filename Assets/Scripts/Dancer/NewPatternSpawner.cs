@@ -10,8 +10,10 @@ public class NewPatternSpawner : MonoBehaviour
     private InputPerPlayer _inputPerPlayer;
     public NewPlayerMovement _playerMovement;
     private BeatClock _beatClock;
+    private MusicParametersForFMOD _musicParametersForFMOD;
     [SerializeField] private List<List<Vector2Int>> allActivePattern = new List<List<Vector2Int>>();
-    [SerializeField] private List<Vector2Int> inputThisMesure = new List<Vector2Int>();
+    [SerializeField] private List<Vector2Int> inputThisMesure = new List<Vector2Int>(); 
+    private int maxInputInMesure;
 
     private void Start()
     {
@@ -19,12 +21,16 @@ public class NewPatternSpawner : MonoBehaviour
         _beatClock = FindAnyObjectByType<BeatClock>();
         _gridSpawner = FindAnyObjectByType<NewDanceFloorSpawner>();
         _inputPerPlayer = GetComponent<InputPerPlayer>();
-       
+        _musicParametersForFMOD = FindAnyObjectByType<MusicParametersForFMOD>();
+        maxInputInMesure = _musicParametersForFMOD.beatsPerMeasure;
+
     }
 
     public void ReceivePlayerInput(int playerID, bool inCoyote, Vector2Int inputs)
     {
-        if (playerID != _inputPerPlayer.playerNumber || !inCoyote) return;
+        if (playerID != _inputPerPlayer.playerNumber ) return;
+        if(inputThisMesure.Count==maxInputInMesure)return;
+        if (!inCoyote){ inputThisMesure.Add(Vector2Int.zero);return;}
         inputThisMesure.Add(inputs);
     }
 
