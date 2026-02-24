@@ -3,13 +3,10 @@ using UnityEngine;
 
 public class PatternInfo
 {
+   
     private static Dictionary<Vector2Int, NewTileScript> allTile;
-
-    private static Dictionary<Vector2Int, NewTileScript> AllTile
-    {
-        get => allTile;
-        set => allTile = value;
-    }
+    private bool debugFirstSet = true;
+   
     
 
     private Vector2Int _direction;
@@ -20,21 +17,32 @@ public class PatternInfo
     private BeatClock _beatClock;
     
 
+    
     public PatternInfo(Dictionary<Vector2Int, NewTileScript> constructorAllTile,Vector2Int dir,Vector2Int initialCoord,BeatClock beatClock)
     {
+        
         _beatClock = beatClock;
         _beatClock.onBeat.AddListener(ReceiveBeat);
-        AllTile = constructorAllTile;
+        AllTile = new Dictionary<Vector2Int, NewTileScript>(constructorAllTile);
+        debugFirstSet = false;
         _direction = dir;
         CurrentTile = AllTile[initialCoord];
     }
-
+ private Dictionary<Vector2Int, NewTileScript> AllTile
+    {
+        get => allTile;
+        set
+        {
+            allTile = value;
+        }
+    }
     
     public NewTileScript CurrentTile
     {
         get => _currentTile;
         set
         {
+            
             _currentTile?.thisPatterneList.Remove(this);
             value.thisPatterneList.Add(this);
             _currentTile = value;
