@@ -21,6 +21,8 @@ public class EventSyncroniser : MonoBehaviour
 
     public void ReceivePlayerMoove(int playerI,Vector2Int movement)
     {
+        
+        
         playerMoovedOnBeat.Invoke(playerI,inCoyote,movement);
         
     }

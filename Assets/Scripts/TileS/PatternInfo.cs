@@ -42,9 +42,8 @@ public class PatternInfo
         get => _currentTile;
         set
         {
-            
+             value.thisPatterneList.Add(this);
             _currentTile?.thisPatterneList.Remove(this);
-            value.thisPatterneList.Add(this);
             _currentTile = value;
             _currentTileCoords = _currentTile.position;
             _currentTile.CheckForPattern();

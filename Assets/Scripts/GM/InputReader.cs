@@ -30,6 +30,7 @@ public class InputReader : MonoBehaviour
         if(!playerXMove.WasPerformedThisFrame())return;
         Vector2 playerRead = playerXMove.ReadValue<Vector2>();
         Vector2Int playerSend = new Vector2Int((int)Math.Floor(playerRead.x),(int)Math.Floor(playerRead.y));
+        if(Math.Abs(playerSend.x)+Math.Abs(playerSend.y)>=2) playerSend=Vector2Int.zero;
         playerInput.Invoke(playerSend,playerID);
         
     }

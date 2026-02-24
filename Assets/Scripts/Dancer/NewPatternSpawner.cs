@@ -30,7 +30,7 @@ public class NewPatternSpawner : MonoBehaviour
 
     public void ReceiveMesure()
     {
-        List<Vector2Int> inputThisMesureInstance = inputThisMesure.ToList();
+        List<Vector2Int> inputThisMesureInstance = new List<Vector2Int>(inputThisMesure);
         allActivePattern.Add(inputThisMesureInstance);
         inputThisMesure.Clear();
     }
@@ -92,14 +92,15 @@ public class NewPatternSpawner : MonoBehaviour
 
     private void CreatePatterneInfo(List<Vector2Int> inputsThisMesure, KeyValuePair<Vector2Int, NewTileScript>[] origne)
     {
+        if (inputsThisMesure.First() == Vector2Int.zero)
+        {
+            //todo=feedback
+            return;
+        }
         for (int i = 0; i < _patternBank.AllPatternes[inputsThisMesure.First()].allLines
                  [inputsThisMesure.FindAll(x => x == inputsThisMesure.First()).Count-1 ].Length - 1; i++)
         {
-            if (inputsThisMesure.First() == Vector2Int.zero)
-            {
-                //todo=feedback
-                continue;
-            }
+            
             if (!_patternBank.AllPatternes[inputsThisMesure.First()]
                     .allLines[inputsThisMesure.FindAll(x => x == inputsThisMesure.First()).Count - 1][i])
                 continue;
