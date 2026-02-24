@@ -43,7 +43,7 @@ public class PatternInfo
         set
         {
              value.thisPatterneList.Add(this);
-            _currentTile?.thisPatterneList.Remove(this);
+            _currentTile?.thisPatterneList.Remove(this);    
             _currentTile = value;
             _currentTileCoords = _currentTile.position;
             _currentTile.CheckForPattern();
@@ -56,8 +56,9 @@ public class PatternInfo
         get => _newTile;
         set
         {
-            _newTile?.thisPatternSignList.Remove(this);
             value?.thisPatternSignList.Add(this);
+            _newTile?.thisPatternSignList.Remove(this);
+            
             _newTile = value;
             _newTile?.CheckForPattern();
             
