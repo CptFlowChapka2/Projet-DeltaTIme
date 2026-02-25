@@ -17,6 +17,9 @@ public class BeatClock : MonoBehaviour
     private double timePerBeat;
     [SerializeField] private float playerCoyoteBeat=0.25f;
 
+    private bool inBeatFlag = false;
+    private bool inMesureFlag = false;
+
     private void Start()
     {
         masterClock = GetComponent<MasterClockByFMOD>();
@@ -33,13 +36,20 @@ public class BeatClock : MonoBehaviour
         int numberOfPreviousBeats = beat - 1 + (musicParameters.beatsPerMeasure * (measure - 1));
         double timeSinceLastBeat = masterClock.timeInSeconds - numberOfPreviousBeats * timePerBeat;
         
-        if (timeSinceLastBeat >= playerCoyoteBeat)//Fin CoyoteTime
+        if (inBeatFlag&&timeSinceLastBeat >= playerCoyoteBeat)//Fin CoyoteTime
         {
+            inBeatFlag = false;
             endCoyoteTime.Invoke();
+            if (inMesureFlag)
+            {
+                inMesureFlag = false;
+                onMeasure.Invoke();
+            }
         }
         
-        if (timeSinceLastBeat >= timePerBeat - playerCoyoteBeat)//Debut CoyoteTime
+        if (!inBeatFlag&&timeSinceLastBeat >= timePerBeat - playerCoyoteBeat)//Debut CoyoteTime
         {
+            inBeatFlag = true;
             startCoyoteTime.Invoke();
         }
         
@@ -51,9 +61,9 @@ public class BeatClock : MonoBehaviour
             onBeat.Invoke();
             onEndBeat.Invoke();
             if (beat <= musicParameters.beatsPerMeasure) return;
+            inMesureFlag = true;
             beat = 1;
             measure++;
-            onMeasure.Invoke();
         }
     }
 }

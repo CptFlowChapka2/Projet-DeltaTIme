@@ -14,6 +14,7 @@ public class NewPatternSpawner : MonoBehaviour
     [SerializeField] private List<List<Vector2Int>> allActivePattern = new List<List<Vector2Int>>();
     [SerializeField] private List<Vector2Int> inputThisMesure = new List<Vector2Int>(); 
     private int maxInputInMesure;
+    
 
     private void Start()
     {
@@ -26,11 +27,17 @@ public class NewPatternSpawner : MonoBehaviour
 
     }
 
+    private bool alreadyEmptyThisBeat = false;
     public void ReceivePlayerInput(int playerID, bool inCoyote, Vector2Int inputs)
     {
         if (playerID != _inputPerPlayer.playerNumber ) return;
         if(inputThisMesure.Count==maxInputInMesure)return;
-        if (!inCoyote){ inputThisMesure.Add(Vector2Int.zero);return;}
+        if (!alreadyEmptyThisBeat&&!inCoyote)
+        {
+            inputThisMesure.Add(Vector2Int.zero);
+            alreadyEmptyThisBeat = true;
+            return;
+        }
         inputThisMesure.Add(inputs);
     }
 
@@ -39,6 +46,11 @@ public class NewPatternSpawner : MonoBehaviour
         List<Vector2Int> inputThisMesureInstance = new List<Vector2Int>(inputThisMesure);
         allActivePattern.Add(inputThisMesureInstance);
         inputThisMesure.Clear();
+    }
+
+    public void ReceiveBeat()
+    {
+        alreadyEmptyThisBeat = false;
     }
     
     public void SpawnPattern()
@@ -110,9 +122,8 @@ public class NewPatternSpawner : MonoBehaviour
             if (!_patternBank.AllPatternes[inputsThisMesure.First()]
                     .allLines[inputsThisMesure.FindAll(x => x == inputsThisMesure.First()).Count - 1][i])
                 continue;
-           
-            origne[i].Value.thisPatterneList.Add(new PatternInfo(_playerMovement.tiles, inputsThisMesure.First(),
-                origne[i].Value.position,_beatClock));
+
+            new PatternInfo(_playerMovement.tiles, inputsThisMesure.First(), origne[i].Value.position, _beatClock);
         }
     }
 }
