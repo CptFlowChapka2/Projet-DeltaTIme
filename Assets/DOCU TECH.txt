@@ -23,6 +23,8 @@ MusicParametersForFMOD => Stocke les paramètres de la musique (BPM, beat par me
 
 BeatClock => Récupère le temps indiqué par la MasterClock, puis l'interprète sous forme de beats et mesures
 selon les MusicParameters. A chaque nouveau beat, il lance un Event OnBeat, et à chaque mesure, un Event OnMeasure.
+Le beat à un coyote ,pour permettre la précision , pour savoir si on est dans le coyote on utilise les flag .
+OnMesure est invoke à la fin du coyote .
 
 NewPlayerMovement => Nouvelle version du script de mouvement, prenant en compte les deux joueurs. Déplace chaque joueur
 de case en case selon les inputs reçus, et les clampe à la limite de leur grille respective , envoi aussi un event pour 
