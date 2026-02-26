@@ -10,11 +10,11 @@ public class NewDanceFloorSpawner : MonoBehaviour
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
     private GridParameters gridParameters;
-    private Dictionary<Vector2Int,NewTileScript> tilesP1 = new Dictionary<Vector2Int, NewTileScript>();
-
-    private List<KeyValuePair<Vector2Int, NewTileScript>> allInvalideTileP1 =new List<KeyValuePair<Vector2Int, NewTileScript>>() ;
-    private Dictionary<Vector2Int,NewTileScript> tilesP2 = new Dictionary<Vector2Int, NewTileScript>();
-    private List<KeyValuePair<Vector2Int, NewTileScript>> allInvalideTileP2 =new List<KeyValuePair<Vector2Int, NewTileScript>>() ;
+    private NewTileScript[,] tilesP1;
+    private NewTileScript[,] tilesP2;
+    private List< NewTileScript> allInvalideTileP1 =new List<NewTileScript>() ;
+    private List< NewTileScript> allInvalideTileP2 =new List<NewTileScript>() ;
+   
     
     
     public int gridSize;
@@ -23,11 +23,11 @@ public class NewDanceFloorSpawner : MonoBehaviour
     {
         gridParameters = GetComponent<GridParameters>();
         gridSize = (int)gridParameters.gridSize+2;
+        
+        tilesP1=InitialiseGridArray();
+        tilesP2=InitialiseGridArray();
         SpawnGrid();
         
-        allInvalideTileP1=MakeExtremityTileInvalid(tilesP1);
-        
-        allInvalideTileP2=MakeExtremityTileInvalid(tilesP2);
         SpawnPlayers();
     }
 
@@ -38,16 +38,16 @@ public class NewDanceFloorSpawner : MonoBehaviour
         NewPlayerMovement p1=player1.GetComponent<NewPlayerMovement>();
         NewPlayerMovement p2=player2.GetComponent<NewPlayerMovement>();
         
-        p1.currentTile = tilesP1[new Vector2Int(halfSize, halfSize)];
-        p2.currentTile = tilesP2[new Vector2Int(halfSize, halfSize)];
+        p1.currentTile = tilesP1[halfSize, halfSize];
+        p2.currentTile = tilesP2[halfSize, halfSize];
 
         p1.transform.position = 
             new Vector3(p1.currentTile.transform.position.x,p1.transform.position.y,p1.currentTile.transform.position.z);
         p2.transform.position = 
             new Vector3(p2.currentTile.transform.position.x,p2.transform.position.y,p2.currentTile.transform.position.z);
 
-        p1.tiles = tilesP1;
-        p2.tiles = tilesP2;
+        p1.thatPLayerGrid = tilesP1;
+        p2.thatPLayerGrid = tilesP2;
         
         p1.invalideTile = allInvalideTileP1;
         p2.invalideTile = allInvalideTileP2;
@@ -62,28 +62,32 @@ public class NewDanceFloorSpawner : MonoBehaviour
             {
                 Vector3 posP1 = new Vector3(i, transform.position.y, j);
                 Vector3 posP2 = new Vector3(i + gridSize , transform.position.y, j);
-                CreateTile(posP1, i, j, tilesP1);
-                CreateTile(posP2, i, j, tilesP2);
+                CreateTile(posP1, i, j, tilesP1,allInvalideTileP1);
+                CreateTile(posP2, i, j, tilesP2,allInvalideTileP2);
                 
             }
         }
         
     }
 
-    private void CreateTile(Vector3 pos, int i, int j, Dictionary<Vector2Int,NewTileScript> tiles)
+    private void CreateTile(Vector3 pos, int i, int j, NewTileScript[,] tiles,List< NewTileScript> invalidTileList)
     {
         NewTileScript tile = Instantiate(gridTile, pos, Quaternion.identity).GetComponent<NewTileScript>();
         tile.Initialize(i, j);
-        tiles.Add(new Vector2Int(i,j),tile);
+        tiles[i,j]=tile;
+        if ((i == 0 || j == 0) || (i == gridSize - 1 || j == gridSize - 1)) //check if tile is an extremity
+        {
+            invalidTileList.Add(tile);
+            tile.thisState = NewTileScript.TileState.Invalid;
+        }
+        
     }
 
 
-    private List<KeyValuePair<Vector2Int, NewTileScript>> MakeExtremityTileInvalid( Dictionary<Vector2Int,NewTileScript> tiles)
+    private NewTileScript[,]  InitialiseGridArray()
     {
-        var allInvalideTile = tiles.Where(y =>
-                y.Key.x.Equals(0) || y.Key.x.Equals(gridSize - 1) || y.Key.y.Equals(0) || y.Key.y.Equals(gridSize - 1))
-            .ToList();
-        allInvalideTile.ForEach(x=>x.Value.thisState=NewTileScript.TileState.Invalid);
-        return allInvalideTile;
+        return new NewTileScript[gridSize, gridSize];
     }
+    
+   
 }

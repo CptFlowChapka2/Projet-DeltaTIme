@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PatternInfo
 {
-    private static Dictionary<Vector2Int, NewTileScript> allTile;
+    private static NewTileScript[,]allTile=new NewTileScript[,]{};
     private bool debugFirstSet = true;
 
 
@@ -15,18 +16,22 @@ public class PatternInfo
     private BeatClock _beatClock;
 
 
-    public PatternInfo(Dictionary<Vector2Int, NewTileScript> constructorAllTile, Vector2Int dir,
+    public PatternInfo( NewTileScript[,] constructorAllTile, Vector2Int dir,
         Vector2Int initialCoord, BeatClock beatClock)
     {
+        Debug.Log("pattern info was constructed");
         _beatClock = beatClock;
         _beatClock.onBeat.AddListener(ReceiveBeat);
-        AllTile = new Dictionary<Vector2Int, NewTileScript>(constructorAllTile);
+        //Ici on copie l'array multidimensionnele //
+        AllTile = new NewTileScript[constructorAllTile.GetLength(0), constructorAllTile.GetLength(1)]; //on s'assure que AllTile fait la bonne taille pour recevoir les élement
+        Array.Copy(constructorAllTile,AllTile,constructorAllTile.Length);// puis on copie 
+        //
         debugFirstSet = false;
         _direction = dir;
-        CurrentTile = AllTile[initialCoord];
+        CurrentTile = AllTile[initialCoord.x,initialCoord.y];
     }
 
-    private Dictionary<Vector2Int, NewTileScript> AllTile
+    private NewTileScript[,] AllTile
     {
         get => allTile;
         set { allTile = value; }
@@ -42,8 +47,14 @@ public class PatternInfo
             _currentTile = value;
             _currentTileCoords = _currentTile.position;
             _currentTile.CheckForPattern();
-            if (!AllTile.ContainsKey(_currentTileCoords + _direction)) return;
-            NewTile = AllTile[_currentTileCoords + _direction];
+            Vector2Int newPositionCoord = _currentTileCoords + _direction;
+            bool newPositionExist = newPositionCoord.x  <= AllTile.GetUpperBound(0) &&
+                                    newPositionCoord.y <= AllTile.GetUpperBound(1)&&
+                                    newPositionCoord.x  >= AllTile.GetLowerBound(0) &&
+                                    newPositionCoord.y >= AllTile.GetLowerBound(1)
+                                    ;
+            if (!newPositionExist) return;
+            NewTile = AllTile[newPositionCoord.x,newPositionCoord.y];
         }
     }
 
@@ -72,9 +83,15 @@ public class PatternInfo
 
     public void Move()
     {
-        NewTile?.thisPatternSignList.RemoveAll(x => x == this);
-        CurrentTile.thisPatterneList.RemoveAll(x => x == this);
-        if (AllTile.ContainsKey(_currentTileCoords + _direction))
+        NewTile?.thisPatternSignList.Remove( this);
+        CurrentTile.thisPatterneList.Remove( this);
+        Vector2Int newPositionCoord = _currentTileCoords + _direction;
+        bool newPositionExist = newPositionCoord.x  <= AllTile.GetUpperBound(0) &&
+                                newPositionCoord.y <= AllTile.GetUpperBound(1)&&
+                                newPositionCoord.x  >= AllTile.GetLowerBound(0) &&
+                                newPositionCoord.y >= AllTile.GetLowerBound(1)
+            ;
+        if (newPositionExist) 
         {
             CurrentTile = NewTile;
             return;

@@ -60,7 +60,7 @@ public class NewPatternSpawner : MonoBehaviour
         if(allActivePattern.Count<1)return;
         foreach (List<Vector2Int> inputsThisMesure in allActivePattern)
         {
-            KeyValuePair<Vector2Int, NewTileScript>[] origne = CreateOrigine(inputsThisMesure);
+            NewTileScript[] origne = CreateOrigine(inputsThisMesure);
             if (origne == null) continue;
             CreatePatterneInfo(inputsThisMesure, origne);
             inputsThisMesure.Remove(inputsThisMesure.First());
@@ -69,61 +69,66 @@ public class NewPatternSpawner : MonoBehaviour
         
     }
 
-    private KeyValuePair<Vector2Int, NewTileScript>[] CreateOrigine(List<Vector2Int> inputsThisMesure)
+    private  NewTileScript[] CreateOrigine(List<Vector2Int> inputsThisMesure)
     {
         
         
         if (inputsThisMesure.Count == 0) return null;
-        KeyValuePair<Vector2Int, NewTileScript>[] origne = new KeyValuePair<Vector2Int, NewTileScript>[] { };
+        NewTileScript[] origne = new NewTileScript[] { };
         if (inputsThisMesure.First() == Vector2Int.up)
         {
             
-            var list = _playerMovement.invalideTile.FindAll(x => x.Value.position.y == 0);
-            list.RemoveAll(x => x.Value.position.x == 0 || x.Value.position.x == _gridSpawner.gridSize - 1);
+            var list = _playerMovement.invalideTile.FindAll(x => x.position.y == 0);
+            list.RemoveAll(x => x.position.x == 0 || x.position.x == _gridSpawner.gridSize - 1);
             origne = list.ToArray();
         }
 
         if (inputsThisMesure.First() == Vector2Int.down)
         {
-            var list = _playerMovement.invalideTile.FindAll(x => x.Value.position.y == _gridSpawner.gridSize - 1);
-            list.RemoveAll(x => x.Value.position.x == 0 || x.Value.position.x == _gridSpawner.gridSize - 1);
+            var list = _playerMovement.invalideTile.FindAll(x => x.position.y == _gridSpawner.gridSize - 1);
+            list.RemoveAll(x => x.position.x == 0 || x.position.x == _gridSpawner.gridSize - 1);
             origne = list.ToArray();
         }
 
         if (inputsThisMesure.First() == Vector2Int.left)
         {
-            var list = _playerMovement.invalideTile.FindAll(x => x.Value.position.x == _gridSpawner.gridSize - 1);
-            list.RemoveAll(x => x.Value.position.y == 0 || x.Value.position.y == _gridSpawner.gridSize - 1);
+            var list = _playerMovement.invalideTile.FindAll(x => x.position.x == _gridSpawner.gridSize - 1);
+            list.RemoveAll(x => x.position.y == 0 || x.position.y == _gridSpawner.gridSize - 1);
             origne = list.ToArray();
         }
 
         if (inputsThisMesure.First() == Vector2Int.right)
         {
-            var list = _playerMovement.invalideTile.FindAll(x => x.Value.position.x == 0);
-            list.RemoveAll(x => x.Value.position.y == 0 || x.Value.position.y == _gridSpawner.gridSize - 1);
+            var list = _playerMovement.invalideTile.FindAll(x => x.position.x == 0);
+            list.RemoveAll(x => x.position.y == 0 || x.position.y == _gridSpawner.gridSize - 1);
             origne = list.ToArray();
         }
+        
         
         
         return origne;
     }
 
-    private void CreatePatterneInfo(List<Vector2Int> inputsThisMesure, KeyValuePair<Vector2Int, NewTileScript>[] origne)
+    private void CreatePatterneInfo(List<Vector2Int> inputsThisMesure, NewTileScript[] origne)
     {
-        if (inputsThisMesure.First() == Vector2Int.zero)
+
+        Vector2Int inputDirToProcesses = inputsThisMesure.First();
+        if (inputDirToProcesses == Vector2Int.zero)
         {
             //todo=feedback
             return;
         }
-        for (int i = 0; i < _patternBank.AllPatternes[inputsThisMesure.First()].allLines
-                 [inputsThisMesure.FindAll(x => x == inputsThisMesure.First()).Count-1 ].Length - 1; i++)
+
+        int nbrOfSimilareInputInMesure = inputsThisMesure.FindAll(x => x == inputDirToProcesses).Count;
+        bool[] patternToSpawn = _patternBank.GetPatternVariantForAnDir(inputDirToProcesses, nbrOfSimilareInputInMesure);
+        for (int i = 0; i < patternToSpawn.Length - 1; i++)
         {
-            
-            if (!_patternBank.AllPatternes[inputsThisMesure.First()]
-                    .allLines[inputsThisMesure.FindAll(x => x == inputsThisMesure.First()).Count - 1][i])
+            if (patternToSpawn[i] is false)
+                //il n'y as rien à faire spawn donc on passe à la prochaine case
                 continue;
 
-            new PatternInfo(_playerMovement.tiles, inputsThisMesure.First(), origne[i].Value.position, _beatClock);
+            NewTileScript[,] gridToKnow = _playerMovement.thatPLayerGrid;
+            new PatternInfo(gridToKnow, inputDirToProcesses, origne[i].position, _beatClock);
         }
     }
 }

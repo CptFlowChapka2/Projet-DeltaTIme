@@ -11,10 +11,9 @@ public class NewPlayerMovement : MonoBehaviour
     private InputPerPlayer inputPerPlayer;
     public NewTileScript currentTile;
     private UnityEvent<int,Vector2Int> playerMooved=new UnityEvent<int,Vector2Int>();
-    public Dictionary<Vector2Int, NewTileScript> tiles = new Dictionary<Vector2Int, NewTileScript>();
+    public NewTileScript[,] thatPLayerGrid = new NewTileScript[,]{};
 
-    public List<KeyValuePair<Vector2Int, NewTileScript>> invalideTile =
-        new List<KeyValuePair<Vector2Int, NewTileScript>>();
+    public List< NewTileScript> invalideTile = new List<NewTileScript>();
     private int gridSize;
     public int thisPLayer;
 
@@ -34,10 +33,18 @@ public class NewPlayerMovement : MonoBehaviour
 
     private void MoveOnGrid(Vector2Int input)
     {
-        if (!tiles.ContainsKey(currentTile.position+input)
-            ||tiles[currentTile.position+input].thisState==NewTileScript.TileState.Invalid)return;
-        currentTile = tiles[currentTile.position + input];
+        Vector2Int newPositionCoord = currentTile.position + input;
+        bool newPositionExist = newPositionCoord.x  <= thatPLayerGrid.GetUpperBound(0) &&
+                                newPositionCoord.y <= thatPLayerGrid.GetUpperBound(1)&&
+                                newPositionCoord.x  >= thatPLayerGrid.GetLowerBound(0) &&
+                                newPositionCoord.y >= thatPLayerGrid.GetLowerBound(1)
+            ;
+        if (!newPositionExist) return;
+        NewTileScript nextPosition = thatPLayerGrid[newPositionCoord.x, newPositionCoord.y];
+        
 
+        if (nextPosition.thisState==NewTileScript.TileState.Invalid)return;
+        currentTile = nextPosition;
         transform.position = new Vector3(currentTile.transform.position.x, transform.position.y,
             currentTile.transform.position.z);
         
