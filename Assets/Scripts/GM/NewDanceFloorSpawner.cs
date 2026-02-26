@@ -73,7 +73,7 @@ public class NewDanceFloorSpawner : MonoBehaviour
     private void CreateTile(Vector3 pos, int i, int j, NewTileScript[,] tiles,List< NewTileScript> invalidTileList)
     {
         NewTileScript tile = Instantiate(gridTile, pos, Quaternion.identity).GetComponent<NewTileScript>();
-        tile.Initialize(i, j);
+        tile.Initialize(i, j,tiles);
         tiles[i,j]=tile;
         if ((i == 0 || j == 0) || (i == gridSize - 1 || j == gridSize - 1)) //check if tile is an extremity
         {

@@ -7,8 +7,9 @@ public class NewTileScript : MonoBehaviour
 {
     public Vector2Int position = new Vector2Int(0, 0);
     public TileState thisState = TileState.Safe;
-    public List<PatternInfo> thisPatterneList = new List<PatternInfo>();
-    public List<PatternInfo> thisPatternSignList = new List<PatternInfo>();
+    private NewTileScript[,] AllTile = new NewTileScript[,]{};
+    public List<ActivatedTileScript> thisPatterneList = new List<ActivatedTileScript>();
+    public List<ActivatedTileScript> thisPatternSignList = new List<ActivatedTileScript>();
     public MeshRenderer colorFeedback;
     public int[] count = new int[] { 0, 0 };
 
@@ -17,8 +18,9 @@ public class NewTileScript : MonoBehaviour
         count = new[] { thisPatterneList.Count, thisPatternSignList.Count };
     }
 
-    public void Initialize(int x, int y)
+    public void Initialize(int x, int y,NewTileScript[,] refToAllTile)
     {
+        AllTile = refToAllTile;
         position = new Vector2Int(x, y);
         BeatClock beatClock = FindFirstObjectByType<BeatClock>();
         beatClock.onEndBeat.AddListener(this.CheckForPattern);
@@ -53,6 +55,18 @@ public class NewTileScript : MonoBehaviour
     private void ChangeFeedBackColor(Color newColor)
     {
         colorFeedback.material.color = newColor;
+    }
+
+    public NewTileScript NextTileScript(Vector2Int dir)
+    {
+        Vector2Int newPositionCoord = position + dir;
+        bool newPositionExist = newPositionCoord.x  <= AllTile.GetUpperBound(0) &&
+                                newPositionCoord.y <= AllTile.GetUpperBound(1)&&
+                                newPositionCoord.x  >= AllTile.GetLowerBound(0) &&
+                                newPositionCoord.y >= AllTile.GetLowerBound(1)
+            ;
+        if (!newPositionExist) return null;
+        return AllTile[newPositionCoord.x, newPositionCoord.y];
     }
 
     //helpers:

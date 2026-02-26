@@ -126,9 +126,7 @@ public class NewPatternSpawner : MonoBehaviour
             if (patternToSpawn[i] is false)
                 //il n'y as rien à faire spawn donc on passe à la prochaine case
                 continue;
-
-            NewTileScript[,] gridToKnow = _playerMovement.thatPLayerGrid;
-            new PatternInfo(gridToKnow, inputDirToProcesses, origne[i].position, _beatClock);
+            
         }
     }
 }
