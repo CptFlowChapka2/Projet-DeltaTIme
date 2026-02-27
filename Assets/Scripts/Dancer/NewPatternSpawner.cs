@@ -14,6 +14,7 @@ public class NewPatternSpawner : MonoBehaviour
     [SerializeField] private List<List<Vector2Int>> allActivePattern = new List<List<Vector2Int>>();
     [SerializeField] private List<Vector2Int> inputThisMesure = new List<Vector2Int>(); 
     private int maxInputInMesure;
+    private ActivatedTIleManager _activatedTIleManager;
     
 
     private void Start()
@@ -21,6 +22,7 @@ public class NewPatternSpawner : MonoBehaviour
         _patternBank = FindAnyObjectByType<PatternBank>();
         _beatClock = FindAnyObjectByType<BeatClock>();
         _gridSpawner = FindAnyObjectByType<NewDanceFloorSpawner>();
+        _activatedTIleManager = FindAnyObjectByType<ActivatedTIleManager>();
         _inputPerPlayer = GetComponent<InputPerPlayer>();
         _musicParametersForFMOD = FindAnyObjectByType<MusicParametersForFMOD>();
         maxInputInMesure = _musicParametersForFMOD.beatsPerMeasure;
@@ -124,9 +126,13 @@ public class NewPatternSpawner : MonoBehaviour
         for (int i = 0; i < patternToSpawn.Length - 1; i++)
         {
             if (patternToSpawn[i] is false)
+            {
                 //il n'y as rien à faire spawn donc on passe à la prochaine case
                 continue;
-            
+            }
+
+            _activatedTIleManager.RequestActivatedTile(origne[i], inputDirToProcesses);
         }
+       
     }
 }
