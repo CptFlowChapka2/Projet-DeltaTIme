@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 public class NewPatternSpawner : MonoBehaviour
@@ -14,7 +16,8 @@ public class NewPatternSpawner : MonoBehaviour
     [SerializeField] private List<List<Vector2Int>> allActivePattern = new List<List<Vector2Int>>();
     [SerializeField] private List<Vector2Int> inputThisMesure = new List<Vector2Int>(); 
     private int maxInputInMesure;
-    private ActivatedTIleManager _activatedTIleManager;
+    private ActivatedTileManager _activatedTileManager;
+    public float numberOfSuccesses;
     
 
     private void Start()
@@ -22,7 +25,7 @@ public class NewPatternSpawner : MonoBehaviour
         _patternBank = FindAnyObjectByType<PatternBank>();
         _beatClock = FindAnyObjectByType<BeatClock>();
         _gridSpawner = FindAnyObjectByType<NewDanceFloorSpawner>();
-        _activatedTIleManager = FindAnyObjectByType<ActivatedTIleManager>();
+        _activatedTileManager = FindAnyObjectByType<ActivatedTileManager>();
         _inputPerPlayer = GetComponent<InputPerPlayer>();
         _musicParametersForFMOD = FindAnyObjectByType<MusicParametersForFMOD>();
         maxInputInMesure = _musicParametersForFMOD.beatsPerMeasure;
@@ -55,9 +58,20 @@ public class NewPatternSpawner : MonoBehaviour
         alreadyEmptyThisBeat = false;
     }
     
+    public void CountNumberOfSuccesses(int playerID)
+    {
+        numberOfSuccesses = 0f;
+        foreach (Vector2Int input in inputThisMesure)
+        {
+            if (input != Vector2Int.zero)
+            {
+                numberOfSuccesses++;
+            }
+        }
+    }
+    
     public void SpawnPattern()
     {
-        
         allActivePattern.RemoveAll(x => x.Count < 1);
         if(allActivePattern.Count<1)return;
         foreach (List<Vector2Int> inputsThisMesure in allActivePattern)
@@ -131,7 +145,7 @@ public class NewPatternSpawner : MonoBehaviour
                 continue;
             }
 
-            _activatedTIleManager.RequestActivatedTile(origne[i], inputDirToProcesses);
+            _activatedTileManager.RequestActivatedTile(origne[i], inputDirToProcesses);
         }
        
     }

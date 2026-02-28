@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class ActivatedTIleManager : MonoBehaviour
+public class ActivatedTileManager : MonoBehaviour
 {
     public int numberOfActivatedTile = 25;
     public GameObject prefab;
@@ -24,7 +24,7 @@ public class ActivatedTIleManager : MonoBehaviour
         }
         
         availableTileBanks = new List<ActivatedTileScript>(activatedTileBanks);
-        activatedTileBanks.ForEach(x=>x.ActivatedTIleManager=this);
+        activatedTileBanks.ForEach(x=>x.activatedTileManager=this);
         nbrOfAvailableTile = availableTileBanks.Count;
         _beatClock = FindAnyObjectByType<BeatClock>();
     }

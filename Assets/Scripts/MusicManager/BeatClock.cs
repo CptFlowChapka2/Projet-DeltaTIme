@@ -35,6 +35,12 @@ public class BeatClock : MonoBehaviour
     {
         int numberOfPreviousBeats = beat - 1 + (musicParameters.beatsPerMeasure * (measure - 1));
         double timeSinceLastBeat = masterClock.timeInSeconds - numberOfPreviousBeats * timePerBeat;
+
+        if (masterClock.timeInSeconds < timePerBeat)
+        {
+            beat = 1;
+            measure = 1;
+        }
         
         if (inBeatFlag&&timeSinceLastBeat >= playerCoyoteBeat)//Fin CoyoteTime
         {
