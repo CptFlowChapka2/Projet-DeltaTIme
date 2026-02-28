@@ -70,3 +70,5 @@ NewDanceFloorSpawner => crée des danceFloor avec la bordure de spawn de pattern
 
 NewPLayerMouvement => bouge le joueur  précisement sur les case du dancefloor .
 
+MusicUpdaterWithPlayerLevel => récupère le nb d'inputs réussis de chaque joueurs via NewPatternSpawner, et change le
+niveau de la musique en fonction sur OnMeasure.

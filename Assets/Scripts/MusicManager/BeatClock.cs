@@ -6,16 +6,18 @@ public class BeatClock : MonoBehaviour
 {
     public int beat = 1;
     public int measure = 1;
-    public UnityEvent onBeat=new UnityEvent();
-    public UnityEvent onEndBeat=new UnityEvent();
-    public UnityEvent onMeasure=new UnityEvent();
-    public UnityEvent startCoyoteTime=new UnityEvent();
-    public UnityEvent endCoyoteTime=new UnityEvent();
+    [SerializeField] private float playerCoyoteBeat=0.25f;
+    public UnityEvent startCoyoteTime = new UnityEvent();
+    public UnityEvent onBeat = new UnityEvent();
+    public UnityEvent onEndBeat = new UnityEvent();
+    public UnityEvent endCoyoteTime = new UnityEvent();
+    public UnityEvent startCoyoteBeforeMeasure = new UnityEvent();
+    public UnityEvent onMeasure = new UnityEvent();
+    public UnityEvent endCoyoteAfterMeasure = new UnityEvent();
     private MasterClockByFMOD masterClock;
     private MusicParametersForFMOD musicParameters;
     private int currentBPM;
     private double timePerBeat;
-    [SerializeField] private float playerCoyoteBeat=0.25f;
 
     private bool inBeatFlag = false;
     private bool inMesureFlag = false;
@@ -42,21 +44,23 @@ public class BeatClock : MonoBehaviour
             measure = 1;
         }
         
-        if (inBeatFlag&&timeSinceLastBeat >= playerCoyoteBeat)//Fin CoyoteTime
+        if (inBeatFlag && timeSinceLastBeat >= playerCoyoteBeat && timeSinceLastBeat < timePerBeat - playerCoyoteBeat)//Fin CoyoteTime
         {
             inBeatFlag = false;
             endCoyoteTime.Invoke();
             if (inMesureFlag)
             {
                 inMesureFlag = false;
-                onMeasure.Invoke();
+                endCoyoteAfterMeasure.Invoke();
             }
         }
         
-        if (!inBeatFlag&&timeSinceLastBeat >= timePerBeat - playerCoyoteBeat)//Debut CoyoteTime
+        if (!inBeatFlag && timeSinceLastBeat >= timePerBeat - playerCoyoteBeat)//Debut CoyoteTime
         {
             inBeatFlag = true;
             startCoyoteTime.Invoke();
+            if (beat < musicParameters.beatsPerMeasure) return;
+            startCoyoteBeforeMeasure.Invoke();
         }
         
         if (timeSinceLastBeat >= timePerBeat)
@@ -68,6 +72,7 @@ public class BeatClock : MonoBehaviour
             onEndBeat.Invoke();
             if (beat <= musicParameters.beatsPerMeasure) return;
             inMesureFlag = true;
+            onMeasure.Invoke();
             beat = 1;
             measure++;
         }

@@ -296,18 +296,6 @@ MonoBehaviour:
   onBeat:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1487537509}
-        m_TargetAssemblyTypeName: EventSyncroniser, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
       - m_Target: {fileID: 1535296487}
         m_TargetAssemblyTypeName: NewPatterneSpawner, Assembly-CSharp
         m_MethodName: SpawnPattern
@@ -362,9 +350,9 @@ MonoBehaviour:
   onMeasure:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1535296483}
-        m_TargetAssemblyTypeName: MajorityVerifier, Assembly-CSharp
-        m_MethodName: ChooseMajority
+      - m_Target: {fileID: 474454726}
+        m_TargetAssemblyTypeName: MusicUpdaterWithPlayerLevels, Assembly-CSharp
+        m_MethodName: UpdateMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -374,18 +362,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1134567146}
-        m_TargetAssemblyTypeName: MajorityVerifier, Assembly-CSharp
-        m_MethodName: ChooseMajority
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  startCoyoteTime:
+    m_PersistentCalls:
+      m_Calls: []
+  startCoyoteBeforeMeasure:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 1535296487}
         m_TargetAssemblyTypeName: NewPatternSpawner, Assembly-CSharp
         m_MethodName: CountNumberOfSuccesses
@@ -410,18 +392,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 474454726}
-        m_TargetAssemblyTypeName: MusicUpdaterWithPlayerLevels, Assembly-CSharp
-        m_MethodName: UpdateMusic
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1535296487}
         m_TargetAssemblyTypeName: NewPatternSpawner, Assembly-CSharp
         m_MethodName: ReceiveMesure
@@ -435,7 +405,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1134567150}
-        m_TargetAssemblyTypeName: NewPatterneSpawner, Assembly-CSharp
+        m_TargetAssemblyTypeName: NewPatternSpawner, Assembly-CSharp
         m_MethodName: ReceiveMesure
         m_Mode: 1
         m_Arguments:
@@ -446,10 +416,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startCoyoteTime:
+  endCoyoteTime:
     m_PersistentCalls:
       m_Calls: []
-  endCoyoteTime:
+  endCoyoteAfterMeasure:
     m_PersistentCalls:
       m_Calls: []
   playerCoyoteBeat: 0.1
@@ -954,17 +924,6 @@ MonoBehaviour:
   playerNumber: 2
   movement: {x: 0, y: 0}
   indexLastInputPlayed: 0
---- !u!114 &1134567146 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1475818512820548077, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
-  m_PrefabInstance: {fileID: 1134567143}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134567144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6535bb389ede8284b91787ef4d2bcaa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MajorityVerifier
 --- !u!114 &1134567148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,17 +1234,6 @@ MonoBehaviour:
   playerNumber: 1
   movement: {x: 0, y: 0}
   indexLastInputPlayed: 0
---- !u!114 &1535296483 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1475818512820548077, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
-  m_PrefabInstance: {fileID: 1535296480}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535296481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6535bb389ede8284b91787ef4d2bcaa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MajorityVerifier
 --- !u!114 &1535296485
 MonoBehaviour:
   m_ObjectHideFlags: 0
