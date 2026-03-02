@@ -4,15 +4,15 @@ using UnityEngine;
 public class TouchZone : MonoBehaviour
 {
     private BeatClock beatClock;
-    private NumberOfTimeTouched player1;
-    private NumberOfTimeTouched player2;
+    private HealthSystem player1;
+    private HealthSystem player2;
     private bool alreadyTouched = false;
 
     private void Start()
     {
         beatClock = GameObject.FindGameObjectWithTag("GM").GetComponent<BeatClock>();
-        player1 = GameObject.FindGameObjectWithTag("Player").GetComponent<NumberOfTimeTouched>();
-        player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<NumberOfTimeTouched>();
+        player1 = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
+        player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<HealthSystem>();
     }
 
     private void Update()

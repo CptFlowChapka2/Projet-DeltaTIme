@@ -5,16 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdater.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crowd/CrowdStartPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crowd/CrowdStartPosition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NewPatternSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/InputTrackerAndPatternSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NewPatternSpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/InputTrackerAndPatternSpawner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Music.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Music.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dancer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dancer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TIles/NewGridTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TIles/NewGridTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FeedbacksTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FeedbacksTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTIleTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewTIleTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crowd/IndividualCrowdScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crowd/IndividualCrowdScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NewPlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/NewPlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GM/EventSyncroniser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GM/EventSyncroniser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GM/InputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GM/InputReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdaterWithPlayerLevels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdaterWithPlayerLevels.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts Proto 1/CameraStartPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts Proto 1/CameraStartPosition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileS/NewTileScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileS/NewTileScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NumberOfTimeTouched.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/HealthSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NumberOfTimeTouched.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/HealthSystem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Feedbacks/FeedbacksManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Feedbacks/FeedbacksManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdaterWithPlayerLevels.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdaterWithPlayerLevels.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdater.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileS/ActivatedTileScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileS/ActivatedTileScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TouchZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TouchZone.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +33,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dancer/NumberOfTimeTouched.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dancer/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dancer/LinkedCrowd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dancer/PlaceholderSoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnumVariables.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TouchZone.cs" root0="FORCE_HIGHLIGHTING" />
@@ -40,21 +49,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Feedbacks-V2",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Feedbacks-V2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.6f1\Editor\Unity.exe" />
@@ -131,7 +140,7 @@
       <workItem from="1771333380948" duration="128000" />
       <workItem from="1771854351451" duration="4626000" />
       <workItem from="1772037899652" duration="14846000" />
-      <workItem from="1772445441218" duration="5001000" />
+      <workItem from="1772445441218" duration="17937000" />
     </task>
     <servers />
   </component>

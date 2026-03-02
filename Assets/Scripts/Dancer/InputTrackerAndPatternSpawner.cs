@@ -13,6 +13,7 @@ public class InputTrackerAndPatternSpawner : MonoBehaviour
     public NewPlayerMovement _playerMovement;
     private BeatClock _beatClock;
     private MusicParametersForFMOD _musicParametersForFMOD;
+    private FeedbacksManager _feedbacksManager;
     [SerializeField] private List<List<Vector2Int>> allActivePattern = new List<List<Vector2Int>>();
     [SerializeField] private List<Vector2Int> inputThisMesure = new List<Vector2Int>(); 
     private int maxInputInMesure;
@@ -28,6 +29,7 @@ public class InputTrackerAndPatternSpawner : MonoBehaviour
         _activatedTileManager = FindAnyObjectByType<ActivatedTileManager>();
         _inputPerPlayer = GetComponent<InputPerPlayer>();
         _musicParametersForFMOD = FindAnyObjectByType<MusicParametersForFMOD>();
+        _feedbacksManager = FindAnyObjectByType<FeedbacksManager>();
         maxInputInMesure = _musicParametersForFMOD.beatsPerMeasure;
 
     }
@@ -46,6 +48,7 @@ public class InputTrackerAndPatternSpawner : MonoBehaviour
             return;
         }
         inputThisMesure.Add(inputs);
+        _feedbacksManager.CorrectMoveFeedback();
     }
 
     public void ReceiveMesure()

@@ -49,7 +49,6 @@ public class ActivatedTileScript : MonoBehaviour
    }
    private void ReceiveBeat()
    {
-      
       Move();
    }
    

@@ -352,7 +352,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 474454726}
         m_TargetAssemblyTypeName: MusicUpdaterWithPlayerLevels, Assembly-CSharp
-        m_MethodName: UpdateMusic
+        m_MethodName: UpdateMusicEachMeasure
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
