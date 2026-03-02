@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class MusicUpdaterWithPlayerLevels : MonoBehaviour
 {
-    [SerializeField] private NewPatternSpawner player1;
-    [SerializeField] private NewPatternSpawner player2;
+    [SerializeField] private InputTrackerAndPatternSpawner player1;
+    [SerializeField] private InputTrackerAndPatternSpawner player2;
     private StudioEventEmitter music;
     private float actualP1Level = 0f;
     private float actualP2Level = 0f;

@@ -10,7 +10,7 @@ public class NewPlayerMovement : MonoBehaviour
     private NewDanceFloorSpawner _danceFloorSpawner;
     private InputPerPlayer inputPerPlayer;
     public NewTileScript currentTile;
-    private UnityEvent<int,Vector2Int> playerMooved=new UnityEvent<int,Vector2Int>();
+    private UnityEvent<int,Vector2Int> playerMoved = new UnityEvent<int,Vector2Int>();
     public NewTileScript[,] thatPLayerGrid = new NewTileScript[,]{};
 
     public List< NewTileScript> invalideTile = new List<NewTileScript>();
@@ -48,12 +48,12 @@ public class NewPlayerMovement : MonoBehaviour
         transform.position = new Vector3(currentTile.transform.position.x, transform.position.y,
             currentTile.transform.position.z);
         
-        playerMooved.Invoke(inputPerPlayer.playerNumber,input);
+        playerMoved.Invoke(inputPerPlayer.playerNumber,input);
     }
     
 
     private void InitialisedLocalEvents()
     {
-        playerMooved.AddListener(FindAnyObjectByType<EventSyncroniser>().ReceivePlayerMoove);
+        playerMoved.AddListener(FindAnyObjectByType<EventSyncroniser>().ReceivePlayerMove);
     }
 }

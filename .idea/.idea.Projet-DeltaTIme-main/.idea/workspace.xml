@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOCU TECH.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOCU TECH.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTIleTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewTIleTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/BeatClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager/BeatClock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crowd/CrowdStartPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crowd/CrowdStartPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NewPatternSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/InputTrackerAndPatternSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NewPatternSpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/InputTrackerAndPatternSpawner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NewPlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/NewPlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GM/EventSyncroniser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GM/EventSyncroniser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GM/InputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GM/InputReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdaterWithPlayerLevels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdaterWithPlayerLevels.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scripts Proto 1/CameraStartPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scripts Proto 1/CameraStartPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileS/NewTileScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileS/NewTileScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +45,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "DEV",
+    "git-widget-placeholder": "Feedbacks-V2",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -124,7 +130,8 @@
       <workItem from="1771075940450" duration="7190000" />
       <workItem from="1771333380948" duration="128000" />
       <workItem from="1771854351451" duration="4626000" />
-      <workItem from="1772037899652" duration="14245000" />
+      <workItem from="1772037899652" duration="14846000" />
+      <workItem from="1772445441218" duration="5001000" />
     </task>
     <servers />
   </component>

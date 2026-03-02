@@ -5,7 +5,7 @@ using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
 
-public class NewPatternSpawner : MonoBehaviour
+public class InputTrackerAndPatternSpawner : MonoBehaviour
 {
     private PatternBank _patternBank;
     private NewDanceFloorSpawner _gridSpawner;
@@ -32,15 +32,17 @@ public class NewPatternSpawner : MonoBehaviour
 
     }
 
-    private bool alreadyEmptyThisBeat = false;
+    private bool alreadyMissedThisBeat = false;
+    
     public void ReceivePlayerInput(int playerID, bool inCoyote, Vector2Int inputs)
     {
-        if (playerID != _inputPerPlayer.playerNumber ) return;
-        if(inputThisMesure.Count==maxInputInMesure)return;
-        if (!alreadyEmptyThisBeat&&!inCoyote)
+        if (playerID != _inputPerPlayer.playerNumber) return;
+        if (inputThisMesure.Count == maxInputInMesure) return;
+        if (alreadyMissedThisBeat) return;
+        if (!alreadyMissedThisBeat && !inCoyote)
         {
             inputThisMesure.Add(Vector2Int.zero);
-            alreadyEmptyThisBeat = true;
+            alreadyMissedThisBeat = true;
             return;
         }
         inputThisMesure.Add(inputs);
@@ -55,7 +57,7 @@ public class NewPatternSpawner : MonoBehaviour
 
     public void ReceiveBeat()
     {
-        alreadyEmptyThisBeat = false;
+        alreadyMissedThisBeat = false;
     }
     
     public void CountNumberOfSuccesses(int playerID)
