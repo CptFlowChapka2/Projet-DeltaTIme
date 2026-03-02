@@ -288,6 +288,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   beat: 1
   measure: 1
+  playerCoyoteBeat: 0.12
+  startCoyoteTime:
+    m_PersistentCalls:
+      m_Calls: []
   onBeat:
     m_PersistentCalls:
       m_Calls:
@@ -366,6 +370,12 @@ MonoBehaviour:
   onEndBeat:
     m_PersistentCalls:
       m_Calls: []
+  endCoyoteTime:
+    m_PersistentCalls:
+      m_Calls: []
+  startCoyoteBeforeMeasure:
+    m_PersistentCalls:
+      m_Calls: []
   onMeasure:
     m_PersistentCalls:
       m_Calls:
@@ -429,13 +439,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startCoyoteTime:
+  endCoyoteAfterMeasure:
     m_PersistentCalls:
       m_Calls: []
-  endCoyoteTime:
-    m_PersistentCalls:
-      m_Calls: []
-  playerCoyoteBeat: 0.12
 --- !u!1 &482601610
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +796,7 @@ MonoBehaviour:
       Data2: 1144910210
       Data3: 568570021
       Data4: 437850670
-    Path: event:/KicksOnBeat
+    Path: event:/Placeholders/KicksOnBeat
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -953,7 +959,7 @@ MonoBehaviour:
       Data2: 1219245595
       Data3: -1102112127
       Data4: 712446485
-    Path: event:/PlaceholderSoundP2
+    Path: event:/Placeholders/PlaceholderSoundP2
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -991,6 +997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewPatterneSpawner
   _playerMovement: {fileID: 1535296489}
   inputThisMesure: []
+  numberOfSuccesses: 0
 --- !u!114 &1134567152 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4167575681557387152, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}
@@ -1108,6 +1115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ca9b44a2a73104e9e9505924fd7387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventSyncroniser
+  playerMovedOnBeat:
+    m_PersistentCalls:
+      m_Calls: []
   playerCoyoteBeat: 0.25
 --- !u!114 &1487537510
 MonoBehaviour:
@@ -1273,7 +1283,7 @@ MonoBehaviour:
       Data2: 1153852045
       Data3: -520475743
       Data4: 1751134655
-    Path: event:/PlaceholderSoundP1
+    Path: event:/Placeholders/PlaceholderSoundP1
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -1311,6 +1321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewPatterneSpawner
   _playerMovement: {fileID: 1134567152}
   inputThisMesure: []
+  numberOfSuccesses: 0
 --- !u!114 &1535296489 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -4167575681557387152, guid: cff0f4ce617076c46aa5c9d99755c121, type: 3}

@@ -288,6 +288,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   beat: 1
   measure: 1
+  playerCoyoteBeat: 0.01
+  startCoyoteTime:
+    m_PersistentCalls:
+      m_Calls: []
   onBeat:
     m_PersistentCalls:
       m_Calls:
@@ -315,6 +319,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onEndBeat:
+    m_PersistentCalls:
+      m_Calls: []
+  endCoyoteTime:
+    m_PersistentCalls:
+      m_Calls: []
+  startCoyoteBeforeMeasure:
+    m_PersistentCalls:
+      m_Calls: []
   onMeasure:
     m_PersistentCalls:
       m_Calls:
@@ -390,13 +403,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startCoyoteTime:
+  endCoyoteAfterMeasure:
     m_PersistentCalls:
       m_Calls: []
-  endCoyoteTime:
-    m_PersistentCalls:
-      m_Calls: []
-  playerCoyoteBeat: 0.01
 --- !u!1 &482601610
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +760,7 @@ MonoBehaviour:
       Data2: 1144910210
       Data3: 568570021
       Data4: 437850670
-    Path: event:/KicksOnBeat
+    Path: event:/Placeholders/KicksOnBeat
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -879,10 +888,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InputPerPlayer
   playerNumber: 2
   movement: {x: 0, y: 0}
-  numberOfLeftThisMeasure: 0
-  numberOfRightThisMeasure: 0
-  numberOfUpThisMeasure: 0
-  numberOfDownThisMeasure: 0
   indexLastInputPlayed: 0
 --- !u!114 &1134567146 stripped
 MonoBehaviour:
@@ -925,7 +930,7 @@ MonoBehaviour:
       Data2: 1219245595
       Data3: -1102112127
       Data4: 712446485
-    Path: event:/PlaceholderSoundP2
+    Path: event:/Placeholders/PlaceholderSoundP2
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -1069,6 +1074,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ca9b44a2a73104e9e9505924fd7387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventSyncroniser
+  playerMovedOnBeat:
+    m_PersistentCalls:
+      m_Calls: []
   playerCoyoteBeat: 0.25
 --- !u!1001 &1535296480
 PrefabInstance:
@@ -1167,10 +1175,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InputPerPlayer
   playerNumber: 1
   movement: {x: 0, y: 0}
-  numberOfLeftThisMeasure: 0
-  numberOfRightThisMeasure: 0
-  numberOfUpThisMeasure: 0
-  numberOfDownThisMeasure: 0
   indexLastInputPlayed: 0
 --- !u!114 &1535296483 stripped
 MonoBehaviour:
@@ -1213,7 +1217,7 @@ MonoBehaviour:
       Data2: 1153852045
       Data3: -520475743
       Data4: 1751134655
-    Path: event:/PlaceholderSoundP1
+    Path: event:/Placeholders/PlaceholderSoundP1
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0

@@ -791,7 +791,7 @@ MonoBehaviour:
       Data2: 1144910210
       Data3: 568570021
       Data4: 437850670
-    Path: event:/KicksOnBeat
+    Path: event:/Placeholders/KicksOnBeat
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -989,7 +989,7 @@ MonoBehaviour:
       Data2: 1219245595
       Data3: -1102112127
       Data4: 712446485
-    Path: event:/PlaceholderSoundP2
+    Path: event:/Placeholders/PlaceholderSoundP2
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -1302,7 +1302,7 @@ MonoBehaviour:
       Data2: 1153852045
       Data3: -520475743
       Data4: 1751134655
-    Path: event:/PlaceholderSoundP1
+    Path: event:/Placeholders/PlaceholderSoundP1
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
