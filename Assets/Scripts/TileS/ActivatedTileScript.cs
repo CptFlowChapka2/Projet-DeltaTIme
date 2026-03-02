@@ -6,7 +6,7 @@ public class ActivatedTileScript : MonoBehaviour
    private NewTileScript nextTile;
    private BeatClock _beatClock;
    private Vector2Int direction;
-   public ActivatedTIleManager ActivatedTIleManager;
+   public ActivatedTileManager activatedTileManager;
    public bool inUsed;
 
    
@@ -15,7 +15,7 @@ public class ActivatedTileScript : MonoBehaviour
    {
       _beatClock = beatClock;
       _beatClock.onBeat.AddListener(ReceiveBeat);
-      ActivatedTIleManager.RemoveInUsedFromList(this);
+      activatedTileManager.RemoveInUsedFromList(this);
       direction = dir;
       CurrentTile = firstTile;
       inUsed = true;
@@ -62,7 +62,7 @@ public class ActivatedTileScript : MonoBehaviour
          currentTile = null;
          nextTile = null;
          inUsed = false;
-         ActivatedTIleManager.AddNotInUsedFromList(this);
+         activatedTileManager.AddNotInUsedFromList(this);
          return;
       }
       CurrentTile = NextTile;

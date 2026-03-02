@@ -30,7 +30,11 @@ public class NewTileScript : MonoBehaviour
     {
         CleanPatternInfoList();
 
-        if (thisState == TileState.Invalid) return;
+        if (thisState == TileState.Invalid)
+        {
+            ChangeFeedBackColor(Color.blue);
+            return;
+        }
 
         switch (thisPatternSignList.Count)
         {

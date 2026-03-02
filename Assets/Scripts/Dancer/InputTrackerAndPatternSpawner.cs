@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
-public class NewPatternSpawner : MonoBehaviour
+public class InputTrackerAndPatternSpawner : MonoBehaviour
 {
     private PatternBank _patternBank;
     private NewDanceFloorSpawner _gridSpawner;
@@ -14,7 +16,8 @@ public class NewPatternSpawner : MonoBehaviour
     [SerializeField] private List<List<Vector2Int>> allActivePattern = new List<List<Vector2Int>>();
     [SerializeField] private List<Vector2Int> inputThisMesure = new List<Vector2Int>(); 
     private int maxInputInMesure;
-    private ActivatedTIleManager _activatedTIleManager;
+    private ActivatedTileManager _activatedTileManager;
+    public float numberOfSuccesses;
     
 
     private void Start()
@@ -22,22 +25,24 @@ public class NewPatternSpawner : MonoBehaviour
         _patternBank = FindAnyObjectByType<PatternBank>();
         _beatClock = FindAnyObjectByType<BeatClock>();
         _gridSpawner = FindAnyObjectByType<NewDanceFloorSpawner>();
-        _activatedTIleManager = FindAnyObjectByType<ActivatedTIleManager>();
+        _activatedTileManager = FindAnyObjectByType<ActivatedTileManager>();
         _inputPerPlayer = GetComponent<InputPerPlayer>();
         _musicParametersForFMOD = FindAnyObjectByType<MusicParametersForFMOD>();
         maxInputInMesure = _musicParametersForFMOD.beatsPerMeasure;
 
     }
 
-    private bool alreadyEmptyThisBeat = false;
+    private bool alreadyMissedThisBeat = false;
+    
     public void ReceivePlayerInput(int playerID, bool inCoyote, Vector2Int inputs)
     {
-        if (playerID != _inputPerPlayer.playerNumber ) return;
-        if(inputThisMesure.Count==maxInputInMesure)return;
-        if (!alreadyEmptyThisBeat&&!inCoyote)
+        if (playerID != _inputPerPlayer.playerNumber) return;
+        if (inputThisMesure.Count == maxInputInMesure) return;
+        if (alreadyMissedThisBeat) return;
+        if (!alreadyMissedThisBeat && !inCoyote)
         {
             inputThisMesure.Add(Vector2Int.zero);
-            alreadyEmptyThisBeat = true;
+            alreadyMissedThisBeat = true;
             return;
         }
         inputThisMesure.Add(inputs);
@@ -52,12 +57,23 @@ public class NewPatternSpawner : MonoBehaviour
 
     public void ReceiveBeat()
     {
-        alreadyEmptyThisBeat = false;
+        alreadyMissedThisBeat = false;
+    }
+    
+    public void CountNumberOfSuccesses(int playerID)
+    {
+        numberOfSuccesses = 0f;
+        foreach (Vector2Int input in inputThisMesure)
+        {
+            if (input != Vector2Int.zero)
+            {
+                numberOfSuccesses++;
+            }
+        }
     }
     
     public void SpawnPattern()
     {
-        
         allActivePattern.RemoveAll(x => x.Count < 1);
         if(allActivePattern.Count<1)return;
         foreach (List<Vector2Int> inputsThisMesure in allActivePattern)
@@ -131,7 +147,7 @@ public class NewPatternSpawner : MonoBehaviour
                 continue;
             }
 
-            _activatedTIleManager.RequestActivatedTile(origne[i], inputDirToProcesses);
+            _activatedTileManager.RequestActivatedTile(origne[i], inputDirToProcesses);
         }
        
     }
