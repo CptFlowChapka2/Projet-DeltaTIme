@@ -288,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   beat: 1
   measure: 1
-  playerCoyoteBeat: 0.13
+  playerCoyoteBeat: 0.1
   startCoyoteTime:
     m_PersistentCalls:
       m_Calls: []
