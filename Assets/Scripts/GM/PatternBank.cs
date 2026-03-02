@@ -43,6 +43,11 @@ public class PatternBank : MonoBehaviour
         AllPatternes.Add(Vector2Int.right, patternRight);
         AllPatternes.Add(Vector2Int.down, patternDown);
     }
+
+    public bool[] GetPatternVariantForAnDir(Vector2Int dir, int variantID)
+    {
+        return AllPatternes[dir].allLines[variantID-1];
+    }
 }
 
 [Serializable]
