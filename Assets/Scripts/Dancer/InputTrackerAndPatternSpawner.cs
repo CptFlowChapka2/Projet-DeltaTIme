@@ -139,7 +139,7 @@ public class InputTrackerAndPatternSpawner : MonoBehaviour
 
         int nbrOfSimilareInputInMesure = inputsThisMesure.FindAll(x => x == inputDirToProcesses).Count;
         bool[] patternToSpawn = _patternBank.GetPatternVariantForAnDir(inputDirToProcesses, nbrOfSimilareInputInMesure);
-        for (int i = 0; i < patternToSpawn.Length - 1; i++)
+        for (int i = 0; i < patternToSpawn.Length ; i++)
         {
             if (patternToSpawn[i] is false)
             {
