@@ -339,6 +339,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1134567150}
+        m_TargetAssemblyTypeName: NewPatternSpawner, Assembly-CSharp
+        m_MethodName: ReceiveBeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1535296487}
+        m_TargetAssemblyTypeName: NewPatternSpawner, Assembly-CSharp
+        m_MethodName: ReceiveBeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onEndBeat:
     m_PersistentCalls:
       m_Calls: []
@@ -411,7 +435,7 @@ MonoBehaviour:
   endCoyoteTime:
     m_PersistentCalls:
       m_Calls: []
-  playerCoyoteBeat: 0.25
+  playerCoyoteBeat: 0.1
 --- !u!1 &482601610
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1016,7 @@ GameObject:
   - component: {fileID: 1487537508}
   - component: {fileID: 1487537509}
   - component: {fileID: 1487537510}
+  - component: {fileID: 1487537511}
   m_Layer: 0
   m_Name: GM
   m_TagString: GM
@@ -1052,25 +1077,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   patternLeft:
-    line1: 01010001000001
+    line1: 01000000000001
     line2: 00000100010000
-    line3: 00000000000000
-    line4: 00000000000000
+    line3: 00000001000000
+    line4: 00010000000100
   patternRight:
-    line1: 01010001010000
-    line2: 00000000000000
-    line3: 00010100010100
-    line4: 00000000000000
+    line1: 00010001000000
+    line2: 00000000010001
+    line3: 00000100000100
+    line4: 01000001000000
   patternUp:
-    line1: 00010000000001
-    line2: 01000100010000
-    line3: 00000000000000
-    line4: 00000000000000
+    line1: 00000100010000
+    line2: 00000001000001
+    line3: 01000000000100
+    line4: 00010000010000
   patternDown:
-    line1: 01000001000001
+    line1: 00000001000100
     line2: 00000100010000
-    line3: 00010000000100
-    line4: 00000000000000
+    line3: 01000000000100
+    line4: 00010000010000
 --- !u!114 &1487537509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1100,6 +1125,22 @@ MonoBehaviour:
   player1: {fileID: 1535296481}
   player2: {fileID: 1134567144}
   gridSize: 7
+--- !u!114 &1487537511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487537502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6b1762a6ea7f2489ac39baf11ff32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActivatedTIleManager
+  numberOfActivatedTile: 50
+  prefab: {fileID: 5819993741766422640, guid: a6d91294963408748add6995d9a90ffb, type: 3}
+  bankPosition: {x: 30, y: 5, z: 0}
+  nbrOfAvailableTile: 0
 --- !u!1001 &1535296480
 PrefabInstance:
   m_ObjectHideFlags: 0

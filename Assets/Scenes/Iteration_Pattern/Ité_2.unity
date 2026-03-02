@@ -435,7 +435,7 @@ MonoBehaviour:
   endCoyoteTime:
     m_PersistentCalls:
       m_Calls: []
-  playerCoyoteBeat: 0.1
+  playerCoyoteBeat: 0.12
 --- !u!1 &482601610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,25 +1077,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   patternLeft:
-    line1: 01010001000001
+    line1: 01000000000001
     line2: 00000100010000
-    line3: 00000000000000
-    line4: 00000000000000
+    line3: 00000001000000
+    line4: 00010000000100
   patternRight:
-    line1: 01010001010000
-    line2: 00000000000000
-    line3: 00010100010100
-    line4: 00000000000000
+    line1: 00010001000000
+    line2: 00000000010001
+    line3: 00000100000100
+    line4: 01000001000000
   patternUp:
-    line1: 00010000000001
-    line2: 01000100010000
-    line3: 00000000000000
-    line4: 00000000000000
+    line1: 00000100010000
+    line2: 00000001000001
+    line3: 01000000000100
+    line4: 00010000010000
   patternDown:
-    line1: 01000001000001
+    line1: 00000001000100
     line2: 00000100010000
-    line3: 00010000000100
-    line4: 00000000000000
+    line3: 01000000000100
+    line4: 00010000010000
 --- !u!114 &1487537509
 MonoBehaviour:
   m_ObjectHideFlags: 0
