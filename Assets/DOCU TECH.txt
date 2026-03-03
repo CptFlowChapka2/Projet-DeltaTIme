@@ -60,7 +60,7 @@ IndividualCrowdScript=> Contient les logique et operation pour varier les feedBa
 
 ActivatedTile=> stock  les information et méthode lié au patterne d'attque : notament la logique de mouvememt à chaque Beat .
 
-NewPatterneSpawner=> Fait apparaitre des patterne d'attaque sur des NewTileScript . récupére les inputs joueur fais on Beat sur une mesure
+InputTrackerAndPatternSpawner=> Traite les inputs joueurs et les stocke. Fait apparaitre des patterne d'attaque sur des NewTileScript . récupére les inputs joueur fais on Beat sur une mesure
 puis à chaque beat instancie les patterns corespondant : Create origine crée un array contenant les case sur lequelle les pattene vont spawn ,selon la direction .
 
 NewTileScript =>  Nouveau Tile script fais pour stocker des ActivatedTile sous forme de list . à chaque endBEat verifie ses list de patterne pour changer d'état.posséde une methode
@@ -72,3 +72,6 @@ NewPLayerMouvement => bouge le joueur  précisement sur les case du dancefloor .
 
 MusicUpdaterWithPlayerLevel => récupère le nb d'inputs réussis de chaque joueurs via NewPatternSpawner, et change le
 niveau de la musique en fonction sur OnMeasure.
+
+FeedbacksManager => contient quelques méthodes de feedbacks, comme DamageFeedback. Ces méthodes ont pour vocation à
+être appelées par d'autres scripts.

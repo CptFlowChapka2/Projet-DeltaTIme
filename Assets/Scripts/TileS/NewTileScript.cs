@@ -10,8 +10,35 @@ public class NewTileScript : MonoBehaviour
     private NewTileScript[,] AllTile = new NewTileScript[,]{};
     public List<ActivatedTileScript> thisPatterneList = new List<ActivatedTileScript>();
     public List<ActivatedTileScript> thisPatternSignList = new List<ActivatedTileScript>();
-    public MeshRenderer colorFeedback;
+    public MeshRenderer meshRenderer;
+    public Vector2Int patternDirection = new Vector2Int(0, 0);
     public int[] count = new int[] { 0, 0 };
+   
+    private MeshRenderer[] possiblesArrows;
+    private MeshRenderer currentArrow = null;
+    
+    private void Awake()
+    {
+        var markers = GetComponentsInChildren<ArrowPlane>();
+        possiblesArrows = new MeshRenderer[markers.Length];
+
+        for (int i = 0; i < markers.Length; i++)
+        {
+            possiblesArrows[i] = markers[i].GetComponent<MeshRenderer>();
+        }
+    }
+
+    private void Start()
+    {
+        currentArrow = possiblesArrows[0];
+        foreach (MeshRenderer variant in possiblesArrows)
+        {
+            if (variant != currentArrow)
+            {
+                variant.enabled = false;
+            }
+        }
+    }
 
     private void Update()
     {
@@ -32,6 +59,7 @@ public class NewTileScript : MonoBehaviour
 
         if (thisState == TileState.Invalid)
         {
+            currentArrow = possiblesArrows[0];
             ChangeFeedBackColor(Color.blue);
             return;
         }
@@ -39,6 +67,7 @@ public class NewTileScript : MonoBehaviour
         switch (thisPatternSignList.Count)
         {
             case >= 1:
+                currentArrow = possiblesArrows[0];
                 ChangeFeedBackColor(Color.yellow);
                 thisState = TileState.Safe;
                 return;
@@ -47,8 +76,32 @@ public class NewTileScript : MonoBehaviour
         switch (thisPatterneList.Count)
         {
             case >= 1:
-                ChangeFeedBackColor(Color.red);
                 thisState = TileState.Damaging;
+                ChangeFeedBackColor(Color.red);
+                currentArrow.enabled = false;
+                if (patternDirection == Vector2Int.left)
+                {
+                    currentArrow = possiblesArrows[1];
+                }
+                else if (patternDirection == Vector2Int.right)
+                {
+                    currentArrow = possiblesArrows[2];
+                }
+                else if (patternDirection == Vector2Int.up)
+                {
+                    currentArrow = possiblesArrows[3];
+                }
+                else if (patternDirection == Vector2Int.down)
+                {
+                    currentArrow = possiblesArrows[4];
+                }
+                else
+                {
+                    currentArrow = possiblesArrows[0];
+                }
+                
+                currentArrow.enabled = true;
+                
                 return;
         }
 
@@ -58,7 +111,7 @@ public class NewTileScript : MonoBehaviour
 
     private void ChangeFeedBackColor(Color newColor)
     {
-        colorFeedback.material.color = newColor;
+        meshRenderer.material.color = newColor;
     }
 
     public NewTileScript NextTileScript(Vector2Int dir)
@@ -70,7 +123,10 @@ public class NewTileScript : MonoBehaviour
                                 newPositionCoord.y >= AllTile.GetLowerBound(1)
             ;
         if (!newPositionExist) return null;
-        return AllTile[newPositionCoord.x, newPositionCoord.y];
+        NewTileScript nextTile = AllTile[newPositionCoord.x, newPositionCoord.y];
+        nextTile.patternDirection = patternDirection;
+        patternDirection = new Vector2Int(0, 0);
+        return nextTile;
     }
 
     //helpers:

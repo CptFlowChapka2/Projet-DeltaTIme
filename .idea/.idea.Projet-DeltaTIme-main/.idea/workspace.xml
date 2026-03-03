@@ -5,24 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdater.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DOCU TECH.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOCU TECH.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Music.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Music.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dancer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dancer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TIles/NewGridTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TIles/NewGridTile.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FeedbacksTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FeedbacksTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTIleTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewTIleTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Crowd/IndividualCrowdScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Crowd/IndividualCrowdScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NewPlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/NewPlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NumberOfTimeTouched.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/HealthSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/NumberOfTimeTouched.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/HealthSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Feedbacks/FeedbacksManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Feedbacks/FeedbacksManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdaterWithPlayerLevels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdaterWithPlayerLevels.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdater.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileS/ActivatedTileScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileS/ActivatedTileScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TouchZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TouchZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/InputTrackerAndPatternSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/InputTrackerAndPatternSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileS/NewTileScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileS/NewTileScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +130,9 @@
       <workItem from="1771333380948" duration="128000" />
       <workItem from="1771854351451" duration="4626000" />
       <workItem from="1772037899652" duration="14846000" />
-      <workItem from="1772445441218" duration="17937000" />
+      <workItem from="1772445441218" duration="18674000" />
+      <workItem from="1772543801941" duration="2861000" />
+      <workItem from="1772562592585" duration="7093000" />
     </task>
     <servers />
   </component>

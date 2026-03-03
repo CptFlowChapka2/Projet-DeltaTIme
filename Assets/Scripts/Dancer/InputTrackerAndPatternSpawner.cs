@@ -95,39 +95,41 @@ public class InputTrackerAndPatternSpawner : MonoBehaviour
         
         
         if (inputsThisMesure.Count == 0) return null;
-        NewTileScript[] origne = new NewTileScript[] { };
+        NewTileScript[] origin = new NewTileScript[] { };
         if (inputsThisMesure.First() == Vector2Int.up)
         {
-            
             var list = _playerMovement.invalideTile.FindAll(x => x.position.y == 0);
             list.RemoveAll(x => x.position.x == 0 || x.position.x == _gridSpawner.gridSize - 1);
-            origne = list.ToArray();
+            origin = list.ToArray();
         }
 
         if (inputsThisMesure.First() == Vector2Int.down)
         {
             var list = _playerMovement.invalideTile.FindAll(x => x.position.y == _gridSpawner.gridSize - 1);
             list.RemoveAll(x => x.position.x == 0 || x.position.x == _gridSpawner.gridSize - 1);
-            origne = list.ToArray();
+            origin = list.ToArray();
         }
 
         if (inputsThisMesure.First() == Vector2Int.left)
         {
             var list = _playerMovement.invalideTile.FindAll(x => x.position.x == _gridSpawner.gridSize - 1);
             list.RemoveAll(x => x.position.y == 0 || x.position.y == _gridSpawner.gridSize - 1);
-            origne = list.ToArray();
+            origin = list.ToArray();
         }
 
         if (inputsThisMesure.First() == Vector2Int.right)
         {
             var list = _playerMovement.invalideTile.FindAll(x => x.position.x == 0);
             list.RemoveAll(x => x.position.y == 0 || x.position.y == _gridSpawner.gridSize - 1);
-            origne = list.ToArray();
+            origin = list.ToArray();
         }
         
+        foreach (NewTileScript tile in origin)
+        {
+            tile.patternDirection = inputsThisMesure.First();
+        }
         
-        
-        return origne;
+        return origin;
     }
 
     private void CreatePatterneInfo(List<Vector2Int> inputsThisMesure, NewTileScript[] origne)
