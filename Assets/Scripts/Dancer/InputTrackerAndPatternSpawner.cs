@@ -124,11 +124,6 @@ public class InputTrackerAndPatternSpawner : MonoBehaviour
             origin = list.ToArray();
         }
         
-        foreach (NewTileScript tile in origin)
-        {
-            tile.patternDirection = inputsThisMesure.First();
-        }
-        
         return origin;
     }
 
