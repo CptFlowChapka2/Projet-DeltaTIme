@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerManager player2Manager;
     [SerializeField] private MusicManager musicManager;
     [SerializeField] private FeedbacksManager feedbacksManager;
-    [SerializeField] private DanceFloorManager danceFloorManager;
+    [SerializeField] private DanceFloorManager danceFloor1Manager;
+    [SerializeField] private DanceFloorManager danceFloor2Manager;
     [SerializeField] private AttacksManager attacksManager;
     
     private List<Manager> allManagers = new List<Manager>();
@@ -18,10 +19,15 @@ public class GameManager : MonoBehaviour
     {
         GetAllManagers();
         InitializeManager<PlayerManager>(out player1Manager, 0);
+        player1Manager.playerId = 1;
         InitializeManager<PlayerManager>(out player2Manager, 1);
+        player1Manager.playerId = 2;
         InitializeManager<MusicManager>(out musicManager);
         InitializeManager<FeedbacksManager>(out feedbacksManager);
-        InitializeManager<DanceFloorManager>(out danceFloorManager);
+        InitializeManager<DanceFloorManager>(out danceFloor1Manager,0);
+        danceFloor1Manager.associatedPLayerId = 1;
+        InitializeManager<DanceFloorManager>(out danceFloor2Manager,1);
+        danceFloor2Manager.associatedPLayerId = 2;
         InitializeManager<AttacksManager>(out attacksManager);
     }
 
@@ -51,5 +57,42 @@ public class GameManager : MonoBehaviour
     public bool GetOnStartCoyoteMeasure()
     {
         return musicManager.onStartCoyoteMeasure;
+    }
+
+    public GameObject GetPlayerGameObject(int playerId)
+    {
+        GameObject toReturn = playerId switch
+        {
+            1=>player1Manager.playerGameobject,
+            2=>player1Manager.playerGameobject,
+            _ => throw new ArgumentOutOfRangeException(nameof(playerId), playerId, null)
+        };
+        return toReturn;
+    }
+
+    public void DoMovePlayerTeleportToCoord(Vector2Int coords,int playerId)
+    {
+        switch (playerId)
+        {
+            case 1 :
+                player1Manager.DoTeleportPlayerToCoords(coords);
+                break;
+            case 2 :
+                player2Manager.DoTeleportPlayerToCoords(coords);
+                break;
+        }
+    }
+
+    public TileiD[,] GetAllTileid(int playerId)
+    {
+        switch (playerId)
+        {
+            case 1 :
+                 return danceFloor1Manager.allTileID;
+            case 2 :
+                return danceFloor2Manager.allTileID;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(playerId)+" was called with invalide int");
+        }
     }
 }

@@ -16,7 +16,15 @@ public class PlayerManager : Manager
         InitializeDoer<AnalyseInput>(out analyseInput);
         InitializeDoer<MovePlayer>(out movePlayer);
         InitializeDoer<UpdateWhenHit>(out updateWhenHit);
+        playerGameobject = gameObject;
+
+
     }
+
+    [Header("GeneralInfo")] 
+    public int playerId;
+    public GameObject playerGameobject;
+    public Vector2Int currentPlayerCoord;
 
     [Header("ReadInput")]
     public string inputActionName; // Player1Move ou Player2Move
@@ -25,4 +33,15 @@ public class PlayerManager : Manager
     [Header("AnalyseInput")] 
     public List<Vector2Int> inputsThisMeasure = new List<Vector2Int>();
     public int numberOfSuccesses = 0;
+
+    [Header("MovePlayer")] 
+    public TileiD currentTileId;
+    
+    
+    //OUTSIDE DO CALL//
+
+    public void DoTeleportPlayerToCoords(Vector2Int coords)
+    {
+        movePlayer.TeleportPlayerToCoords(coords);
+    }
 }
