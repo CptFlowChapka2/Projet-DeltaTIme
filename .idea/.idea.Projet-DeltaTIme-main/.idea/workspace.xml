@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DoActions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DoActions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOCU TECH.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOCU TECH.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TIles/NewGridTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TIles/NewGridTile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FeedbacksTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FeedbacksTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/InputTrackerAndPatternSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/InputTrackerAndPatternSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileS/NewTileScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileS/NewTileScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GM/EventSyncroniser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GM/EventSyncroniser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Attack pattern/Materials/Pattern Droit.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprite/Attack pattern/Materials/Pattern Droit.mat.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dancer/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dancer/LinkedCrowd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dancer/PlaceholderSoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoThings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnumVariables.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TouchZone.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -132,7 +133,8 @@
       <workItem from="1772037899652" duration="14846000" />
       <workItem from="1772445441218" duration="18674000" />
       <workItem from="1772543801941" duration="2861000" />
-      <workItem from="1772562592585" duration="7093000" />
+      <workItem from="1772562592585" duration="7930000" />
+      <workItem from="1772636234012" duration="8301000" />
     </task>
     <servers />
   </component>

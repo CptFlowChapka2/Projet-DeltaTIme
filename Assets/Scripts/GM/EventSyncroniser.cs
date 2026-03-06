@@ -15,7 +15,7 @@ public class EventSyncroniser : MonoBehaviour
         playerMovedOnBeat.AddListener(FindAnyObjectByType<CrowdLvl>().ReceivePlayerOnBeat);
         FindObjectsByType<InputTrackerAndPatternSpawner>(FindObjectsInactive.Exclude,FindObjectsSortMode.InstanceID).ToList().ForEach(
             x=>playerMovedOnBeat.AddListener(x.ReceivePlayerInput)
-            );
+            );//
     }
 
     public void ReceivePlayerMove(int playerI,Vector2Int movement)
