@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Manager : MonoBehaviour
 {
+    public GameManager gameManager;
     protected List<Doer> allDoers =  new List<Doer>();
 
     protected void GetAllDoersOnGameObject()

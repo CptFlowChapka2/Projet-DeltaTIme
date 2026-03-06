@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class MusicManager : Manager
 {
+    
     private MasterClock masterClock;
     private BeatClock beatClock;
 
