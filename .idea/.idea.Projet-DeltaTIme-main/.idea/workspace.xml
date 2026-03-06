@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DoActions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DoActions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GM/EventSyncroniser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GM/EventSyncroniser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Attack pattern/Materials/Pattern Droit.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprite/Attack pattern/Materials/Pattern Droit.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TIles/NewGridTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TIles/NewGridTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FeedbacksTest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FeedbacksTest.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTIleTest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTIleTest.unity.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Feedbacks-V2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;DEV&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -135,6 +134,8 @@
       <workItem from="1772543801941" duration="2861000" />
       <workItem from="1772562592585" duration="7930000" />
       <workItem from="1772636234012" duration="8301000" />
+      <workItem from="1772790930297" duration="390000" />
+      <workItem from="1772791427512" duration="438000" />
     </task>
     <servers />
   </component>

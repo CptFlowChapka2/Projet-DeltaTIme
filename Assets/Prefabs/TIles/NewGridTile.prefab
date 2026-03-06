@@ -489,10 +489,10 @@ MonoBehaviour:
   count: 0000000000000000
   posssibleMaterial:
   - {fileID: 2100000, guid: 8eeb2d0ee6be43045b58686bc8d3674d, type: 2}
-  - {fileID: 2100000, guid: 76bdb30a50d9ee9499f539bf96bad6ba, type: 2}
   - {fileID: 2100000, guid: 0f4996a9515f6c74b8d82ee162944cc0, type: 2}
-  - {fileID: 2100000, guid: f457d29d7140e504da6cc7bb129a12a6, type: 2}
+  - {fileID: 2100000, guid: 76bdb30a50d9ee9499f539bf96bad6ba, type: 2}
   - {fileID: 2100000, guid: 4600cd56dab10f342b0834fff6f4489f, type: 2}
+  - {fileID: 2100000, guid: e367ba0678a2e4045be83157f2e91af8, type: 2}
   - {fileID: 2100000, guid: c70ee830929c05545a292b117b11e2aa, type: 2}
   - {fileID: 2100000, guid: c70ee830929c05545a292b117b11e2aa, type: 2}
   - {fileID: 2100000, guid: c70ee830929c05545a292b117b11e2aa, type: 2}
