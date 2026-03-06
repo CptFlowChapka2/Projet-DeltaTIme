@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -8,6 +9,7 @@ public class NewPlayerMovement : MonoBehaviour
 {
     private GameObject gm;
     private NewDanceFloorSpawner _danceFloorSpawner;
+    private StudioEventEmitter stepSound;
     private InputPerPlayer inputPerPlayer;
     public NewTileScript currentTile;
     private UnityEvent<int,Vector2Int> playerMoved = new UnityEvent<int,Vector2Int>();
@@ -21,6 +23,7 @@ public class NewPlayerMovement : MonoBehaviour
     {
         gm = GameObject.Find("GM");
         _danceFloorSpawner = gm.GetComponent<NewDanceFloorSpawner>();
+        stepSound = GetComponent<StudioEventEmitter>();
         inputPerPlayer = GetComponent<InputPerPlayer>();
         InitialisedLocalEvents();
     }
@@ -47,6 +50,8 @@ public class NewPlayerMovement : MonoBehaviour
         currentTile = nextPosition;
         transform.position = new Vector3(currentTile.transform.position.x, transform.position.y,
             currentTile.transform.position.z);
+        
+        stepSound.Play();
         
         playerMoved.Invoke(inputPerPlayer.playerNumber,input);
     }

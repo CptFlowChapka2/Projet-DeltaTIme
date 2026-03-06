@@ -128,6 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fa67dc3aea0c648b00e8187fc89624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewPlayerMovement
+  currentTile: {fileID: 0}
+  invalideTile: []
+  thisPLayer: 0
 --- !u!114 &1475818512820548077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 070cf587c2822124ba9799232ce85566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  invincibilityTime: 0.5
+  milestoneForCrowdUpdating: 3
+  numberOfTimeTouched: 0
+  numberOfMeasuresUntouched: 0
+  isInvincible: 0

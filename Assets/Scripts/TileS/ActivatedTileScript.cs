@@ -5,7 +5,7 @@ public class ActivatedTileScript : MonoBehaviour
    private NewTileScript currentTile;
    private NewTileScript nextTile;
    private BeatClock _beatClock;
-   private Vector2Int direction;
+   public Vector2Int direction;
    public ActivatedTileManager activatedTileManager;
    public bool inUsed;
 
@@ -49,7 +49,6 @@ public class ActivatedTileScript : MonoBehaviour
    }
    private void ReceiveBeat()
    {
-      
       Move();
    }
    
