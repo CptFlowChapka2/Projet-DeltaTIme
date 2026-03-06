@@ -9,7 +9,7 @@ public enum PlayerState
     Undefined
 }
 
-public class FeedbacksManager : MonoBehaviour
+public class FeedbacksManager : Manager
 {
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;

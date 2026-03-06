@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class TouchZone : MonoBehaviour
 {
-    private BeatClock beatClock;
+    private OldBeatClock _oldBeatClock;
     private HealthSystem player1;
     private HealthSystem player2;
     private bool alreadyTouched = false;
 
     private void Start()
     {
-        beatClock = GameObject.FindGameObjectWithTag("GM").GetComponent<BeatClock>();
+        _oldBeatClock = GameObject.FindGameObjectWithTag("GM").GetComponent<OldBeatClock>();
         player1 = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthSystem>();
         player2 = GameObject.FindGameObjectWithTag("Player2").GetComponent<HealthSystem>();
     }

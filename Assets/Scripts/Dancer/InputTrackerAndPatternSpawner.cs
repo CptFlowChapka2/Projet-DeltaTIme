@@ -11,7 +11,7 @@ public class InputTrackerAndPatternSpawner : MonoBehaviour
     private NewDanceFloorSpawner _gridSpawner;
     private InputPerPlayer _inputPerPlayer;
     public NewPlayerMovement _playerMovement;
-    private BeatClock _beatClock;
+    private OldBeatClock _oldBeatClock;
     private MusicParametersForFMOD _musicParametersForFMOD;
     private FeedbacksManager _feedbacksManager;
     [SerializeField] private List<List<Vector2Int>> allActivePattern = new List<List<Vector2Int>>();
@@ -24,7 +24,7 @@ public class InputTrackerAndPatternSpawner : MonoBehaviour
     private void Start()
     {
         _patternBank = FindAnyObjectByType<PatternBank>();
-        _beatClock = FindAnyObjectByType<BeatClock>();
+        _oldBeatClock = FindAnyObjectByType<OldBeatClock>();
         _gridSpawner = FindAnyObjectByType<NewDanceFloorSpawner>();
         _activatedTileManager = FindAnyObjectByType<ActivatedTileManager>();
         _inputPerPlayer = GetComponent<InputPerPlayer>();

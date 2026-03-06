@@ -7,7 +7,7 @@ public class DamagingTileScript : MonoBehaviour
     private GameObject player1;
     private GameObject player2;
     private NewTileScript newTileScript;
-    private BeatClock beatClock;
+    private OldBeatClock _oldBeatClock;
     private FeedbacksManager feedbacksManager;
     public bool applyDamages = false;
 
@@ -16,10 +16,10 @@ public class DamagingTileScript : MonoBehaviour
         player1 = GameObject.FindGameObjectWithTag("Player");
         player2 = GameObject.FindGameObjectWithTag("Player2");
         newTileScript = GetComponent<NewTileScript>();
-        beatClock = FindFirstObjectByType<BeatClock>();
+        _oldBeatClock = FindFirstObjectByType<OldBeatClock>();
         feedbacksManager = FindFirstObjectByType<FeedbacksManager>();
-        beatClock.onBeat.AddListener(SwitchLethalityOff);
-        beatClock.onEndBeat.AddListener(SwitchLethalityOn);
+        _oldBeatClock.onBeat.AddListener(SwitchLethalityOff);
+        _oldBeatClock.onEndBeat.AddListener(SwitchLethalityOn);
     }
 
     private void Update()

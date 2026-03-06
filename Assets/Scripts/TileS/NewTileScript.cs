@@ -47,8 +47,8 @@ public class NewTileScript : MonoBehaviour
     {
         AllTile = refToAllTile;
         position = new Vector2Int(x, y);
-        BeatClock beatClock = FindFirstObjectByType<BeatClock>();
-        beatClock.onEndBeat.AddListener(this.CheckForPattern);
+        OldBeatClock oldBeatClock = FindFirstObjectByType<OldBeatClock>();
+        oldBeatClock.onEndBeat.AddListener(this.CheckForPattern);
     }
 
     public void CheckForPattern()

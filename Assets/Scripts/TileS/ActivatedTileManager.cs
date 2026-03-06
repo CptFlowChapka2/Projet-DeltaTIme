@@ -13,7 +13,7 @@ public class ActivatedTileManager : MonoBehaviour
 
     [SerializeField] private int nbrOfAvailableTile;
 
-    private BeatClock _beatClock;
+    private OldBeatClock _oldBeatClock;
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class ActivatedTileManager : MonoBehaviour
         availableTileBanks = new List<ActivatedTileScript>(activatedTileBanks);
         activatedTileBanks.ForEach(x=>x.activatedTileManager=this);
         nbrOfAvailableTile = availableTileBanks.Count;
-        _beatClock = FindAnyObjectByType<BeatClock>();
+        _oldBeatClock = FindAnyObjectByType<OldBeatClock>();
     }
 
     public ActivatedTileScript RequestActivatedTile(NewTileScript firstTile , Vector2Int dir)
@@ -38,7 +38,7 @@ public class ActivatedTileManager : MonoBehaviour
             return null;
         }
 
-        givenActivatedTile.Initialise(firstTile,dir,_beatClock);
+        givenActivatedTile.Initialise(firstTile,dir,_oldBeatClock);
         return givenActivatedTile;
     }
 

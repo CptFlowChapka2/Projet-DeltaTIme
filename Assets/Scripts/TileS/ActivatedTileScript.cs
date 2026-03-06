@@ -4,17 +4,17 @@ public class ActivatedTileScript : MonoBehaviour
 {
    private NewTileScript currentTile;
    private NewTileScript nextTile;
-   private BeatClock _beatClock;
+   private OldBeatClock _oldBeatClock;
    public Vector2Int direction;
    public ActivatedTileManager activatedTileManager;
    public bool inUsed;
 
    
 
-   public void Initialise(NewTileScript firstTile,Vector2Int dir,BeatClock beatClock)
+   public void Initialise(NewTileScript firstTile,Vector2Int dir,OldBeatClock oldBeatClock)
    {
-      _beatClock = beatClock;
-      _beatClock.onBeat.AddListener(ReceiveBeat);
+      _oldBeatClock = oldBeatClock;
+      _oldBeatClock.onBeat.AddListener(ReceiveBeat);
       activatedTileManager.RemoveInUsedFromList(this);
       direction = dir;
       CurrentTile = firstTile;
@@ -57,7 +57,7 @@ public class ActivatedTileScript : MonoBehaviour
       
       if (NextTile is null)
       {
-         _beatClock.onBeat.RemoveListener(ReceiveBeat);
+         _oldBeatClock.onBeat.RemoveListener(ReceiveBeat);
          currentTile = null;
          nextTile = null;
          inUsed = false;

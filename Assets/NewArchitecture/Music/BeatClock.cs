@@ -1,0 +1,124 @@
+using System;
+using UnityEngine;
+
+public class BeatClock : Doer
+{
+    private MusicManager musicManager;
+    
+    private double timeInSeconds;
+    private int beat;
+    private int measure;
+    private double coyoteTime;
+    private int beatsPerMeasure;
+    
+    private bool onStartCoyoteBeat;
+    private bool inCoyoteBeat;
+    private bool onBeat;
+    private bool onEndCoyoteBeat;
+    private bool onStartCoyoteMeasure;
+    private bool inCoyoteMeasure;
+    private bool onMeasure;
+    private bool onEndCoyoteMeasure;
+
+    private void Start()
+    {
+        musicManager = (MusicManager)manager;
+    }
+
+    private void FixedUpdate()
+    {
+        GetAllUsefulParameters();
+        ReinitializeFlags();
+        SequenceBeatsAndMeasures();
+        SetAllUsedParameters();
+    }
+
+    protected override void GetAllUsefulParameters()
+    {
+        timeInSeconds = musicManager.timeInSeconds;
+        beat = musicManager.beat;
+        measure = musicManager.measure;
+        coyoteTime = musicManager.coyoteTime;
+        beatsPerMeasure = musicManager.beatsPerMeasure;
+        onStartCoyoteBeat = musicManager.onStartCoyoteBeat;
+        inCoyoteBeat = musicManager.inCoyoteBeat;
+        onBeat = musicManager.onBeat;
+        onEndCoyoteBeat = musicManager.onEndCoyoteBeat;
+        onStartCoyoteMeasure = musicManager.onStartCoyoteMeasure;
+        inCoyoteMeasure = musicManager.inCoyoteMeasure;
+        onMeasure = musicManager.onMeasure;
+        onEndCoyoteMeasure = musicManager.onEndCoyoteMeasure;
+    }
+
+    protected override void SetAllUsedParameters()
+    {
+        musicManager.timeInSeconds = timeInSeconds;
+        musicManager.beat = beat;
+        musicManager.measure = measure;
+        musicManager.coyoteTime = coyoteTime;
+        musicManager.beatsPerMeasure = beatsPerMeasure;
+        musicManager.onStartCoyoteBeat = onStartCoyoteBeat;
+        musicManager.inCoyoteBeat = inCoyoteBeat;
+        musicManager.onBeat = onBeat;
+        musicManager.onEndCoyoteBeat = onEndCoyoteBeat;
+        musicManager.onStartCoyoteMeasure = onStartCoyoteMeasure;
+        musicManager.inCoyoteMeasure = inCoyoteMeasure;
+        musicManager.onMeasure = onMeasure;
+        musicManager.onEndCoyoteMeasure = onEndCoyoteMeasure;
+    }
+
+    private void SequenceBeatsAndMeasures()
+    {
+        int numberOfPreviousBeats = beat - 1 + (beatsPerMeasure * (measure - 1));
+        double timePerBeat = 60.0 / beatsPerMeasure;
+        double timeSinceLastBeat = timeInSeconds - numberOfPreviousBeats * timePerBeat;
+        
+        if (timeInSeconds < timePerBeat)
+        {
+            beat = 1;
+            measure = 1;
+        }
+        
+        if (inCoyoteBeat && timeSinceLastBeat >= coyoteTime && timeSinceLastBeat < timePerBeat - coyoteTime)//Fin CoyoteTime
+        {
+            inCoyoteBeat = false;
+            onEndCoyoteBeat = true;
+            if (inCoyoteMeasure)
+            {
+                inCoyoteMeasure = false;
+                onEndCoyoteMeasure = true;
+            }
+        }
+        
+        if (!inCoyoteBeat && timeSinceLastBeat >= timePerBeat - coyoteTime)//Debut CoyoteTime
+        {
+            inCoyoteBeat = true;
+            onStartCoyoteBeat = true;
+            if (beat < beatsPerMeasure) return;
+            inCoyoteMeasure = true;
+            onStartCoyoteMeasure = true;
+        }
+        
+        if (timeSinceLastBeat >= timePerBeat)
+        {
+            beat++;
+            //Debug.Log( "beat was called");
+            
+            onBeat = true;
+            if (beat <= beatsPerMeasure) return;
+            onMeasure = true;
+            beat = 1;
+            measure++;
+        }
+    }
+
+    private void ReinitializeFlags()
+    {
+        onBeat = false;
+        onMeasure = false;
+        onStartCoyoteBeat = false;
+        onStartCoyoteMeasure = false;
+        onEndCoyoteBeat = false;
+        onEndCoyoteMeasure = false;
+    }
+}
