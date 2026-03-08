@@ -9,9 +9,13 @@ public class MasterClock : Doer
 
     private double timeInSeconds;
 
-    private void Start()
+    private void Awake()
     {
         musicManager = (MusicManager)manager;
+    }
+
+    private void Start()
+    {
         musicManager.musicPlaying = GetComponent<StudioEventEmitter>().EventInstance;
     }
 
@@ -22,12 +26,12 @@ public class MasterClock : Doer
         SetAllUsedParameters();
     }
 
-    protected override void GetAllUsefulParameters()
+    public override void GetAllUsefulParameters()
     {
         timeInSeconds = musicManager.timeInSeconds;
     }
 
-    protected override void SetAllUsedParameters()
+    public override void SetAllUsedParameters()
     {
         musicManager.timeInSeconds = timeInSeconds;
     }

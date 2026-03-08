@@ -7,7 +7,7 @@ public class MusicManager : Manager
     private MasterClock masterClock;
     private BeatClock beatClock;
 
-    private void Start()
+    private void Awake()
     {
         GetAllDoersOnGameObject();
         InitializeDoer<MasterClock>(out masterClock);

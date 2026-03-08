@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileiD : MonoBehaviour
+public class TileId : MonoBehaviour
 {
     public Vector2Int position = new Vector2Int(0, 0);
     public TileState thisState = TileState.Safe;

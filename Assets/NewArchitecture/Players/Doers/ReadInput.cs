@@ -8,9 +8,14 @@ public class ReadInput : Doer
     
     private InputAction playerMove;
 
-    private void Start()
+    private void Awake()
     {
         playerManager = (PlayerManager)manager;
+    }
+
+    private void Start()
+    {
+        
         playerMove = InputSystem.actions.FindAction(playerManager.inputActionName);
     }
 

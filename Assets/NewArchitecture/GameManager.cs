@@ -19,15 +19,11 @@ public class GameManager : MonoBehaviour
     {
         GetAllManagers();
         InitializeManager<PlayerManager>(out player1Manager, 0);
-        player1Manager.playerId = 1;
         InitializeManager<PlayerManager>(out player2Manager, 1);
-        player1Manager.playerId = 2;
         InitializeManager<MusicManager>(out musicManager);
         InitializeManager<FeedbacksManager>(out feedbacksManager);
         InitializeManager<DanceFloorManager>(out danceFloor1Manager,0);
-        danceFloor1Manager.associatedPLayerId = 1;
         InitializeManager<DanceFloorManager>(out danceFloor2Manager,1);
-        danceFloor2Manager.associatedPLayerId = 2;
         InitializeManager<AttacksManager>(out attacksManager);
     }
 
@@ -64,7 +60,7 @@ public class GameManager : MonoBehaviour
         GameObject toReturn = playerId switch
         {
             1=>player1Manager.playerGameobject,
-            2=>player1Manager.playerGameobject,
+            2=>player2Manager.playerGameobject,
             _ => throw new ArgumentOutOfRangeException(nameof(playerId), playerId, null)
         };
         return toReturn;
@@ -83,7 +79,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public TileiD[,] GetAllTileid(int playerId)
+    public void DoCallAllManagerOfTypeToForceGetUsefullData<Tm,Td>() where Tm: Manager where Td:Doer
+    {
+        if (typeof(Tm).IsSubclassOf(typeof(Manager)))//si on spécifie le type de manager alors on cherche celui la
+        {
+            
+            allManagers.Where(x=> x.GetType() == typeof(Tm)).ToList().ForEach(x=>x.ForceDoerToGetUsefullData<Td>());
+            return;
+        }
+        //sinon on le fait pour tout le monde 
+        allManagers.ForEach(x=>x.ForceDoerToGetUsefullData<Doer>());//on met Doer ici car aucun manager ne partage de Doer
+    }
+
+    public TileId[,] GetAllTileid(int playerId)
     {
         switch (playerId)
         {
@@ -92,7 +100,7 @@ public class GameManager : MonoBehaviour
             case 2 :
                 return danceFloor2Manager.allTileID;
             default:
-                throw new ArgumentOutOfRangeException(nameof(playerId)+" was called with invalide int");
+                throw new ArgumentOutOfRangeException(nameof(playerId)+" was called with invalide int= "+playerId);
         }
     }
 }

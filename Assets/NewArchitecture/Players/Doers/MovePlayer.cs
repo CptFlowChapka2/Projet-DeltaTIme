@@ -1,15 +1,21 @@
+using System;
 using UnityEngine;
 
 public class MovePlayer : Doer
 {
     private PlayerManager playerManager;
-    private TileiD[,] allTileId = new TileiD[,]{};
-    private void Start()
+    private TileId[,] allTileId = new TileId[,]{};
+    private void Awake()
     {
         playerManager = (PlayerManager)manager;
     }
 
-    protected override void GetAllUsefulParameters()
+    private void Start()
+    {
+        GetAllUsefulParameters();
+    }
+
+    public override void GetAllUsefulParameters()
     {
         allTileId = playerManager.gameManager.GetAllTileid(playerManager.playerId);
     }
@@ -18,7 +24,7 @@ public class MovePlayer : Doer
     {
         playerManager.currentPlayerCoord = coords;
         playerManager.currentTileId = allTileId[coords.x, coords.y];
-        TileiD currentTile = playerManager.currentTileId;
+        TileId currentTile = playerManager.currentTileId;
         playerManager.playerGameobject.transform.position=
             new Vector3(currentTile.transform.position.x,playerManager.playerGameobject.transform.position.y,currentTile.transform.position.z);
 

@@ -11,7 +11,7 @@ public class AnalyseInput : Doer
     private bool onEndCoyoteBeat;
     private bool onStartCoyoteMeasure;
 
-    private void Start()
+    private void Awake()
     {
         playerManager = (PlayerManager)manager;
     }
@@ -24,7 +24,7 @@ public class AnalyseInput : Doer
         ListenForOnStartCoyoteMeasure();
     }
 
-    protected override void GetAllUsefulParameters()
+    public override void GetAllUsefulParameters()
     {
         inCoyoteBeat = playerManager.gameManager.GetInCoyoteBeat();
         onEndCoyoteBeat = playerManager.gameManager.GetOnEndCoyoteBeat(); 

@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17094726}
   - component: {fileID: 17094725}
+  - component: {fileID: 17094727}
   m_Layer: 0
   m_Name: DanceFloorManager
   m_TagString: Untagged
@@ -148,6 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcda29ca08619ad46b9d539bce94b62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DanceFloorManager
+  gameManager: {fileID: 0}
+  associatedPlayerId: 1
+  allInvalideTile: []
+  tilePrefab: {fileID: 4807671647597357901, guid: bf017d74face67f488857fbfabd605fb, type: 3}
+  danceFloorSize: 7
 --- !u!4 &17094726
 Transform:
   m_ObjectHideFlags: 0
@@ -163,6 +169,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &17094727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17094724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ffff77a88a82d4d898ea8cbb8090fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreateDanceFloor
 --- !u!1 &221582686
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +273,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &551810306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4647136175729154352, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
+  m_PrefabInstance: {fileID: 1148675111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &599797797
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,8 +404,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9098dee795f478442b5cd620b7961f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FeedbacksManager
-  player1: {fileID: 0}
-  player2: {fileID: 0}
+  gameManager: {fileID: 0}
+  player1: {fileID: 2007460766}
+  player2: {fileID: 551810306}
   hitSound: {fileID: 0}
   dingSound: {fileID: 0}
   actualP1Level: 0
@@ -414,7 +438,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2118952740601809374, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.27374
+      value: 14.4
       objectReference: {fileID: 0}
     - target: {fileID: 2118952740601809374, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -422,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2118952740601809374, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.02319
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2118952740601809374, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
       propertyPath: m_LocalRotation.w
@@ -456,6 +480,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 8076618584947001855, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
+      propertyPath: playerId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076618584947001855, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
+      propertyPath: inputActionName
+      value: Player2Move
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -466,7 +498,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8076618584947001855, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
   m_PrefabInstance: {fileID: 1148675111}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 551810306}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d244404a5ba78c4c9543e127dbd7158, type: 3}
@@ -520,6 +552,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5722078554517464659, guid: 415a1ad53163608428b19024321c6c68, type: 3}
+      propertyPath: playerId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722078554517464659, guid: 415a1ad53163608428b19024321c6c68, type: 3}
+      propertyPath: inputActionName
+      value: Player1Move
+      objectReference: {fileID: 0}
     - target: {fileID: 9151578693863569052, guid: 415a1ad53163608428b19024321c6c68, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -534,7 +574,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5722078554517464659, guid: 415a1ad53163608428b19024321c6c68, type: 3}
   m_PrefabInstance: {fileID: 1333142596}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2007460766}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d244404a5ba78c4c9543e127dbd7158, type: 3}
@@ -573,7 +613,8 @@ MonoBehaviour:
   player2Manager: {fileID: 1148675112}
   musicManager: {fileID: 1922939611}
   feedbacksManager: {fileID: 716344577}
-  danceFloorManager: {fileID: 17094725}
+  danceFloor1Manager: {fileID: 17094725}
+  danceFloor2Manager: {fileID: 1805349647}
   attacksManager: {fileID: 1828740938}
 --- !u!4 &1452981380
 Transform:
@@ -585,6 +626,68 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1805349645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1805349648}
+  - component: {fileID: 1805349647}
+  - component: {fileID: 1805349646}
+  m_Layer: 0
+  m_Name: DanceFloorManager (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1805349646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805349645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ffff77a88a82d4d898ea8cbb8090fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreateDanceFloor
+--- !u!114 &1805349647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805349645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcda29ca08619ad46b9d539bce94b62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DanceFloorManager
+  gameManager: {fileID: 0}
+  associatedPlayerId: 2
+  allInvalideTile: []
+  tilePrefab: {fileID: 4807671647597357901, guid: bf017d74face67f488857fbfabd605fb, type: 3}
+  danceFloorSize: 7
+--- !u!4 &1805349648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805349645}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.24801, y: 0, z: -0.25139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -619,6 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0adde2b756b9343a03e4df7a4fde9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttacksManager
+  gameManager: {fileID: 0}
 --- !u!4 &1828740939
 Transform:
   m_ObjectHideFlags: 0
@@ -644,6 +748,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1922939612}
   - component: {fileID: 1922939611}
+  - component: {fileID: 1922939614}
+  - component: {fileID: 1922939613}
+  - component: {fileID: 1922939615}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -663,6 +770,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82804489e255aff4d9ef68b17a22a3dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  gameManager: {fileID: 0}
+  beatsPerMinute: 0
+  beatsPerMeasure: 0
+  timeInSeconds: 0
+  beat: 1
+  measure: 1
+  coyoteTime: 0.1
+  onStartCoyoteBeat: 0
+  inCoyoteBeat: 0
+  onBeat: 0
+  onEndCoyoteBeat: 0
+  onStartCoyoteMeasure: 0
+  inCoyoteMeasure: 0
+  onMeasure: 0
+  onEndCoyoteMeasure: 0
 --- !u!4 &1922939612
 Transform:
   m_ObjectHideFlags: 0
@@ -678,6 +800,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1922939613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922939610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50d06b45367ff54d97b2eae3c0501bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MasterClock
+--- !u!114 &1922939614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922939610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d9cae0051ceaa4ca4e66640473852a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BeatClock
+--- !u!114 &1922939615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922939610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1350197352
+      Data2: 1153515339
+      Data3: 1106126728
+      Data4: -1973774604
+    Path: event:/MusicPlay
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &2007460766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9151578693863569052, guid: 415a1ad53163608428b19024321c6c68, type: 3}
+  m_PrefabInstance: {fileID: 1333142596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -690,4 +872,5 @@ SceneRoots:
   - {fileID: 1922939612}
   - {fileID: 716344578}
   - {fileID: 17094726}
+  - {fileID: 1805349648}
   - {fileID: 1828740939}

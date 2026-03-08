@@ -9,7 +9,7 @@ public class PlayerManager : Manager
     private MovePlayer movePlayer;
     private UpdateWhenHit updateWhenHit;
     
-    private void Start()
+    private void Awake()
     {
         GetAllDoersOnGameObject();
         InitializeDoer<ReadInput>(out readInput);
@@ -24,7 +24,7 @@ public class PlayerManager : Manager
     [Header("GeneralInfo")] 
     public int playerId;
     public GameObject playerGameobject;
-    public Vector2Int currentPlayerCoord;
+    public Vector2Int currentPlayerCoord=new Vector2Int();
 
     [Header("ReadInput")]
     public string inputActionName; // Player1Move ou Player2Move
@@ -35,7 +35,7 @@ public class PlayerManager : Manager
     public int numberOfSuccesses = 0;
 
     [Header("MovePlayer")] 
-    public TileiD currentTileId;
+    public TileId currentTileId;
     
     
     //OUTSIDE DO CALL//
@@ -44,4 +44,5 @@ public class PlayerManager : Manager
     {
         movePlayer.TeleportPlayerToCoords(coords);
     }
+    
 }

@@ -5,48 +5,63 @@ using UnityEngine;
 public class CreateDanceFloor : Doer
 {
     private DanceFloorManager danceFloorManager;
-    private TileiD[,] allTileId = new TileiD[,]{};
-    private List<TileiD> allInvalideTile = new List<TileiD>();
+    private TileId[,] allTileId = new TileId[,]{};
+    private List<TileId> allInvalideTile = new List<TileId>();
     private GameObject tilePrefab;
     private int danceFloorSize;
 
-    private void Start()
+    private void Awake()
     {
         danceFloorManager = (DanceFloorManager)manager;
+    }
+
+    private void Start()
+    {
+        
         GetAllUsefulParameters();
        allTileId= InitialiseDanceFloorArray();
        SpawnDanceFloor();
+      SetAllUsedParameters();
+      danceFloorManager.gameManager.DoCallAllManagerOfTypeToForceGetUsefullData<PlayerManager,MovePlayer>();
        TeleportPLayerToCenterOfDanceFloor();
     }
 
-    protected override void GetAllUsefulParameters()
+    public override void GetAllUsefulParameters()
     {
         tilePrefab = danceFloorManager.tilePrefab;
         danceFloorSize = danceFloorManager.danceFloorSize + 2;
 
     }
-    
-    private TileiD[,]  InitialiseDanceFloorArray()
+
+    public override void SetAllUsedParameters()
     {
-        return new TileiD[danceFloorSize, danceFloorSize];
+        danceFloorManager.allTileID = allTileId;
+        danceFloorManager.allInvalideTile = allInvalideTile;
+    }
+
+    private TileId[,]  InitialiseDanceFloorArray()
+    {
+        return new TileId[danceFloorSize, danceFloorSize];
     }
     
     private void SpawnDanceFloor()
     {
+        
+        GameObject playerGo = danceFloorManager.gameManager.GetPlayerGameObject(danceFloorManager.associatedPlayerId);
         for (int i = 0; i < danceFloorSize; i++)
         {
             for (int j = 0; j < danceFloorSize; j++)
             {
-                Vector3 posP1 = new Vector3(i, transform.position.y, j);
-                CreateTile(posP1, i, j, allTileId,allInvalideTile);
+                Vector3 pos = playerGo.transform.position+new Vector3(i, 0, j);
+                CreateTile(pos, i, j, allTileId,allInvalideTile);
                 
             }
         }
         
     }
-    private void CreateTile(Vector3 pos, int i, int j, TileiD[,] tiles,List< TileiD> invalidTileList)
+    private void CreateTile(Vector3 pos, int i, int j, TileId[,] tiles,List< TileId> invalidTileList)
     {
-        TileiD tile = Instantiate(tilePrefab, pos,Quaternion.identity).GetComponent<TileiD>();
+        TileId tile = Instantiate(tilePrefab, pos,Quaternion.identity).GetComponent<TileId>();
         tile.Initialise(danceFloorManager,new Vector2Int(i,j));
         tiles[i,j]=tile;
         if ((i == 0 || j == 0) || (i == danceFloorSize - 1 || j == danceFloorSize - 1)) //check if tile is an extremity
@@ -61,7 +76,7 @@ public class CreateDanceFloor : Doer
     {
         int halfSize = (int)Math.Floor((float)danceFloorSize / 2);
         Vector2Int coords = new Vector2Int(halfSize, halfSize);
-        danceFloorManager.gameManager.DoMovePlayerTeleportToCoord(coords,danceFloorManager.associatedPLayerId);
+        danceFloorManager.gameManager.DoMovePlayerTeleportToCoord(coords,danceFloorManager.associatedPlayerId);
         
     }
 

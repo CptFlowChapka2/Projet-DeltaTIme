@@ -10,12 +10,12 @@ public abstract class Doer : MonoBehaviour
         set => manager = value;
     }
 
-    protected virtual void GetAllUsefulParameters()
+    public virtual void GetAllUsefulParameters()
     {
         
     }
     
-    protected virtual void SetAllUsedParameters()
+    public virtual void SetAllUsedParameters()
     {
         
     }

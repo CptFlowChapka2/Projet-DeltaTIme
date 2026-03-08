@@ -33,7 +33,7 @@ public class BeatClock : Doer
         SetAllUsedParameters();
     }
 
-    protected override void GetAllUsefulParameters()
+    public override void GetAllUsefulParameters()
     {
         timeInSeconds = musicManager.timeInSeconds;
         beat = musicManager.beat;
@@ -50,7 +50,7 @@ public class BeatClock : Doer
         onEndCoyoteMeasure = musicManager.onEndCoyoteMeasure;
     }
 
-    protected override void SetAllUsedParameters()
+    public override void SetAllUsedParameters()
     {
         musicManager.timeInSeconds = timeInSeconds;
         musicManager.beat = beat;

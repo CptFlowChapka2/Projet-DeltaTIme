@@ -13,10 +13,10 @@ public class DanceFloorManager : Manager
         InitializeDoer(out createDanceFloor);
     }
 
-    public int associatedPLayerId;
+    public int associatedPlayerId;
     [Header("CreateDanceFloor")]
-    public TileiD[,] allTileID = new TileiD[,]{};
-    public List<NewTileScript> allInvalideTile = new List<NewTileScript>();
+    public TileId[,] allTileID = new TileId[,]{};
+    public List<TileId> allInvalideTile = new List<TileId>();
     public GameObject tilePrefab;
     public int danceFloorSize;
 
