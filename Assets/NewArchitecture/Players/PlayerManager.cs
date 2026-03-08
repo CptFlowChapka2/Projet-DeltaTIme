@@ -16,15 +16,15 @@ public class PlayerManager : Manager
         InitializeDoer<AnalyseInput>(out analyseInput);
         InitializeDoer<MovePlayer>(out movePlayer);
         InitializeDoer<UpdateWhenHit>(out updateWhenHit);
-        playerGameobject = gameObject;
+        playerGameObject = gameObject;
 
 
     }
 
     [Header("GeneralInfo")] 
     public int playerId;
-    public GameObject playerGameobject;
-    public Vector2Int currentPlayerCoord=new Vector2Int();
+    public GameObject playerGameObject;
+    public Vector2Int currentPlayerCoords=new Vector2Int();
 
     [Header("ReadInput")]
     public string inputActionName; // Player1Move ou Player2Move

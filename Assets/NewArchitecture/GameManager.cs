@@ -59,8 +59,8 @@ public class GameManager : MonoBehaviour
     {
         GameObject toReturn = playerId switch
         {
-            1=>player1Manager.playerGameobject,
-            2=>player2Manager.playerGameobject,
+            1=>player1Manager.playerGameObject,
+            2=>player2Manager.playerGameObject,
             _ => throw new ArgumentOutOfRangeException(nameof(playerId), playerId, null)
         };
         return toReturn;

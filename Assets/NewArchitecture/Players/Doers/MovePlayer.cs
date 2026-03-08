@@ -5,6 +5,12 @@ public class MovePlayer : Doer
 {
     private PlayerManager playerManager;
     private TileId[,] allTileId = new TileId[,]{};
+    private Vector2Int currentPlayerCoords;
+    private TileId currentTileId;
+    private GameObject playerGameObject;
+    
+    
+    
     private void Awake()
     {
         playerManager = (PlayerManager)manager;
@@ -18,16 +24,26 @@ public class MovePlayer : Doer
     public override void GetAllUsefulParameters()
     {
         allTileId = playerManager.gameManager.GetAllTileid(playerManager.playerId);
+        currentPlayerCoords = playerManager.currentPlayerCoords;
+        currentTileId = playerManager.currentTileId;
+        playerGameObject = playerManager.playerGameObject;
+    }
+
+    public override void SetAllUsedParameters()
+    {
+        playerManager.currentPlayerCoords = currentPlayerCoords;
+        playerManager.currentTileId = currentTileId;
+        playerManager.playerGameObject = playerGameObject;
     }
 
     public void TeleportPlayerToCoords(Vector2Int coords)
     {
-        playerManager.currentPlayerCoord = coords;
-        playerManager.currentTileId = allTileId[coords.x, coords.y];
-        TileId currentTile = playerManager.currentTileId;
-        playerManager.playerGameobject.transform.position=
-            new Vector3(currentTile.transform.position.x,playerManager.playerGameobject.transform.position.y,currentTile.transform.position.z);
-
+        currentPlayerCoords = coords;
+        currentTileId = allTileId[coords.x, coords.y];
+        TileId currentTile = currentTileId;
+        playerGameObject.transform.position=
+            new Vector3(currentTile.transform.position.x,playerGameObject.transform.position.y,currentTile.transform.position.z);
+        SetAllUsedParameters();
     }
 }
 
