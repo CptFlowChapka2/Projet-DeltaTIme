@@ -130,25 +130,25 @@ public class InputTrackerAndPatternSpawner : MonoBehaviour
     private void CreatePatterneInfo(List<Vector2Int> inputsThisMesure, NewTileScript[] origne)
     {
 
-        Vector2Int inputDirToProcesses = inputsThisMesure.First();
-        if (inputDirToProcesses == Vector2Int.zero)
-        {
-            //todo=feedback
-            return;
-        }
-
-        int nbrOfSimilareInputInMesure = inputsThisMesure.FindAll(x => x == inputDirToProcesses).Count;
-        bool[] patternToSpawn = _patternBank.GetPatternVariantForAnDir(inputDirToProcesses, nbrOfSimilareInputInMesure);
-        for (int i = 0; i < patternToSpawn.Length ; i++)
-        {
-            if (patternToSpawn[i] is false)
-            {
-                //il n'y as rien à faire spawn donc on passe à la prochaine case
-                continue;
-            }
-
-            _activatedTileManager.RequestActivatedTile(origne[i], inputDirToProcesses);
-        }
-       
+        // Vector2Int inputDirToProcesses = inputsThisMesure.First();
+        // if (inputDirToProcesses == Vector2Int.zero)
+        // {
+        //     //todo=feedback
+        //     return;
+        // }
+        //
+        // int nbrOfSimilareInputInMesure = inputsThisMesure.FindAll(x => x == inputDirToProcesses).Count;
+        // bool[] patternToSpawn = _patternBank.GetPatternVariantForAnDir(inputDirToProcesses, nbrOfSimilareInputInMesure);
+        // for (int i = 0; i < patternToSpawn.Length ; i++)
+        // {
+        //     if (patternToSpawn[i] is false)
+        //     {
+        //         //il n'y as rien à faire spawn donc on passe à la prochaine case
+        //         continue;
+        //     }
+        //
+        //     _activatedTileManager.RequestActivatedTile(origne[i], inputDirToProcesses);
+        // }
+        //
     }
 }

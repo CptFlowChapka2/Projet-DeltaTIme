@@ -703,6 +703,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1828740939}
   - component: {fileID: 1828740938}
+  - component: {fileID: 1828740942}
+  - component: {fileID: 1828740941}
+  - component: {fileID: 1828740940}
+  - component: {fileID: 1828740943}
   m_Layer: 0
   m_Name: AttacksManager
   m_TagString: Untagged
@@ -723,6 +727,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttacksManager
   gameManager: {fileID: 0}
+  patternBank: {fileID: 0}
+  projectileIdPrefab: {fileID: 377817695415084827, guid: a804cdc7ce0491942a34391383d9ce03, type: 3}
+  inactiveProjectileIdPosition: {x: 0, y: 30, z: 0}
+  maxNumberOfProjectileId: 5
+  allProjectileIds: []
+  currentlyActiveProjectileIds: []
+  currentlyInactiveProjectileIds: []
 --- !u!4 &1828740939
 Transform:
   m_ObjectHideFlags: 0
@@ -738,6 +749,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1828740940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828740937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89ce5d9f2efae04d993389eef6a73ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveProjectile
+--- !u!114 &1828740941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828740937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea3cbc2862d53a4782548bd4ceeeeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ManipulateProjectileList
+  currentlyInactiveProjectileIds: []
+--- !u!114 &1828740942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828740937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df387c7db6d348947a8b6204d44a7846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PatternBank
+  patternLeft:
+    line1: 00000100000000
+    line2: 00010000000000
+    line3: 01000000000000
+    line4: 00000000000100
+  patternRight:
+    line1: 01010000000000
+    line2: 00000101000000
+    line3: 00000100000000
+    line4: 00010000000000
+  patternUp:
+    line1: 00010100000000
+    line2: 00000000010000
+    line3: 00000100000000
+    line4: 00010000000000
+  patternDown:
+    line1: 00000100000000
+    line2: 00000100000000
+    line3: 00000000000100
+    line4: 00000100000000
+--- !u!114 &1828740943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828740937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbcda373ae99a54c8053839777be6b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnProjectile
 --- !u!1 &1922939610
 GameObject:
   m_ObjectHideFlags: 0

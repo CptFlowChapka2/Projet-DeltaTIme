@@ -9,6 +9,8 @@ public class ManipulateProjectileList : Doer
     private Vector3 defaultPosition;
     private List<ProjectileID> allProjectileIds = new List<ProjectileID>();
     private List<ProjectileID> currentlyActiveProjectileIds = new List<ProjectileID>();
+     public List<ProjectileID> currentlyInactiveProjectileIds = new List<ProjectileID>();
+    
     
     private AttacksManager attacksManager;
     private void Awake()
@@ -23,17 +25,25 @@ public class ManipulateProjectileList : Doer
         SetAllUsedParameters();
     }
 
+    private void FixedUpdate()
+    {
+        SetAllUsedParameters();
+    }
+
     public override void GetAllUsefulParameters()
     {
         defaultPosition = attacksManager.inactiveProjectileIdPosition;
         allProjectileIds = attacksManager.allProjectileIds;
         currentlyActiveProjectileIds = attacksManager.currentlyActiveProjectileIds;
+        currentlyInactiveProjectileIds = attacksManager.currentlyInactiveProjectileIds;
     }
 
     public override void SetAllUsedParameters()
     {
         attacksManager.allProjectileIds = allProjectileIds;
-         
+        attacksManager.currentlyActiveProjectileIds = currentlyActiveProjectileIds;
+        attacksManager.currentlyInactiveProjectileIds = currentlyInactiveProjectileIds;
+
     }
 
     private void SpawnAllProjectile()
@@ -46,16 +56,19 @@ public class ManipulateProjectileList : Doer
             GameObject justSpawnedActivatedTile = Instantiate(prefab,defaultPosition,Quaternion.identity);
             allProjectileIds.Add(justSpawnedActivatedTile.GetComponent<ProjectileID>());
         }
-        
+
+        currentlyInactiveProjectileIds = new List<ProjectileID>(allProjectileIds);
         allProjectileIds.ForEach(x=>x.attacksManager=attacksManager);
     }
 
     public void RemoveProjectileFromUnusedList(ProjectileID projectileID)
     {
         currentlyActiveProjectileIds.Remove(projectileID);
+        currentlyInactiveProjectileIds.Add(projectileID);
     }
     public void AddProjectileFromUnusedList(ProjectileID projectileID)
     {
         currentlyActiveProjectileIds.Add(projectileID);
+        currentlyInactiveProjectileIds.Remove(projectileID);
     }
 }

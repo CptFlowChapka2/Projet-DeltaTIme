@@ -55,6 +55,44 @@ public class GameManager : MonoBehaviour
         return musicManager.onStartCoyoteMeasure;
     }
 
+    public bool GetOnBeat()
+    {
+        return musicManager.onBeat;
+    }
+
+    public bool GetOnEndMesure()
+    {
+        return musicManager.onEndCoyoteMeasure;
+    }
+
+    public List<Vector2Int> GetInputsThisMeasure(int playerId)
+    {
+        List<Vector2Int> toReturn = playerId switch
+        {
+            1=> player1Manager.inputsThisMeasure,
+            2=>player2Manager.inputsThisMeasure,
+
+        };
+        return toReturn;
+    }
+    public List<TileId> GetDanceFloorAllInvalidTile(int playerId)
+    {
+        List<TileId> toReturn = playerId switch
+        {
+            1=> danceFloor1Manager.allInvalideTile,
+            2=>danceFloor2Manager.allInvalideTile,
+
+        };
+        return toReturn;
+    }
+
+   
+
+    public int GetDanceFloorSize()
+    {
+        return danceFloor1Manager.danceFloorSize;
+    }
+
     public GameObject GetPlayerGameObject(int playerId)
     {
         GameObject toReturn = playerId switch

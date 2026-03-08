@@ -12,7 +12,7 @@ public class MoveProjectile : Doer
 
     public override void GetAllUsefulParameters()
     {
-        onBeatFlag = attacksManager.gameManager.GetInCoyoteBeat();
+        onBeatFlag = attacksManager.gameManager.GetOnBeat();
     }
 
     private void FixedUpdate()
