@@ -103,4 +103,36 @@ public class GameManager : MonoBehaviour
                 throw new ArgumentOutOfRangeException(nameof(playerId)+" was called with invalide int= "+playerId);
         }
     }
+
+    public void DoTileListModification(Vector2Int tileToModify, ProjectileID toDo,
+       tileIdOrder thingToDo,int playerId,bool overwriteToAll=false)
+    {
+        if (overwriteToAll)
+        {
+            danceFloor1Manager.DoModifyTileList(tileToModify, toDo, thingToDo, overwriteToAll);
+            danceFloor2Manager.DoModifyTileList(tileToModify, toDo, thingToDo, overwriteToAll);
+        }
+        
+        switch (playerId)
+        {
+            case 1:
+                danceFloor1Manager.DoModifyTileList(tileToModify, toDo, thingToDo);
+                break;
+            case 2:
+                danceFloor2Manager.DoModifyTileList(tileToModify, toDo, thingToDo);
+                break;
+        }
+    }
+
+    public TileId[,] GetAllTileArray(int playerId)
+    {
+        TileId[,] toReturn = playerId switch
+        {
+            1=>danceFloor1Manager.allTileID,
+            2=>danceFloor2Manager.allTileID
+
+        };
+        return toReturn;
+        
+    }
 }

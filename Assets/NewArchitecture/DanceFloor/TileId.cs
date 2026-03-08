@@ -16,6 +16,21 @@ public class TileId : MonoBehaviour
         danceFloorManager = iniDanceFloorManager;
         position = iniPosition;
     }
-    
-    
+
+    public void AddAProjectileOnThisTile(ProjectileID projectileID)
+    {
+        allProjectileOnThisTile.Add(projectileID);
+    }
+    public void RemoveAProjectileOnThisTile(ProjectileID projectileID)
+    {
+        allProjectileOnThisTile.Remove(projectileID);
+    }
+    public void AddASignOnThisTile(ProjectileID projectileID)
+    {
+        allProjectileOnThisTileNextBeat.Add(projectileID);
+    }
+    public void RemoveASignOnThisTile(ProjectileID projectileID)
+    {
+        allProjectileOnThisTileNextBeat.Remove(projectileID);
+    }
 }

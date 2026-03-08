@@ -7,3 +7,10 @@ public enum TileState
     Damaging
     
 }
+public enum tileIdOrder
+{
+    CurrentAdd,
+    CurrentRemove,
+    SignAdd,
+    SignRemove
+}

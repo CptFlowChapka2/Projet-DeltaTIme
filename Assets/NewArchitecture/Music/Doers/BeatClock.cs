@@ -20,7 +20,7 @@ public class BeatClock : Doer
     private bool onMeasure;
     private bool onEndCoyoteMeasure;
 
-    private void Start()
+    private void Awake()
     {
         musicManager = (MusicManager)manager;
     }
