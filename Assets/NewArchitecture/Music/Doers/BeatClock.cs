@@ -10,6 +10,7 @@ public class BeatClock : Doer
     private int measure;
     private double coyoteTime;
     private int beatsPerMeasure;
+    private int beatsPerMinute;
     
     private bool onStartCoyoteBeat;
     private bool inCoyoteBeat;
@@ -40,6 +41,7 @@ public class BeatClock : Doer
         measure = musicManager.measure;
         coyoteTime = musicManager.coyoteTime;
         beatsPerMeasure = musicManager.beatsPerMeasure;
+        beatsPerMinute = musicManager.beatsPerMinute;
         onStartCoyoteBeat = musicManager.onStartCoyoteBeat;
         inCoyoteBeat = musicManager.inCoyoteBeat;
         onBeat = musicManager.onBeat;
@@ -57,6 +59,7 @@ public class BeatClock : Doer
         musicManager.measure = measure;
         musicManager.coyoteTime = coyoteTime;
         musicManager.beatsPerMeasure = beatsPerMeasure;
+        musicManager.beatsPerMinute = beatsPerMinute;
         musicManager.onStartCoyoteBeat = onStartCoyoteBeat;
         musicManager.inCoyoteBeat = inCoyoteBeat;
         musicManager.onBeat = onBeat;
@@ -70,7 +73,7 @@ public class BeatClock : Doer
     private void SequenceBeatsAndMeasures()
     {
         int numberOfPreviousBeats = beat - 1 + (beatsPerMeasure * (measure - 1));
-        double timePerBeat = 60.0 / beatsPerMeasure;
+        double timePerBeat = 60.0 / beatsPerMinute;
         double timeSinceLastBeat = timeInSeconds - numberOfPreviousBeats * timePerBeat;
         
         if (timeInSeconds < timePerBeat)

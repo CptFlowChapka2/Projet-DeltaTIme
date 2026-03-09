@@ -48,7 +48,7 @@ public class InputTrackerAndPatternSpawner : MonoBehaviour
             return;
         }
         inputThisMesure.Add(inputs);
-        _feedbacksManager.CorrectMoveFeedback();
+        //_feedbacksManager.CorrectMoveFeedback();
     }
 
     public void ReceiveMesure()

@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private PlayerManager player1Manager;
-    [SerializeField] private PlayerManager player2Manager;
-    [SerializeField] private MusicManager musicManager;
-    [SerializeField] private FeedbacksManager feedbacksManager;
-    [SerializeField] private DanceFloorManager danceFloor1Manager;
-    [SerializeField] private DanceFloorManager danceFloor2Manager;
-    [SerializeField] private AttacksManager attacksManager;
+    public PlayerManager player1Manager;
+    public PlayerManager player2Manager;
+    public MusicManager musicManager;
+    public FeedbacksManager feedbacksManager;
+    public DanceFloorManager danceFloor1Manager;
+    public DanceFloorManager danceFloor2Manager;
+    public AttacksManager attacksManager;
     
     private List<Manager> allManagers = new List<Manager>();
 
@@ -75,6 +75,18 @@ public class GameManager : MonoBehaviour
         };
         return toReturn;
     }
+
+    public int GetNumberOfSuccesses(int playerId)
+    {
+        int toReturn = playerId switch
+        {
+            1=>player1Manager.numberOfSuccesses,
+            2=>player2Manager.numberOfSuccesses,
+            _ => throw new ArgumentOutOfRangeException(nameof(playerId), playerId, null)
+        };
+        return toReturn;
+    }
+    
     public List<TileId> GetDanceFloorAllInvalidTile(int playerId)
     {
         List<TileId> toReturn = playerId switch
@@ -172,5 +184,10 @@ public class GameManager : MonoBehaviour
         };
         return toReturn;
         
+    }
+
+    public void DoCallSpecificFeedback(FeedbackCaller feedback)
+    {
+        feedbacksManager.Call(feedback);
     }
 }

@@ -10,13 +10,14 @@ public class AnalyseInput : Doer
     private bool inCoyoteBeat;
     private bool onEndCoyoteBeat;
     private bool onStartCoyoteMeasure;
+    private int numberOfSuccesses = 0;
 
     private void Awake()
     {
         playerManager = (PlayerManager)manager;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         GetAllUsefulParameters();
         ListenForOnEndCoyoteBeat();
@@ -42,7 +43,13 @@ public class AnalyseInput : Doer
         if (!inCoyoteBeat)
         {
             inputThisFrame = Vector2Int.zero;
+            Debug.Log("Oops");
             //todo call feedback
+        }
+        else
+        {
+            playerManager.gameManager.DoCallSpecificFeedback(playerManager.gameManager.feedbacksManager.movingInBeatFeedback);
+            numberOfSuccesses++;
         }
         inputsThisMeasureCache.Add(inputThisFrame);
         alreadyInputedThisBeat = true;
@@ -60,6 +67,9 @@ public class AnalyseInput : Doer
     {
         if (onStartCoyoteMeasure)
         {
+            playerManager.numberOfSuccesses = numberOfSuccesses;
+            Debug.Log(numberOfSuccesses);
+            numberOfSuccesses = 0;
             playerManager.inputsThisMeasure = inputsThisMeasureCache;
             inputsThisMeasureCache.Clear();
         }

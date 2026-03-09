@@ -61,7 +61,7 @@ public class CreateDanceFloor : Doer
     }
     private void CreateTile(Vector3 pos, int i, int j, TileId[,] tiles,List< TileId> invalidTileList)
     {
-        TileId tile = Instantiate(tilePrefab, pos,Quaternion.identity).GetComponent<TileId>();
+        TileId tile = Instantiate(tilePrefab, pos, Quaternion.identity).GetComponent<TileId>();
         tile.Initialise(danceFloorManager,new Vector2Int(i,j));
         tiles[i,j]=tile;
         if ((i == 0 || j == 0) || (i == danceFloorSize - 1 || j == danceFloorSize - 1)) //check if tile is an extremity
@@ -77,7 +77,6 @@ public class CreateDanceFloor : Doer
         int halfSize = (int)Math.Floor((float)danceFloorSize / 2);
         Vector2Int coords = new Vector2Int(halfSize, halfSize);
         danceFloorManager.gameManager.DoMovePlayerTeleportToCoord(coords,danceFloorManager.associatedPlayerId);
-        
     }
 
 

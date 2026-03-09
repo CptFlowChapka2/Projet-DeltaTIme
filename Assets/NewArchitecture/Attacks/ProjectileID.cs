@@ -4,7 +4,6 @@ public class ProjectileID : MonoBehaviour
 {
     public AttacksManager attacksManager;
     
-    
     public TileId currentTileId;
     public Vector2Int currentRelativeCoords;
     public Vector2Int directionOfMouvement;

@@ -112,7 +112,7 @@ public class SpawnProjectile : Doer
         
         return origin;
     }
-    private void AssignProjectileId(List<Vector2Int> inputsThisMesure, TileId[] origne,int playerId)
+    private void AssignProjectileId(List<Vector2Int> inputsThisMesure, TileId[] origin, int playerId)
     {
 
         Vector2Int inputDirToProcesses = inputsThisMesure.First();
@@ -132,7 +132,7 @@ public class SpawnProjectile : Doer
                 continue;
             }
 
-            RequestProjectileID(origne[i], inputsThisMesure.First(), playerId);
+            RequestProjectileID(origin[i], inputsThisMesure.First(), playerId);
         }
        
     }

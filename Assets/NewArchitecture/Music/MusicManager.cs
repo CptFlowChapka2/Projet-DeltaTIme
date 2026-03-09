@@ -6,12 +6,14 @@ public class MusicManager : Manager
     
     private MasterClock masterClock;
     private BeatClock beatClock;
+    private UpdateMusic updateMusic;
 
     private void Awake()
     {
         GetAllDoersOnGameObject();
         InitializeDoer<MasterClock>(out masterClock);
         InitializeDoer<BeatClock>(out beatClock);
+        InitializeDoer<UpdateMusic>(out updateMusic);
     }
 
     [Header("Music Parameters")]
@@ -35,4 +37,8 @@ public class MusicManager : Manager
     public bool inCoyoteMeasure = false;
     public bool onMeasure = false;
     public bool onEndCoyoteMeasure = false;
+
+    [Header("Update Music Each Measure")] 
+    public int player1Level = 0;
+    public int player2Level = 0;
 }
