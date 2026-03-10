@@ -51,6 +51,7 @@ public class MoveProjectile : Doer
     {
         
         Vector2Int potentialNewCoord = projectileID.currentRelativeCoords + projectileID.directionOfMouvement;
+        Debug.Log(potentialNewCoord);
         result = Vector2Int.zero;
         if ((potentialNewCoord.x < allTile.GetLowerBound(0) || potentialNewCoord.x > allTile.GetUpperBound(0)) ||
             (potentialNewCoord.y < allTile.GetLowerBound(1) || potentialNewCoord.y > allTile.GetUpperBound(1)))
