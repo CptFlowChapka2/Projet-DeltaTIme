@@ -30,4 +30,15 @@ public class AttacksManager : Manager
         return patternBank.AllPatternes[dir].allLines[variantID-1];
     }
     
+    public void SwitchProjectileToActiveList(ProjectileID projectileID)
+    {
+        manipulateProjectileList.SwitchProjectileToActiveList(projectileID);
+
+    }
+    public void SwitchProjectileToInactiveList(ProjectileID projectileID)
+    {
+        manipulateProjectileList.SwitchProjectileToInactiveList(projectileID);
+       
+    }
+    
 }

@@ -15,8 +15,10 @@ public class ProjectileID : MonoBehaviour
         currentTileId = firstTile;
         currentPlayerId = playerId;
         currentRelativeCoords = currentTileId.position;
-        attacksManager.gameManager.DoTileListModification(currentTileId.position,this,tileIdOrder.CurrentAdd,currentPlayerId);
-        attacksManager.gameManager.DoTileListModification(currentTileId.position+directionOfMouvement,this,tileIdOrder.SignAdd,currentPlayerId);
+        attacksManager.gameManager.DoTileListModification
+            (currentTileId.position,this,tileIdOrder.CurrentAdd,currentPlayerId);
+        attacksManager.gameManager.DoTileListModification
+            (currentTileId.position+directionOfMouvement,this,tileIdOrder.SignAdd,currentPlayerId);
 
         
     }

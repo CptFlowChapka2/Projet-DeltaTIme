@@ -41,8 +41,8 @@ public class ManipulateProjectileList : Doer
     public override void SetAllUsedParameters()
     {
         attacksManager.allProjectileIds = allProjectileIds;
-        attacksManager.currentlyActiveProjectileIds = currentlyActiveProjectileIds;
-        attacksManager.currentlyInactiveProjectileIds = currentlyInactiveProjectileIds;
+        attacksManager.currentlyActiveProjectileIds =new List<ProjectileID>(currentlyActiveProjectileIds) ;
+        attacksManager.currentlyInactiveProjectileIds =new List<ProjectileID>(currentlyInactiveProjectileIds) ;
 
     }
 
@@ -61,14 +61,19 @@ public class ManipulateProjectileList : Doer
         allProjectileIds.ForEach(x=>x.attacksManager=attacksManager);
     }
 
-    public void RemoveProjectileFromUnusedList(ProjectileID projectileID)
+    public void SwitchProjectileToActiveList(ProjectileID projectileID)
     {
-        currentlyActiveProjectileIds.Remove(projectileID);
-        currentlyInactiveProjectileIds.Add(projectileID);
+        if(!currentlyActiveProjectileIds.Contains(projectileID)) currentlyActiveProjectileIds.Add(projectileID);
+        if(currentlyInactiveProjectileIds.Contains(projectileID)) currentlyActiveProjectileIds.RemoveAll(x=>projectileID);
+        
+        
+        
+        
     }
-    public void AddProjectileFromUnusedList(ProjectileID projectileID)
+    public void SwitchProjectileToInactiveList(ProjectileID projectileID)
     {
-        currentlyActiveProjectileIds.Add(projectileID);
-        currentlyInactiveProjectileIds.Remove(projectileID);
+        if(!currentlyActiveProjectileIds.Contains(projectileID)) currentlyActiveProjectileIds.RemoveAll(x=>projectileID);
+        if(currentlyInactiveProjectileIds.Contains(projectileID)) currentlyActiveProjectileIds.Add(projectileID);
+       
     }
 }

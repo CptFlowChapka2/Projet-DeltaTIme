@@ -91,7 +91,6 @@ public class SpawnProjectile : Doer
     
     private  TileId[] CreateOrigine(Vector2Int inputsThisMesure,List<TileId> invalideTile)
     {
-        invalideTile.ForEach(x=>Debug.Log("Invalide Tile position "+x.position));
         TileId[] origin = new TileId[] { };
         if (inputsThisMesure == Vector2Int.up)
         {
@@ -143,7 +142,7 @@ public class SpawnProjectile : Doer
                 //il n'y as rien à faire spawn donc on passe à la prochaine case
                 continue;
             }
-            Debug.Log(i);
+            Debug.Log("what is i ? i is "+i);
 
             RequestProjectileID(origin[i], inputsThisMesure.First(), playerId);
         }
@@ -158,6 +157,7 @@ public class SpawnProjectile : Doer
             return null;
         }
 
+        attacksManager.SwitchProjectileToActiveList(projectileID);
         projectileID.PutInUse(dir,firstTile,playerID);
         return projectileID;
     }

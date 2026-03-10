@@ -27,4 +27,13 @@ public abstract class Manager : MonoBehaviour
         }
         allDoers.ForEach(x=>x.GetAllUsefulParameters());
     }
+    public void ForceDoerToSetUsefullData<T>() where T:Doer
+    {
+        if (typeof(T).IsSubclassOf(typeof(Doer)))
+        {
+            allDoers.Where(x=> x.GetType() == typeof(T)).ToList().ForEach(x=>x.SetAllUsedParameters());
+            return;
+        }
+        allDoers.ForEach(x=>x.SetAllUsedParameters());
+    }
 }

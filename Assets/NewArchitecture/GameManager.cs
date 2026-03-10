@@ -140,6 +140,17 @@ public class GameManager : MonoBehaviour
         //sinon on le fait pour tout le monde 
         allManagers.ForEach(x=>x.ForceDoerToGetUsefullData<Doer>());//on met Doer ici car aucun manager ne partage de Doer
     }
+    public void DoCallAllManagerOfTypeToForceSetUsefullData<Tm,Td>() where Tm: Manager where Td:Doer
+    {
+        if (typeof(Tm).IsSubclassOf(typeof(Manager)))//si on spécifie le type de manager alors on cherche celui la
+        {
+            
+            allManagers.Where(x=> x.GetType() == typeof(Tm)).ToList().ForEach(x=>x.ForceDoerToSetUsefullData<Td>());
+            return;
+        }
+        //sinon on le fait pour tout le monde 
+        allManagers.ForEach(x=>x.ForceDoerToSetUsefullData<Doer>());//on met Doer ici car aucun manager ne partage de Doer
+    }
 
     public TileId[,] GetAllTileid(int playerId)
     {
