@@ -54,7 +54,7 @@ public class MoveProjectile : Doer
 
     private void MooveProjectileToTile(ProjectileID projectileID,TileId nextTile)
     {
-        transform.position = nextTile.gameObject.transform.position;
+        projectileID.transform.position = nextTile.gameObject.transform.position;
 
        Vector2Int currentRelativeCoords = projectileID.currentRelativeCoords;
        int currentPlayerId = projectileID.currentPlayerId;

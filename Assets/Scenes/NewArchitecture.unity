@@ -767,10 +767,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttacksManager
   gameManager: {fileID: 0}
-  patternBank: {fileID: 0}
+  patternBank: {fileID: 1828740942}
   projectileIdPrefab: {fileID: 377817695415084827, guid: a804cdc7ce0491942a34391383d9ce03, type: 3}
   inactiveProjectileIdPosition: {x: 0, y: 30, z: 0}
-  maxNumberOfProjectileId: 5
+  maxNumberOfProjectileId: 50
   allProjectileIds: []
   currentlyActiveProjectileIds: []
   currentlyInactiveProjectileIds: []

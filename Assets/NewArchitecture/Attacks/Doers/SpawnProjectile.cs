@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using UnityEngine;
 
 public class SpawnProjectile : Doer
@@ -56,60 +57,70 @@ public class SpawnProjectile : Doer
 
     private void SpawnAProjectile(int playerID)
     {
+        
+      
         List<List<Vector2Int>> playerInputToProcees = playerID switch
         {
             1=>allInputsThisMeasureP1,
             2=>allInputsThisMeasureP2
 
         };
+        if (playerInputToProcees.Count==0)return ; 
+        Debug.Log("projectile was called to be spawned");
         List<TileId> allInvalidTile = playerID switch
         {
             1=>allInvalideTileP1,
             2=>allInvalideTileP2,
         };
-        playerInputToProcees.ForEach(inputsThisMeasure =>
+        
+        foreach (var inputsThisMeasure in playerInputToProcees)
         {
-            TileId[] origine=CreateOrigine(inputsThisMeasure, allInvalidTile);
+            if(inputsThisMeasure.Count==0)continue;
+           Vector2Int inputsThisMeasureFirst = inputsThisMeasure.First();
+            if (inputsThisMeasureFirst == Vector2Int.zero)
+            {
+                inputsThisMeasure.Remove(inputsThisMeasureFirst);
+                continue;
+            };
+            TileId[] origine=CreateOrigine(inputsThisMeasureFirst, allInvalidTile);
             AssignProjectileId(inputsThisMeasure,origine,playerID);
             inputsThisMeasure.Remove(inputsThisMeasure.First());
-        });
+        }
 
     }
     
-    private  TileId[] CreateOrigine(List<Vector2Int> inputsThisMesure,List<TileId> invalideTile)
+    private  TileId[] CreateOrigine(Vector2Int inputsThisMesure,List<TileId> invalideTile)
     {
-        
-        
-        if (inputsThisMesure.Count == 0) return null;
+        invalideTile.ForEach(x=>Debug.Log("Invalide Tile position "+x.position));
         TileId[] origin = new TileId[] { };
-        if (inputsThisMesure.First() == Vector2Int.up)
+        if (inputsThisMesure == Vector2Int.up)
         {
             var list = invalideTile.FindAll(x => x.position.y == 0);
             list.RemoveAll(x => x.position.x == 0 || x.position.x == danceFloorSize - 1);
             origin = list.ToArray();
         }
 
-        if (inputsThisMesure.First() == Vector2Int.down)
+        if (inputsThisMesure == Vector2Int.down)
         {
             var list = invalideTile.FindAll(x => x.position.y == danceFloorSize - 1);
             list.RemoveAll(x => x.position.x == 0 || x.position.x == danceFloorSize- 1);
             origin = list.ToArray();
         }
 
-        if (inputsThisMesure.First() == Vector2Int.left)
+        if (inputsThisMesure == Vector2Int.left)
         {
             var list = invalideTile.FindAll(x => x.position.x == danceFloorSize - 1);
             list.RemoveAll(x => x.position.y == 0 || x.position.y == danceFloorSize - 1);
             origin = list.ToArray();
         }
 
-        if (inputsThisMesure.First() == Vector2Int.right)
+        if (inputsThisMesure == Vector2Int.right)
         {
             var list = invalideTile.FindAll(x => x.position.x == 0);
             list.RemoveAll(x => x.position.y == 0 || x.position.y == danceFloorSize- 1);
             origin = list.ToArray();
         }
-        
+        Debug.Log("origine lenght is "+origin.Length);
         return origin;
     }
     private void AssignProjectileId(List<Vector2Int> inputsThisMesure, TileId[] origin, int playerId)
@@ -123,14 +134,16 @@ public class SpawnProjectile : Doer
         }
 
         int nbrOfSimilareInputInMesure = inputsThisMesure.FindAll(x => x == inputDirToProcesses).Count;
+        Debug.Assert(attacksManager!=null,"attacksManager==null");
         bool[] patternToSpawn = attacksManager.GetPatternVariantForAnDir(inputDirToProcesses, nbrOfSimilareInputInMesure);
-        for (int i = 0; i < patternToSpawn.Length ; i++)
+        for (int i = 0; i < patternToSpawn.Length-1 ; i++)
         {
             if (patternToSpawn[i] is false)
             {
                 //il n'y as rien à faire spawn donc on passe à la prochaine case
                 continue;
             }
+            Debug.Log(i);
 
             RequestProjectileID(origin[i], inputsThisMesure.First(), playerId);
         }

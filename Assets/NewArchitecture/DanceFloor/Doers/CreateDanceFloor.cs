@@ -76,6 +76,7 @@ public class CreateDanceFloor : Doer
     {
         int halfSize = (int)Math.Floor((float)danceFloorSize / 2);
         Vector2Int coords = new Vector2Int(halfSize, halfSize);
+        Debug.Log("coord to tp to center "+coords+"player "+danceFloorManager.associatedPlayerId);
         danceFloorManager.gameManager.DoMovePlayerTeleportToCoord(coords,danceFloorManager.associatedPlayerId);
     }
 

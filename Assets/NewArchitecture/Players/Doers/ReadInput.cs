@@ -19,7 +19,7 @@ public class ReadInput : Doer
         playerMove = InputSystem.actions.FindAction(playerManager.inputActionName);
     }
 
-    private void Update()
+    private void Update()//todo : remettre fixUpdate
     {
         playerManager.inputThisFrame = GetPlayerInputThisFrame();
     }
