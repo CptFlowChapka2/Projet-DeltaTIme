@@ -19,11 +19,15 @@ public class GameManager : MonoBehaviour
     {
         GetAllManagers();
         InitializeManager<PlayerManager>(out player1Manager, 0);
+        player1Manager.playerId = 1;
         InitializeManager<PlayerManager>(out player2Manager, 1);
+        player2Manager.playerId = 2;
         InitializeManager<MusicManager>(out musicManager);
         InitializeManager<FeedbacksManager>(out feedbacksManager);
         InitializeManager<DanceFloorManager>(out danceFloor1Manager,0);
+        danceFloor1Manager.associatedPlayerId = 1;
         InitializeManager<DanceFloorManager>(out danceFloor2Manager,1);
+        danceFloor2Manager.associatedPlayerId = 2;
         InitializeManager<AttacksManager>(out attacksManager);
     }
 
