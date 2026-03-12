@@ -51,7 +51,7 @@ public class UpdateMusic : Doer
         if (player1NumberOfSuccesses < player1Level) player1Level--;
         if (player2NumberOfSuccesses < player2Level) player2Level--;
         
-        Debug.Log("player1Level: " + player1Level + ", player2Level: " + player2Level);
+        //Debug.Log("player1Level: " + player1Level + ", player2Level: " + player2Level);
         
         music.SetParameter("Player1Level", player1Level);
         music.SetParameter("Player2Level", player2Level);

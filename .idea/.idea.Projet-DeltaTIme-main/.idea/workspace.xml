@@ -6,29 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/AttacksManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/AttacksManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/MoveProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/MoveProjectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/SpawnProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/SpawnProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Prefab/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Prefab/Projectile.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/ProjectileID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/ProjectileID.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/Doers/CreateDanceFloor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/Doers/CreateDanceFloor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/FeedbacksManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/FeedbacksManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Music/Doers/BeatClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Music/Doers/BeatClock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Music/Doers/BeatClock.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Music/Doers/BeatClock.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Music/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Music/MusicManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Music/MusicManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Music/MusicManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/AnalyseInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/AnalyseInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/AnalyseInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/AnalyseInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Music/UpdateMusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Music/UpdateMusic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/MovePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/MovePlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/ReadInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/ReadInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/ReadInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/ReadInput.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/HealthSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/HealthSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dancer/InputTrackerAndPatternSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dancer/InputTrackerAndPatternSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdater.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/MusicUpdater.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MusicManager/OldBeatClock.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MusicManager/OldBeatClock.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TileS/DamagingTileScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TileS/DamagingTileScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TouchZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TouchZone.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/ManipulateProjectileList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/NewArchitecture/FeedbackCaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/MovingInBeatFeedback.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/TakingHitFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/NewArchitecture/Music/UpdateMusic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/UpdateWhenHit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dancer/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -158,6 +144,7 @@
       <workItem from="1772636234012" duration="8301000" />
       <workItem from="1772790930297" duration="390000" />
       <workItem from="1772791427512" duration="11376000" />
+      <workItem from="1773331547022" duration="4695000" />
     </task>
     <servers />
   </component>

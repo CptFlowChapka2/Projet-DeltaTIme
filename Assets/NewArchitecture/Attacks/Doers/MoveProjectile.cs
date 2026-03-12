@@ -24,16 +24,16 @@ public class MoveProjectile : Doer
         GetAllUsefulParameters();
         if (onBeatFlag)
         {
-            Debug.Log(allProjectile.Count +"active projectile counte");
+            //Debug.Log(allProjectile.Count +"active projectile counte");
             allProjectile.FindAll(x=>x.inUse).ForEach(x =>
             {
                 if (x.currentPlayerId == 0) goto SkipToRemove ;//le goto car la flemme
                 TileId[,] allTile = attacksManager.gameManager.GetAllTileid(x.currentPlayerId);
                 Vector2Int newCoords;
-                Debug.Log("a projectile is trying to move");
+                //Debug.Log("a projectile is trying to move");
                 if (CalculateNextTile(x, out newCoords,allTile))//est un retourn bool pour check si la case existe
-                {
-                 Debug.Log("projectile bouge to "+newCoords);   
+                { 
+                    //Debug.Log("projectile bouge to "+newCoords);   
                     MooveProjectileToTile(x,allTile[newCoords.x,newCoords.y]);
                     return;
                 }
@@ -51,7 +51,7 @@ public class MoveProjectile : Doer
     {
         
         Vector2Int potentialNewCoord = projectileID.currentRelativeCoords + projectileID.directionOfMouvement;
-        Debug.Log(potentialNewCoord);
+        //Debug.Log(potentialNewCoord);
         result = Vector2Int.zero;
         if ((potentialNewCoord.x < allTile.GetLowerBound(0) || potentialNewCoord.x > allTile.GetUpperBound(0)) ||
             (potentialNewCoord.y < allTile.GetLowerBound(1) || potentialNewCoord.y > allTile.GetUpperBound(1)))
@@ -61,19 +61,19 @@ public class MoveProjectile : Doer
     }
 
     private void MooveProjectileToTile(ProjectileID projectileID,TileId nextTile)
-    {
+    { 
         projectileID.transform.position = nextTile.gameObject.transform.position;
 
-       Vector2Int currentRelativeCoords = projectileID.currentRelativeCoords;
-       int currentPlayerId = projectileID.currentPlayerId;
+        Vector2Int currentRelativeCoords = projectileID.currentRelativeCoords;
+        int currentPlayerId = projectileID.currentPlayerId;
         
-       attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.CurrentRemove,currentPlayerId);
-       attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.SignRemove,currentPlayerId);
+        attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.CurrentRemove,currentPlayerId);
+        attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.SignRemove,currentPlayerId);
         
-       projectileID.currentTileId = nextTile;
-       projectileID.currentRelativeCoords = projectileID.currentTileId.position;
+        projectileID.currentTileId = nextTile;
+        projectileID.currentRelativeCoords = projectileID.currentTileId.position;
         
-       attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.CurrentAdd,currentPlayerId);
-       attacksManager.gameManager.DoTileListModification(currentRelativeCoords+projectileID.directionOfMouvement,projectileID,tileIdOrder.SignAdd,currentPlayerId);
+        attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.CurrentAdd,currentPlayerId);
+        attacksManager.gameManager.DoTileListModification(currentRelativeCoords+projectileID.directionOfMouvement,projectileID,tileIdOrder.SignAdd,currentPlayerId);
     }
 }

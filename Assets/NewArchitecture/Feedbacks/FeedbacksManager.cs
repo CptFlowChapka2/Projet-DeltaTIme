@@ -12,11 +12,13 @@ public enum PlayerState
 public class FeedbacksManager : Manager
 {
     public MovingInBeatFeedback movingInBeatFeedback;
+    public TakingHitFeedback takingHitFeedback;
     
     private void Start()
     {
         GetAllDoersOnGameObject();
         InitializeDoer(out movingInBeatFeedback);
+        InitializeDoer(out takingHitFeedback);
     }
 
     public void Call(FeedbackCaller caller)

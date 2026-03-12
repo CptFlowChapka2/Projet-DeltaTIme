@@ -21,8 +21,6 @@ public class ProjectileID : MonoBehaviour
             (currentTileId.position,this,tileIdOrder.CurrentAdd,currentPlayerId);
         attacksManager.gameManager.DoTileListModification
             (currentTileId.position+directionOfMouvement,this,tileIdOrder.SignAdd,currentPlayerId);
-
-        
     }
 
     public void PutOutOfUse()

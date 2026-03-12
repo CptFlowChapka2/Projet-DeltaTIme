@@ -31,7 +31,7 @@ public class SpawnProjectile : Doer
     {
         
         onMesureFlag = attacksManager.gameManager.GetOnEndMesure();
-        onBeatFlag=attacksManager.gameManager.GetOnBeat();
+        onBeatFlag = attacksManager.gameManager.GetOnBeat();
         
         if (onMesureFlag)
         {
@@ -82,7 +82,7 @@ public class SpawnProjectile : Doer
                 inputsThisMeasure.Remove(inputsThisMeasureFirst);
                 continue;
             };
-            Debug.Log("projectile was called to be spawned");
+            //Debug.Log("projectile was called to be spawned");
             TileId[] origine=CreateOrigine(inputsThisMeasureFirst, allInvalidTile);
             AssignProjectileId(inputsThisMeasure,origine,playerID);
             inputsThisMeasure.Remove(inputsThisMeasure.First());
@@ -134,7 +134,7 @@ public class SpawnProjectile : Doer
         Vector2Int inputDirToProcesses = inputsThisMesure.First();
         if (inputDirToProcesses == Vector2Int.zero)
         {
-            Debug.Log("projectile was Zero dir and thus canceled");
+            //Debug.Log("projectile was Zero dir and thus canceled");
             //todo=feedback
             return;
         }

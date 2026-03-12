@@ -387,7 +387,9 @@ GameObject:
   - component: {fileID: 716344578}
   - component: {fileID: 716344577}
   - component: {fileID: 716344580}
+  - component: {fileID: 716344582}
   - component: {fileID: 716344579}
+  - component: {fileID: 716344581}
   m_Layer: 0
   m_Name: FeedbacksManager
   m_TagString: Untagged
@@ -409,6 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FeedbacksManager
   gameManager: {fileID: 0}
   movingInBeatFeedback: {fileID: 0}
+  takingHitFeedback: {fileID: 0}
 --- !u!4 &716344578
 Transform:
   m_ObjectHideFlags: 0
@@ -468,6 +471,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CallFeedbackWhenMovingInBeat
   movingInBeatFeedbackEmitter: {fileID: 716344579}
+--- !u!114 &716344581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716344576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1553918819
+      Data2: 1265111231
+      Data3: 374335378
+      Data4: -1175414948
+    Path: event:/PlayerHit
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &716344582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716344576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0378eaec166338642bb17d5615474af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TakingHitFeedback
+  takingHitFeedbackEmitter: {fileID: 716344581}
 --- !u!1001 &1148675111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -772,8 +819,6 @@ MonoBehaviour:
   inactiveProjectileIdPosition: {x: 0, y: 30, z: 0}
   maxNumberOfProjectileId: 50
   allProjectileIds: []
-  currentlyActiveProjectileIds: []
-  currentlyInactiveProjectileIds: []
 --- !u!4 &1828740939
 Transform:
   m_ObjectHideFlags: 0
@@ -813,7 +858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea3cbc2862d53a4782548bd4ceeeeb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ManipulateProjectileList
-  currentlyInactiveProjectileIds: []
 --- !u!114 &1828740942
 MonoBehaviour:
   m_ObjectHideFlags: 0
