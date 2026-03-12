@@ -158,7 +158,7 @@ public class SpawnProjectile : Doer
     
     public ProjectileID RequestProjectileID(TileId firstTile , Vector2Int dir,int playerID)
     {
-        ProjectileID projectileID = attacksManager.currentlyInactiveProjectileIds.First();
+        ProjectileID projectileID = attacksManager.allProjectileIds.Find(x=>!x.inUse);
         if (projectileID is null)
         {
             return null;

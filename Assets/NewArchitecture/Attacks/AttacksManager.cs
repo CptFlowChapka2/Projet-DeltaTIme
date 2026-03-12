@@ -14,8 +14,6 @@ public class AttacksManager : Manager
     public Vector3 inactiveProjectileIdPosition = new Vector3(0, 30, 0);
     public int maxNumberOfProjectileId = 5;
     public List<ProjectileID> allProjectileIds = new List<ProjectileID>();
-     public List<ProjectileID> currentlyActiveProjectileIds = new List<ProjectileID>();
-     public List<ProjectileID> currentlyInactiveProjectileIds = new List<ProjectileID>();
     
     private void Awake()
     {

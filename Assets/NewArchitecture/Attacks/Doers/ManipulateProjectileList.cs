@@ -8,8 +8,6 @@ public class ManipulateProjectileList : Doer
     
     private Vector3 defaultPosition;
     private List<ProjectileID> allProjectileIds = new List<ProjectileID>();
-    public List<ProjectileID> currentlyActiveProjectileIds = new List<ProjectileID>();
-     public List<ProjectileID> currentlyInactiveProjectileIds = new List<ProjectileID>();
     
     
     private AttacksManager attacksManager;
@@ -34,15 +32,13 @@ public class ManipulateProjectileList : Doer
     {
         defaultPosition = attacksManager.inactiveProjectileIdPosition;
         allProjectileIds = attacksManager.allProjectileIds;
-        currentlyActiveProjectileIds = attacksManager.currentlyActiveProjectileIds;
-        currentlyInactiveProjectileIds = attacksManager.currentlyInactiveProjectileIds;
+       
     }
 
     public override void SetAllUsedParameters()
     {
         attacksManager.allProjectileIds = allProjectileIds;
-        attacksManager.currentlyActiveProjectileIds =new List<ProjectileID>(currentlyActiveProjectileIds) ;
-        attacksManager.currentlyInactiveProjectileIds =new List<ProjectileID>(currentlyInactiveProjectileIds) ;
+        
 
     }
 
@@ -56,8 +52,7 @@ public class ManipulateProjectileList : Doer
             GameObject justSpawnedActivatedTile = Instantiate(prefab,defaultPosition,Quaternion.identity);
             allProjectileIds.Add(justSpawnedActivatedTile.GetComponent<ProjectileID>());
         }
-
-        currentlyInactiveProjectileIds = new List<ProjectileID>(allProjectileIds);
+        
         allProjectileIds.ForEach(x=>x.attacksManager=attacksManager);
     }
     
