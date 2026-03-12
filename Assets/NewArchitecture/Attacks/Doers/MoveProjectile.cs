@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveProjectile : Doer
 {
     private AttacksManager attacksManager;
-    private List<ProjectileID> allActiveProjectiles = new List<ProjectileID>();
+    private List<ProjectileID> allProjectile = new List<ProjectileID>();
     private bool onBeatFlag;
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class MoveProjectile : Doer
     public override void GetAllUsefulParameters()
     {
         onBeatFlag = attacksManager.gameManager.GetOnBeat();
-       allActiveProjectiles =new List<ProjectileID>(attacksManager.currentlyActiveProjectileIds);
+        allProjectile = attacksManager.allProjectileIds;
     }
 
     private void FixedUpdate()
@@ -24,16 +24,16 @@ public class MoveProjectile : Doer
         GetAllUsefulParameters();
         if (onBeatFlag)
         {
-            
-            allActiveProjectiles.ForEach(x =>
+            Debug.Log(allProjectile.Count +"active projectile counte");
+            allProjectile.FindAll(x=>x.inUse).ForEach(x =>
             {
-               
                 if (x.currentPlayerId == 0) goto SkipToRemove ;//le goto car la flemme
                 TileId[,] allTile = attacksManager.gameManager.GetAllTileid(x.currentPlayerId);
                 Vector2Int newCoords;
+                Debug.Log("a projectile is trying to move");
                 if (CalculateNextTile(x, out newCoords,allTile))//est un retourn bool pour check si la case existe
                 {
-                    
+                 Debug.Log("projectile bouge to "+newCoords);   
                     MooveProjectileToTile(x,allTile[newCoords.x,newCoords.y]);
                     return;
                 }
@@ -42,7 +42,7 @@ public class MoveProjectile : Doer
                 x.transform.position = attacksManager.inactiveProjectileIdPosition;
                 attacksManager.gameManager.DoTileListModification
                     (new Vector2Int(),x,tileIdOrder.CurrentRemove,x.currentPlayerId,true);
-                attacksManager.SwitchProjectileToInactiveList(x);
+                
             });
         }
     }

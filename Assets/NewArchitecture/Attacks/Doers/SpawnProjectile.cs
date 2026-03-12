@@ -22,7 +22,7 @@ public class SpawnProjectile : Doer
 
     private void Start()
     {
-        danceFloorSize = attacksManager.gameManager.GetDanceFloorSize();
+        danceFloorSize = attacksManager.gameManager.GetDanceFloorSize()+2;
         allInvalideTileP1 = attacksManager.gameManager.GetDanceFloorAllInvalidTile(1);
         allInvalideTileP2 = attacksManager.gameManager.GetDanceFloorAllInvalidTile(2);
     }
@@ -66,7 +66,7 @@ public class SpawnProjectile : Doer
 
         };
         if (playerInputToProcees.Count==0)return ; 
-        Debug.Log("projectile was called to be spawned");
+        
         List<TileId> allInvalidTile = playerID switch
         {
             1=>allInvalideTileP1,
@@ -82,6 +82,7 @@ public class SpawnProjectile : Doer
                 inputsThisMeasure.Remove(inputsThisMeasureFirst);
                 continue;
             };
+            Debug.Log("projectile was called to be spawned");
             TileId[] origine=CreateOrigine(inputsThisMeasureFirst, allInvalidTile);
             AssignProjectileId(inputsThisMeasure,origine,playerID);
             inputsThisMeasure.Remove(inputsThisMeasure.First());
@@ -97,6 +98,7 @@ public class SpawnProjectile : Doer
             var list = invalideTile.FindAll(x => x.position.y == 0);
             list.RemoveAll(x => x.position.x == 0 || x.position.x == danceFloorSize - 1);
             origin = list.ToArray();
+            
         }
 
         if (inputsThisMesure == Vector2Int.down)
@@ -104,6 +106,7 @@ public class SpawnProjectile : Doer
             var list = invalideTile.FindAll(x => x.position.y == danceFloorSize - 1);
             list.RemoveAll(x => x.position.x == 0 || x.position.x == danceFloorSize- 1);
             origin = list.ToArray();
+            
         }
 
         if (inputsThisMesure == Vector2Int.left)
@@ -111,15 +114,18 @@ public class SpawnProjectile : Doer
             var list = invalideTile.FindAll(x => x.position.x == danceFloorSize - 1);
             list.RemoveAll(x => x.position.y == 0 || x.position.y == danceFloorSize - 1);
             origin = list.ToArray();
+            
         }
 
         if (inputsThisMesure == Vector2Int.right)
         {
+            
             var list = invalideTile.FindAll(x => x.position.x == 0);
             list.RemoveAll(x => x.position.y == 0 || x.position.y == danceFloorSize- 1);
             origin = list.ToArray();
+            
         }
-        Debug.Log("origine lenght is "+origin.Length);
+        
         return origin;
     }
     private void AssignProjectileId(List<Vector2Int> inputsThisMesure, TileId[] origin, int playerId)
@@ -128,6 +134,7 @@ public class SpawnProjectile : Doer
         Vector2Int inputDirToProcesses = inputsThisMesure.First();
         if (inputDirToProcesses == Vector2Int.zero)
         {
+            Debug.Log("projectile was Zero dir and thus canceled");
             //todo=feedback
             return;
         }
@@ -142,7 +149,7 @@ public class SpawnProjectile : Doer
                 //il n'y as rien à faire spawn donc on passe à la prochaine case
                 continue;
             }
-            Debug.Log("what is i ? i is "+i);
+           
 
             RequestProjectileID(origin[i], inputsThisMesure.First(), playerId);
         }
@@ -156,8 +163,7 @@ public class SpawnProjectile : Doer
         {
             return null;
         }
-
-        attacksManager.SwitchProjectileToActiveList(projectileID);
+        
         projectileID.PutInUse(dir,firstTile,playerID);
         return projectileID;
     }

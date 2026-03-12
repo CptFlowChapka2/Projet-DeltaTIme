@@ -8,9 +8,11 @@ public class ProjectileID : MonoBehaviour
     public Vector2Int currentRelativeCoords;
     public Vector2Int directionOfMouvement;
     public int currentPlayerId;
+    public bool inUse = false;
 
     public void PutInUse(Vector2Int dir,TileId firstTile,int playerId)
     {
+        inUse = true;
         directionOfMouvement = dir;
         currentTileId = firstTile;
         currentPlayerId = playerId;
@@ -25,6 +27,7 @@ public class ProjectileID : MonoBehaviour
 
     public void PutOutOfUse()
     {
+        inUse = false;
         directionOfMouvement = new Vector2Int();
         currentTileId = null;
         currentPlayerId = 0;

@@ -8,7 +8,7 @@ public class ManipulateProjectileList : Doer
     
     private Vector3 defaultPosition;
     private List<ProjectileID> allProjectileIds = new List<ProjectileID>();
-    private List<ProjectileID> currentlyActiveProjectileIds = new List<ProjectileID>();
+    public List<ProjectileID> currentlyActiveProjectileIds = new List<ProjectileID>();
      public List<ProjectileID> currentlyInactiveProjectileIds = new List<ProjectileID>();
     
     
@@ -60,20 +60,5 @@ public class ManipulateProjectileList : Doer
         currentlyInactiveProjectileIds = new List<ProjectileID>(allProjectileIds);
         allProjectileIds.ForEach(x=>x.attacksManager=attacksManager);
     }
-
-    public void SwitchProjectileToActiveList(ProjectileID projectileID)
-    {
-        if(!currentlyActiveProjectileIds.Contains(projectileID)) currentlyActiveProjectileIds.Add(projectileID);
-        if(currentlyInactiveProjectileIds.Contains(projectileID)) currentlyActiveProjectileIds.RemoveAll(x=>projectileID);
-        
-        
-        
-        
-    }
-    public void SwitchProjectileToInactiveList(ProjectileID projectileID)
-    {
-        if(!currentlyActiveProjectileIds.Contains(projectileID)) currentlyActiveProjectileIds.RemoveAll(x=>projectileID);
-        if(currentlyInactiveProjectileIds.Contains(projectileID)) currentlyActiveProjectileIds.Add(projectileID);
-       
-    }
+    
 }
