@@ -52,7 +52,7 @@ public class MovePlayer : Doer
     public void TeleportPlayerToCoords(Vector2Int coords)
     {
         currentPlayerCoords = coords;
-        currentPlayerCoords = new Vector2Int(Mathf.Clamp(currentPlayerCoords.x, 1, danceFloorSize-1 ), Mathf.Clamp(currentPlayerCoords.y, 1, danceFloorSize-1 ));
+        currentPlayerCoords = new Vector2Int(Mathf.Clamp(currentPlayerCoords.x, 1, danceFloorSize-1 ), Mathf.Clamp(currentPlayerCoords.y, 1, danceFloorSize ));
         currentTileId = allTileId[currentPlayerCoords.x, currentPlayerCoords.y];
         TileId currentTile = currentTileId;
         playerGameObject.transform.position=
