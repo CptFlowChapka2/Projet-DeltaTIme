@@ -9,11 +9,17 @@
       <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/MoveProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/MoveProjectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/SpawnProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/SpawnProjectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Prefab/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Prefab/Projectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/ProjectileID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/ProjectileID.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/FeedbacksManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/FeedbacksManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/Prefab/DanceFloorTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/Prefab/DanceFloorTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Music/Doers/BeatClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Music/Doers/BeatClock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Music/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Music/MusicManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Music/UpdateMusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Music/UpdateMusic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/MovePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/MovePlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/AnalyseInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/AnalyseInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/UpdateWhenHit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/UpdateWhenHit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FeedbacksTest 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FeedbacksTest 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTIleTest 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewTIleTest 1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

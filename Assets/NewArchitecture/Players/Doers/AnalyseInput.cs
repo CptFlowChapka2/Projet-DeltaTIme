@@ -8,8 +8,8 @@ public class AnalyseInput : Doer
 
     private Vector2Int inputThisFrame;
     private bool inCoyoteBeat;
-    private bool onEndCoyoteBeat;
-    private bool onStartCoyoteMeasure;
+    //private bool onEndCoyoteBeat;
+    //private bool onStartCoyoteMeasure;
     private int numberOfSuccesses = 0;
 
     private void Awake()
@@ -20,16 +20,16 @@ public class AnalyseInput : Doer
     private void Update()
     {
         GetAllUsefulParameters();
-        ListenForOnEndCoyoteBeat();
+        //ListenForOnEndCoyoteBeat();
         CreateInputsThisMeasure();
-        ListenForOnStartCoyoteMeasure();
+        //ListenForOnStartCoyoteMeasure();
     }
 
     public override void GetAllUsefulParameters()
     {
         inCoyoteBeat = playerManager.gameManager.GetInCoyoteBeat();
-        onEndCoyoteBeat = playerManager.gameManager.GetOnEndCoyoteBeat(); 
-        onStartCoyoteMeasure = playerManager.gameManager.GetOnStartCoyoteMeasure();
+        //onEndCoyoteBeat = playerManager.gameManager.GetOnEndCoyoteBeat(); 
+        //onStartCoyoteMeasure = playerManager.gameManager.GetOnStartCoyoteMeasure();
         inputThisFrame = playerManager.inputThisFrame;
     }
 
@@ -43,7 +43,7 @@ public class AnalyseInput : Doer
         if (!inCoyoteBeat)
         {
             inputThisFrame = Vector2Int.zero;
-            Debug.Log("Oops");
+            //Debug.Log("Oops");
             //todo call feedback
         }
         else
@@ -55,24 +55,18 @@ public class AnalyseInput : Doer
         alreadyInputedThisBeat = true;
     }
 
-    private void ListenForOnEndCoyoteBeat()
+    public void ListenForOnEndCoyoteBeat()
     {
-        if (onEndCoyoteBeat)
-        {
-            alreadyInputedThisBeat = false;
-        }
+        alreadyInputedThisBeat = false;
     }
 
-    private void ListenForOnStartCoyoteMeasure()
+    public void ListenForOnStartCoyoteMeasure()
     {
-        if (onStartCoyoteMeasure)
-        {
-            playerManager.numberOfSuccesses = numberOfSuccesses;
-            Debug.Log(numberOfSuccesses);
-            numberOfSuccesses = 0;
-            playerManager.inputsThisMeasure = inputsThisMeasureCache;
-            inputsThisMeasureCache.Clear();
-        }
+        playerManager.numberOfSuccesses = numberOfSuccesses;
+        //Debug.Log(numberOfSuccesses);
+        numberOfSuccesses = 0;
+        playerManager.inputsThisMeasure = inputsThisMeasureCache;
+        inputsThisMeasureCache.Clear();
     }
     
     private void ResolveDiagonals(Vector2Int input, out Vector2Int rInput)

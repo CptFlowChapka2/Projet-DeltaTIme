@@ -12,7 +12,7 @@ public class UpdateMusic : Doer
     private int player2NumberOfSuccesses;
     private int player1Level;
     private int player2Level;
-    private bool onStartCoyoteMeasure;
+    //private bool onStartCoyoteMeasure;
 
     private void Start()
     {
@@ -20,18 +20,11 @@ public class UpdateMusic : Doer
         music = GetComponent<StudioEventEmitter>();
     }
 
-    private void Update()
-    {
-        GetAllUsefulParameters();
-        UpdateMusicEachMeasure();
-        SetAllUsedParameters();
-    }
-
     public override void GetAllUsefulParameters()
     {
         player1NumberOfSuccesses = musicManager.gameManager.GetNumberOfSuccesses(1);
         player2NumberOfSuccesses = musicManager.gameManager.GetNumberOfSuccesses(2);
-        onStartCoyoteMeasure = musicManager.onStartCoyoteMeasure;
+        //onStartCoyoteMeasure = musicManager.onStartCoyoteMeasure;
         player1Level = musicManager.player1Level;
         player2Level = musicManager.player2Level;
     }
@@ -42,9 +35,9 @@ public class UpdateMusic : Doer
         musicManager.player2Level = player2Level;
     }
 
-    public void UpdateMusicEachMeasure()
+    public void ListenForOnStartCoyoteMeasure()
     {
-        if (!onStartCoyoteMeasure) return;
+        GetAllUsefulParameters();
         
         if (player1NumberOfSuccesses > player1Level) player1Level++;
         if (player2NumberOfSuccesses > player2Level) player2Level++;
@@ -55,5 +48,7 @@ public class UpdateMusic : Doer
         
         music.SetParameter("Player1Level", player1Level);
         music.SetParameter("Player2Level", player2Level);
+        
+        SetAllUsedParameters();
     }
 }

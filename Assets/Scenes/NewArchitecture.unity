@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 17094726}
   - component: {fileID: 17094725}
   - component: {fileID: 17094727}
+  - component: {fileID: 17094728}
   m_Layer: 0
   m_Name: DanceFloorManager
   m_TagString: Untagged
@@ -181,6 +182,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ffff77a88a82d4d898ea8cbb8090fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreateDanceFloor
+--- !u!114 &17094728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17094724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1c80710b93d374b9f626dfd2bd9e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpdateTileMaterial
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  damagingColor: {r: 1, g: 0, b: 0, a: 1}
+  warningColor: {r: 0.9882665, g: 1, b: 0.40566033, a: 1}
 --- !u!1 &221582686
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +607,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d244404a5ba78c4c9543e127dbd7158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
+--- !u!114 &1148675116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3724836183907952664, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
+  m_PrefabInstance: {fileID: 1148675111}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b92673fdb0b30c4ab303b2f8bdd0c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnalyseInput
 --- !u!1001 &1333142596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -667,6 +694,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d244404a5ba78c4c9543e127dbd7158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
+--- !u!114 &1346527008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 922190267147847604, guid: 415a1ad53163608428b19024321c6c68, type: 3}
+  m_PrefabInstance: {fileID: 1333142596}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b92673fdb0b30c4ab303b2f8bdd0c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnalyseInput
 --- !u!1 &1452981378
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +734,120 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c1342947240dd43b16e942e4cc35f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  onStartCoyoteMeasure:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1346527008}
+        m_TargetAssemblyTypeName: AnalyseInput, Assembly-CSharp
+        m_MethodName: ListenForOnStartCoyoteMeasure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1148675116}
+        m_TargetAssemblyTypeName: AnalyseInput, Assembly-CSharp
+        m_MethodName: ListenForOnStartCoyoteMeasure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1922939616}
+        m_TargetAssemblyTypeName: UpdateMusic, Assembly-CSharp
+        m_MethodName: ListenForOnStartCoyoteMeasure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStartCoyoteBeat:
+    m_PersistentCalls:
+      m_Calls: []
+  onMeasure:
+    m_PersistentCalls:
+      m_Calls: []
+  onBeat:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1828740943}
+        m_TargetAssemblyTypeName: SpawnProjectile, Assembly-CSharp
+        m_MethodName: ListenForOnBeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1828740940}
+        m_TargetAssemblyTypeName: MoveProjectile, Assembly-CSharp
+        m_MethodName: ListenForOnBeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onEndCoyoteMeasure:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1828740943}
+        m_TargetAssemblyTypeName: SpawnProjectile, Assembly-CSharp
+        m_MethodName: ListenForOnEndCoyoteMeasure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onEndCoyoteBeat:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1346527008}
+        m_TargetAssemblyTypeName: AnalyseInput, Assembly-CSharp
+        m_MethodName: ListenForOnEndCoyoteBeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1148675116}
+        m_TargetAssemblyTypeName: AnalyseInput, Assembly-CSharp
+        m_MethodName: ListenForOnEndCoyoteBeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   player1Manager: {fileID: 1333142597}
   player2Manager: {fileID: 1148675112}
   musicManager: {fileID: 1922939611}
@@ -729,6 +881,7 @@ GameObject:
   - component: {fileID: 1805349648}
   - component: {fileID: 1805349647}
   - component: {fileID: 1805349646}
+  - component: {fileID: 1805349649}
   m_Layer: 0
   m_Name: DanceFloorManager (1)
   m_TagString: Untagged
@@ -780,6 +933,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1805349649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805349645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1c80710b93d374b9f626dfd2bd9e40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpdateTileMaterial
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  damagingColor: {r: 1, g: 0, b: 0, a: 1}
+  warningColor: {r: 1, g: 0.9994963, b: 0.3075471, a: 1}
 --- !u!1 &1828740937
 GameObject:
   m_ObjectHideFlags: 0

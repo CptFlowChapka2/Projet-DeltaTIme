@@ -36,6 +36,9 @@ public class PlayerManager : Manager
 
     [Header("MovePlayer")] 
     public TileId currentTileId;
+
+    [Header("UpdateWhenHit")] 
+    public bool isAlreadyHit = false;
     
     
     //OUTSIDE DO CALL//

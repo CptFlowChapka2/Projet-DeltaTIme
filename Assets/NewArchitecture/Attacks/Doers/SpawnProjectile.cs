@@ -27,28 +27,8 @@ public class SpawnProjectile : Doer
         allInvalideTileP2 = attacksManager.gameManager.GetDanceFloorAllInvalidTile(2);
     }
 
-    public override void GetAllUsefulParameters()
-    {
-        
-        onMesureFlag = attacksManager.gameManager.GetOnEndMesure();
-        onBeatFlag = attacksManager.gameManager.GetOnBeat();
-        
-        if (onMesureFlag)
-        {
-            allInputsThisMeasureP1.Add(attacksManager.gameManager.GetInputsThisMeasure(1));
-            allInputsThisMeasureP2.Add(attacksManager.gameManager.GetInputsThisMeasure(2));
-        }
-    }
-
     private void FixedUpdate()
     {
-        GetAllUsefulParameters();
-        if (onBeatFlag)
-        {
-            SpawnAProjectile(1);
-            SpawnAProjectile(2);
-        }
-
         allInputsThisMeasureP1.RemoveAll(x =>x.Count.Equals(0));
         allInputsThisMeasureP2.RemoveAll(x =>x.Count.Equals(0));
         allInputsThisMeasureP1.TrimExcess();
@@ -57,8 +37,6 @@ public class SpawnProjectile : Doer
 
     private void SpawnAProjectile(int playerID)
     {
-        
-      
         List<List<Vector2Int>> playerInputToProcees = playerID switch
         {
             1=>allInputsThisMeasureP1,
@@ -87,7 +65,6 @@ public class SpawnProjectile : Doer
             AssignProjectileId(inputsThisMeasure,origine,playerID);
             inputsThisMeasure.Remove(inputsThisMeasure.First());
         }
-
     }
     
     private  TileId[] CreateOrigine(Vector2Int inputsThisMesure,List<TileId> invalideTile)
@@ -166,5 +143,17 @@ public class SpawnProjectile : Doer
         
         projectileID.PutInUse(dir,firstTile,playerID);
         return projectileID;
+    }
+
+    public void ListenForOnEndCoyoteMeasure()
+    {
+        allInputsThisMeasureP1.Add(attacksManager.gameManager.GetInputsThisMeasure(1));
+        allInputsThisMeasureP2.Add(attacksManager.gameManager.GetInputsThisMeasure(2));
+    }
+    
+    public void ListenForOnBeat()
+    {
+        SpawnAProjectile(1);
+        SpawnAProjectile(2);
     }
 }

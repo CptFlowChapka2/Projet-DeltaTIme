@@ -29,7 +29,7 @@ public class BeatClock : Doer
     private void FixedUpdate()
     {
         GetAllUsefulParameters();
-        ReinitializeFlags();
+        //ReinitializeFlags();
         SequenceBeatsAndMeasures();
         SetAllUsedParameters();
     }
@@ -42,14 +42,14 @@ public class BeatClock : Doer
         coyoteTime = musicManager.coyoteTime;
         beatsPerMeasure = musicManager.beatsPerMeasure;
         beatsPerMinute = musicManager.beatsPerMinute;
-        onStartCoyoteBeat = musicManager.onStartCoyoteBeat;
+        //onStartCoyoteBeat = musicManager.onStartCoyoteBeat;
         inCoyoteBeat = musicManager.inCoyoteBeat;
-        onBeat = musicManager.onBeat;
-        onEndCoyoteBeat = musicManager.onEndCoyoteBeat;
-        onStartCoyoteMeasure = musicManager.onStartCoyoteMeasure;
+        //onBeat = musicManager.onBeat;
+        //onEndCoyoteBeat = musicManager.onEndCoyoteBeat;
+        //onStartCoyoteMeasure = musicManager.onStartCoyoteMeasure;
         inCoyoteMeasure = musicManager.inCoyoteMeasure;
-        onMeasure = musicManager.onMeasure;
-        onEndCoyoteMeasure = musicManager.onEndCoyoteMeasure;
+        //onMeasure = musicManager.onMeasure;
+        //onEndCoyoteMeasure = musicManager.onEndCoyoteMeasure;
     }
 
     public override void SetAllUsedParameters()
@@ -60,16 +60,17 @@ public class BeatClock : Doer
         musicManager.coyoteTime = coyoteTime;
         musicManager.beatsPerMeasure = beatsPerMeasure;
         musicManager.beatsPerMinute = beatsPerMinute;
-        musicManager.onStartCoyoteBeat = onStartCoyoteBeat;
+        //musicManager.onStartCoyoteBeat = onStartCoyoteBeat;
         musicManager.inCoyoteBeat = inCoyoteBeat;
-        musicManager.onBeat = onBeat;
-        musicManager.onEndCoyoteBeat = onEndCoyoteBeat;
-        musicManager.onStartCoyoteMeasure = onStartCoyoteMeasure;
+        //musicManager.onBeat = onBeat;
+        //musicManager.onEndCoyoteBeat = onEndCoyoteBeat;
+        //musicManager.onStartCoyoteMeasure = onStartCoyoteMeasure;
         musicManager.inCoyoteMeasure = inCoyoteMeasure;
-        musicManager.onMeasure = onMeasure;
-        musicManager.onEndCoyoteMeasure = onEndCoyoteMeasure;
+        //musicManager.onMeasure = onMeasure;
+        //musicManager.onEndCoyoteMeasure = onEndCoyoteMeasure;
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private void SequenceBeatsAndMeasures()
     {
         int numberOfPreviousBeats = beat - 1 + (beatsPerMeasure * (measure - 1));
@@ -85,43 +86,47 @@ public class BeatClock : Doer
         if (inCoyoteBeat && timeSinceLastBeat >= coyoteTime && timeSinceLastBeat < timePerBeat - coyoteTime)//Fin CoyoteTime
         {
             inCoyoteBeat = false;
-            onEndCoyoteBeat = true;
+            musicManager.gameManager.onEndCoyoteBeat.Invoke();
+            //onEndCoyoteBeat = true;
             if (inCoyoteMeasure)
             {
                 inCoyoteMeasure = false;
-                onEndCoyoteMeasure = true;
+                musicManager.gameManager.onEndCoyoteMeasure.Invoke();
+                //onEndCoyoteMeasure = true;
             }
         }
         
         if (!inCoyoteBeat && timeSinceLastBeat >= timePerBeat - coyoteTime)//Debut CoyoteTime
         {
             inCoyoteBeat = true;
-            onStartCoyoteBeat = true;
+            musicManager.gameManager.onStartCoyoteBeat.Invoke();
+            //onStartCoyoteBeat = true;
             if (beat < beatsPerMeasure) return;
             inCoyoteMeasure = true;
-            onStartCoyoteMeasure = true;
+            musicManager.gameManager.onStartCoyoteMeasure.Invoke();
+            //onStartCoyoteMeasure = true;
         }
         
         if (timeSinceLastBeat >= timePerBeat)
         {
             beat++;
-            //Debug.Log( "beat was called");
-            
-            onBeat = true;
+            musicManager.gameManager.onBeat.Invoke();
+            //onBeat = true;
             if (beat <= beatsPerMeasure) return;
-            onMeasure = true;
+            musicManager.gameManager.onMeasure.Invoke();
+            //onMeasure = true;
             beat = 1;
             measure++;
         }
     }
 
-    private void ReinitializeFlags()
-    {
-        onBeat = false;
-        onMeasure = false;
-        onStartCoyoteBeat = false;
-        onStartCoyoteMeasure = false;
-        onEndCoyoteBeat = false;
-        onEndCoyoteMeasure = false;
-    }
+    // private void ReinitializeFlags()
+    // {
+    //     onBeat = false;
+    //     onMeasure = false;
+    //     onStartCoyoteBeat = false;
+    //     onStartCoyoteMeasure = false;
+    //     onEndCoyoteBeat = false;
+    //     onEndCoyoteMeasure = false;
+    // }
 }

@@ -29,14 +29,14 @@ public class MusicManager : Manager
     public int measure = 1;
     public double coyoteTime = 0.1;
     
-    public bool onStartCoyoteBeat = false;
+    //public bool onStartCoyoteBeat = false;
     public bool inCoyoteBeat = false;
-    public bool onBeat = false;
-    public bool onEndCoyoteBeat = false;
-    public bool onStartCoyoteMeasure = false;
+    //public bool onBeat = false;
+    //public bool onEndCoyoteBeat = false;
+    //public bool onStartCoyoteMeasure = false;
     public bool inCoyoteMeasure = false;
-    public bool onMeasure = false;
-    public bool onEndCoyoteMeasure = false;
+    //public bool onMeasure = false;
+    //public bool onEndCoyoteMeasure = false;
 
     [Header("Update Music Each Measure")] 
     public int player1Level = 0;

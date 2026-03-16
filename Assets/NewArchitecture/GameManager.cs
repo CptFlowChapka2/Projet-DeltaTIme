@@ -2,9 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public UnityEvent onStartCoyoteMeasure = new UnityEvent();
+    public UnityEvent onStartCoyoteBeat = new UnityEvent();
+    public UnityEvent onMeasure = new UnityEvent();
+    public UnityEvent onBeat = new UnityEvent();
+    public UnityEvent onEndCoyoteMeasure = new UnityEvent();
+    public UnityEvent onEndCoyoteBeat = new UnityEvent();
+    
     public PlayerManager player1Manager;
     public PlayerManager player2Manager;
     public MusicManager musicManager;
@@ -44,29 +52,14 @@ public class GameManager : MonoBehaviour
     
     //METHODES GETTERS
 
+    public double GetTimePerBeat()
+    {
+        return 60.0 / musicManager.beatsPerMinute;
+    }
+
     public bool GetInCoyoteBeat()
     {
         return musicManager.inCoyoteBeat;
-    }
-    
-    public bool GetOnEndCoyoteBeat()
-    {
-        return musicManager.onEndCoyoteBeat;
-    }
-
-    public bool GetOnStartCoyoteMeasure()
-    {
-        return musicManager.onStartCoyoteMeasure;
-    }
-
-    public bool GetOnBeat()
-    {
-        return musicManager.onBeat;
-    }
-
-    public bool GetOnEndMesure()
-    {
-        return musicManager.onEndCoyoteMeasure;
     }
 
     public List<Vector2Int> GetInputsThisMeasure(int playerId)
@@ -101,9 +94,7 @@ public class GameManager : MonoBehaviour
         };
         return toReturn;
     }
-
-   
-
+    
     public int GetDanceFloorSize()
     {
         return danceFloor1Manager.danceFloorSize;
