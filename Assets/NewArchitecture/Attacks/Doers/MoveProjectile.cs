@@ -73,10 +73,11 @@ public class MoveProjectile : Doer
             }
             SkipToRemove:
             x.transform.position = attacksManager.inactiveProjectileIdPosition;
+            
             attacksManager.gameManager.DoTileListModification
-                (new Vector2Int(),x,tileIdOrder.CurrentRemove,x.currentPlayerId,true);
+                (x.currentRelativeCoords,x,tileIdOrder.CurrentRemove,x.currentPlayerId);
             attacksManager.gameManager.DoTileListModification
-                (new Vector2Int(),x,tileIdOrder.SignRemove,x.currentPlayerId,true);
+                (x.currentRelativeCoords,x,tileIdOrder.SignRemove,x.currentPlayerId);
             x.PutOutOfUse();
         });
     }
