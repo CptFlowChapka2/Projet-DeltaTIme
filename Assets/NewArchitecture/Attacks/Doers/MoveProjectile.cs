@@ -24,14 +24,14 @@ public class MoveProjectile : Doer
         Vector2Int potentialNewCoord = projectileID.currentRelativeCoords + projectileID.directionOfMouvement;
         //Debug.Log(potentialNewCoord);
         result = Vector2Int.zero;
-        if ((potentialNewCoord.x < allTile.GetLowerBound(0) || potentialNewCoord.x > allTile.GetUpperBound(0)) ||
-            (potentialNewCoord.y < allTile.GetLowerBound(1) || potentialNewCoord.y > allTile.GetUpperBound(1)))
+        if ((potentialNewCoord.x < 0 || potentialNewCoord.x > allTile.GetUpperBound(0)) ||
+            (potentialNewCoord.y < 0 || potentialNewCoord.y > allTile.GetUpperBound(0)))
             return false;
         result = potentialNewCoord;
         return true;
     }
 
-    private void MooveProjectileToTile(ProjectileID projectileID,TileId nextTile)
+    private void MooveProjectileToTile(ProjectileID projectileID,TileId nextTile,int allTileSize)
     { 
         projectileID.transform.position = nextTile.gameObject.transform.position;
 
@@ -43,8 +43,13 @@ public class MoveProjectile : Doer
         
         projectileID.currentTileId = nextTile;
         projectileID.currentRelativeCoords = projectileID.currentTileId.position;
+        currentRelativeCoords = projectileID.currentRelativeCoords;
         
         attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.CurrentAdd,currentPlayerId);
+        Vector2Int potentialNewCoord=currentRelativeCoords+projectileID.directionOfMouvement;
+        if ((potentialNewCoord.x < 0 || potentialNewCoord.x > allTileSize) ||
+            (potentialNewCoord.y < 0 || potentialNewCoord.y > allTileSize))
+            return;
         attacksManager.gameManager.DoTileListModification(currentRelativeCoords+projectileID.directionOfMouvement,projectileID,tileIdOrder.SignAdd,currentPlayerId);
     }
 
@@ -63,15 +68,16 @@ public class MoveProjectile : Doer
             if (CalculateNextTile(x, out newCoords,allTile))//est un retourn bool pour check si la case existe
             { 
                 //Debug.Log("projectile bouge to "+newCoords);   
-                MooveProjectileToTile(x,allTile[newCoords.x,newCoords.y]);
+                MooveProjectileToTile(x,allTile[newCoords.x,newCoords.y],allTile.GetUpperBound(0));
                 return;
             }
             SkipToRemove:
-            x.PutOutOfUse();
             x.transform.position = attacksManager.inactiveProjectileIdPosition;
             attacksManager.gameManager.DoTileListModification
                 (new Vector2Int(),x,tileIdOrder.CurrentRemove,x.currentPlayerId,true);
-                
+            attacksManager.gameManager.DoTileListModification
+                (new Vector2Int(),x,tileIdOrder.SignRemove,x.currentPlayerId,true);
+            x.PutOutOfUse();
         });
     }
 }

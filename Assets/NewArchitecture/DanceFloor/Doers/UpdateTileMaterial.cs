@@ -13,6 +13,7 @@ public class UpdateTileMaterial : MonoBehaviour
     private void Start()
     {
         tileId = GetComponent<TileId>();
+        Debug.Assert(tileId.danceFloorManager.gameManager.onBeat is not null);
         tileId.danceFloorManager.gameManager.onBeat.AddListener(ListenForOnBeat);
     }
 

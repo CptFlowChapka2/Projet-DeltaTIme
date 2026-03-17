@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 17094726}
   - component: {fileID: 17094725}
   - component: {fileID: 17094727}
-  - component: {fileID: 17094728}
   m_Layer: 0
   m_Name: DanceFloorManager
   m_TagString: Untagged
@@ -182,21 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ffff77a88a82d4d898ea8cbb8090fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreateDanceFloor
---- !u!114 &17094728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17094724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba1c80710b93d374b9f626dfd2bd9e40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UpdateTileMaterial
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  damagingColor: {r: 1, g: 0, b: 0, a: 1}
-  warningColor: {r: 0.9882665, g: 1, b: 0.40566033, a: 1}
 --- !u!1 &221582686
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +865,6 @@ GameObject:
   - component: {fileID: 1805349648}
   - component: {fileID: 1805349647}
   - component: {fileID: 1805349646}
-  - component: {fileID: 1805349649}
   m_Layer: 0
   m_Name: DanceFloorManager (1)
   m_TagString: Untagged
@@ -933,21 +916,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1805349649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805349645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba1c80710b93d374b9f626dfd2bd9e40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UpdateTileMaterial
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
-  damagingColor: {r: 1, g: 0, b: 0, a: 1}
-  warningColor: {r: 1, g: 0.9994963, b: 0.3075471, a: 1}
 --- !u!1 &1828740937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,14 +1078,8 @@ MonoBehaviour:
   beat: 1
   measure: 1
   coyoteTime: 0.1
-  onStartCoyoteBeat: 0
   inCoyoteBeat: 0
-  onBeat: 0
-  onEndCoyoteBeat: 0
-  onStartCoyoteMeasure: 0
   inCoyoteMeasure: 0
-  onMeasure: 0
-  onEndCoyoteMeasure: 0
   player1Level: 0
   player2Level: 0
 --- !u!4 &1922939612

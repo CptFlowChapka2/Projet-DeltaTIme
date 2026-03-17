@@ -23,7 +23,7 @@ public class TileId : MonoBehaviour
     }
     public void RemoveAProjectileOnThisTile(ProjectileID projectileID)
     {
-        allProjectileOnThisTile.Remove(projectileID);
+        allProjectileOnThisTile.RemoveAll(x=>projectileID);
     }
     public void AddASignOnThisTile(ProjectileID projectileID)
     {
@@ -31,6 +31,6 @@ public class TileId : MonoBehaviour
     }
     public void RemoveASignOnThisTile(ProjectileID projectileID)
     {
-        allProjectileOnThisTileNextBeat.Remove(projectileID);
+        allProjectileOnThisTileNextBeat.RemoveAll(x=>projectileID);
     }
 }

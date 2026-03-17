@@ -23,7 +23,6 @@ public class DanceFloorManager : Manager
 
     public void DoModifyTileList(Vector2Int tileToModify, ProjectileID toDo, tileIdOrder thingToDo,bool overwriteToAll=false)
     {
-        
         switch (thingToDo)
         {
             case tileIdOrder.CurrentAdd:

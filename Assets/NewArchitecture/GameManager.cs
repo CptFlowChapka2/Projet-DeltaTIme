@@ -165,6 +165,7 @@ public class GameManager : MonoBehaviour
     {
         if (overwriteToAll)
         {
+            
             danceFloor1Manager.DoModifyTileList(tileToModify, toDo, thingToDo, overwriteToAll);
             danceFloor2Manager.DoModifyTileList(tileToModify, toDo, thingToDo, overwriteToAll);
         }
