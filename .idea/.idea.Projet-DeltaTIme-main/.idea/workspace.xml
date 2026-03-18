@@ -6,20 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/MoveProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/MoveProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/Doers/UpdateTileMaterial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/Doers/UpdateTileMaterial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/Prefab/DanceFloorTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/Prefab/DanceFloorTile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_All.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_All.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_Down.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_Down.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_Left.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_Left.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_LeftDown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_LeftDown.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_LeftRight.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_LeftRight.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_LeftUp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_LeftUp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_Right.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_Right.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_RightDown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_RightDown.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_RightUp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_RightUp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_Up.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_Up.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_UpDown.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/TileFeedback/Sign/Mats/Sign_UpDown.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/DanceFloorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/DanceFloorManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/FeedbacksManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/FeedbacksManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,6 +143,7 @@
       <workItem from="1772791427512" duration="11376000" />
       <workItem from="1773331547022" duration="4695000" />
       <workItem from="1773824363545" duration="11363000" />
+      <workItem from="1773847027639" duration="2386000" />
     </task>
     <servers />
   </component>

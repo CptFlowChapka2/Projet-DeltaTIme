@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DanceFloorManager : Manager
 {
-
     private CreateDanceFloor createDanceFloor;
     
     private void Awake()

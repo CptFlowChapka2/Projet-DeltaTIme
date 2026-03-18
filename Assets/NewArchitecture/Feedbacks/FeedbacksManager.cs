@@ -13,6 +13,8 @@ public class FeedbacksManager : Manager
 {
     public MovingInBeatFeedback movingInBeatFeedback;
     public TakingHitFeedback takingHitFeedback;
+    public UpdatingAnnouncers updatingAnnouncersP1;
+    public UpdatingAnnouncers updatingAnnouncersP2;
     
     private void Start()
     {

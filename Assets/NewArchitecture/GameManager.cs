@@ -110,6 +110,11 @@ public class GameManager : MonoBehaviour
         };
         return toReturn;
     }
+    
+    public int GetBeat()
+    {
+        return musicManager.beat;
+    }
 
     public void DoMovePlayerTeleportToCoord(Vector2Int coords,int playerId)
     {
