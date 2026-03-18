@@ -181,6 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ffff77a88a82d4d898ea8cbb8090fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreateDanceFloor
+--- !u!23 &73132539 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 875656003621804425, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
+  m_PrefabInstance: {fileID: 1148675111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &221582686
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +284,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!23 &574776214 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3700821525115549221, guid: 415a1ad53163608428b19024321c6c68, type: 3}
+  m_PrefabInstance: {fileID: 1333142596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &599797797
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +585,10 @@ PrefabInstance:
       propertyPath: inputActionName
       value: Player2Move
       objectReference: {fileID: 0}
+    - target: {fileID: 8092487781278076367, guid: 44343b9d9a5d97c4ebd1de3de20cd8ab, type: 3}
+      propertyPath: meshRenderer
+      value: 
+      objectReference: {fileID: 73132539}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -650,6 +664,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5706987812351746659, guid: 415a1ad53163608428b19024321c6c68, type: 3}
+      propertyPath: meshRenderer
+      value: 
+      objectReference: {fileID: 574776214}
     - target: {fileID: 5722078554517464659, guid: 415a1ad53163608428b19024321c6c68, type: 3}
       propertyPath: playerId
       value: 1

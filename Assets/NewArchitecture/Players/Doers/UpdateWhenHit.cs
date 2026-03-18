@@ -4,6 +4,7 @@ using UnityEngine;
 public class UpdateWhenHit : Doer
 {
     private PlayerManager playerManager;
+    [SerializeField] private MeshRenderer meshRenderer;
     
     private TileId currentTileId;
     private bool isAlreadyHit = false;
@@ -32,12 +33,14 @@ public class UpdateWhenHit : Doer
             {
                 t = 0;
                 isAlreadyHit = false;
+                meshRenderer.material.color = Color.blue;
             }
         }
         else if (currentTileId.allProjectileOnThisTile.Count > 0 && !isAlreadyHit)
         {
             isAlreadyHit = true;
             playerManager.gameManager.DoCallSpecificFeedback(playerManager.gameManager.feedbacksManager.takingHitFeedback);
+            meshRenderer.material.color = Color.red;
         }
     }
 
