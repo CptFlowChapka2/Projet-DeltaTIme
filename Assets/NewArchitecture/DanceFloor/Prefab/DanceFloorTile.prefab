@@ -625,7 +625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1c80710b93d374b9f626dfd2bd9e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpdateTileMaterial
-  meshRenderer: {fileID: 1400893441011835011}
+  baseMeshRenderer: {fileID: 1400893441011835011}
+  signMeshRenderer: {fileID: 2066051877618833563}
   baseMaterial: {fileID: 2100000, guid: 8eeb2d0ee6be43045b58686bc8d3674d, type: 2}
   transparentMaterial: {fileID: 2100000, guid: 199176f8447f8e64fade6c59f97ebbd9, type: 2}
   onTileAllMaterial: {fileID: 2100000, guid: f9a042769fcdd3c40a21abb4801f5572, type: 2}

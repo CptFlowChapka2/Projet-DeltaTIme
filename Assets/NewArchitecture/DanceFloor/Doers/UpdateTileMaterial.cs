@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class UpdateTileMaterial : MonoBehaviour
 {
-    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private MeshRenderer baseMeshRenderer;
+    [SerializeField] private MeshRenderer signMeshRenderer;
     private TileId tileId;
     
     private List<Vector2Int> projectilesDirections = new List<Vector2Int>();
@@ -60,9 +61,9 @@ public class UpdateTileMaterial : MonoBehaviour
         };
         signsMaterials = new Material[12]
         {
-            onSignTileRightMaterial, onSignTileLeftMaterial, onSignTileUpMaterial, onSignTileDownMaterial,
-            onSignTileLeftRightMaterial, onSignTileRightUpMaterial, onSignTileRightDownMaterial,
-            onSignTileLeftUpMaterial, onSignTileLeftDownMaterial, onSignTileUpDownMaterial, onSignTileAllMaterial,
+            onSignTileLeftMaterial, onSignTileRightMaterial, onSignTileDownMaterial, onSignTileUpMaterial,
+            onSignTileLeftRightMaterial, onSignTileLeftDownMaterial, onSignTileLeftUpMaterial,
+            onSignTileRightDownMaterial, onSignTileRightUpMaterial, onSignTileUpDownMaterial, onSignTileAllMaterial,
             transparentMaterial
         };
     }
@@ -70,16 +71,16 @@ public class UpdateTileMaterial : MonoBehaviour
     public void ListenForOnBeat()
     {
         StoreProjectilesAndSignsDirections();
-        ChooseMaterialRelativeToPatternPresence(signsDirections, signsMaterials);
-        ChooseMaterialRelativeToPatternPresence(projectilesDirections, projectileMaterials);
+        ChooseMaterialRelativeToPatternPresence(signMeshRenderer, signsDirections, signsMaterials);
+        ChooseMaterialRelativeToPatternPresence(baseMeshRenderer, projectilesDirections, projectileMaterials);
     }
 
-    private void ChooseMaterialRelativeToPatternPresence(List<Vector2Int> directions, Material[] materials)
+    private void ChooseMaterialRelativeToPatternPresence(MeshRenderer renderer, List<Vector2Int> directions, Material[] materials)
     {
         switch (directions.Count)
         {
             case 0:
-                meshRenderer.material = materials[11];
+                renderer.material = materials[11];
                 break;
             case 1:
                 switch (directions[0].x)
@@ -87,10 +88,10 @@ public class UpdateTileMaterial : MonoBehaviour
                     case 0:
                         break;
                     case -1:
-                        meshRenderer.material = materials[0];
+                        renderer.material = materials[0];
                         break;
                     case 1:
-                        meshRenderer.material = materials[1];
+                        renderer.material = materials[1];
                         break;
                 }
                 switch (directions[0].y)
@@ -98,10 +99,10 @@ public class UpdateTileMaterial : MonoBehaviour
                     case 0:
                         break;
                     case -1:
-                        meshRenderer.material = materials[2];
+                        renderer.material = materials[2];
                         break;
                     case 1:
-                        meshRenderer.material = materials[3];
+                        renderer.material = materials[3];
                         break;
                 }
                 break;
@@ -109,38 +110,38 @@ public class UpdateTileMaterial : MonoBehaviour
                 if (directions.Contains(new Vector2Int(-1, 0)) && 
                     directions.Contains(new Vector2Int(1, 0)))
                 {
-                    meshRenderer.material = materials[4];
+                    renderer.material = materials[4];
                 }
                 else if (directions.Contains(new Vector2Int(-1, 0)) &&
                          directions.Contains(new Vector2Int(0, -1)))
                 {
-                    meshRenderer.material = materials[5];
+                    renderer.material = materials[5];
                 }
                 else if (directions.Contains(new Vector2Int(-1, 0)) &&
                          directions.Contains(new Vector2Int(0, 1)))
                 {
-                    meshRenderer.material = materials[6];
+                    renderer.material = materials[6];
                 }
                 else if (directions.Contains(new Vector2Int(1, 0)) &&
                          directions.Contains(new Vector2Int(0, -1)))
                 {
-                    meshRenderer.material = materials[7];
+                    renderer.material = materials[7];
                 }
                 else if (directions.Contains(new Vector2Int(1, 0)) &&
                          directions.Contains(new Vector2Int(0, 1)))
                 {
-                    meshRenderer.material = materials[8];
+                    renderer.material = materials[8];
                 }
                 else if (directions.Contains(new Vector2Int(0, -1)) &&
                          directions.Contains(new Vector2Int(0, 1)))
                 {
-                    meshRenderer.material = materials[9];
+                    renderer.material = materials[9];
                 }
                 break;
             case 3:
                 break;
             case 4:
-                meshRenderer.material = materials[10];
+                renderer.material = materials[10];
                 break;
         }
     }

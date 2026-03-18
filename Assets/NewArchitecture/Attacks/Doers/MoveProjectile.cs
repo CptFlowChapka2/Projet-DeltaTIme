@@ -39,13 +39,14 @@ public class MoveProjectile : Doer
         int currentPlayerId = projectileID.currentPlayerId;
         
         attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.CurrentRemove,currentPlayerId);
-        attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.SignRemove,currentPlayerId);
         
         projectileID.currentTileId = nextTile;
         projectileID.currentRelativeCoords = projectileID.currentTileId.position;
         currentRelativeCoords = projectileID.currentRelativeCoords;
         
         attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.CurrentAdd,currentPlayerId);
+        attacksManager.gameManager.DoTileListModification(currentRelativeCoords,projectileID,tileIdOrder.SignRemove,currentPlayerId);
+        
         Vector2Int potentialNewCoord=currentRelativeCoords+projectileID.directionOfMouvement;
         if ((potentialNewCoord.x < 0 || potentialNewCoord.x > allTileSize) ||
             (potentialNewCoord.y < 0 || potentialNewCoord.y > allTileSize))
