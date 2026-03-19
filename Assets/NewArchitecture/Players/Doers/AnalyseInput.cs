@@ -67,11 +67,6 @@ public class AnalyseInput : Doer
 
     public void ListenForOnEndCoyoteBeat()
     {
-        foreach (var i in inputsThisMeasureCache)
-        {
-            Debug.Log(i);
-        }
-        
         if (alreadyInputedThisBeat == false)
         {
             inputsThisMeasureCache[currentBeat] = Vector2Int.zero;

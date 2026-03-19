@@ -27,16 +27,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         GetAllManagers();
-        InitializeManager<PlayerManager>(out player1Manager, 0);
-        player1Manager.playerId = 1;
-        InitializeManager<PlayerManager>(out player2Manager, 1);
-        player2Manager.playerId = 2;
+        player1Manager.gameManager = this;
+        player2Manager.gameManager = this;
         InitializeManager<MusicManager>(out musicManager);
         InitializeManager<FeedbacksManager>(out feedbacksManager);
-        InitializeManager<DanceFloorManager>(out danceFloor1Manager,0);
-        danceFloor1Manager.associatedPlayerId = 1;
-        InitializeManager<DanceFloorManager>(out danceFloor2Manager,1);
-        danceFloor2Manager.associatedPlayerId = 2;
+        danceFloor1Manager.gameManager = this;
+        danceFloor2Manager.gameManager = this;
         InitializeManager<AttacksManager>(out attacksManager);
     }
 
@@ -100,9 +96,8 @@ public class GameManager : MonoBehaviour
     {
         List<TileId> toReturn = playerId switch
         {
-            1=> danceFloor1Manager.allInvalideTile,
-            2=>danceFloor2Manager.allInvalideTile,
-
+            1 => danceFloor1Manager.allInvalideTile,
+            2 => danceFloor2Manager.allInvalideTile,
         };
         return toReturn;
     }

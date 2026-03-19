@@ -54,7 +54,7 @@ public class SpawnProjectile : Doer
         foreach (var inputsThisMeasure in playerInputToProcees)
         {
             if(inputsThisMeasure.Count==0)continue;
-           Vector2Int inputsThisMeasureFirst = inputsThisMeasure.First();
+            Vector2Int inputsThisMeasureFirst = inputsThisMeasure.First();
             if (inputsThisMeasureFirst == Vector2Int.zero || inputsThisMeasureFirst == new Vector2Int(-1, -1))
             {
                 inputsThisMeasure.Remove(inputsThisMeasureFirst);
@@ -67,7 +67,7 @@ public class SpawnProjectile : Doer
         }
     }
     
-    private  TileId[] CreateOrigine(Vector2Int inputsThisMesure,List<TileId> invalideTile)
+    private TileId[] CreateOrigine(Vector2Int inputsThisMesure,List<TileId> invalideTile)
     {
         TileId[] origin = new TileId[] { };
         if (inputsThisMesure == Vector2Int.up)
@@ -119,7 +119,7 @@ public class SpawnProjectile : Doer
         int nbrOfSimilareInputInMesure = inputsThisMesure.FindAll(x => x == inputDirToProcesses).Count;
         Debug.Assert(attacksManager!=null,"attacksManager==null");
         bool[] patternToSpawn = attacksManager.GetPatternVariantForAnDir(inputDirToProcesses, nbrOfSimilareInputInMesure);
-        for (int i = 0; i < patternToSpawn.Length-1 ; i++)
+        for (int i = 0; i < patternToSpawn.Length; i++)
         {
             if (patternToSpawn[i] is false)
             {
@@ -128,7 +128,6 @@ public class SpawnProjectile : Doer
             }
             RequestProjectileID(origin[i], inputsThisMesure.First(), playerId);
         }
-       
     }
     
     public ProjectileID RequestProjectileID(TileId firstTile , Vector2Int dir,int playerID)
@@ -138,8 +137,14 @@ public class SpawnProjectile : Doer
         {
             return null;
         }
+
+        int opponentId = playerID switch
+        {
+            1 => 2,
+            2 => 1
+        };
         
-        projectileID.PutInUse(dir,firstTile,playerID);
+        projectileID.PutInUse(dir,firstTile,opponentId);
         return projectileID;
     }
 

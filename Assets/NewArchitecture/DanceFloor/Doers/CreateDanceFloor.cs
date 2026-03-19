@@ -17,20 +17,18 @@ public class CreateDanceFloor : Doer
 
     private void Start()
     {
-        
         GetAllUsefulParameters();
-       allTileId= InitialiseDanceFloorArray();
-       SpawnDanceFloor();
-      SetAllUsedParameters();
-      danceFloorManager.gameManager.DoCallAllManagerOfTypeToForceGetUsefullData<PlayerManager,MovePlayer>();
-       TeleportPLayerToCenterOfDanceFloor();
+        allTileId= InitialiseDanceFloorArray();
+        SpawnDanceFloor();
+        SetAllUsedParameters();
+        danceFloorManager.gameManager.DoCallAllManagerOfTypeToForceGetUsefullData<PlayerManager,MovePlayer>();
+        TeleportPLayerToCenterOfDanceFloor();
     }
 
     public override void GetAllUsefulParameters()
     {
         tilePrefab = danceFloorManager.tilePrefab;
         danceFloorSize = danceFloorManager.danceFloorSize + 2;
-
     }
 
     public override void SetAllUsedParameters()
@@ -46,7 +44,6 @@ public class CreateDanceFloor : Doer
     
     private void SpawnDanceFloor()
     {
-        
         GameObject playerGo = danceFloorManager.gameManager.GetPlayerGameObject(danceFloorManager.associatedPlayerId);
         for (int i = 0; i < danceFloorSize; i++)
         {
@@ -54,7 +51,6 @@ public class CreateDanceFloor : Doer
             {
                 Vector3 pos = playerGo.transform.position+new Vector3(i, 0, j);
                 CreateTile(pos, i, j, allTileId,allInvalideTile);
-                
             }
         }
         
@@ -69,7 +65,6 @@ public class CreateDanceFloor : Doer
             invalidTileList.Add(tile);
             tile.thisState = TileState.Invalid;
         }
-        
     }
 
     private void TeleportPLayerToCenterOfDanceFloor()
