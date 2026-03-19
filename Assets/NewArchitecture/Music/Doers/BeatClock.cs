@@ -94,6 +94,9 @@ public class BeatClock : Doer
                 musicManager.gameManager.onEndCoyoteMeasure.Invoke();
                 //onEndCoyoteMeasure = true;
             }
+
+            if (beat < beatsPerMeasure) return;
+            musicManager.gameManager.onBeginningMeasure.Invoke();
         }
         
         if (!inCoyoteBeat && timeSinceLastBeat >= timePerBeat - coyoteTime)//Debut CoyoteTime

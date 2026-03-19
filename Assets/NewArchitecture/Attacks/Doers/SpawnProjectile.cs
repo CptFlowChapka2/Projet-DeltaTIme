@@ -55,7 +55,7 @@ public class SpawnProjectile : Doer
         {
             if(inputsThisMeasure.Count==0)continue;
            Vector2Int inputsThisMeasureFirst = inputsThisMeasure.First();
-            if (inputsThisMeasureFirst == Vector2Int.zero)
+            if (inputsThisMeasureFirst == Vector2Int.zero || inputsThisMeasureFirst == new Vector2Int(-1, -1))
             {
                 inputsThisMeasure.Remove(inputsThisMeasureFirst);
                 continue;
@@ -126,8 +126,6 @@ public class SpawnProjectile : Doer
                 //il n'y as rien à faire spawn donc on passe à la prochaine case
                 continue;
             }
-           
-
             RequestProjectileID(origin[i], inputsThisMesure.First(), playerId);
         }
        
@@ -145,7 +143,7 @@ public class SpawnProjectile : Doer
         return projectileID;
     }
 
-    public void ListenForOnEndCoyoteMeasure()
+    public void ListenForOnBeginningMeasure()
     {
         allInputsThisMeasureP1.Add(attacksManager.gameManager.GetInputsThisMeasure(1));
         allInputsThisMeasureP2.Add(attacksManager.gameManager.GetInputsThisMeasure(2));

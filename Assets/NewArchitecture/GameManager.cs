@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public UnityEvent onBeginningMeasure = new UnityEvent();
     public UnityEvent onStartCoyoteMeasure = new UnityEvent();
     public UnityEvent onStartCoyoteBeat = new UnityEvent();
     public UnityEvent onMeasure = new UnityEvent();
@@ -66,8 +67,19 @@ public class GameManager : MonoBehaviour
     {
         List<Vector2Int> toReturn = playerId switch
         {
-            1=> player1Manager.inputsThisMeasure,
-            2=>player2Manager.inputsThisMeasure,
+            1 => player1Manager.inputsThisMeasure,
+            2 => player2Manager.inputsThisMeasure,
+
+        };
+        return toReturn;
+    }
+    
+    public Vector2Int[] GetInputsThisMeasureCache(int playerId)
+    {
+        Vector2Int[] toReturn = playerId switch
+        {
+            1 => player1Manager.inputsThisMeasureCache,
+            2 => player2Manager.inputsThisMeasureCache,
 
         };
         return toReturn;
@@ -109,11 +121,6 @@ public class GameManager : MonoBehaviour
             _ => throw new ArgumentOutOfRangeException(nameof(playerId), playerId, null)
         };
         return toReturn;
-    }
-    
-    public int GetBeat()
-    {
-        return musicManager.beat;
     }
 
     public void DoMovePlayerTeleportToCoord(Vector2Int coords,int playerId)

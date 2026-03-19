@@ -1190,12 +1190,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c1342947240dd43b16e942e4cc35f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  onStartCoyoteMeasure:
+  onBeginningMeasure:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1346527008}
         m_TargetAssemblyTypeName: AnalyseInput, Assembly-CSharp
-        m_MethodName: ListenForOnStartCoyoteMeasure
+        m_MethodName: ListenForOnBeginningMeasure
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1207,7 +1207,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1148675116}
         m_TargetAssemblyTypeName: AnalyseInput, Assembly-CSharp
-        m_MethodName: ListenForOnStartCoyoteMeasure
+        m_MethodName: ListenForOnBeginningMeasure
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1217,6 +1217,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1828740943}
+        m_TargetAssemblyTypeName: SpawnProjectile, Assembly-CSharp
+        m_MethodName: ListenForOnBeginningMeasure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStartCoyoteMeasure:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 1922939616}
         m_TargetAssemblyTypeName: UpdateMusic, Assembly-CSharp
         m_MethodName: ListenForOnStartCoyoteMeasure
@@ -1234,7 +1249,31 @@ MonoBehaviour:
       m_Calls: []
   onMeasure:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1710315315}
+        m_TargetAssemblyTypeName: UpdatingAnnouncers, Assembly-CSharp
+        m_MethodName: ListenForOnMeasure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1984021047}
+        m_TargetAssemblyTypeName: UpdatingAnnouncers, Assembly-CSharp
+        m_MethodName: ListenForOnMeasure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onBeat:
     m_PersistentCalls:
       m_Calls:
@@ -1264,19 +1303,7 @@ MonoBehaviour:
         m_CallState: 2
   onEndCoyoteMeasure:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1828740943}
-        m_TargetAssemblyTypeName: SpawnProjectile, Assembly-CSharp
-        m_MethodName: ListenForOnEndCoyoteMeasure
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onEndCoyoteBeat:
     m_PersistentCalls:
       m_Calls:
@@ -1294,6 +1321,30 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1148675116}
         m_TargetAssemblyTypeName: AnalyseInput, Assembly-CSharp
+        m_MethodName: ListenForOnEndCoyoteBeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1710315315}
+        m_TargetAssemblyTypeName: UpdatingAnnouncers, Assembly-CSharp
+        m_MethodName: ListenForOnEndCoyoteBeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1984021047}
+        m_TargetAssemblyTypeName: UpdatingAnnouncers, Assembly-CSharp
         m_MethodName: ListenForOnEndCoyoteBeat
         m_Mode: 1
         m_Arguments:
@@ -1493,11 +1544,11 @@ MonoBehaviour:
   beat3Announcer: {fileID: 1083593994}
   beat4Announcer: {fileID: 921497167}
   baseMaterial: {fileID: 2100000, guid: 199176f8447f8e64fade6c59f97ebbd9, type: 2}
-  rightMaterial: {fileID: 2100000, guid: f9d001d21b7109d488ebdb284fc286fe, type: 2}
-  leftMaterial: {fileID: 2100000, guid: ed2d92c13d8b9804882581a261828a63, type: 2}
-  upMaterial: {fileID: 2100000, guid: a572ebb773f4b504fa4fc74341332927, type: 2}
-  downMaterial: {fileID: 2100000, guid: bbc229d8404797440939f281edd06c5c, type: 2}
-  crossMaterial: {fileID: 2100000, guid: f9a042769fcdd3c40a21abb4801f5572, type: 2}
+  rightMaterial: {fileID: 2100000, guid: e367ba0678a2e4045be83157f2e91af8, type: 2}
+  leftMaterial: {fileID: 2100000, guid: 4600cd56dab10f342b0834fff6f4489f, type: 2}
+  upMaterial: {fileID: 2100000, guid: 0f4996a9515f6c74b8d82ee162944cc0, type: 2}
+  downMaterial: {fileID: 2100000, guid: 76bdb30a50d9ee9499f539bf96bad6ba, type: 2}
+  crossMaterial: {fileID: 2100000, guid: 676d074da6e33e04db684bceca2ac6e9, type: 2}
   feedbacksManager: {fileID: 716344577}
 --- !u!1 &1805349645
 GameObject:
@@ -1976,11 +2027,11 @@ MonoBehaviour:
   beat3Announcer: {fileID: 1589975354}
   beat4Announcer: {fileID: 2024332708}
   baseMaterial: {fileID: 2100000, guid: 199176f8447f8e64fade6c59f97ebbd9, type: 2}
-  rightMaterial: {fileID: 2100000, guid: f9d001d21b7109d488ebdb284fc286fe, type: 2}
-  leftMaterial: {fileID: 2100000, guid: ed2d92c13d8b9804882581a261828a63, type: 2}
-  upMaterial: {fileID: 2100000, guid: a572ebb773f4b504fa4fc74341332927, type: 2}
-  downMaterial: {fileID: 2100000, guid: bbc229d8404797440939f281edd06c5c, type: 2}
-  crossMaterial: {fileID: 2100000, guid: f9a042769fcdd3c40a21abb4801f5572, type: 2}
+  rightMaterial: {fileID: 2100000, guid: e367ba0678a2e4045be83157f2e91af8, type: 2}
+  leftMaterial: {fileID: 2100000, guid: 4600cd56dab10f342b0834fff6f4489f, type: 2}
+  upMaterial: {fileID: 2100000, guid: 0f4996a9515f6c74b8d82ee162944cc0, type: 2}
+  downMaterial: {fileID: 2100000, guid: 76bdb30a50d9ee9499f539bf96bad6ba, type: 2}
+  crossMaterial: {fileID: 2100000, guid: 676d074da6e33e04db684bceca2ac6e9, type: 2}
   feedbacksManager: {fileID: 716344577}
 --- !u!1 &2024332705
 GameObject:

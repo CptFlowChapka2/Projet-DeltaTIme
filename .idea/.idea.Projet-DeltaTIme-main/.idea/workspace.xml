@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/DanceFloorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/DanceFloor/DanceFloorManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/FeedbacksManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/FeedbacksManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/SpawnProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Attacks/Doers/SpawnProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/UpdatingAnnouncers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Feedbacks/UpdatingAnnouncers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Music/Doers/BeatClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Music/Doers/BeatClock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/AnalyseInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/Doers/AnalyseInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewArchitecture/Players/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewArchitecture/Players/PlayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +146,8 @@
       <workItem from="1772791427512" duration="11376000" />
       <workItem from="1773331547022" duration="4695000" />
       <workItem from="1773824363545" duration="11363000" />
-      <workItem from="1773847027639" duration="2386000" />
+      <workItem from="1773847027639" duration="2451000" />
+      <workItem from="1773873207120" duration="7888000" />
     </task>
     <servers />
   </component>
