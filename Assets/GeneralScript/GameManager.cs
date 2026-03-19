@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
             1 => player1Manager.inputsThisMeasure,
             2 => player2Manager.inputsThisMeasure,
 
+            _ => throw new ArgumentOutOfRangeException(nameof(playerId), playerId, null)
         };
         return toReturn;
     }
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
             1 => player1Manager.inputsThisMeasureCache,
             2 => player2Manager.inputsThisMeasureCache,
 
+            _ => throw new ArgumentOutOfRangeException(nameof(playerId), playerId, null)
         };
         return toReturn;
     }
@@ -98,6 +100,7 @@ public class GameManager : MonoBehaviour
         {
             1 => danceFloor1Manager.allInvalideTile,
             2 => danceFloor2Manager.allInvalideTile,
+            _ => throw new ArgumentOutOfRangeException(nameof(playerId), playerId, null)
         };
         return toReturn;
     }
@@ -193,8 +196,8 @@ public class GameManager : MonoBehaviour
         TileId[,] toReturn = playerId switch
         {
             1=>danceFloor1Manager.allTileID,
-            2=>danceFloor2Manager.allTileID
-
+            2=>danceFloor2Manager.allTileID,
+            _ => throw new ArgumentOutOfRangeException(nameof(playerId), playerId, null)
         };
         return toReturn;
         

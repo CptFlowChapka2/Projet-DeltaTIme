@@ -40,8 +40,8 @@ public class SpawnProjectile : Doer
         List<List<Vector2Int>> playerInputToProcees = playerID switch
         {
             1=>allInputsThisMeasureP1,
-            2=>allInputsThisMeasureP2
-
+            2=>allInputsThisMeasureP2,
+            _ => throw new ArgumentOutOfRangeException(nameof(playerID), playerID, null)
         };
         if (playerInputToProcees.Count==0)return ; 
         
@@ -49,6 +49,7 @@ public class SpawnProjectile : Doer
         {
             1=>allInvalideTileP1,
             2=>allInvalideTileP2,
+            _ => throw new ArgumentOutOfRangeException(nameof(playerID), playerID, null)
         };
         
         foreach (var inputsThisMeasure in playerInputToProcees)
@@ -141,7 +142,8 @@ public class SpawnProjectile : Doer
         int opponentId = playerID switch
         {
             1 => 2,
-            2 => 1
+            2 => 1,
+            _ => throw new ArgumentOutOfRangeException(nameof(playerID), playerID, null)
         };
         
         projectileID.PutInUse(dir,firstTile,opponentId);
