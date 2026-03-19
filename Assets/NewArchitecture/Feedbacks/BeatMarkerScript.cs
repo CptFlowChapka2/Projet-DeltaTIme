@@ -7,10 +7,11 @@ public class BeatMarkerScript : MonoBehaviour
 
    public int currentIndex = 0;
    private float currentPercent = 0;
-   public float percentByFixedUpdate=0.032f;
+   public float percentByFixedUpdate=0.0347222222f;
 
    private void FixedUpdate()
    {
+      currentPercent += percentByFixedUpdate;
       if (currentPercent >= 1)
       {
          currentPercent = 0;
@@ -23,7 +24,7 @@ public class BeatMarkerScript : MonoBehaviour
       }
       
       transform.position = Vector3.Lerp(allPoints[currentIndex].position, allPoints[currentIndex + 1].position, currentPercent);
-      currentPercent += percentByFixedUpdate;
+      
       
    }
 }
