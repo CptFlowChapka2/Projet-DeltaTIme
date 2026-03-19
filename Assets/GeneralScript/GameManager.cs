@@ -134,6 +134,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public Vector2Int GetPlayerCurrentRelativeCoords(int playerId)
+    {
+        Vector2Int toReturn = playerId switch
+        {
+            1=>player1Manager.currentPlayerCoords,
+            2=>player2Manager.currentPlayerCoords,
+            _ => throw new ArgumentOutOfRangeException(nameof(playerId), playerId, null)
+        };
+        return toReturn;
+        
+    }
+
     public void DoCallAllManagerOfTypeToForceGetUsefullData<Tm,Td>() where Tm: Manager where Td:Doer
     {
         if (typeof(Tm).IsSubclassOf(typeof(Manager)))//si on spécifie le type de manager alors on cherche celui la
