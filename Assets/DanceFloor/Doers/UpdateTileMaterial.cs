@@ -47,7 +47,7 @@ public class UpdateTileMaterial : MonoBehaviour
     [SerializeField] private Material onSignTileUpMaterial;
     [SerializeField] private Material onSignTileUpDownMaterial;
 
-    private void Start()
+    public void Initialize()
     {
         tileId = GetComponent<TileId>();
         Debug.Assert(tileId.danceFloorManager.gameManager.onBeat is not null);

@@ -11,11 +11,11 @@ public class TileId : MonoBehaviour
 
     public DanceFloorManager danceFloorManager;
 
-    public void Initialise(DanceFloorManager iniDanceFloorManager,Vector2Int iniPosition)
-    {
-        danceFloorManager = iniDanceFloorManager;
-        position = iniPosition;
-    }
+    // public void Initialise(DanceFloorManager iniDanceFloorManager,Vector2Int iniPosition)
+    // {
+    //     danceFloorManager = iniDanceFloorManager;
+    //     position = iniPosition;
+    // }
 
     public void AddAProjectileOnThisTile(ProjectileID projectileID)
     {
