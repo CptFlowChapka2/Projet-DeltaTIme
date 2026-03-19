@@ -37,6 +37,7 @@ public class AnalyseInput : Doer
         //onStartCoyoteMeasure = playerManager.gameManager.GetOnStartCoyoteMeasure();
         inputThisFrame = playerManager.inputThisFrame;
         inputsThisMeasureCache = playerManager.inputsThisMeasureCache;
+        numberOfSuccesses = playerManager.numberOfSuccesses;
     }
 
     public override void SetAllUsedParameters()

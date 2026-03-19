@@ -5,8 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/DanceFloor/Doers/CreateDanceFloor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DanceFloor/Doers/CreateDanceFloor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DanceFloor/TileiD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DanceFloor/TileiD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/BeatBarImage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/BeatBarImage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/BeatMarkerScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/BeatMarkerScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/FeedbacksManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Feedbacks/FeedbacksManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Left_individual_Lvl3_Frame1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Left_individual_Lvl3_Frame1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Left_individual_Lvl3_Frame2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Left_individual_Lvl3_Frame2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Right_individual_Lvl1_Frame2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Right_individual_Lvl1_Frame2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Right_individual_Lvl1_frame1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Right_individual_Lvl1_frame1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lv1_frame1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lv1_frame1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lvl2_frame1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lvl2_frame1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lvl2_frame2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lvl2_frame2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_indiviudal_Lvl1_frame2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_indiviudal_Lvl1_frame2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_Lvl3_Frame1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_Lvl3_Frame1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_Lvl3_Frame2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_Lvl3_Frame2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_lvl2_frame1png.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_lvl2_frame1png.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_lvl2_frame2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_lvl2_frame2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/UpdatingAnnouncers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/UpdatingAnnouncers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScript/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScript/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Players/Doers/AnalyseInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Players/Doers/AnalyseInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Players/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Players/PlayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,21 +75,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "DEV",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;DEV&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.6f1\Editor\Unity.exe" />
@@ -143,7 +176,8 @@
       <workItem from="1773824363545" duration="11363000" />
       <workItem from="1773847027639" duration="2451000" />
       <workItem from="1773873207120" duration="10865000" />
-      <workItem from="1773920087962" duration="744000" />
+      <workItem from="1773920087962" duration="1283000" />
+      <workItem from="1773946723635" duration="6058000" />
     </task>
     <servers />
   </component>

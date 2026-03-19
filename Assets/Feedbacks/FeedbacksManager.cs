@@ -15,6 +15,8 @@ public class FeedbacksManager : Manager
     public TakingHitFeedback takingHitFeedback;
     public UpdatingAnnouncers updatingAnnouncersP1;
     public UpdatingAnnouncers updatingAnnouncersP2;
+    public UpdatingCrowd updatingCrowd;
+    
     
     private void Start()
     {

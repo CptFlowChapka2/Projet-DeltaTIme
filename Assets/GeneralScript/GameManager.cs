@@ -219,4 +219,32 @@ public class GameManager : MonoBehaviour
     {
         feedbacksManager.Call(feedback);
     }
+
+    public int GetNumberOfConsecutiveUntouchedMeasures(int i)
+    {
+        if (i == 1)
+        {
+            return player1Manager.numberOfConsecutivePerfectMeasures;
+        }
+        else if (i == 2)
+        {
+            return player2Manager.numberOfConsecutivePerfectMeasures;
+        }
+        else
+        {
+            throw new ArgumentOutOfRangeException(nameof(i));
+        }
+    }
+
+    public bool GetIsAlreadyHit(int playerId)
+    {
+        if (playerId == 1)
+        {
+            return player1Manager.isAlreadyHit;
+        }
+        else
+        {
+            return player2Manager.isAlreadyHit;
+        }
+    }
 }

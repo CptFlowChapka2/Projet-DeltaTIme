@@ -33,6 +33,7 @@ public class PlayerManager : Manager
     public Vector2Int[] inputsThisMeasureCache = new Vector2Int[4]
         {new Vector2Int(-1, -1), new Vector2Int(-1, -1), new Vector2Int(-1, -1), new Vector2Int(-1, -1)};
     public int numberOfSuccesses = 0;
+    public int numberOfConsecutivePerfectMeasures = 0;
 
     [Header("MovePlayer")] 
     public TileId currentTileId;
