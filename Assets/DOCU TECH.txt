@@ -4,7 +4,8 @@ DOCU TECHNIQUE : DeltaTime
 
 Classe Abstraite :
 
-Doers : Classe comune de tous les scripts qui ont pour but de faire quelque chose . 
+Doers : 
+Classe comune de tous les scripts qui ont pour but de faire quelque chose . 
 Par default, ils contiennent tous 
     —Un GetSet qui à Reference à un Manager .
     — Les Fonctions Get et Set AllUsefulParameters , par default vide qui permete d'uniformisé les récuperation et aplication de variable.
@@ -14,7 +15,8 @@ Standart d'utilisation
     — Un Doer contient Un groupe logique d'action ,si son scope s'étant on le casse en plusieur doers.
     — Les méthodes d'un Doer doivent expliciter leur logique internet => conquaçé les méthodes .
 
-Manager: Classe commune à tout les script qui ont pour but de centralisé les réfrence et variable .
+Manager: 
+Classe commune à tout les script qui ont pour but de centralisé les réfrence et variable .
 il contiennent tout les variable qui doive etre accédé par d'autre Doer .
 Il posséde des méthode pour accéder correctement à une variable (Get...) ou une Action (Do...) .
 
@@ -46,3 +48,67 @@ pour initialiser tout les manager 2 méthode :
 
 Le groupe de méthode Get permente d'accéder  à une variable d'un autre Manager
 le groupe de méthode Do permete d'ordoner l'action d'un Doer extérieur 
+
+
+//Player System//
+PlayerManager : Manager
+Manager pour le systéme player .
+
+Posséde les Doers :
+
+-ReadInput
+-AnalyseInput
+-MovePlayer
+-UpdateWhenHit
+
+Variable public notable :
+player id : permet de spécifier le joueur actuel , définit dans l'inspecteur.
+currentPlayerCoords: position actuel du Player en coordoné relative du Dancefloor.
+InputActionName : à initialiser dans l'inpecteur avec "Player1Move" ou "Player2Move".par rapport à l'input map.
+inputsThisMeasure: La liste des input en Vecteur2Int fais à la derniére mesure complété.
+inputsThisMeasureCache : La liste des input en Vecteur2int fais lors de la mesure actuel  (ATTENTION IL FAUT FORCE GET et SET REGULIERMENT POUR QU'ELLE SOIT A JOUR)
+currentTileId: Reference vers la TileID actuelle.
+
+Méthode Public:
+DoTeleportPlayerToCoords(Vector2Int coords) :  Teleport le joueur à une case spécifier sur le dance floor associé.
+
+
+ReadInput : Doer
+
+A pour charge de lire les Input d'un joueur fais cette frame  et les traduire en Vector2Int
+Renvoi une valeur de 0 si aucun Input à étais fais cette frame .
+
+AnalyseInput : Doer
+
+Récupére les Input de ReadInput et les filtre .
+Si un il n'y as  ut d'input on skip.
+Si un input à deja étais traité sur ce Beat on  l'action est annulé.
+Si l'input est une diagonal on l'annule ,priorisant l'horizontal.
+Si on l'input est effectué off Beat ,on transforme l'input en Zero.
+Sinon on compte le nombre de mouvemente réussi .
+
+Aprés on ajoute  l'input (qui est soit valide soit Zero) dans Input THis measure Cache.
+
+MovePlayer : Doer
+
+Bouge le joeur  si l'input de ReadInput n'est pas 0
+
+Le mouvment est une teleportation qui actualise les paramétre changer (current coord et currente tile)
+la teleportation est clmaper dans les les limite de l'espace jouable du dancefloor
+
+UpdateWHenHit : Doer
+
+Change le materieu du joueur si le joueur à étais toucher .
+
+contient un temps d'invulnarabilité .
+
+vérifie si le joeuur est hit en checkant le nombre de projectile sur la current Tile.
+
+
+
+//DanceFloor System///
+
+DanceFLoorManager : Manager
+
+
+
