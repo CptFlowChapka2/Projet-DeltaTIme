@@ -2,76 +2,47 @@ DOCU TECHNIQUE : DeltaTime
 
 ================================================================================
 
-InputReader => Le gestionnaire d'inputs du projet.Sépare à la lecture les input des joueur dans des chaîne d'event différent.
+Classe Abstraite :
 
-EnumVariables => Un script où sont créées les différentes variables enum, pour les réutiliser librement dans
-les autres scripts.
+Doers : Classe comune de tous les scripts qui ont pour but de faire quelque chose . 
+Par default, ils contiennent tous 
+    —Un GetSet qui à Reference à un Manager .
+    — Les Fonctions Get et Set AllUsefulParameters , par default vide qui permete d'uniformisé les récuperation et aplication de variable.
+Standart d'utilisation 
+    —Un doer Doit avoit un nom commençant par un verbe .
+    — Il doit avoir une reference vers son manager typer .
+    — Un Doer contient Un groupe logique d'action ,si son scope s'étant on le casse en plusieur doers.
+    — Les méthodes d'un Doer doivent expliciter leur logique internet => conquaçé les méthodes .
 
-InputPerPlayer => Indique aux deux joueurs quels inputs ils doivent écouter. Compte ensuite chaque itération de chaque
-input et les stocke.
+Manager: Classe commune à tout les script qui ont pour but de centralisé les réfrence et variable .
+il contiennent tout les variable qui doive etre accédé par d'autre Doer .
+Il posséde des méthode pour accéder correctement à une variable (Get...) ou une Action (Do...) .
 
-GridParameters => Stocke les variables liées à la grille (pour l'instant juste la taille)
+par default ils contiennent tous :
+    -une reference au Game Manager
+    -Une Liste non Typer de tout leur Doer
+    -Une méthode GetAllDoersOnGameObject , qui initialise la liste avec un GetComponentS
+    -Une Fonction InitializeDoer qui :
+        -out une réference typer du Doer
+        -donne la réference manager au doer.
+     -Les méthode Force Get et Set AllusefullData d'un Doer :
+        -Si on Specifie le Type de Doer , il appliquerat la fonction Set ou Get de tout les Doer correspondant.
+        -Sinon de tout les Doer
 
-DanceFloorSpawner => Fait apparaître les deux grilles en prenant en compte la taille stockée,
-et place les deux joueurs au centre de chacune d'entre elles. La caméra, elle, se recentre avec un script
-spécifique, CameraStartPosition.
 
-MasterClockByFMOD => Récupère la position de la Timeline FMOD de l'EventInstance correspondant à
-la musique en train de jouer, puis la convertit en secondes en temps réel.
+Si un Doer à besoin de quelque chose extérieur à sa logique interne (ex : variable globale) il doit passer par un Manager.
+Si un Manager à besoin de quelque chose extérieur à ses prérocative (ex: un autre Doer que les siens) il doit passer par le Game Manager.
 
-MusicParametersForFMOD => Stocke les paramètres de la musique (BPM, beat par mesure pour le moment).
+Game Manager:
 
-BeatClock => Récupère le temps indiqué par la MasterClock, puis l'interprète sous forme de beats et mesures
-selon les MusicParameters. A chaque nouveau beat, il lance un Event OnBeat, et à chaque mesure, un Event OnMeasure.
-Le beat à un coyote ,pour permettre la précision , pour savoir si on est dans le coyote on utilise les flag .
-OnMesure est invoke à la fin du coyote .
+Le Game Manager à pour but de centraliser  les manager entre eux par le biais de méthode de communication direct (Get de valeur , Call D'action ...) 
+ou par le bias des Event .
 
-NewPlayerMovement => Nouvelle version du script de mouvement, prenant en compte les deux joueurs. Déplace chaque joueur
-de case en case selon les inputs reçus, et les clampe à la limite de leur grille respective , envoi aussi un event pour 
-dire qu'un joueur à bougé.
+Il posséde une reference à tout les manager .
 
-MajorityVerifier => Sur l'Event OnMeasure, trie les inputs pour garder les 2 plus utilisés, puis les assigne chacun à une
-variable indiquant leur majorité. Réinitialise ensuite les compteurs dans InputPerPlayer.
+pour initialiser tout les manager 2 méthode :
+    -par refference public dans l'inspecteur (solution safe pour les manager dupliqué comme DanceFloor ou Player Manager)
+    -Par la méthode GetAllManager(qui met tout les manager de la scéne dans une liste) + InializeManaer (out une refernec typer d'un manager + transmet la réference vers le gamemanager)
 
-PatternBank => Stocke quatre instances du struct Pattern, créé pour stocker les valeurs d'activation des tiles de chaque
-line du pattern. Chacune correspond au pattern attribué à une direction spécifique.
-
-PatternSpawner => Sur l'Event OnMeasure, instantie un objet pattern sur chaque grille. Chaque player instantie
-son propre pattern pour l'adversaire, pour faciliter la reconnaissance.
-
-PatternInitializer => Initialize le pattern, en lui donnant sa direction et le type de pattern à lancer.
-
-PatternMovement => Sur l'Event OnBeat, fais avancer l'objet pattern et change le state des tiles lumineuses
-selon le beat. Détruit le pattern une fois arrivé au bout de sa course.
-
-LightStateChecker => Stocke le state de chaque tile lumineuse, et active/désactive leur renderer/collider en fonction
-du state choisi.
-
-NumberOfTimeTouched => Stocke son titre dans chaque dancer
-
-TouchZone => Vérifie que la position d'une tile lumineuse est ou non à la même position qu'un dancer.
-Si oui, augmente son NumberOfTimeTouched et se "bloque", sinon se "débloque."
-
-EventSynchroniser=> Contient la logique des event  codépendant. Actuellemnt  sert au moove on beat .
-
-CrowdLvl=>Contient les logique  pour changer les feedback d'une crowd ,ébauche pour devenir un FeedbackManger .
-
-IndividualCrowdScript=> Contient les logique et operation pour varier les feedBack Crowd .
-
-ActivatedTile=> stock  les information et méthode lié au patterne d'attque : notament la logique de mouvememt à chaque Beat .
-
-InputTrackerAndPatternSpawner=> Traite les inputs joueurs et les stocke. Fait apparaitre des patterne d'attaque sur des NewTileScript . récupére les inputs joueur fais on Beat sur une mesure
-puis à chaque beat instancie les patterns corespondant : Create origine crée un array contenant les case sur lequelle les pattene vont spawn ,selon la direction .
-
-NewTileScript =>  Nouveau Tile script fais pour stocker des ActivatedTile sous forme de list . à chaque endBEat verifie ses list de patterne pour changer d'état.posséde une methode
-pour obtenir une case voisine ,utiliser lors des du mouvement des ActivatedTile.
-
-NewDanceFloorSpawner => crée des danceFloor avec la bordure de spawn de patterne ,et stock les dancefloor sous forme d'Array.
-
-NewPLayerMouvement => bouge le joueur  précisement sur les case du dancefloor .
-
-MusicUpdaterWithPlayerLevel => récupère le nb d'inputs réussis de chaque joueurs via NewPatternSpawner, et change le
-niveau de la musique en fonction sur OnMeasure.
-
-FeedbacksManager => contient quelques méthodes de feedbacks, comme DamageFeedback. Ces méthodes ont pour vocation à
-être appelées par d'autres scripts.
+Le groupe de méthode Get permente d'accéder  à une variable d'un autre Manager
+le groupe de méthode Do permete d'ordoner l'action d'un Doer extérieur 

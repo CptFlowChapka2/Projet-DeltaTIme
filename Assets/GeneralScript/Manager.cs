@@ -14,7 +14,7 @@ public abstract class Manager : MonoBehaviour
 
     protected void InitializeDoer<T>(out T appropriateDoer) where T : Doer
     {
-        appropriateDoer = (T)allDoers.Where(x => x.GetType() == typeof(T)).First(); // Cherche la bonne classe étendue de Doer
+        appropriateDoer = (T)allDoers.First(x => x.GetType() == typeof(T)); // Cherche la bonne classe étendue de Doer
         appropriateDoer.Manager = this;
     }
 

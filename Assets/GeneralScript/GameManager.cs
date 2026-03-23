@@ -121,18 +121,7 @@ public class GameManager : MonoBehaviour
         return toReturn;
     }
 
-    public void DoMovePlayerTeleportToCoord(Vector2Int coords,int playerId)
-    {
-        switch (playerId)
-        {
-            case 1 :
-                player1Manager.DoTeleportPlayerToCoords(coords);
-                break;
-            case 2 :
-                player2Manager.DoTeleportPlayerToCoords(coords);
-                break;
-        }
-    }
+    
 
     public Vector2Int GetPlayerCurrentRelativeCoords(int playerId)
     {
@@ -145,64 +134,20 @@ public class GameManager : MonoBehaviour
         return toReturn;
         
     }
-
-    public void DoCallAllManagerOfTypeToForceGetUsefullData<Tm,Td>() where Tm: Manager where Td:Doer
-    {
-        if (typeof(Tm).IsSubclassOf(typeof(Manager)))//si on spécifie le type de manager alors on cherche celui la
-        {
-            
-            allManagers.Where(x=> x.GetType() == typeof(Tm)).ToList().ForEach(x=>x.ForceDoerToGetUsefullData<Td>());
-            return;
-        }
-        //sinon on le fait pour tout le monde 
-        allManagers.ForEach(x=>x.ForceDoerToGetUsefullData<Doer>());//on met Doer ici car aucun manager ne partage de Doer
-    }
-    public void DoCallAllManagerOfTypeToForceSetUsefullData<Tm,Td>() where Tm: Manager where Td:Doer
-    {
-        if (typeof(Tm).IsSubclassOf(typeof(Manager)))//si on spécifie le type de manager alors on cherche celui la
-        {
-            
-            allManagers.Where(x=> x.GetType() == typeof(Tm)).ToList().ForEach(x=>x.ForceDoerToSetUsefullData<Td>());
-            return;
-        }
-        //sinon on le fait pour tout le monde 
-        allManagers.ForEach(x=>x.ForceDoerToSetUsefullData<Doer>());//on met Doer ici car aucun manager ne partage de Doer
-    }
-
+    
     public TileId[,] GetAllTileid(int playerId)
     {
         switch (playerId)
         {
             case 1 :
-                 return danceFloor1Manager.allTileID;
+                return danceFloor1Manager.allTileID;
             case 2 :
                 return danceFloor2Manager.allTileID;
             default:
                 throw new ArgumentOutOfRangeException(nameof(playerId)+" was called with invalide int= "+playerId);
         }
     }
-
-    public void DoTileListModification(Vector2Int tileToModify, ProjectileID toDo,
-       tileIdOrder thingToDo,int playerId,bool overwriteToAll=false)
-    {
-        if (overwriteToAll)
-        {
-            
-            danceFloor1Manager.DoModifyTileList(tileToModify, toDo, thingToDo, overwriteToAll);
-            danceFloor2Manager.DoModifyTileList(tileToModify, toDo, thingToDo, overwriteToAll);
-        }
-        
-        switch (playerId)
-        {
-            case 1:
-                danceFloor1Manager.DoModifyTileList(tileToModify, toDo, thingToDo);
-                break;
-            case 2:
-                danceFloor2Manager.DoModifyTileList(tileToModify, toDo, thingToDo);
-                break;
-        }
-    }
-
+    
     public TileId[,] GetAllTileArray(int playerId)
     {
         TileId[,] toReturn = playerId switch
@@ -214,12 +159,7 @@ public class GameManager : MonoBehaviour
         return toReturn;
         
     }
-
-    public void DoCallSpecificFeedback(FeedbackCaller feedback)
-    {
-        feedbacksManager.Call(feedback);
-    }
-
+    
     public int GetNumberOfConsecutiveUntouchedMeasures(int i)
     {
         if (i == 1)
@@ -247,4 +187,70 @@ public class GameManager : MonoBehaviour
             return player2Manager.isAlreadyHit;
         }
     }
+//methode DO
+    public void DoMovePlayerTeleportToCoord(Vector2Int coords,int playerId)
+    {
+        switch (playerId)
+        {
+            case 1 :
+                player1Manager.DoTeleportPlayerToCoords(coords);
+                break;
+            case 2 :
+                player2Manager.DoTeleportPlayerToCoords(coords);
+                break;
+        }
+    }
+    public void DoCallAllManagerOfTypeToForceGetUsefullData<Tm,Td>() where Tm: Manager where Td:Doer
+    {
+        if (typeof(Tm).IsSubclassOf(typeof(Manager)))//si on spécifie le type de manager alors on cherche celui la
+        {
+            
+            allManagers.Where(x=> x.GetType() == typeof(Tm)).ToList().ForEach(x=>x.ForceDoerToGetUsefullData<Td>());
+            return;
+        }
+        //sinon on le fait pour tout le monde 
+        allManagers.ForEach(x=>x.ForceDoerToGetUsefullData<Doer>());//on met Doer ici car aucun manager ne partage de Doer
+    }
+    public void DoCallAllManagerOfTypeToForceSetUsefullData<Tm,Td>() where Tm: Manager where Td:Doer
+    {
+        if (typeof(Tm).IsSubclassOf(typeof(Manager)))//si on spécifie le type de manager alors on cherche celui la
+        {
+            
+            allManagers.Where(x=> x.GetType() == typeof(Tm)).ToList().ForEach(x=>x.ForceDoerToSetUsefullData<Td>());
+            return;
+        }
+        //sinon on le fait pour tout le monde 
+        allManagers.ForEach(x=>x.ForceDoerToSetUsefullData<Doer>());//on met Doer ici car aucun manager ne partage de Doer
+    }
+
+   
+
+    public void DoTileListModification(Vector2Int tileToModify, ProjectileID toDo,
+       tileIdOrder thingToDo,int playerId,bool overwriteToAll=false)
+    {
+        if (overwriteToAll)
+        {
+            
+            danceFloor1Manager.DoModifyTileList(tileToModify, toDo, thingToDo, overwriteToAll);
+            danceFloor2Manager.DoModifyTileList(tileToModify, toDo, thingToDo, overwriteToAll);
+        }
+        
+        switch (playerId)
+        {
+            case 1:
+                danceFloor1Manager.DoModifyTileList(tileToModify, toDo, thingToDo);
+                break;
+            case 2:
+                danceFloor2Manager.DoModifyTileList(tileToModify, toDo, thingToDo);
+                break;
+        }
+    }
+    
+
+    public void DoCallSpecificFeedback(FeedbackCaller feedback)
+    {
+        feedbacksManager.Call(feedback);
+    }
+
+   
 }
