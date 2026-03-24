@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class ManipulateProjectileList : Doer
+public class CalculateProjectileList : Doer
 {
     
     private Vector3 defaultPosition;

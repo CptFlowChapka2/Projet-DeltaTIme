@@ -151,5 +151,89 @@ Groupe Methode Add & Remove:
 
 -ajoute ou enléve des projectile  d'une des liste au dessus.
 
+//Attaque System ///
+
+AttacksManager : Manager
+manager pour le sytéme d'attaque .
+
+Posséde les Doers :
+
+-CalculateProjectileList
+-MoveProjectile
+-SpawnProjectile
+-PatternBank (depracated)
+
+et à besoin de ProjectileID
+
+Variable publique notable :
+
+-projectileIdPrefab : prefab du projectile  qui posséde  un Projectile ID
+-inactiveProjectileIdPosition : position de default dans le monde  des projectile .
+-maxNumberOfProjectileId : nombre de projectile maximum qui existe .
+-allProjectileIds : tout les projectile qui exsite dans une list .
+
+
+CalculateProjectileList : Doer 
+
+à pour role  d'instancier et crée la projectileID list .
+
+Méthode public 
+
+CalculateProjectileList
+    -aux start , selon le maxNumberOfProjectileId  , Instancie un nombre de prefab équal  ,puis ajoute leur projectile ID à la list.
+    -Ensuite donne la reference de l'attaque manager au Projectile ID.
+    
+
+ProjectileID :
+
+Represent les information  d'un projectile .
+
+Variable publique :
+
+-currentTileId :  reference à la TileID actuel 
+-currentRelativeCoords : coordoné relative au danceFloor de la TleIDActuel
+-directionOfMouvement : direction de mouvement representé par un Vecteur2Int.
+-currentPlayerId : int representant l'association au player et DanceFloor .
+-inUse:  bool pour represnté si ce projectile est actif .
+
+méthode Publique :
+
+
+PutInUse()
+-associe toute les valeur initial  du projectile .
+-utilisant gameManager.DoTileListModification , ce donne en reférence  aux tile dans leur projetilileOnTHisTIleList.
+
+PutOutOfUSe()
+-remet à zero les valeur du projectile .
+
+
+MoveProjectile : Doer 
+
+Serie de Méthode de mouvement :
+
+CalculateNextTile():
+-Calcule si la prochaine tile est valide ,retourn false si ce n'est pas le cas 
+-si la tile est valide out la reference la coordoné relative dans l'array.
+-Condition :si  la coordoné donné  + la direction du projectile ,est une coordoné présente dans l'array.
+
+MooveProjectileToTile()
+
+-positione spatialement le projectile sur la positionn de la nouvelle tile.
+-s'enleve de la liste des projectile de la précedente tile .
+-s'ajoute à la liste des projctile de la nouvelle tile.
+-s'enléve de la sign list  de la nouvelle tile.
+-s'ajoute à la liste  de sign sur une  la prochaine nouvelle tile (si elle existe)
+
+
+ ListenForOnBeat()
+ 
+ -met à jour la liste des projectile actif .
+ -pour tout les projectile  actullent inUse ,applique les 2 méthode   au dessus .
+ -si le mouvement ne peux s'effectuer alors on PutOfUse  ,et on enléve le projectile des liste dans les Tile concerné.
+ 
+ 
+ 
+
+
 
 

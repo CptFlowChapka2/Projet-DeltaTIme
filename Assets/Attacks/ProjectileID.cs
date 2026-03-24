@@ -30,6 +30,7 @@ public class ProjectileID : MonoBehaviour
         currentTileId = null;
         currentPlayerId = 0;
         currentRelativeCoords = new Vector2Int();
+        transform.position = attacksManager.inactiveProjectileIdPosition;
     }
     
     

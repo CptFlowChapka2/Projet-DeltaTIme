@@ -4,10 +4,10 @@ using UnityEngine.Serialization;
 
 public class AttacksManager : Manager
 {
-    private ManipulateProjectileList manipulateProjectileList;
+    private CalculateProjectileList _calculateProjectileList;
     private MoveProjectile moveProjectile;
     private SpawnProjectile spawnProjectile;
-    public PatternBank patternBank;
+    public PatternBank patternBank;//todo : deprecated
 
     [Header("ManipulateProjectList")] 
     public GameObject projectileIdPrefab;
@@ -18,7 +18,7 @@ public class AttacksManager : Manager
     private void Awake()
     {
         GetAllDoersOnGameObject();
-        InitializeDoer(out manipulateProjectileList);
+        InitializeDoer(out _calculateProjectileList);
         InitializeDoer(out moveProjectile);
         InitializeDoer(out spawnProjectile);
     }

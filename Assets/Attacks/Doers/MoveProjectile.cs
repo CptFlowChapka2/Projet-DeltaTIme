@@ -56,7 +56,7 @@ public class MoveProjectile : Doer
 
     public void ListenForOnBeat()
     {
-        attacksManager.ForceDoerToSetUsefullData<ManipulateProjectileList>();
+        attacksManager.ForceDoerToSetUsefullData<CalculateProjectileList>();
         GetAllUsefulParameters();
         
         //Debug.Log(allProjectile.Count +"active projectile counte");
