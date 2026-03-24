@@ -110,5 +110,46 @@ vérifie si le joeuur est hit en checkant le nombre de projectile sur la current
 
 DanceFLoorManager : Manager
 
+Manager pour le danceFloor
+
+
+Posséde les Doers :
+
+-CreateDanceFloor
+
+//ATTTENTION// toute les Tile fesant partit d'un dance floor doivent etre en enfant de l'object possédant se script
+Variable publique notable :
+
+-associatedPlayerId : int qui permet  de lié le manager à un joueur.
+-allTileID : array à double entré representent toute les tiles d'un danceFloor.
+-allInvalideTile :List contenat une reference à toute les case invalide (extrimité).
+
+Methode public :
+
+DoModifyTileList(Vector2Int tileToModify, ProjectileID toDo, tileIdOrder thingToDo,bool overwriteToAll=false)
+    -Appele une fonction de TileID permetant de modifier ça liste de projectile (en Sign ou en présent) selon un enum.
+    -si overwriteToALl est true alors on fais le call  sur tout les TileID de maniére indiscriminé.
+
+
+CreateDanceFLoor : Doer
+
+Initialize l'array allTileID.
+pour se faire il récupére tout les object contenant un TIleID  qui lui sont enfant
+Téleport ensuite le joueur à la case central.
+
+TileID 
+
+Script présent sur toute les tiles.
+
+Variable importante :
+-position : les coordoné relative de la tile
+-thisState: l'état  de la case (Safe ,Damaging,Invalide)
+-allProjectileOnThisTile : tout les projectile actuelment sur cette tile dans une lise
+-allProjectileOnThisTileNextBeat :tout les projectile qui seront sur cette tile le beat prochain dans une liste
+
+Groupe Methode Add & Remove:
+
+-ajoute ou enléve des projectile  d'une des liste au dessus.
+
 
 
