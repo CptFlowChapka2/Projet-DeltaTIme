@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UpdatingAnnouncers : FeedbackCaller
 {
-    [SerializeField] private int playerID;
+     public int playerID;
     
     [Header("Announcers")]
     [SerializeField] private MeshRenderer beat1Announcer;
@@ -21,10 +21,11 @@ public class UpdatingAnnouncers : FeedbackCaller
     [SerializeField] private Material crossMaterial;
     
     [Header("FM")]
-    [SerializeField] private FeedbacksManager feedbacksManager;
+     private FeedbacksManager feedbacksManager;
 
     private void Start()
     {
+        feedbacksManager = (FeedbacksManager)manager;
         ReinitializeMaterials();
     }
 

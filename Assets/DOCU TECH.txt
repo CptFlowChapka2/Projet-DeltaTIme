@@ -232,7 +232,54 @@ MooveProjectileToTile()
  -si le mouvement ne peux s'effectuer alors on PutOfUse  ,et on enléve le projectile des liste dans les Tile concerné.
  
  
+ SpawnProjectile : Doer
  
+ Attribue un projectile de la list AllProjectile à une case à l'extremité d'un danceFloor spécifier .
+ 
+ SpawnProjectile()
+ -chaque mesure on récuper les input de la précedante mesure  de chaque joueur qu'on stock dans la list.
+ -puis chaque Beat  on crée un projectile pour le premier élement de chaque liste .
+ -si l'input est 0 ou vide (symboliser par -1,-1) on l'enléve de la liste 
+ -puis on AssigneProjectile.
+ -on finis par enlever l'input de la liste .
+ 
+ 
+ AssignProjectile()
+ 
+ -inverse l'id  pour aller sur le dancefloor adverse.
+ -on CurateInvalide pour avoir le case invalide  corespondante (si direction droite case de départ à gauche)
+ -trouve la tile de départ  dependament du mode :
+    -AtoA : on prend la position du joueur A comme entré
+    -BtoA:on prend la postion du jouer B comme entré
+ -on finis avec RequestPorjectile
+ 
+ RequestPRojectile():
+ -PutInSUe  un projectile inutilisé  avec le player id du joueur adverse.
+ 
+ //FeedBack System//
+ 
+ FeedbackManager : Manager
+ 
+ Les Doer du FEedback manager sont des FeedBackCaller une classe abstraite enfant des doer.
+ Les FeedbackCaller ont pour seul diffrence une méthode virtuel nomer Call ,qui permet d'uniformisé les appele de feedback.
+ 
+ Si un feedback est automatique il est préferable d'en faire un Doer et non un feedBack Caller
+ 
+ le manager à comme FeedBackCaller 
+ 
+ -MovingInBeatFeedback
+ -TakingHitFeedback
+ - 2 UpdatingAnnouncers
+ 
+ le manager à comme Doer:
+ 
+ - UpdatingCrowd
+ 
+ Méthode publice :
+ 
+ Call
+ -permet de call un feedbackCaller
+
 
 
 
