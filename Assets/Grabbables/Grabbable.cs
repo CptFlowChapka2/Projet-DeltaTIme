@@ -35,9 +35,15 @@ public abstract class Grabbable : MonoBehaviour
     {
         meshRenderer = GetComponent<MeshRenderer>();
         meshFilter = GetComponent<MeshFilter>();
+        if(variants.Length==0)return;
         ActualVariant = 0;
     }
-    
+
+    protected virtual void Start()
+    {
+        //transform.position = actualHex.transform.position+new Vector3(0f,0.5f,0);
+    }
+
     public virtual void Tick()
     {
         

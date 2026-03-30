@@ -14,19 +14,34 @@ public struct Rule
 
 public class Machine : Grabbable
 {
+    public bool debugMode = true;
     [SerializeField] private Rule[] rules;
     private IngredientsDictionary ingredientsDictionary;
     private Rule actualRuleToFollow;
-    private List<Ingredient> workedIngredients;
+    private List<Ingredient> workedIngredients=new List<Ingredient>();
     private bool isWorking = false;
 
     [SerializeField] private GameObject prefabIngredient;
 
     private int tickCounter = 0;
 
-    private void Start()
+    protected override void Start()
     {
-        ingredientsDictionary = FindObjectOfType<IngredientsDictionary>();
+        ingredientsDictionary = FindAnyObjectByType<IngredientsDictionary>();
+        actualHex.AddGrabbable(this);
+        //transform.position = actualHex.transform.position+new Vector3(0f,0.5f,0);
+        
+    }
+
+    private void Update()
+    {
+        if (debugMode)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Tick();
+            }
+        }
     }
 
     public override void Tick()
@@ -49,17 +64,21 @@ public class Machine : Grabbable
         {
             tickCounter = 0;
             // todo pour les variants
-            foreach (Grabbable grabbable in workedIngredients)
+            isWorking = false;
+            if (workedIngredients.Count > 0)
             {
-                actualHex.DestroyGrabbables(grabbable);
+                foreach (Grabbable grabbable in workedIngredients)
+                {
+                    actualHex.DestroyGrabbables(grabbable);
+                } 
             }
-
+            
             if (actualRuleToFollow.outputs.Contains(IngredientType.None)) return;
                 
             foreach (IngredientType output in actualRuleToFollow.outputs)
             {
                 Ingredient outputIngredient = Instantiate(prefabIngredient, transform.position, transform.rotation).GetComponent<Ingredient>();
-                outputIngredient.Initialize(output, ingredientsDictionary);
+                outputIngredient.Initialize(output, ingredientsDictionary,actualHex);
                 actualHex.AddGrabbable(outputIngredient);
             }
         }
