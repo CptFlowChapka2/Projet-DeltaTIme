@@ -41,7 +41,7 @@ public abstract class Grabbable : MonoBehaviour
 
     protected virtual void Start()
     {
-        //transform.position = actualHex.transform.position+new Vector3(0f,0.5f,0);
+        transform.position = actualHex.boundsCenter + new Vector3(0, 0.5f, 0);
     }
 
     public virtual void Tick()

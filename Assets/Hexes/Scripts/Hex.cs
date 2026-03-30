@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,6 +7,12 @@ public abstract class Hex : MonoBehaviour
 {
     [SerializeField] protected Vector2Int relativeCoords;
     public List<Grabbable> grabbablesOnThisHex = new List<Grabbable>();
+    public Vector3 boundsCenter;
+
+    private void Awake()
+    {
+        boundsCenter = GetComponent<MeshRenderer>().bounds.center;
+    }
 
     public virtual void Tick()
     {
