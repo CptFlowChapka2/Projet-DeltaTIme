@@ -1,19 +1,16 @@
 using System;
 using UnityEngine;
 
-public enum IngredientType
-{
-    None,
-    A,
-    B
-}
-
 public class Ingredient : Grabbable
 {
     public IngredientType type;
+    private IngredientsDictionary dictionary; 
 
-    public void Initialize(IngredientType ingredientType)
+    public void Initialize(IngredientType ingredientType, IngredientsDictionary ingredientsDictionary)
     {
-        type = ingredientType;
+         type = ingredientType;
+         dictionary = ingredientsDictionary;
+         variants = dictionary.ingredients[type];
+         ActualVariant = 0;
     }
 }

@@ -15,6 +15,7 @@ public struct Rule
 public class Machine : Grabbable
 {
     [SerializeField] private Rule[] rules;
+    private IngredientsDictionary ingredientsDictionary;
     private Rule actualRuleToFollow;
     private List<Ingredient> workedIngredients;
     private bool isWorking = false;
@@ -22,7 +23,12 @@ public class Machine : Grabbable
     [SerializeField] private GameObject prefabIngredient;
 
     private int tickCounter = 0;
-    
+
+    private void Start()
+    {
+        ingredientsDictionary = FindObjectOfType<IngredientsDictionary>();
+    }
+
     public override void Tick()
     {
         if (!isWorking)
@@ -32,22 +38,29 @@ public class Machine : Grabbable
 
         if (isWorking)
         {
-            tickCounter++;
-            if (tickCounter >= actualRuleToFollow.numberOfTicksToPerform)
-            {
-                tickCounter = 0;
-                // todo pour les variants
-                foreach (Grabbable grabbable in workedIngredients)
-                {
-                    actualHex.DestroyGrabbables(grabbable);
-                }
+            ApplyRule();
+        }
+    }
 
-                foreach (IngredientType output in actualRuleToFollow.outputs)
-                {
-                    Ingredient outputIngredient = Instantiate(prefabIngredient, transform.position, transform.rotation).GetComponent<Ingredient>();
-                    outputIngredient.type = output;
-                }
+    private void ApplyRule()
+    {
+        tickCounter++;
+        if (tickCounter >= actualRuleToFollow.numberOfTicksToPerform)
+        {
+            tickCounter = 0;
+            // todo pour les variants
+            foreach (Grabbable grabbable in workedIngredients)
+            {
+                actualHex.DestroyGrabbables(grabbable);
+            }
+
+            if (actualRuleToFollow.outputs.Contains(IngredientType.None)) return;
                 
+            foreach (IngredientType output in actualRuleToFollow.outputs)
+            {
+                Ingredient outputIngredient = Instantiate(prefabIngredient, transform.position, transform.rotation).GetComponent<Ingredient>();
+                outputIngredient.Initialize(output, ingredientsDictionary);
+                actualHex.AddGrabbable(outputIngredient);
             }
         }
     }

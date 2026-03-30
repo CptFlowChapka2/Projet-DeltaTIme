@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 
+[Serializable]
 public struct GrabbableVariant
 {
     public Mesh mesh;
