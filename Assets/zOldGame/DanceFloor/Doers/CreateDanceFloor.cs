@@ -54,6 +54,7 @@ public class CreateDanceFloor : Doer
             {
                 allInvalideTile.Add(tile);
                 tile.thisState = TileState.Invalid;
+                tile.GetComponent<MeshRenderer>().material.color = Color.blue;
             }
             tile.gameObject.GetComponent<UpdateTileMaterial>().Initialize();
         }

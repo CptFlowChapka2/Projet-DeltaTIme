@@ -6137,7 +6137,7 @@ Transform:
   m_GameObject: {fileID: 760592452}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.94, y: 0.7, z: 1.2099998}
+  m_LocalPosition: {x: 1.07, y: 0.7, z: 0.79}
   m_LocalScale: {x: 0.415, y: 0.415, z: 0.415}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7273,7 +7273,7 @@ Transform:
   m_GameObject: {fileID: 949216729}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.81, y: 0.7, z: 1.11}
+  m_LocalPosition: {x: 2.97, y: 0.7, z: 0.44}
   m_LocalScale: {x: 0.415, y: 0.415, z: 0.415}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14349,7 +14349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbcda373ae99a54c8053839777be6b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnProjectile
-  mode: 0
+  mode: 1
 --- !u!1001 &1829562530
 PrefabInstance:
   m_ObjectHideFlags: 0

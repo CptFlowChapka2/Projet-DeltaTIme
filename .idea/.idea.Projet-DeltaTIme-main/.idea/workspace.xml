@@ -6,40 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/BeatBarImage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/BeatBarImage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/BeatMarkerScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/BeatMarkerScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/FeedbacksManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Feedbacks/FeedbacksManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Left_individual_Lvl3_Frame1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Left_individual_Lvl3_Frame1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Left_individual_Lvl3_Frame2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Left_individual_Lvl3_Frame2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Right_individual_Lvl1_Frame2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Right_individual_Lvl1_Frame2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Right_individual_Lvl1_frame1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/Right_individual_Lvl1_frame1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lv1_frame1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lv1_frame1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lvl2_frame1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lvl2_frame1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lvl2_frame2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_individual_lvl2_frame2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_indiviudal_Lvl1_frame2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/left_indiviudal_Lvl1_frame2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_Lvl3_Frame1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_Lvl3_Frame1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_Lvl3_Frame2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_Lvl3_Frame2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_lvl2_frame1png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_lvl2_frame1png.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_lvl2_frame2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/Foule/Sprite/right_individual_lvl2_frame2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/UpdatingAnnouncers.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feedbacks/UpdatingAnnouncers.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScript/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScript/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Players/Doers/AnalyseInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Players/Doers/AnalyseInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Players/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Players/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DanceFloor/Doers/CreateDanceFloor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DanceFloor/Doers/CreateDanceFloor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewArchitecture.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +144,9 @@
       <workItem from="1773847027639" duration="2451000" />
       <workItem from="1773873207120" duration="10865000" />
       <workItem from="1773920087962" duration="1283000" />
-      <workItem from="1773946723635" duration="6058000" />
+      <workItem from="1773946723635" duration="6737000" />
+      <workItem from="1774309805885" duration="785000" />
+      <workItem from="1774433760691" duration="2186000" />
     </task>
     <servers />
   </component>
