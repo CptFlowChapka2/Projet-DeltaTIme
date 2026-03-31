@@ -30,6 +30,7 @@ public class Player : Grabbable
 
     private void Update()
     {
+        GrabRelease();
         ExtendRetract();
         Spin();
         grabber.transform.position = transform.position + arm;
@@ -39,7 +40,7 @@ public class Player : Grabbable
     {
         if (grabReleaseAction.WasPerformedThisFrame())
         {
-            
+            grabber.OnGrabRelease();
         }
     }
 
