@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Grabbable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Grabbable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Ingredient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Ingredient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Scripts/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Scripts/Hex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +140,7 @@
       <workItem from="1774876449996" duration="479000" />
       <workItem from="1774876950309" duration="18799000" />
       <workItem from="1774957853628" duration="3775000" />
-      <workItem from="1774977443272" duration="1568000" />
+      <workItem from="1774977443272" duration="2712000" />
     </task>
     <servers />
   </component>
