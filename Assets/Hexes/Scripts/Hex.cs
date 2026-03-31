@@ -22,9 +22,10 @@ public abstract class Hex : MonoBehaviour
     [SerializeField] private Material hoveredMaterial;
     [SerializeField] private MeshRenderer meshRenderer;
 
-    private void Awake()
+    private void Start()
     {
-        //boundsCenter = meshRenderer.bounds.center;
+        Timer timer = FindAnyObjectByType<Timer>();
+        timer.Tick.AddListener(Tick);
     }
     
     private void Update()
@@ -66,7 +67,8 @@ public abstract class Hex : MonoBehaviour
 
     public virtual void Tick()
     {
-        grabbablesOnThisHex.First().Tick();
+        if(grabbablesOnThisHex.Count==0)return;
+        grabbablesOnThisHex?.First()?.Tick();
     }
 
     public void ChangeMaterial(Material newMaterial)
