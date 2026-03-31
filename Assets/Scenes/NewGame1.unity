@@ -1608,14 +1608,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IngredientsDictionnary
   ingredients:
     _serializedList:
-    - Key: 1
-      Value:
-      - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-        material: {fileID: 2100000, guid: 0468fb0bade6ed14cb6be81ecc125a32, type: 2}
     - Key: 2
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+        material: {fileID: 2100000, guid: 0468fb0bade6ed14cb6be81ecc125a32, type: 2}
+    - Key: 3
+      Value:
+      - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: 8a24971c5a5f60246b651343d933dbb1, type: 2}
+    - Key: 4
+      Value:
+      - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+        material: {fileID: 2100000, guid: 10406b3e6b8e76e40829f9b4478c4c0c, type: 2}
+    - Key: 5
+      Value:
+      - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+        material: {fileID: 2100000, guid: 01704edf3fd48844b9e4e2728dbc6118, type: 2}
 --- !u!4 &374764353
 Transform:
   m_ObjectHideFlags: 0
@@ -4592,7 +4600,7 @@ PrefabInstance:
       objectReference: {fileID: 1176507961}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].inputs.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].outputs.Array.size
@@ -4600,11 +4608,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'rules.Array.data[0].inputs.Array.data[0]'
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: 'rules.Array.data[0].inputs.Array.data[1]'
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'rules.Array.data[0].outputs.Array.data[0]'
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].numberOfTicksToPerform
@@ -4612,7 +4624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5341778612878112200, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_Name
-      value: TransformAtoB
+      value: TransformABtoC
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14846,6 +14858,87 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1056297826330024082, guid: f4f7f7c3f2a63b646b9dd0c8117dce13, type: 3}
+--- !u!1001 &1465665705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: actualHex
+      value: 
+      objectReference: {fileID: 1347256766}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: rules.Array.data[0].inputs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: rules.Array.data[0].outputs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: 'rules.Array.data[0].inputs.Array.data[0]'
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: 'rules.Array.data[0].outputs.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: rules.Array.data[0].numberOfTicksToPerform
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341778612878112200, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_Name
+      value: DeleteD
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.72266
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
 --- !u!114 &1467413752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20242,11 +20335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'rules.Array.data[0].inputs.Array.data[0]'
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'rules.Array.data[0].outputs.Array.data[0]'
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].numberOfTicksToPerform
@@ -20254,7 +20347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5341778612878112200, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_Name
-      value: DeleteB
+      value: SpawnB
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21629,24 +21722,52 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1220149402}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: rules.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].inputs.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: rules.Array.data[1].inputs.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].outputs.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
-      propertyPath: 'rules.Array.data[0].outputs.Array.data[0]'
+      propertyPath: rules.Array.data[1].outputs.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: 'rules.Array.data[1].inputs.Array.data[0]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: 'rules.Array.data[1].inputs.Array.data[1]'
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: 'rules.Array.data[0].outputs.Array.data[0]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: 'rules.Array.data[1].outputs.Array.data[0]'
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].numberOfTicksToPerform
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: rules.Array.data[1].numberOfTicksToPerform
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5341778612878112200, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_Name
-      value: SpawnA
+      value: SpawnA/TransformACtoD
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21704,5 +21825,6 @@ SceneRoots:
   - {fileID: 6819340426825001210}
   - {fileID: 1024079005}
   - {fileID: 2015507983}
+  - {fileID: 1465665705}
   - {fileID: 2468010865620526788}
   - {fileID: 1096583722}
