@@ -41,7 +41,10 @@ public abstract class Grabbable : MonoBehaviour
 
     protected virtual void Start()
     {
-        transform.position = actualHex.boundsCenter + new Vector3(0, 0.5f, 0);
+        if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit))
+        {
+            transform.position = hit.collider.gameObject.transform.position + new Vector3(0, 0.5f, 0);
+        }
     }
 
     public virtual void Tick()

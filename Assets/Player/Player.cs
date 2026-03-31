@@ -21,6 +21,7 @@ public class Player : Grabbable
     protected override void Start()
     {
         base.Start();
+        transform.position += new Vector3(0, 0.5f, 0);
         arm = new Vector3(1, 0, 0);
         playerInput = GetComponent<PlayerInput>(); 
         spinAction = playerInput.actions["Spin"];

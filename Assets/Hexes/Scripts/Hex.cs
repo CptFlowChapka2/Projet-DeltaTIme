@@ -14,7 +14,7 @@ public abstract class Hex : MonoBehaviour
 {
     [SerializeField] protected Vector2Int relativeCoords;
     public List<Grabbable> grabbablesOnThisHex = new List<Grabbable>();
-    public Vector3 boundsCenter;
+    //public Vector3 boundsCenter;
 
     [SerializeField] protected Grabber[] grabbers;
     public HexState state = HexState.Idle;
@@ -24,7 +24,7 @@ public abstract class Hex : MonoBehaviour
 
     private void Awake()
     {
-        boundsCenter = meshRenderer.bounds.center;
+        //boundsCenter = meshRenderer.bounds.center;
     }
     
     private void Update()

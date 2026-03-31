@@ -29,7 +29,7 @@ public class Machine : Grabbable
     {
         ingredientsDictionary = FindAnyObjectByType<IngredientsDictionary>();
         actualHex.AddGrabbable(this);
-        transform.position = actualHex.boundsCenter + new Vector3(0, 0.5f, 0);
+        base.Start();
     }
 
     private void Update()
