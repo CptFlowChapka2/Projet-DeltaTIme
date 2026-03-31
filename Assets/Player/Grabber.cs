@@ -25,14 +25,26 @@ public class Grabber : MonoBehaviour
         Hex hex = currentHoveredHex.GetComponentInParent<Hex>();
         if (!currentGrabbedObject && hex.grabbablesOnThisHex.Count != 0)
         {
-            currentGrabbedObject = hex.grabbablesOnThisHex.Last();
-            hex.RemoveGrabbable(currentGrabbedObject);
+            GrabOn(hex);
         }
         else if (hex.grabbablesOnThisHex.Count == 0 || !(currentGrabbedObject is Machine && hex.grabbablesOnThisHex.Last() is Ingredient))
         {
-            hex.AddGrabbable(currentGrabbedObject);
-            currentGrabbedObject.transform.position = hex.transform.position + new Vector3(0, 0.5f, 0);
-            currentGrabbedObject = null;
+            ReleaseOn(hex);
         }
+    }
+
+    private void ReleaseOn(Hex hex)
+    {
+        hex.AddGrabbable(currentGrabbedObject);
+        currentGrabbedObject.isGrabbed = false;
+        currentGrabbedObject.transform.position = hex.transform.position + new Vector3(0, 0.5f, 0);
+        currentGrabbedObject = null;
+    }
+
+    private void GrabOn(Hex hex)
+    {
+        currentGrabbedObject = hex.grabbablesOnThisHex.Last();
+        currentGrabbedObject.isGrabbed = true;
+        hex.RemoveGrabbable(currentGrabbedObject);
     }
 }

@@ -44,6 +44,7 @@ public abstract class Grabbable : MonoBehaviour
         if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit))
         {
             transform.position = hit.collider.gameObject.transform.position + new Vector3(0, 0.5f, 0);
+            actualHex = hit.collider.gameObject.GetComponentInParent<Hex>();
         }
     }
 
