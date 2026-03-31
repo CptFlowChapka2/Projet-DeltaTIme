@@ -15,14 +15,15 @@ public abstract class Hex : MonoBehaviour
     [SerializeField] protected Vector2Int relativeCoords;
     public List<Grabbable> grabbablesOnThisHex = new List<Grabbable>();
     public Vector3 boundsCenter;
+
+    [SerializeField] protected Grabber[] grabbers;
     public HexState state = HexState.Idle;
     [SerializeField] private Material idleMaterial;
     [SerializeField] private Material hoveredMaterial;
-    private MeshRenderer meshRenderer;
+    [SerializeField] private MeshRenderer meshRenderer;
 
     private void Awake()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
         boundsCenter = meshRenderer.bounds.center;
     }
     
@@ -33,6 +34,22 @@ public abstract class Hex : MonoBehaviour
 
     public virtual void OnUpdate()
     {
+        bool isHovered = false;
+        
+        for (int i = 0; i < grabbers.Length; i++)
+        {
+            if (grabbers[i].currentHoveredHex == meshRenderer.gameObject)
+            {
+                state = HexState.Hovered;
+                isHovered = true;
+            }
+        }
+
+        if (!isHovered)
+        {
+            state = HexState.Idle;
+        }
+        
         switch (state)
         {
             case HexState.Idle:
