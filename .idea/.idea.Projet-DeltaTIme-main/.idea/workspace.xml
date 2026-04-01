@@ -6,7 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/A.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/A/Variant0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/A/Variant0/A_Variant0_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/A/Variant0/A_Variant0_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/B.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/B/Variant0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/B/Variant0/B_Variant0_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/B/Variant0/B_Variant0_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/C.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/C/Variant0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/C/Variant0/C_Variant0_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/C/Variant0/C_Variant0_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/D.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/D/Variant0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/D/Variant0/D_Variant0_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Ingredient/D/Variant0/D_Variant0_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Machine.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Machine/AtoB.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Machine/AtoB/Variant0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Machine/AtoB/Variant0/AtoB_Variant0_Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Machine/AtoB/Variant0/AtoB_Variant0_Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Machine/DestroyB.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/GrabbleVarients/Machine/SpawnA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau Test 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau Test 1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

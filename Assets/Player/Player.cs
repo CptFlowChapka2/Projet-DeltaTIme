@@ -8,6 +8,7 @@ public class Player : Grabbable
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float extentionSpeed;
     [SerializeField] private float maxExtentionLength;
+    [SerializeField] private float minExtentionLength;
     public PlayerInput playerInput;
     private InputAction spinAction;
     private InputAction extendRetractAction;
@@ -50,7 +51,7 @@ public class Player : Grabbable
     {
         float extendValue = extendRetractAction.ReadValue<float>() * Time.deltaTime * extentionSpeed; 
         float armMagnitude = arm.magnitude + extendValue;
-        armMagnitude = Mathf.Clamp(armMagnitude, 1, maxExtentionLength);
+        armMagnitude = Mathf.Clamp(armMagnitude, minExtentionLength, maxExtentionLength);
         arm = arm.normalized * armMagnitude;
     }
 
