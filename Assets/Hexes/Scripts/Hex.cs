@@ -78,6 +78,7 @@ public abstract class Hex : MonoBehaviour
 
     public virtual void AddGrabbable(Grabbable grabbable)
     {
+        
         grabbablesOnThisHex.Add(grabbable);
         grabbablesOnThisHex.TrimExcess();
         grabbable.actualHex = this;
