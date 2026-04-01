@@ -28,7 +28,13 @@ Hérite de Hex. Pour l'instant, ne fait rien de plus que Hex.
 INGREDIENT :
 
 Hérite de Grabbable. Contient un type d'ingredient (enum) qu'il récupère lorsqu'il est initialisé (méthode Initialize), et
-une rèf à l'IngredientDictionary (lie un IngredientType à un GrabbableVariant)
+une rèf à l'IngredientDictionary (lie un IngredientType à un GrabbableVariant) pour choisir sous quels variants apparaître.
+
+MACHINE :
+
+Hérite de Grabbable. Contient une liste de Rule (struct avec list d'IngredientType inputs, list d'IngredientType outputs,
+int nb de ticks pour s'activer), ainsi que un identificateur de la rule à suivre à un instant t, les ingrédients dispos dans
+une List, un compteur de ticks local et un booléen isWorking.
 
 
 

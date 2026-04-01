@@ -7,9 +7,6 @@
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DOCU TECH.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOCU TECH.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +142,7 @@
       <workItem from="1774876950309" duration="18799000" />
       <workItem from="1774957853628" duration="3775000" />
       <workItem from="1774977443272" duration="3401000" />
-      <workItem from="1775031954728" duration="3313000" />
+      <workItem from="1775031954728" duration="4418000" />
     </task>
     <servers />
   </component>
