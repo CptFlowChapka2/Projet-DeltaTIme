@@ -27,9 +27,10 @@ public class Machine : Grabbable
 
     protected override void Start()
     {
+        base.Start();
         ingredientsDictionary = FindAnyObjectByType<IngredientsDictionary>();
         actualHex.AddGrabbable(this);
-        base.Start();
+        
     }
 
     private void Update()
