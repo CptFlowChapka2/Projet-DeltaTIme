@@ -72,6 +72,11 @@ public class Machine : Grabbable
             }
             
             if (actualRuleToFollow.outputs.Contains(IngredientType.None)) return;
+            if (actualRuleToFollow.outputs.Contains(IngredientType.Score))
+            {
+                //todo
+                return;
+            }
                 
             foreach (IngredientType output in actualRuleToFollow.outputs)
             {
