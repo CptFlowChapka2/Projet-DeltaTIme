@@ -77,7 +77,7 @@ public class Machine : Grabbable
             {
                 Ingredient outputIngredient = Instantiate(prefabIngredient, transform.position, transform.rotation).GetComponent<Ingredient>();
                 outputIngredient.Initialize(output, ingredientsDictionary,actualHex);
-                actualHex.AddGrabbable(outputIngredient);
+                //l'ingredient qui vient de spawn applique son Start de grabble donc s'ajoute lui même à la hex//
             }
         }
     }
