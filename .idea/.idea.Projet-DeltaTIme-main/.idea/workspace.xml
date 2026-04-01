@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOCU TECH.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOCU TECH.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTiling.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewTiling.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau Test 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau Test 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GeneralScripts/CameraPositionning.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Grabbables/Grabbable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Grabbables/Ingredient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Grabbables/Machine.cs" root0="FORCE_HIGHLIGHTING" />

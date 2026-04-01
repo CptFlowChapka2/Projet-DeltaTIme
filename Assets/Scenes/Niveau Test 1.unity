@@ -9438,6 +9438,7 @@ GameObject:
   - component: {fileID: 1025533194}
   - component: {fileID: 1025533193}
   - component: {fileID: 1025533192}
+  - component: {fileID: 1025533195}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9513,12 +9514,27 @@ Transform:
   m_GameObject: {fileID: 1025533191}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 8.66, y: 15.16, z: 7.14}
+  m_LocalPosition: {x: 14.37, y: 15.16, z: 2.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1025533195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025533191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2da641a175d27347ae8c86319079f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraPositionning
+  smoothTime: 0.5
+  p1: {fileID: 2468010865620526789}
+  p2: {fileID: 1298800721}
 --- !u!114 &1027581695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19997,6 +20013,11 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerMouse
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!4 &1298800721 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+  m_PrefabInstance: {fileID: 1298800718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1299611874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32262,6 +32283,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 467469174}
   m_SourcePrefab: {fileID: 100100000, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+--- !u!4 &2468010865620526789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+  m_PrefabInstance: {fileID: 2468010865620526788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6782622675980644441
 PrefabInstance:
   m_ObjectHideFlags: 0
