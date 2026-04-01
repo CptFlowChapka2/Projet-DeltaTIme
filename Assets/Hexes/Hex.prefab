@@ -47,7 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NormalHex
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
-  boundsCenter: {x: 0, y: 0, z: 0}
   grabbers: []
   state: 1
   idleMaterial: {fileID: 2100000, guid: fccca1c433a871943b23ed29051b280b, type: 2}
@@ -104,6 +103,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0f8c8956a24a84a459270ac16bd3fe5a, type: 3}
       propertyPath: m_Name
       value: MeshAndCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f8c8956a24a84a459270ac16bd3fe5a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

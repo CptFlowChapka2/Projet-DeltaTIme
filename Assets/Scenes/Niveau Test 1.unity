@@ -4278,6 +4278,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f6c59bec-a654-41b5-a98f-9c5a5b1d1bc7
     m_ActionName: 'PlayerMouse/Spin[/Mouse/leftButton,/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 72b820ab-9608-4196-a2f8-4f056086c6d8
+    m_ActionName: 'PlayerKeyboard/Grab[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 59cfcee9-a567-46d7-971a-22886397b05d
+    m_ActionName: 'PlayerKeyboard/Extend[/Keyboard/s,/Keyboard/w]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e850f53f-e04b-4a4e-b921-b7b5524e0b21
+    m_ActionName: 'PlayerKeyboard/Spin[/Keyboard/a,/Keyboard/d]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Mouse
   m_DefaultActionMap: PlayerMouse
@@ -19872,7 +19884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: extentionSpeed
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: actionMap.m_Name
@@ -19920,7 +19932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00327
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20008,9 +20020,21 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f6c59bec-a654-41b5-a98f-9c5a5b1d1bc7
     m_ActionName: 'PlayerMouse/Spin[/Mouse/leftButton,/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 72b820ab-9608-4196-a2f8-4f056086c6d8
+    m_ActionName: 'PlayerKeyboard/Grab[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 59cfcee9-a567-46d7-971a-22886397b05d
+    m_ActionName: 'PlayerKeyboard/Extend[/Keyboard/s,/Keyboard/w]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e850f53f-e04b-4a4e-b921-b7b5524e0b21
+    m_ActionName: 'PlayerKeyboard/Spin[/Keyboard/a,/Keyboard/d]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Mouse
-  m_DefaultActionMap: PlayerMouse
+  m_DefaultControlScheme: Keyboard
+  m_DefaultActionMap: PlayerKeyboard
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &1298800721 stripped
@@ -32237,7 +32261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00327
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.z

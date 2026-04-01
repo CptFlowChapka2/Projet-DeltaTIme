@@ -45,6 +45,7 @@ public abstract class Grabbable : MonoBehaviour
         {
             transform.position = hit.collider.gameObject.transform.position + new Vector3(0, 0.5f, 0);
             actualHex = hit.collider.gameObject.GetComponentInParent<Hex>();
+            actualHex.AddGrabbable(this);
         }
     }
 

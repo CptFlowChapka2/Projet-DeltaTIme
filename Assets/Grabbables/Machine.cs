@@ -29,8 +29,6 @@ public class Machine : Grabbable
     {
         base.Start();
         ingredientsDictionary = FindAnyObjectByType<IngredientsDictionary>();
-        actualHex.AddGrabbable(this);
-        
     }
 
     private void Update()

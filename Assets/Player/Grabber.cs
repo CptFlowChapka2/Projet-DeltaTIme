@@ -6,6 +6,7 @@ public class Grabber : MonoBehaviour
 {
     public GameObject currentHoveredHex = null;
     public Grabbable currentGrabbedObject = null;
+    [NonSerialized]public Player player;
 
     private void Update()
     {
@@ -25,6 +26,7 @@ public class Grabber : MonoBehaviour
         Hex hex = currentHoveredHex.GetComponentInParent<Hex>();
         if (!currentGrabbedObject && hex.grabbablesOnThisHex.Count != 0)
         {
+            if(player.isGrabbed&&hex.grabbablesOnThisHex.Last() is Player)return;
             GrabOn(hex);
         }
         else if (currentGrabbedObject &&(hex.grabbablesOnThisHex.Count == 0 || !(!(currentGrabbedObject is Ingredient) && hex.grabbablesOnThisHex.Last() is Ingredient)))

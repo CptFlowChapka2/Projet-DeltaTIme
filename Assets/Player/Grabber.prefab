@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9756665052825506}
   - component: {fileID: 6135125014848952520}
   - component: {fileID: 5041740305350047247}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Grabber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,3 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e9efd3aeac57346aeff20ffe4d8819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grabber
+  currentHoveredHex: {fileID: 0}
+  currentGrabbedObject: {fileID: 0}

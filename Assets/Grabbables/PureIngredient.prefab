@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6425678485983145503}
   - component: {fileID: 3838890925083332071}
   - component: {fileID: 4378965160454549965}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PureIngredient
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
