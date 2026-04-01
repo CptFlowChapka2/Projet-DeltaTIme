@@ -1,284 +1,34 @@
-DOCU TECHNIQUE : DeltaTime
+DOCU TECHNIQUE : DeltaTile
 
 ================================================================================
 
-Classe Abstraite :
+Classes Abstraites :
 
-Doers : 
-Classe comune de tous les scripts qui ont pour but de faire quelque chose . 
-Par default, ils contiennent tous 
-    —Un GetSet qui à Reference à un Manager .
-    — Les Fonctions Get et Set AllUsefulParameters , par default vide qui permete d'uniformisé les récuperation et aplication de variable.
-Standart d'utilisation 
-    —Un doer Doit avoit un nom commençant par un verbe .
-    — Il doit avoir une reference vers son manager typer .
-    — Un Doer contient Un groupe logique d'action ,si son scope s'étant on le casse en plusieur doers.
-    — Les méthodes d'un Doer doivent expliciter leur logique internet => conquaçé les méthodes .
+HEX :
 
-Manager: 
-Classe commune à tout les script qui ont pour but de centralisé les réfrence et variable .
-il contiennent tout les variable qui doive etre accédé par d'autre Doer .
-Il posséde des méthode pour accéder correctement à une variable (Get...) ou une Action (Do...) .
+Une case hexagonale de la grille. Elle a des coordonnées relatives (Vector2Int), et une List de Grabbables présents dessus. Elle contient
+aussi des méthodes liées à la manipulation des Grabbables de sa liste (un Add, un Remove, un Destroy et un extracteur
+d'éléments à partir d'un autre élément), ainsi que la possibilité de changer de matériau quand elle est survolée par un Grabber.
+Au Start, elle va inscrire une méthode virtuelle Tick à l'event Tick du GM.
 
-par default ils contiennent tous :
-    -une reference au Game Manager
-    -Une Liste non Typer de tout leur Doer
-    -Une méthode GetAllDoersOnGameObject , qui initialise la liste avec un GetComponentS
-    -Une Fonction InitializeDoer qui :
-        -out une réference typer du Doer
-        -donne la réference manager au doer.
-     -Les méthode Force Get et Set AllusefullData d'un Doer :
-        -Si on Specifie le Type de Doer , il appliquerat la fonction Set ou Get de tout les Doer correspondant.
-        -Sinon de tout les Doer
+GRABBABLE :
 
+Un objet manipulable par la Grabber des deux joueurs. Il contient une référence à l'hex qu'il est en train d'occuper, ainsi que
+deux booléens pour savoir s'il est actif/ s'il est en train d'être grab. Il peut apparaître sous différentes formes physiques,
+définies par différents GrabbableVariant (struct mesh/material), et s'initialise au premier d'entre eux à l'awake.
+Au Start, initialise sa position en tirant un Raycast vers le bas, ce qui l'attache à l'hex le plus proche.
+Il a également une méthode virtuelle Tick liée à celle de son hex.
 
-Si un Doer à besoin de quelque chose extérieur à sa logique interne (ex : variable globale) il doit passer par un Manager.
-Si un Manager à besoin de quelque chose extérieur à ses prérocative (ex: un autre Doer que les siens) il doit passer par le Game Manager.
+Classes héritées :
 
-Game Manager:
+NORMAL HEX : 
 
-Le Game Manager à pour but de centraliser  les manager entre eux par le biais de méthode de communication direct (Get de valeur , Call D'action ...) 
-ou par le bias des Event .
+Hérite de Hex. Pour l'instant, ne fait rien de plus que Hex.
 
-Il posséde une reference à tout les manager .
+INGREDIENT :
 
-pour initialiser tout les manager 2 méthode :
-    -par refference public dans l'inspecteur (solution safe pour les manager dupliqué comme DanceFloor ou Player Manager)
-    -Par la méthode GetAllManager(qui met tout les manager de la scéne dans une liste) + InializeManaer (out une refernec typer d'un manager + transmet la réference vers le gamemanager)
-
-Le groupe de méthode Get permente d'accéder  à une variable d'un autre Manager
-le groupe de méthode Do permete d'ordoner l'action d'un Doer extérieur 
-
-
-//Player System//
-PlayerManager : Manager
-Manager pour le systéme player .
-
-Posséde les Doers :
-
--ReadInput
--AnalyseInput
--MovePlayer
--UpdateWhenHit
-
-Variable public notable :
-player id : permet de spécifier le joueur actuel , définit dans l'inspecteur.
-currentPlayerCoords: position actuel du Player en coordoné relative du Dancefloor.
-InputActionName : à initialiser dans l'inpecteur avec "Player1Move" ou "Player2Move".par rapport à l'input map.
-inputsThisMeasure: La liste des input en Vecteur2Int fais à la derniére mesure complété.
-inputsThisMeasureCache : La liste des input en Vecteur2int fais lors de la mesure actuel  (ATTENTION IL FAUT FORCE GET et SET REGULIERMENT POUR QU'ELLE SOIT A JOUR)
-currentTileId: Reference vers la TileID actuelle.
-
-Méthode Public:
-DoTeleportPlayerToCoords(Vector2Int coords) :  Teleport le joueur à une case spécifier sur le dance floor associé.
-
-
-ReadInput : Doer
-
-A pour charge de lire les Input d'un joueur fais cette frame  et les traduire en Vector2Int
-Renvoi une valeur de 0 si aucun Input à étais fais cette frame .
-
-AnalyseInput : Doer
-
-Récupére les Input de ReadInput et les filtre .
-Si un il n'y as  ut d'input on skip.
-Si un input à deja étais traité sur ce Beat on  l'action est annulé.
-Si l'input est une diagonal on l'annule ,priorisant l'horizontal.
-Si on l'input est effectué off Beat ,on transforme l'input en Zero.
-Sinon on compte le nombre de mouvemente réussi .
-
-Aprés on ajoute  l'input (qui est soit valide soit Zero) dans Input THis measure Cache.
-
-MovePlayer : Doer
-
-Bouge le joeur  si l'input de ReadInput n'est pas 0
-
-Le mouvment est une teleportation qui actualise les paramétre changer (current coord et currente tile)
-la teleportation est clmaper dans les les limite de l'espace jouable du dancefloor
-
-UpdateWHenHit : Doer
-
-Change le materieu du joueur si le joueur à étais toucher .
-
-contient un temps d'invulnarabilité .
-
-vérifie si le joeuur est hit en checkant le nombre de projectile sur la current Tile.
-
-
-
-//DanceFloor System///
-
-DanceFLoorManager : Manager
-
-Manager pour le danceFloor
-
-
-Posséde les Doers :
-
--CreateDanceFloor
-
-//ATTTENTION// toute les Tile fesant partit d'un dance floor doivent etre en enfant de l'object possédant se script
-Variable publique notable :
-
--associatedPlayerId : int qui permet  de lié le manager à un joueur.
--allTileID : array à double entré representent toute les tiles d'un danceFloor.
--allInvalideTile :List contenat une reference à toute les case invalide (extrimité).
-
-Methode public :
-
-DoModifyTileList(Vector2Int tileToModify, ProjectileID toDo, tileIdOrder thingToDo,bool overwriteToAll=false)
-    -Appele une fonction de TileID permetant de modifier ça liste de projectile (en Sign ou en présent) selon un enum.
-    -si overwriteToALl est true alors on fais le call  sur tout les TileID de maniére indiscriminé.
-
-
-CreateDanceFLoor : Doer
-
-Initialize l'array allTileID.
-pour se faire il récupére tout les object contenant un TIleID  qui lui sont enfant
-Téleport ensuite le joueur à la case central.
-
-TileID 
-
-Script présent sur toute les tiles.
-
-Variable importante :
--position : les coordoné relative de la tile
--thisState: l'état  de la case (Safe ,Damaging,Invalide)
--allProjectileOnThisTile : tout les projectile actuelment sur cette tile dans une lise
--allProjectileOnThisTileNextBeat :tout les projectile qui seront sur cette tile le beat prochain dans une liste
-
-Groupe Methode Add & Remove:
-
--ajoute ou enléve des projectile  d'une des liste au dessus.
-
-//Attaque System ///
-
-AttacksManager : Manager
-manager pour le sytéme d'attaque .
-
-Posséde les Doers :
-
--CalculateProjectileList
--MoveProjectile
--SpawnProjectile
--PatternBank (depracated)
-
-et à besoin de ProjectileID
-
-Variable publique notable :
-
--projectileIdPrefab : prefab du projectile  qui posséde  un Projectile ID
--inactiveProjectileIdPosition : position de default dans le monde  des projectile .
--maxNumberOfProjectileId : nombre de projectile maximum qui existe .
--allProjectileIds : tout les projectile qui exsite dans une list .
-
-
-CalculateProjectileList : Doer 
-
-à pour role  d'instancier et crée la projectileID list .
-
-Méthode public 
-
-CalculateProjectileList
-    -aux start , selon le maxNumberOfProjectileId  , Instancie un nombre de prefab équal  ,puis ajoute leur projectile ID à la list.
-    -Ensuite donne la reference de l'attaque manager au Projectile ID.
-    
-
-ProjectileID :
-
-Represent les information  d'un projectile .
-
-Variable publique :
-
--currentTileId :  reference à la TileID actuel 
--currentRelativeCoords : coordoné relative au danceFloor de la TleIDActuel
--directionOfMouvement : direction de mouvement representé par un Vecteur2Int.
--currentPlayerId : int representant l'association au player et DanceFloor .
--inUse:  bool pour represnté si ce projectile est actif .
-
-méthode Publique :
-
-
-PutInUse()
--associe toute les valeur initial  du projectile .
--utilisant gameManager.DoTileListModification , ce donne en reférence  aux tile dans leur projetilileOnTHisTIleList.
-
-PutOutOfUSe()
--remet à zero les valeur du projectile .
-
-
-MoveProjectile : Doer 
-
-Serie de Méthode de mouvement :
-
-CalculateNextTile():
--Calcule si la prochaine tile est valide ,retourn false si ce n'est pas le cas 
--si la tile est valide out la reference la coordoné relative dans l'array.
--Condition :si  la coordoné donné  + la direction du projectile ,est une coordoné présente dans l'array.
-
-MooveProjectileToTile()
-
--positione spatialement le projectile sur la positionn de la nouvelle tile.
--s'enleve de la liste des projectile de la précedente tile .
--s'ajoute à la liste des projctile de la nouvelle tile.
--s'enléve de la sign list  de la nouvelle tile.
--s'ajoute à la liste  de sign sur une  la prochaine nouvelle tile (si elle existe)
-
-
- ListenForOnBeat()
- 
- -met à jour la liste des projectile actif .
- -pour tout les projectile  actullent inUse ,applique les 2 méthode   au dessus .
- -si le mouvement ne peux s'effectuer alors on PutOfUse  ,et on enléve le projectile des liste dans les Tile concerné.
- 
- 
- SpawnProjectile : Doer
- 
- Attribue un projectile de la list AllProjectile à une case à l'extremité d'un danceFloor spécifier .
- 
- SpawnProjectile()
- -chaque mesure on récuper les input de la précedante mesure  de chaque joueur qu'on stock dans la list.
- -puis chaque Beat  on crée un projectile pour le premier élement de chaque liste .
- -si l'input est 0 ou vide (symboliser par -1,-1) on l'enléve de la liste 
- -puis on AssigneProjectile.
- -on finis par enlever l'input de la liste .
- 
- 
- AssignProjectile()
- 
- -inverse l'id  pour aller sur le dancefloor adverse.
- -on CurateInvalide pour avoir le case invalide  corespondante (si direction droite case de départ à gauche)
- -trouve la tile de départ  dependament du mode :
-    -AtoA : on prend la position du joueur A comme entré
-    -BtoA:on prend la postion du jouer B comme entré
- -on finis avec RequestPorjectile
- 
- RequestPRojectile():
- -PutInSUe  un projectile inutilisé  avec le player id du joueur adverse.
- 
- //FeedBack System//
- 
- FeedbackManager : Manager
- 
- Les Doer du FEedback manager sont des FeedBackCaller une classe abstraite enfant des doer.
- Les FeedbackCaller ont pour seul diffrence une méthode virtuel nomer Call ,qui permet d'uniformisé les appele de feedback.
- 
- Si un feedback est automatique il est préferable d'en faire un Doer et non un feedBack Caller
- 
- le manager à comme FeedBackCaller 
- 
- -MovingInBeatFeedback
- -TakingHitFeedback
- - 2 UpdatingAnnouncers
- 
- le manager à comme Doer:
- 
- - UpdatingCrowd
- 
- Méthode publice :
- 
- Call
- -permet de call un feedbackCaller
+Hérite de Grabbable. Contient un type d'ingredient (enum) qu'il récupère lorsqu'il est initialisé (méthode Initialize), et
+une rèf à l'IngredientDictionary (lie un IngredientType à un GrabbableVariant)
 
 
 

@@ -27,7 +27,7 @@ public class Grabber : MonoBehaviour
         {
             GrabOn(hex);
         }
-        else if (hex.grabbablesOnThisHex.Count == 0 || !(currentGrabbedObject is Machine && hex.grabbablesOnThisHex.Last() is Ingredient))
+        else if (hex.grabbablesOnThisHex.Count == 0 || !(!(currentGrabbedObject is Ingredient) && hex.grabbablesOnThisHex.Last() is Ingredient))
         {
             ReleaseOn(hex);
         }

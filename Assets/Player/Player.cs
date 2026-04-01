@@ -32,8 +32,8 @@ public class Player : Grabbable
     private void Update()
     {
         GrabRelease();
-        ExtendRetract();
-        Spin();
+        ExtendRetract1Axis();
+        Spin1Axis();
         grabber.transform.position = transform.position + arm;
     }
 
@@ -45,7 +45,7 @@ public class Player : Grabbable
         }
     }
 
-    private void ExtendRetract()
+    private void ExtendRetract1Axis()
     {
         float extendValue = extendRetractAction.ReadValue<float>() * Time.deltaTime * extentionSpeed; 
         float armMagnitude = arm.magnitude + extendValue;
@@ -53,11 +53,9 @@ public class Player : Grabbable
         arm = arm.normalized * armMagnitude;
     }
 
-    private void Spin()
+    private void Spin1Axis()
     {
         float spinValue = spinAction.ReadValue<float>() * Time.deltaTime * rotationSpeed;
-        //currentAngle += spinValue;
-        //currentAngle = Mathf.Repeat(currentAngle, 360);
         arm = Quaternion.AngleAxis(spinValue, Vector3.up) * arm;
     }
 
