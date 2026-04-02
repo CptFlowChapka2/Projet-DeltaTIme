@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/SpawnA + TransfACToD/SpawnA + TransformACToD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/SpawnA + TransfACToD/SpawnA + TransformACToD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/SpawnB/SpawnB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/SpawnB/SpawnB.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/TransformDToScore/TransformDToScore.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/TransformDToScore/TransformDToScore.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Scripts/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Scripts/Hex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau Test 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau Test 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/PureMachine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/PureMachine.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +145,7 @@
       <workItem from="1774957853628" duration="3775000" />
       <workItem from="1774977443272" duration="3401000" />
       <workItem from="1775031954728" duration="4418000" />
-      <workItem from="1775119285611" duration="4099000" />
+      <workItem from="1775119285611" duration="5303000" />
     </task>
     <servers />
   </component>
