@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197093582984123191}
+  - component: {fileID: -89561766259049293}
   - component: {fileID: 567737932276303864}
   m_Layer: 0
   m_Name: Hex
@@ -33,6 +34,20 @@ Transform:
   - {fileID: 9015450113103135081}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-89561766259049293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045419837451981810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5341627513ef67c40981a59611d561aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HexInitializer
+  relativeCoords: {x: 0, y: 0}
+  grabbers: []
 --- !u!114 &567737932276303864
 MonoBehaviour:
   m_ObjectHideFlags: 0

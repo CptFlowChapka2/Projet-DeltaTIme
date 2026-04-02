@@ -83,7 +83,7 @@ public class Machine : Grabbable
             foreach (IngredientType output in actualRuleToFollow.outputs)
             {
                 Ingredient outputIngredient = Instantiate(prefabIngredient, transform.position, transform.rotation).GetComponent<Ingredient>();
-                outputIngredient.Initialize(output, ingredientsDictionary,actualHex);
+                outputIngredient.Initialize(output, ingredientsDictionary, actualHex);
                 //l'ingredient qui vient de spawn applique son Start de grabble donc s'ajoute lui même à la hex//
             }
         }

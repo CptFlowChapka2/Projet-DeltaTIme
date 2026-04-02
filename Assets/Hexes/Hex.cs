@@ -12,21 +12,24 @@ public enum HexState
 
 public abstract class Hex : MonoBehaviour
 {
-    [SerializeField] protected Vector2Int relativeCoords;
+    public Vector2Int relativeCoords;
     public List<Grabbable> grabbablesOnThisHex = new List<Grabbable>();
     //public Vector3 boundsCenter;
 
-    [SerializeField] protected Grabber[] grabbers;
+    public Grabber[] grabbers;
     public HexState state = HexState.Idle;
     [SerializeField] private Material idleMaterial;
     [SerializeField] private Material hoveredMaterial;
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material popupBaseMaterial;
 
-    private void Start()
+    protected virtual void Start()
     {
         Timer timer = FindAnyObjectByType<Timer>();
         timer.Tick.AddListener(Tick);
+        HexInitializer hexInit = GetComponent<HexInitializer>();
+        relativeCoords = hexInit.relativeCoords;
+        grabbers = hexInit.grabbers;
     }
     
     private void Update()
