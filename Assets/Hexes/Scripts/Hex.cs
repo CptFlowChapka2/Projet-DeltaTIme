@@ -21,6 +21,7 @@ public abstract class Hex : MonoBehaviour
     [SerializeField] private Material idleMaterial;
     [SerializeField] private Material hoveredMaterial;
     [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Material popupBaseMaterial;
 
     private void Start()
     {
@@ -43,6 +44,15 @@ public abstract class Hex : MonoBehaviour
             {
                 state = HexState.Hovered;
                 isHovered = true;
+                if (grabbablesOnThisHex.Count == 0 || grabbablesOnThisHex.First() is not Machine)
+                {
+                    grabbers[i].player.popupRenderer.material = popupBaseMaterial;
+                } 
+                else
+                {
+                    Machine machine = grabbablesOnThisHex.First() as Machine;
+                    grabbers[i].player.popupRenderer.material = machine.popupMaterial;
+                }
             }
         }
 

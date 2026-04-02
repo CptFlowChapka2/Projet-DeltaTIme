@@ -23,6 +23,8 @@ public class Machine : Grabbable
 
     [SerializeField] private GameObject prefabIngredient;
 
+    [SerializeField] public Material popupMaterial;
+
     private int tickCounter = 0;
 
     protected override void Start()

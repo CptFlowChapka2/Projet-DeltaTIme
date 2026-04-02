@@ -17,12 +17,14 @@ public class Player : Grabbable
     public Vector3 arm;
     private float currentAngle = 0f;
     
+    public MeshRenderer popupRenderer;
     public Grabber grabber;
 
     protected override void Start()
     {
         base.Start();
-        grabber.player=this;
+        grabber.player = this;
+        popupRenderer.gameObject.GetComponent<PopupMover>().playerToFollow = this;
         transform.position += new Vector3(0, 0.5f, 0);
         arm = new Vector3(1, 0, 0);
         playerInput = GetComponent<PlayerInput>(); 
