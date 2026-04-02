@@ -9,7 +9,9 @@ public enum IngredientType
     A,
     B,
     C,
-    D
+    D,
+    E,
+    F
 }
 
 public class IngredientsDictionary : MonoBehaviour
