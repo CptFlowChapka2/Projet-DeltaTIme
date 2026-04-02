@@ -13,6 +13,8 @@ public class Player : Grabbable
     private InputAction spinAction;
     private InputAction extendRetractAction;
     private InputAction grabReleaseAction;
+    [SerializeField] private GameObject visualArm;
+    
 
     public Vector3 arm;
     private float currentAngle = 0f;
@@ -39,6 +41,7 @@ public class Player : Grabbable
         ExtendRetract1Axis();
         Spin1Axis();
         grabber.transform.position = transform.position + arm;
+        UpadateVisualArm();
     }
 
     private void GrabRelease()
@@ -61,11 +64,20 @@ public class Player : Grabbable
     {
         float spinValue = spinAction.ReadValue<float>() * Time.deltaTime * rotationSpeed;
         arm = Quaternion.AngleAxis(spinValue, Vector3.up) * arm;
+        visualArm.transform.rotation*=Quaternion.AngleAxis(spinValue, Vector3.right);
+
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, arm);
+    }
+
+    private void UpadateVisualArm()
+    {
+        visualArm.transform.localScale = new Vector3(visualArm.transform.localScale.x,arm.magnitude / 2,visualArm.transform.localScale.z);
+        visualArm.transform.position = transform.position+ arm/2;
+       
     }
 }
