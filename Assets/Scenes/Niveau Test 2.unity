@@ -6457,6 +6457,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
   m_PrefabInstance: {fileID: 1298800718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1298800722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+  m_PrefabInstance: {fileID: 1298800718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298800719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531c607c9e8c1c24a819ba73a472b9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!1001 &1299611874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8305,7 +8316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206abb6b783bad24082de6b9ef1e0de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopupMover
-  playerToFollow: {fileID: 0}
+  playerToFollow: {fileID: 2468010865620526790}
 --- !u!64 &1699790046
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9437,7 +9448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206abb6b783bad24082de6b9ef1e0de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopupMover
-  playerToFollow: {fileID: 0}
+  playerToFollow: {fileID: 1298800722}
 --- !u!64 &1925413399
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10406,6 +10417,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
   m_PrefabInstance: {fileID: 2468010865620526788}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2468010865620526790 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+  m_PrefabInstance: {fileID: 2468010865620526788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467469168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531c607c9e8c1c24a819ba73a472b9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!1001 &6782622675980644441
 PrefabInstance:
   m_ObjectHideFlags: 0
