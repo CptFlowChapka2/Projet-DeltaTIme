@@ -94,6 +94,7 @@ public abstract class Hex : MonoBehaviour
     {
         grabbablesOnThisHex.Remove(grabbable);
         grabbablesOnThisHex.TrimExcess();
+        if(grabbable ==null)return;
         Destroy(grabbable.gameObject);
     }
 
