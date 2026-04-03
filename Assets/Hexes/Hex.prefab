@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 9015450113103135081}
   - component: {fileID: 1876660642919818969}
   - component: {fileID: 7878621762305096198}
-  - component: {fileID: 3449187996961529473}
+  - component: {fileID: 7182248296207090403}
   m_Layer: 0
   m_Name: MeshAndCollider
   m_TagString: Untagged
@@ -206,10 +206,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f8c8956a24a84a459270ac16bd3fe5a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3449187996961529473}
+      addedObject: {fileID: 7182248296207090403}
   m_SourcePrefab: {fileID: 100100000, guid: 0f8c8956a24a84a459270ac16bd3fe5a, type: 3}
---- !u!64 &3449187996961529473
-MeshCollider:
+--- !u!135 &7182248296207090403
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -226,7 +226,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2534964839176971238, guid: 16f7bce66e19af74cbece0e9254cd642, type: 3}
+  serializedVersion: 3
+  m_Radius: 0.008668293
+  m_Center: {x: 0, y: 1.390714e-19, z: 0.00011252641}

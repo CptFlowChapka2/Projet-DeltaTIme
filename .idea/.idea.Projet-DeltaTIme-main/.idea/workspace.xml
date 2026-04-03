@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-    </list>
+    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +143,7 @@
       <workItem from="1775119285611" duration="5901000" />
       <workItem from="1775134529485" duration="107000" />
       <workItem from="1775134684954" duration="4146000" />
-      <workItem from="1775219820415" duration="5179000" />
+      <workItem from="1775219820415" duration="5646000" />
     </task>
     <servers />
   </component>
