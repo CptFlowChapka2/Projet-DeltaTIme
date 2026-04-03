@@ -19,7 +19,6 @@ public class Player : Grabbable
     
 
     public Vector3 arm;
-    private float currentAngle = 0f;
     
     public MeshRenderer popupRenderer;
     public Grabber grabber;

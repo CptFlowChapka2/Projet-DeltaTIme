@@ -26,7 +26,7 @@ public abstract class Hex : MonoBehaviour
 
     protected virtual void Start()
     {
-        gridManager = FindObjectOfType<GridManager>();
+        gridManager = FindAnyObjectByType<GridManager>();
         Timer timer = FindAnyObjectByType<Timer>();
         timer.Tick.AddListener(Tick);
         grabbers = gridManager.grabbers;

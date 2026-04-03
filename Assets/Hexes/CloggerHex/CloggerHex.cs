@@ -11,7 +11,7 @@ public class CloggerHex : Hex
     protected override void Start()
     {
         base.Start();
-        ingredientsDictionary = FindObjectOfType<IngredientsDictionary>();
+        ingredientsDictionary = FindAnyObjectByType<IngredientsDictionary>();
     }
     
     public override void Tick()
