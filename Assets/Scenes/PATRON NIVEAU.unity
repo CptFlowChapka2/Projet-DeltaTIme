@@ -22788,6 +22788,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1468823296}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: otherPLayer
+      value: 
+      objectReference: {fileID: 2468010865620526790}
+    - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1298800720}
@@ -22967,6 +22971,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
   m_PrefabInstance: {fileID: 1298800718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1298800722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+  m_PrefabInstance: {fileID: 1298800718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298800719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531c607c9e8c1c24a819ba73a472b9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!1001 &1299994461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39163,6 +39178,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 957272735}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: otherPLayer
+      value: 
+      objectReference: {fileID: 1298800722}
+    - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 467469174}
@@ -39283,6 +39302,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
   m_PrefabInstance: {fileID: 2468010865620526788}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2468010865620526790 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+  m_PrefabInstance: {fileID: 2468010865620526788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467469168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531c607c9e8c1c24a819ba73a472b9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!1001 &7105340685727233526
 PrefabInstance:
   m_ObjectHideFlags: 0
