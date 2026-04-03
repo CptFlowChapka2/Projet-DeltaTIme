@@ -7,8 +7,10 @@
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Grabbable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Grabbable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PATRON NIVEAU.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PATRON NIVEAU.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/visual arm.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/visual arm.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +149,7 @@
       <workItem from="1775119285611" duration="5901000" />
       <workItem from="1775134529485" duration="107000" />
       <workItem from="1775134684954" duration="4146000" />
-      <workItem from="1775219820415" duration="8321000" />
+      <workItem from="1775219820415" duration="9619000" />
     </task>
     <servers />
   </component>

@@ -12,8 +12,8 @@ public abstract class Grabbable : MonoBehaviour
 {
     public GrabbableVariant[] variants;
     private int actualVariant;
-    private MeshRenderer meshRenderer;
-    private MeshFilter meshFilter;
+    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private MeshFilter meshFilter;
     
     public Hex actualHex;
     public bool isGrabbed = false;
