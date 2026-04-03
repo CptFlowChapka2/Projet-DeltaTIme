@@ -18,6 +18,7 @@ public abstract class Grabbable : MonoBehaviour
     public Hex actualHex;
     public bool isGrabbed = false;
     public bool isActive = true;
+    public int beforeGrabVariant;
 
     public int ActualVariant
     {

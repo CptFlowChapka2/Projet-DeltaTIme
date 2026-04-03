@@ -71,7 +71,7 @@ public class Machine : Grabbable
             tickCounter++;
             if (tickCounter < timeToReactivate) return;
             isActive = true;
-            ActualVariant = 0;
+            ActualVariant = beforeGrabVariant;
             tickCounter = 0;
             return;
         }

@@ -48,6 +48,7 @@ public class Grabber : MonoBehaviour
         currentGrabbedObject = hex.grabbablesOnThisHex.Last();
         currentGrabbedObject.isGrabbed = true;
         currentGrabbedObject.isActive = false;
+        currentGrabbedObject.beforeGrabVariant = currentGrabbedObject.ActualVariant;
         currentGrabbedObject.ActualVariant =currentGrabbedObject.variants.Length-1;
         hex.RemoveGrabbable(currentGrabbedObject);
     }
