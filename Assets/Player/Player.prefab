@@ -138,6 +138,8 @@ MonoBehaviour:
   variants:
   - mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
     material: {fileID: 2100000, guid: 628b0e3da95dbb244ab78f88a61ec1ed, type: 2}
+  meshRenderer: {fileID: 3574796184170298609}
+  meshFilter: {fileID: 1829860539516233376}
   actualHex: {fileID: 0}
   isGrabbed: 0
   isActive: 1

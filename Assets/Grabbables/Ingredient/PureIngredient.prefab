@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingredient
   variants: []
+  meshRenderer: {fileID: 6425678485983145503}
+  meshFilter: {fileID: 1471998406455675705}
   actualHex: {fileID: 0}
   isGrabbed: 0
   isActive: 1

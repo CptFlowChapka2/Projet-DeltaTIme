@@ -33,8 +33,6 @@ public abstract class Grabbable : MonoBehaviour
     
     private void Awake()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        meshFilter = GetComponent<MeshFilter>();
         if(variants.Length==0)return;
         ActualVariant = 0;
     }

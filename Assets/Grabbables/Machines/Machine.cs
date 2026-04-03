@@ -5,11 +5,27 @@ using UnityEditor;
 using UnityEngine;
 
 [Serializable]
-public struct Rule
+public struct Rule : IEquatable<Rule>
 {
     public IngredientType[] inputs;
     public IngredientType[] outputs;
     public int numberOfTicksToPerform;
+
+    //pour pouvoir vérifier si 2 Rule sont égal//
+    public bool Equals(Rule other)
+    {
+        return Equals(inputs, other.inputs) && Equals(outputs, other.outputs) && numberOfTicksToPerform == other.numberOfTicksToPerform;
+    }
+
+    public override bool Equals(object obj)
+    {
+        return obj is Rule other && Equals(other);
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(inputs, outputs, numberOfTicksToPerform);
+    }
 }
 
 public class Machine : Grabbable
@@ -18,6 +34,7 @@ public class Machine : Grabbable
     [SerializeField] private Rule[] rules;
     private IngredientsDictionary ingredientsDictionary;
     private Rule actualRuleToFollow;
+    private Rule lastRuleToFollow;
     private List<Ingredient> workedIngredients=new List<Ingredient>();
     private bool isWorking = false;
     public int possibleSpeedBoostByEnergizer = 0;
@@ -27,6 +44,8 @@ public class Machine : Grabbable
     [SerializeField] public Material popupMaterial;
 
     private int tickCounter = 0;
+    public int timeToReactivate = 3;
+    
 
     protected override void Start()
     {
@@ -47,6 +66,16 @@ public class Machine : Grabbable
 
     public override void Tick()
     {
+        if (!isActive)
+        {
+            tickCounter++;
+            if (tickCounter < timeToReactivate) return;
+            isActive = true;
+            ActualVariant = 0;
+            tickCounter = 0;
+            return;
+        }
+        
         if (!isWorking)
         {
             AssignRule();
@@ -123,5 +152,9 @@ public class Machine : Grabbable
                 break;
             }
         }
+
+        if (!actualRuleToFollow.Equals(lastRuleToFollow)) tickCounter = 0;
+        lastRuleToFollow = actualRuleToFollow;
+
     }
 }
