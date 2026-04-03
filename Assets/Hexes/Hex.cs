@@ -22,16 +22,46 @@ public abstract class Hex : MonoBehaviour
     [SerializeField] private Material hoveredMaterial;
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material popupBaseMaterial;
+    private GridManager gridManager;
 
     protected virtual void Start()
     {
+        gridManager = FindObjectOfType<GridManager>();
         Timer timer = FindAnyObjectByType<Timer>();
         timer.Tick.AddListener(Tick);
-        HexInitializer hexInit = GetComponent<HexInitializer>();
-        relativeCoords = hexInit.relativeCoords;
-        grabbers = hexInit.grabbers;
+        grabbers = gridManager.grabbers;
+
+        InitializeRelativeCoords();
     }
-    
+
+    private void InitializeRelativeCoords()
+    {
+        int relativeX = 0;
+        int relativeY = 0;
+
+        float stepsX = transform.position.x;
+        float stepsY = transform.position.z;
+
+        for (int i = 0; i < 25; i++)
+        {
+            if ((stepsX > -0.1f && stepsX < 0.1f) || (stepsX >= 0.866024f - 0.1f && stepsX < 0.866024f + 0.1f)) //approximation car Mathf.Sqrt est pas précise
+            {
+                relativeX = i;
+            }
+            
+            if (stepsY == 0)
+            {
+                relativeY = i;
+            }
+            
+            stepsX -= 0.866024f * 2f;
+            stepsY -= 1.5f;
+        }
+        
+        relativeCoords.x = relativeX;
+        relativeCoords.y = relativeY;
+    }
+
     private void Update()
     {
         OnUpdate();
