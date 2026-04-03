@@ -20,6 +20,7 @@ public class Machine : Grabbable
     private Rule actualRuleToFollow;
     private List<Ingredient> workedIngredients=new List<Ingredient>();
     private bool isWorking = false;
+    public int possibleSpeedBoostByEnergizer = 0;
 
     [SerializeField] private GameObject prefabIngredient;
 
@@ -60,7 +61,7 @@ public class Machine : Grabbable
     private void ApplyRule()
     {
         tickCounter++;
-        if (tickCounter >= actualRuleToFollow.numberOfTicksToPerform)
+        if (tickCounter >= actualRuleToFollow.numberOfTicksToPerform - possibleSpeedBoostByEnergizer)
         {
             tickCounter = 0;
             // todo pour les variants
