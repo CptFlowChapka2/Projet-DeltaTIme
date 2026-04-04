@@ -53,7 +53,9 @@ public class Player : Grabbable
                 visualArm.transform.rotation * Quaternion.AngleAxis(spinValue, Vector3.right),0,-1,QueryTriggerInteraction.Collide);
         
             var hitlist = hits.ToList();
-            hitlist.RemoveAll(x=>x.collider.gameObject==visualArm||x.collider.gameObject==grabber.gameObject);
+            hitlist.RemoveAll(x=>x.collider.gameObject==visualArm ||
+                                 x.collider.gameObject==grabber.gameObject ||
+                                 x.collider==actualHex.gameObject.GetComponentInChildren<SphereCollider>());
             //todo revoir le blocker car du coup ça déconne quand on grab l'autre joueur
             //Debug.Log(hitlist.Count);
             //if(hitlist.Any(x=>x.collider.gameObject.CompareTag("ArmBlocker")))return;
