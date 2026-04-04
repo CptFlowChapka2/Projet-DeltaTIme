@@ -17,7 +17,7 @@ public class Player : Grabbable
     private InputAction extendRetractAction;
     private InputAction grabReleaseAction;
     [SerializeField] private GameObject visualArm;
-    [SerializeField] private Player otherPLayer;
+   
     
 
     public Vector3 arm;
