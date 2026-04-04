@@ -24,6 +24,7 @@ public class Grabber : MonoBehaviour
     public void OnGrabRelease()
     {
         Hex hex = currentHoveredHex.GetComponentInParent<Hex>();
+        if (hex is HalfBlockerHex) return;
         if (!currentGrabbedObject && hex.grabbablesOnThisHex.Count != 0)
         {
             if(player.isGrabbed && hex.grabbablesOnThisHex.Last() is Player)return;

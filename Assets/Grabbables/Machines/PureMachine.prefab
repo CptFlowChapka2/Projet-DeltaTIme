@@ -70,13 +70,12 @@ MonoBehaviour:
   variants:
   - mesh: {fileID: 2534964839176971238, guid: 76865979b3286344ebb638fd86aa3ab2, type: 3}
     material: {fileID: 2100000, guid: 7bc8a44cd46869d4e8ee2d64f0840671, type: 2}
-  - mesh: {fileID: 2534964839176971238, guid: 76865979b3286344ebb638fd86aa3ab2, type: 3}
-    material: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   meshRenderer: {fileID: 4000476396115700581}
   meshFilter: {fileID: 8605430290017097707}
   actualHex: {fileID: 0}
   isGrabbed: 0
   isActive: 1
+  beforeGrabVariant: 0
   debugMode: 1
   rules:
   - inputs: 

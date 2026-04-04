@@ -66,7 +66,6 @@ public class Player : Grabbable
         {
             grabber.OnGrabRelease();
         }
-        
     }
 
     private void ExtendRetract1Axis(Vector3 armIn,out Vector3 tempArm )
