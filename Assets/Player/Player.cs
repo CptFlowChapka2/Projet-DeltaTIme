@@ -54,8 +54,7 @@ public class Player : Grabbable
         
             var hitlist = hits.ToList();
             hitlist.RemoveAll(x=>x.collider.gameObject==visualArm ||
-                                 x.collider.gameObject==grabber.gameObject ||
-                                 x.collider==actualHex.gameObject.GetComponentInChildren<SphereCollider>());
+                                 x.collider.gameObject==grabber.gameObject);
             //todo revoir le blocker car du coup ça déconne quand on grab l'autre joueur
             //Debug.Log(hitlist.Count);
             //if(hitlist.Any(x=>x.collider.gameObject.CompareTag("ArmBlocker")))return;
