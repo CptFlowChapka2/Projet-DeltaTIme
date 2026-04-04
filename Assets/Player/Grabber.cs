@@ -38,9 +38,14 @@ public class Grabber : MonoBehaviour
     private void ReleaseOn(Hex hex)
     {
         hex.AddGrabbable(currentGrabbedObject);
-        currentGrabbedObject.isGrabbed = false;
-        currentGrabbedObject.transform.position = hex.transform.position + new Vector3(0, 0.5f, 0);
-        currentGrabbedObject = null;
+
+        if (hex.grabbablesOnThisHex.Contains(currentGrabbedObject))
+        {
+            currentGrabbedObject.isGrabbed = false;
+            currentGrabbedObject.transform.position = hex.transform.position + new Vector3(0, 0.5f, 0);
+            currentGrabbedObject = null;
+        }
+        
     }
 
     private void GrabOn(Hex hex)
