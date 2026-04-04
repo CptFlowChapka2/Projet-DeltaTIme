@@ -40,24 +40,33 @@ public class Player : Grabbable
 
     private void Update()
     {
-        GrabRelease();
-        Vector3 tempArm = arm;
-        ExtendRetract1Axis(tempArm,out  tempArm);
-        Spin1Axis(out float spinValue,tempArm,out tempArm);
+        if (isActive)
+        {
+            ActualVariant = 0;
+            GrabRelease();
+            Vector3 tempArm = arm;
+            ExtendRetract1Axis(tempArm,out  tempArm);
+            Spin1Axis(out float spinValue,tempArm,out tempArm);
         
-        RaycastHit[] hits = Physics.BoxCastAll(transform.position + tempArm / 2,
-            new Vector3(10f, tempArm.magnitude/2,0.2F), Vector3.up,
-            visualArm.transform.rotation * Quaternion.AngleAxis(spinValue, Vector3.right),0,-1,QueryTriggerInteraction.Collide);
+            RaycastHit[] hits = Physics.BoxCastAll(transform.position + tempArm / 2,
+                new Vector3(10f, tempArm.magnitude/2,0.2F), Vector3.up,
+                visualArm.transform.rotation * Quaternion.AngleAxis(spinValue, Vector3.right),0,-1,QueryTriggerInteraction.Collide);
         
-        var hitlist = hits.ToList();
-        hitlist.RemoveAll(x=>x.collider.gameObject==visualArm||x.collider.gameObject==grabber.gameObject);
-        //Debug.Log(hitlist.Count);
-        if(hitlist.Any(x=>x.collider.gameObject.CompareTag("ArmBlocker")))return;
+            var hitlist = hits.ToList();
+            hitlist.RemoveAll(x=>x.collider.gameObject==visualArm||x.collider.gameObject==grabber.gameObject);
+            //todo revoir le blocker car du coup ça déconne quand on grab l'autre joueur
+            //Debug.Log(hitlist.Count);
+            //if(hitlist.Any(x=>x.collider.gameObject.CompareTag("ArmBlocker")))return;
         
-        arm = tempArm;
-        grabber.transform.position = transform.position + arm;
-        visualArm.transform.rotation*=Quaternion.AngleAxis(spinValue, Vector3.right);
-        UpadateVisualArm();
+            arm = tempArm;
+            grabber.transform.position = transform.position + arm;
+            visualArm.transform.rotation*=Quaternion.AngleAxis(spinValue, Vector3.right);
+            UpadateVisualArm();
+        }
+        else
+        {
+            ActualVariant = 1;
+        }
     }
 
     private void GrabRelease()

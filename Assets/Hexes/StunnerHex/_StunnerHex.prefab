@@ -95,3 +95,4 @@ MonoBehaviour:
   hoveredMaterial: {fileID: 2100000, guid: 2b96e666c09e6f54aa817d0b539e6350, type: 2}
   meshRenderer: {fileID: 3267673367902115890}
   popupBaseMaterial: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
+  ticksToStun: 4

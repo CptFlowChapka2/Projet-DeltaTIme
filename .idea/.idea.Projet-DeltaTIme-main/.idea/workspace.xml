@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/StunnerHex/StunnerHex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/StunnerHex/StunnerHex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/StunnerHex/_StunnerHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/StunnerHex/_StunnerHex.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +151,7 @@
       <workItem from="1775134529485" duration="107000" />
       <workItem from="1775134684954" duration="4146000" />
       <workItem from="1775219820415" duration="10809000" />
-      <workItem from="1775300768935" duration="2112000" />
+      <workItem from="1775300768935" duration="4887000" />
     </task>
     <servers />
   </component>
