@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/_BlockerHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/_BlockerHex.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/_Hex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/_Hex.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +144,7 @@
       <workItem from="1775134529485" duration="107000" />
       <workItem from="1775134684954" duration="4146000" />
       <workItem from="1775219820415" duration="10809000" />
-      <workItem from="1775300768935" duration="7928000" />
+      <workItem from="1775300768935" duration="9057000" />
     </task>
     <servers />
   </component>
