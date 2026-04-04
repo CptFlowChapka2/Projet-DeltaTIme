@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1284391011390978211}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.45}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -184,8 +184,9 @@ MonoBehaviour:
   maxExtentionLength: 0
   minExtentionLength: 0
   playerInput: {fileID: 0}
-  arm: {x: 0, y: 0, z: 0}
-  visualArm: {fileID: 0}
+  rb: {fileID: 0}
+  armVector: {x: 0, y: 0, z: 0}
+  physicalArm: {fileID: 0}
   popupRenderer: {fileID: 0}
   grabber: {fileID: 0}
   armOrigin: {fileID: 5073226082269632013}
