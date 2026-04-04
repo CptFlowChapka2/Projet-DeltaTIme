@@ -6,11 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Grabbable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Grabbable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/visual arm.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/visual arm.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerHoverMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerHoverMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerHoverMat.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerHoverMat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerHoverMat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerHoverMat.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerIdleMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerIdleMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerIdleMat.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerIdleMat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerIdleMat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/BlockerIdleMat.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/_BlockerHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/_BlockerHex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/EnergizerHex/EnergizerIdleMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/EnergizerHex/EnergizerIdleMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PATRON NIVEAU.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PATRON NIVEAU.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +155,8 @@
       <workItem from="1775119285611" duration="5901000" />
       <workItem from="1775134529485" duration="107000" />
       <workItem from="1775134684954" duration="4146000" />
-      <workItem from="1775219820415" duration="9619000" />
+      <workItem from="1775219820415" duration="10809000" />
+      <workItem from="1775300768935" duration="759000" />
     </task>
     <servers />
   </component>

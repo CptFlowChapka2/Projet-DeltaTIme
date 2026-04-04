@@ -51,7 +51,7 @@ public class Player : Grabbable
         
         var hitlist = hits.ToList();
         hitlist.RemoveAll(x=>x.collider.gameObject==visualArm||x.collider.gameObject==grabber.gameObject);
-        Debug.Log(hitlist.Count);
+        //Debug.Log(hitlist.Count);
         if(hitlist.Any(x=>x.collider.gameObject.CompareTag("ArmBlocker")))return;
         
         arm = tempArm;
