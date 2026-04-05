@@ -61,13 +61,33 @@ PrefabInstance:
       value: ArmBlocker
       objectReference: {fileID: 0}
     - target: {fileID: 7182248296207090403, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182248296207090403, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Center.z
-      value: 0.005
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182248296207090403, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182248296207090403, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0a40163d27ba1654c95582573be613be, type: 2}
+    - target: {fileID: 8527144438738508755, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015450113103135081, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 567737932276303864, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
     m_RemovedGameObjects: []
@@ -126,8 +146,8 @@ SphereCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.8660254
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.6, z: 0}

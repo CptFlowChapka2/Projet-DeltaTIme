@@ -14,7 +14,8 @@ public class StunnerHex : Hex
             ticks++;
             if (ticks >= ticksToStun)
             {
-                grabbablesOnThisHex.First().isActive = false;
+                Player player = grabbablesOnThisHex.First() as Player;
+                player.state = PlayerState.Stunned;
             }
         }
         grabbablesOnThisHex?.First()?.Tick();
@@ -26,7 +27,8 @@ public class StunnerHex : Hex
         if (grabbable is Player)
         {
             ticks = 0;
-            grabbable.isActive = true;
+            Player player = grabbable as Player;
+            player.state = PlayerState.Idle;
         }
     }
 }

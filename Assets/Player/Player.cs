@@ -6,6 +6,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static System.MathF;
 
+public enum PlayerState
+{
+    None,
+    Idle,
+    Stunned,
+    Knocked
+}
+
 public class Player : Grabbable
 {
     [SerializeField] private float rotationSpeed;
@@ -24,13 +32,20 @@ public class Player : Grabbable
     public MeshRenderer popupRenderer;
     public Grabber grabber;
     [SerializeField] private Transform armOrigin;
+    
+    public PlayerState state = PlayerState.Idle;
+    [SerializeField] private float maxTimerWhenKnocked;
+    [SerializeField] private float knockingSpeed;
+    [NonSerialized] public bool knockedLeft = false;
+    [NonSerialized] public bool knockedRight = false;
+    private float timerKnocked = 0;
 
     protected override void Start()
     {
         base.Start();
         grabber.player = this;
         popupRenderer.gameObject.GetComponent<PopupMover>().playerToFollow = this;
-        transform.position += new Vector3(0, 0.5f, 0);
+        //transform.position += new Vector3(0, 0.5f, 0);
         armVector = new Vector3(0, 0, 2.5f);
         playerInput = GetComponent<PlayerInput>(); 
         rb = GetComponent<Rigidbody>();
@@ -41,26 +56,68 @@ public class Player : Grabbable
 
     private void Update()
     {
-        if (isActive)
-        {
-            ActualVariant = 0;
-            GrabRelease();
+        GrabRelease();
             
-            Vector3 tempArm = armVector;
-            ExtendRetract1Axis(out tempArm);
-            armVector = tempArm;
-            grabber.transform.position = transform.position + armVector;
-            UpdateVisualArm();
-        }
-        else
+        Vector3 tempArm = armVector;
+        ExtendRetract1Axis(out tempArm);
+        
+        switch (state)
         {
-            ActualVariant = 1;
+            case PlayerState.Idle:
+                ActualVariant = 0;
+                armVector = tempArm;
+                grabber.transform.position = transform.position + armVector;
+                UpdateVisualArm();
+                break;
+            case PlayerState.Stunned:
+                ActualVariant = 1;
+                break;
+            case PlayerState.Knocked:
+                ActualVariant = 2;
+                timerKnocked += Time.deltaTime;
+                if (timerKnocked >= maxTimerWhenKnocked)
+                {
+                    timerKnocked = 0;
+                    state = PlayerState.Idle;
+                }
+                break;
         }
     }
 
     private void FixedUpdate()
     {
-        Spin1Axis();
+        switch (state)
+        {
+            case PlayerState.Idle:
+                Spin1Axis();
+                break;
+            case PlayerState.Stunned:
+                break;
+            case PlayerState.Knocked:
+                if (knockedLeft)
+                {
+                    rb.angularVelocity = new Vector3(0, -knockingSpeed, 0);
+                    knockedLeft = false;
+                }
+                else if (knockedRight)
+                {
+                    rb.angularVelocity = new Vector3(0, knockingSpeed, 0);
+                    knockedRight = false;
+                }
+                else
+                {
+                    Vector3 decceleration = new Vector3(0, rotationSpeed / 90, 0);
+                    if (rb.angularVelocity.y > 0)
+                    {
+                        rb.angularVelocity -= decceleration;
+                    }
+                    else if (rb.angularVelocity.y < 0)
+                    {
+                        rb.angularVelocity += decceleration;
+                    }
+                }
+                break;
+        }
     }
 
     private void OriginalBlocker(Vector3 tempArm, float spinValue)
