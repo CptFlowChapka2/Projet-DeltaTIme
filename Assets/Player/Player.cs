@@ -67,7 +67,7 @@ public class Player : Grabbable
                 ActualVariant = 0;
                 armVector = tempArm;
                 grabber.transform.position = transform.position + armVector;
-                UpdateVisualArm();
+                UpdatePysicalArm();
                 break;
             case PlayerState.Stunned:
                 ActualVariant = 1;
@@ -162,7 +162,7 @@ public class Player : Grabbable
         Gizmos.DrawWireSphere(transform.position, maxExtentionLength);
     }
 
-    private void UpdateVisualArm()
+    private void UpdatePysicalArm()
     {
         physicalArm.transform.localScale = new Vector3(physicalArm.transform.localScale.x, 
                                                     (armVector.magnitude - (Mathf.Abs((armOrigin.position - transform.position).magnitude))) / 2,
