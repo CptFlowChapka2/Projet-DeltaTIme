@@ -2,7 +2,7 @@ DOCU TECHNIQUE : DeltaTile
 
 ================================================================================
 
-Classes Abstraites :
+===Classes Abstraites :
 
 HEX :
 
@@ -19,7 +19,7 @@ définies par différents GrabbableVariant (struct mesh/material), et s'initiali
 Au Start, initialise sa position en tirant un Raycast vers le bas, ce qui l'attache à l'hex le plus proche.
 Il a également une méthode virtuelle Tick liée à celle de son hex.
 
-Classes héritées :
+===Classes héritées :
 
 NORMAL HEX : 
 
@@ -35,6 +35,24 @@ MACHINE :
 Hérite de Grabbable. Contient une liste de Rule (struct avec list d'IngredientType inputs, list d'IngredientType outputs,
 int nb de ticks pour s'activer), ainsi que un identificateur de la rule à suivre à un instant t, les ingrédients dispos dans
 une List, un compteur de ticks local et un booléen isWorking.
+Selon l'activation de isWorking, soit elle choisit une règle à appliquer via AssignRule selon les objets qu'elle a en inputs
+(objets au dessus dans le stack de l'Hex), soit elle applique sa règle via ApplyRule, et tout cela sur l'event Tick.
+
+PLAYER :
+
+Hérite de Grabbable. Contient toutes les variables en lien avec les déplacements/inputs du joueur (vitesse de rotation/d'extension,
+extension max/min, rèf à l'InputSystem), des références vers ses objets enfants (arm, grabber) et une variable enum d'état
+qui defini sa manière d'agir à l'instant t.
+Fait tourner le joueur selon ses inputs avec un RigidBody dans la fixedUpdate et étend son bras dans l'Update, tant qu'il est dans
+l'état Idle; dans l'état Stunned il ne peut rien faire, et dans l'état Knocked, il subit une force de rotation pendant
+un temps de maxTimerWhenKnocked avant de repasser en Idle.
+
+Plusieurs petits scripts lui sont intimement liés: PopupMover, qui s'occupe de tp le placeholder de popup au dessus de
+lui en permanence sans qu'elle n'aie à subir la rotation; BlockerDetector, sur les collider Trigger de son bras, qui le
+font passer dans l'état Knocked quand ils détectent un objet ArmBlocker et déterminent la direction de répulsion; et
+Grabber, le plus complexe, qui stocke une référence à l'Hex qu'il est en train de survoler ainsi qu'à l'objet qu'il est 
+potentiellement en train de tenir, afin d'activer l'état Hovered de l'Hex en question, et de poser ou récupérer l'objet
+dessus lors de l'action GrabRelease déclenchée par un input du Player.
 
 
 
