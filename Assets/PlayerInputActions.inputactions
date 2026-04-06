@@ -3,7 +3,7 @@
     "name": "PlayerInputActions",
     "maps": [
         {
-            "name": "PlayerMouse",
+            "name": "Player1/Mouse",
             "id": "02ea2448-e698-40bf-9006-0b31264aabcb",
             "actions": [
                 {
@@ -48,11 +48,44 @@
                 },
                 {
                     "name": "",
+                    "id": "1774c7aa-c6a2-4371-94b1-94095ae23fb4",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c674a7d7-944a-429d-948e-fdf545f3cc4a",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c692045b-9085-4394-af40-57d07705d6a8",
                     "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Mouse",
+                    "action": "Extend",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f540210e-2107-44ba-b7d8-b6ad9d755a14",
+                    "path": "<Gamepad>/rightStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
                     "action": "Extend",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -89,11 +122,22 @@
                     "action": "Spin",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "a56f0bd6-2623-4ace-ad1f-0a0b5c0e42b6",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Spin",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
         {
-            "name": "PlayerKeyboard",
+            "name": "Player2/keyboard",
             "id": "3814bb5c-54eb-410e-a12d-fc06c91d1dc4",
             "actions": [
                 {
@@ -137,6 +181,28 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "25ba71e6-2d04-49f3-8a93-caf848843d54",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ca258aa-5680-430b-b8be-22978086e309",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
                     "id": "75b183f7-8c62-463f-a4e0-0a8933c2b792",
                     "path": "1DAxis",
@@ -170,6 +236,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "",
+                    "id": "2ad66354-3568-4d10-8c61-518c9fee7838",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spin",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
                     "id": "0ba4413b-2b9d-4e26-8912-561235c73d32",
                     "path": "1DAxis",
@@ -201,6 +278,17 @@
                     "action": "Extend",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b544896c-1244-469c-876b-528954e61e23",
+                    "path": "<Gamepad>/rightStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Extend",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
@@ -223,6 +311,17 @@
             "devices": [
                 {
                     "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Controller",
+            "bindingGroup": "Controller",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
                     "isOptional": false,
                     "isOR": false
                 }

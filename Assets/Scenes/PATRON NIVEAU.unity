@@ -6482,6 +6482,7 @@ GameObject:
   - component: {fileID: 374764353}
   - component: {fileID: 374764352}
   - component: {fileID: 374764354}
+  - component: {fileID: 374764355}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6563,6 +6564,50 @@ MonoBehaviour:
   Tick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &374764355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374764351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInputManager
+  m_NotificationBehavior: 2
+  m_MaxPlayerCount: -1
+  m_AllowJoining: 1
+  m_JoinBehavior: 2
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: ea562c73-ec66-4d97-b937-c9f1742348fc
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 0}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!4 &376304042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -7970,8 +8015,8 @@ MonoBehaviour:
     m_ActionId: e850f53f-e04b-4a4e-b921-b7b5524e0b21
     m_ActionName: 'PlayerKeyboard/Spin[/Keyboard/a,/Keyboard/d]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Mouse
-  m_DefaultActionMap: PlayerMouse
+  m_DefaultControlScheme: Controller
+  m_DefaultActionMap: Player1/Mouse
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &467829709 stripped
@@ -22996,8 +23041,8 @@ MonoBehaviour:
     m_ActionId: e850f53f-e04b-4a4e-b921-b7b5524e0b21
     m_ActionName: 'PlayerKeyboard/Spin[/Keyboard/a,/Keyboard/d]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
-  m_DefaultActionMap: PlayerKeyboard
+  m_DefaultControlScheme: Controller
+  m_DefaultActionMap: Player2/keyboard
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &1298800721 stripped
