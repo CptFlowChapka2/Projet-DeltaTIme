@@ -75,16 +75,9 @@ public class Machine : Grabbable
             tickCounter = 0;
             return;
         }
-        
-        if (!isWorking)
-        {
-            AssignRule();
-        }
 
-        if (isWorking)
-        {
-            ApplyRule();
-        }
+        AssignRule();
+        ApplyRule();
     }
 
     private void ApplyRule()
@@ -94,7 +87,6 @@ public class Machine : Grabbable
         {
             tickCounter = 0;
             // todo pour les variants
-            isWorking = false;
             if (workedIngredients.Count > 0)
             {
                 foreach (Grabbable grabbable in workedIngredients)
@@ -102,7 +94,8 @@ public class Machine : Grabbable
                     actualHex.DestroyGrabbables(grabbable);
                 } 
             }
-            
+
+            if (actualRuleToFollow.Equals(new Rule())) return;
             if (actualRuleToFollow.outputs.Contains(IngredientType.None)) return;
             if (actualRuleToFollow.outputs.Contains(IngredientType.Score))
             {
@@ -132,12 +125,13 @@ public class Machine : Grabbable
             }
         }
         
+        actualRuleToFollow = new Rule();
+        
         foreach (Rule rule in rules)
         {
             if (rule.inputs.Contains(IngredientType.None) && ingredientsTypes.Count == 0)
             {
                 actualRuleToFollow = rule;
-                isWorking = true;
                 break;
             }
 
@@ -147,14 +141,20 @@ public class Machine : Grabbable
                 ingredientsTypes.Count == nextGrabbables.Count)
             {
                 actualRuleToFollow = rule;
-                nextGrabbables.ForEach(x => workedIngredients.Add((Ingredient)x));
-                isWorking = true;
                 break;
             }
         }
 
-        if (!actualRuleToFollow.Equals(lastRuleToFollow)) tickCounter = 0;
+        if (!actualRuleToFollow.Equals(lastRuleToFollow))
+        {
+            tickCounter = 0;
+            workedIngredients.Clear();
+            if (!(actualRuleToFollow.inputs.Contains(IngredientType.None) || actualRuleToFollow.Equals(new Rule())))
+            {
+                nextGrabbables.ForEach(x => workedIngredients.Add((Ingredient)x));  
+            }
+        }
+        
         lastRuleToFollow = actualRuleToFollow;
-
     }
 }

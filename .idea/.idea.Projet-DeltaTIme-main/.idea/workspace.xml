@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DOCU TECH.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DOCU TECH.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PATRON NIVEAU.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PATRON NIVEAU.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Player__Redoing&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;DEV&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -149,7 +150,8 @@
       <workItem from="1775134684954" duration="4146000" />
       <workItem from="1775219820415" duration="10809000" />
       <workItem from="1775300768935" duration="14506000" />
-      <workItem from="1775377054244" duration="11440000" />
+      <workItem from="1775377054244" duration="12651000" />
+      <workItem from="1775580103294" duration="1575000" />
     </task>
     <servers />
   </component>
