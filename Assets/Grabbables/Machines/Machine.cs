@@ -77,6 +77,7 @@ public class Machine : Grabbable
         }
 
         AssignRule();
+        if (actualRuleToFollow.Equals(new Rule())) return;
         ApplyRule();
     }
 
@@ -94,8 +95,7 @@ public class Machine : Grabbable
                     actualHex.DestroyGrabbables(grabbable);
                 } 
             }
-
-            if (actualRuleToFollow.Equals(new Rule())) return;
+            
             if (actualRuleToFollow.outputs.Contains(IngredientType.None)) return;
             if (actualRuleToFollow.outputs.Contains(IngredientType.Score))
             {
@@ -145,11 +145,17 @@ public class Machine : Grabbable
             }
         }
 
+        if (actualRuleToFollow.Equals(new Rule()))
+        {
+            lastRuleToFollow = actualRuleToFollow;
+            return;
+        }
+        
         if (!actualRuleToFollow.Equals(lastRuleToFollow))
         {
             tickCounter = 0;
             workedIngredients.Clear();
-            if (!(actualRuleToFollow.inputs.Contains(IngredientType.None) || actualRuleToFollow.Equals(new Rule())))
+            if (!(actualRuleToFollow.inputs.Contains(IngredientType.None)))
             {
                 nextGrabbables.ForEach(x => workedIngredients.Add((Ingredient)x));  
             }
