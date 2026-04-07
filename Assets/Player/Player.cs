@@ -150,9 +150,29 @@ public class Player : Grabbable
         tempArm = transform.forward * armMagnitude;
     }
 
+    private Vector2 stickInputLastFrame = new Vector2();
     private void Spin1Axis()
     {
-        float spinValue = spinAction.ReadValue<float>() * Time.fixedDeltaTime * rotationSpeed;
+        bool controlMode = playerInput.currentActionMap.name.Equals("AnyPlayer/controller");
+        float spinValue=0;
+        if (controlMode)
+        {
+            Vector2 thisFrameRead = spinAction.ReadValue<Vector2>() ;
+            if (thisFrameRead == Vector2.zero)
+            {
+                spinValue = 0;
+                rb.angularVelocity = new Vector3(0, spinValue, 0);
+                return;
+            }
+            
+            //thisFrameRead = Vector2.MoveTowards(stickInputLastFrame, thisFrameRead, (Time.fixedDeltaTime * rotationSpeed));
+            spinValue = -Vector2.SignedAngle(stickInputLastFrame, thisFrameRead)*(Time.fixedDeltaTime * rotationSpeed);
+            stickInputLastFrame = thisFrameRead;
+        }
+        else
+        { 
+            spinValue = spinAction.ReadValue<float>() * Time.fixedDeltaTime * rotationSpeed;
+        }
         rb.angularVelocity = new Vector3(0, spinValue, 0);
     }
 
