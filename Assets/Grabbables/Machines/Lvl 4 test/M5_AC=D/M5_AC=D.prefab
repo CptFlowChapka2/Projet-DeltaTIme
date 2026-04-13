@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: popupMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 38f5344190c099548bf9b84871b9ee41, type: 2}
+      objectReference: {fileID: 2100000, guid: 8667976c7fad54a418232692fea90488, type: 2}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.size
       value: 2
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[1].numberOfTicksToPerform
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4000476396115700581, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -78,15 +78,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.4762444
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 11.877665
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalRotation.w

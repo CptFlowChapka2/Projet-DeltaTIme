@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: popupMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 38f5344190c099548bf9b84871b9ee41, type: 2}
+      objectReference: {fileID: 2100000, guid: 92847e7fc0352b040a5848443fde27d3, type: 2}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: variants.Array.data[0].material
       value: 
@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].numberOfTicksToPerform
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4000476396115700581, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -46,19 +46,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f2ea3c0b0cb1d4441b5f9ac24cf8aeb1, type: 2}
     - target: {fileID: 5341778612878112200, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_Name
-      value: M5_AC=D
+      value: M6_ED=SCORE
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 13.884818
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 11.89
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalRotation.w
