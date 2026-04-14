@@ -18,7 +18,7 @@ public class CloggerHex : Hex
     {
         if (grabbablesOnThisHex.Count == 0) return;
         if (grabbablesOnThisHex.Last() is Ingredient &&
-            !(((Ingredient)grabbablesOnThisHex.Last()).type == IngredientType.Clogger)) return;
+            ((Ingredient)grabbablesOnThisHex.Last()).type == IngredientType.Clogger) return;
         if (grabbablesOnThisHex.First() is Machine)
         {
             numberOfTicks++;

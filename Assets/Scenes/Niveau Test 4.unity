@@ -1098,8 +1098,8 @@ MonoBehaviour:
     m_ActionId: a3c0e6d3-f446-4717-941d-afb122f0a85e
     m_ActionName: 'AnyPlayer/controller/Extend[/XInputControllerWindows/leftShoulder,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/rightTrigger,/XInputControllerWindows/rightShoulder]'
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Mouse
-  m_DefaultActionMap: Player1/Mouse
+  m_DefaultControlScheme: Controller
+  m_DefaultActionMap: 2befc926-ee27-4531-91d7-0a1caace7930
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &467829709 stripped
@@ -3591,8 +3591,8 @@ MonoBehaviour:
     m_ActionId: a3c0e6d3-f446-4717-941d-afb122f0a85e
     m_ActionName: AnyPlayer/controller/Extend
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Keyboard
-  m_DefaultActionMap: Player2/keyboard
+  m_DefaultControlScheme: Controller
+  m_DefaultActionMap: 2befc926-ee27-4531-91d7-0a1caace7930
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &1298800721 stripped
