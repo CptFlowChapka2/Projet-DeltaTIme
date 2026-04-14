@@ -166,7 +166,7 @@ public class Player : Grabbable
             }
             
             //thisFrameRead = Vector2.MoveTowards(stickInputLastFrame, thisFrameRead, (Time.fixedDeltaTime * rotationSpeed));
-            spinValue = -Vector2.SignedAngle(stickInputLastFrame, thisFrameRead)*(Time.fixedDeltaTime * rotationSpeed);
+            spinValue = -Vector2.SignedAngle(stickInputLastFrame, thisFrameRead)*(Time.deltaTime * rotationSpeed);
             stickInputLastFrame = thisFrameRead;
         }
         else
