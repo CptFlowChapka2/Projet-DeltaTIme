@@ -22,12 +22,13 @@ public abstract class Hex : MonoBehaviour
     [SerializeField] private Material hoveredMaterial;
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material popupBaseMaterial;
-    private GridManager gridManager;
+    [HideInInspector]public GridManager gridManager;
+    [HideInInspector]public Timer timer;
 
     protected virtual void Start()
     {
         gridManager = FindAnyObjectByType<GridManager>();
-        Timer timer = FindAnyObjectByType<Timer>();
+        timer = FindAnyObjectByType<Timer>();
         timer.Tick.AddListener(Tick);
         grabbers = gridManager.grabbers;
 

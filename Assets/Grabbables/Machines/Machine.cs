@@ -45,12 +45,15 @@ public class Machine : Grabbable
 
     private int tickCounter = 0;
     public int timeToReactivate = 3;
+    private Timer _timer;
+    
     
 
     protected override void Start()
     {
         base.Start();
         ingredientsDictionary = FindAnyObjectByType<IngredientsDictionary>();
+        _timer = actualHex.timer;
     }
 
     private void Update()
@@ -99,7 +102,10 @@ public class Machine : Grabbable
             if (actualRuleToFollow.outputs.Contains(IngredientType.None)) return;
             if (actualRuleToFollow.outputs.Contains(IngredientType.Score))
             {
-                //todo
+                foreach (IngredientType score in actualRuleToFollow.outputs)
+                { 
+                    _timer.score++;
+                }
                 return;
             }
                 
@@ -137,7 +143,8 @@ public class Machine : Grabbable
 
             var intersection = ingredientsTypes.Intersect(rule.inputs.ToList());
             //Ca doit être exactement la même, mais pas forcément dans le même ordre
-            if (intersection.Count() == rule.inputs.Length && intersection.Count() == ingredientsTypes.Count &&
+            var ingredientTypes = intersection.ToList();
+            if (ingredientTypes.Count() == rule.inputs.Length && ingredientTypes.Count() == ingredientsTypes.Count &&
                 ingredientsTypes.Count == nextGrabbables.Count)
             {
                 actualRuleToFollow = rule;
