@@ -38,6 +38,7 @@ public class Grabber : MonoBehaviour
 
     private void ReleaseOn(Hex hex)
     {
+        if(hex.grabbablesOnThisHex.Count>=hex.maxNbrOfGrabbable) return;
         hex.AddGrabbable(currentGrabbedObject);
 
         if (hex.grabbablesOnThisHex.Contains(currentGrabbedObject))

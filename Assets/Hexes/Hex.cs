@@ -18,6 +18,7 @@ public abstract class Hex : MonoBehaviour
 
     public Grabber[] grabbers;
     public HexState state = HexState.Idle;
+    public int maxNbrOfGrabbable = 3;
     [SerializeField] private Material idleMaterial;
     [SerializeField] private Material hoveredMaterial;
     [SerializeField] private MeshRenderer meshRenderer;
@@ -125,6 +126,7 @@ public abstract class Hex : MonoBehaviour
         grabbablesOnThisHex.Add(grabbable);
         grabbablesOnThisHex.TrimExcess();
         grabbable.actualHex = this;
+        ReOrganiseGrabbable();
     }
 
     public virtual void RemoveGrabbable(Grabbable grabbable)
@@ -132,14 +134,17 @@ public abstract class Hex : MonoBehaviour
         grabbablesOnThisHex.Remove(grabbable);
         grabbablesOnThisHex.TrimExcess();
         grabbable.actualHex = null;
+        ReOrganiseGrabbable();
     }
 
     public virtual void DestroyGrabbables(Grabbable grabbable)
     {
         grabbablesOnThisHex.Remove(grabbable);
         grabbablesOnThisHex.TrimExcess();
+        ReOrganiseGrabbable();
         if(grabbable ==null)return;
         Destroy(grabbable.gameObject);
+        
     }
 
     public List<Grabbable> AllNextGrabbables(Grabbable grabbable)
@@ -147,5 +152,16 @@ public abstract class Hex : MonoBehaviour
         List<Grabbable> allNextGrabbables = grabbablesOnThisHex.ToList(); 
         allNextGrabbables.RemoveRange(0, grabbablesOnThisHex.IndexOf(grabbable) + 1);
         return allNextGrabbables;
+    }
+
+    public void ReOrganiseGrabbable()
+    {
+        grabbablesOnThisHex.TrimExcess();
+        Vector3 a = new Vector3(0, 0.15f, 0);
+        for (int i = 0; i < grabbablesOnThisHex.Count; i++)
+        {
+            grabbablesOnThisHex[i].transform.position = transform.position + a;
+            a += a;
+        }
     }
 }
