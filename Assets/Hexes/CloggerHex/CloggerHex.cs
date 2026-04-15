@@ -33,4 +33,11 @@ public class CloggerHex : Hex
         }
         grabbablesOnThisHex?.First()?.Tick();
     }
+
+    public override void RemoveGrabbable(Grabbable grabbable)
+    {
+        if(grabbablesOnThisHex.First().Equals(grabbable))numberOfTicks = 0;
+        base.RemoveGrabbable(grabbable);
+        
+    }
 }
