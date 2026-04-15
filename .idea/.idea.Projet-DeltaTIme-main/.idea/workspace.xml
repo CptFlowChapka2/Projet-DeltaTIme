@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PATRON NIVEAU.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PATRON NIVEAU.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
@@ -152,6 +152,10 @@
       <workItem from="1775300768935" duration="14506000" />
       <workItem from="1775377054244" duration="12651000" />
       <workItem from="1775580103294" duration="1575000" />
+      <workItem from="1775589415642" duration="658000" />
+      <workItem from="1775592046613" duration="609000" />
+      <workItem from="1776115837162" duration="679000" />
+      <workItem from="1776277365130" duration="3460000" />
     </task>
     <servers />
   </component>

@@ -10,8 +10,32 @@ public enum HexState
     Hovered
 }
 
+[Serializable]
+public struct HexRule : IEquatable<HexRule>
+{
+    public IngredientType[] inputs;
+    public GameObject replacementHex;
+    public int nbOfTicksToReplace;
+    
+    public bool Equals(HexRule other)
+    {
+        return Equals(inputs, other.inputs) && Equals(replacementHex, other.replacementHex) && nbOfTicksToReplace == other.nbOfTicksToReplace;
+    }
+
+    public override bool Equals(object obj)
+    {
+        return obj is MachineRule other && Equals(other);
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(inputs, replacementHex, nbOfTicksToReplace);
+    }
+}
+
 public abstract class Hex : MonoBehaviour
 {
+    public HexRule[] hexRules;
     public Vector2Int relativeCoords;
     public List<Grabbable> grabbablesOnThisHex = new List<Grabbable>();
     //public Vector3 boundsCenter;
@@ -25,6 +49,11 @@ public abstract class Hex : MonoBehaviour
     [SerializeField] private Material popupBaseMaterial;
     [HideInInspector]public GridManager gridManager;
     [HideInInspector]public LvlInfos lvlInfos;
+    
+    //Variables liées aux HexRules
+    protected HexRule currentRule;
+    protected HexRule lastTickRule;
+    protected int tickCounter;
 
     protected virtual void Start()
     {
@@ -113,7 +142,47 @@ public abstract class Hex : MonoBehaviour
     public virtual void Tick()
     {
         if(grabbablesOnThisHex.Count==0)return;
+        if (grabbablesOnThisHex.First() is Ingredient && hexRules.Length != 0)
+        {
+            VerifyHexRule();
+        }
+        else
+        {
+            tickCounter = 0;
+            lastTickRule = new HexRule();
+        }
         grabbablesOnThisHex?.First()?.Tick();
+    }
+
+    public void VerifyHexRule()
+    {
+        tickCounter++;
+        currentRule = new HexRule();
+        for (int i = 0; i < hexRules.Length; i++)
+        {
+            if (hexRules[i].inputs.Contains(((Ingredient)grabbablesOnThisHex.First()).type))
+            {
+                currentRule = hexRules[i];
+                break;
+            }
+        }
+
+        if (currentRule.Equals(new HexRule()) || !currentRule.Equals(lastTickRule))
+        {
+            tickCounter = 0;
+            lastTickRule = currentRule;
+            return;
+        }
+
+        if (tickCounter >= currentRule.nbOfTicksToReplace)
+        {
+            foreach (Grabbable grabbable in grabbablesOnThisHex)
+            {
+                Destroy(grabbable.gameObject);
+            }
+            Instantiate(currentRule.replacementHex, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
     }
 
     public void ChangeMaterial(Material newMaterial)

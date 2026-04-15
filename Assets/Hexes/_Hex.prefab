@@ -45,14 +45,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e372a82f0eb2e42a1ba02e851fc33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NormalHex
+  hexRules:
+  - inputs: 02000000
+    replacementHex: {fileID: 6380230336998857399, guid: 88e326870b3a69c408ab43e293a9ac84, type: 3}
+    nbOfTicksToReplace: 2
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
   state: 1
+  maxNbrOfGrabbable: 3
   idleMaterial: {fileID: 2100000, guid: fccca1c433a871943b23ed29051b280b, type: 2}
   hoveredMaterial: {fileID: 2100000, guid: fe8a44be32262554db49dfac77f75b27, type: 2}
   meshRenderer: {fileID: 7878621762305096198}
   popupBaseMaterial: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
+  gridManager: {fileID: 0}
+  lvlInfos: {fileID: 0}
 --- !u!1 &8527144438738508755
 GameObject:
   m_ObjectHideFlags: 0
