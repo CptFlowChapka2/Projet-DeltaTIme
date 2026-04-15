@@ -24,12 +24,15 @@ public class CloggerHex : Hex
             numberOfTicks++;
             if (numberOfTicks >= numberOfTicksToClog)
             {
+                ((Machine)grabbablesOnThisHex.First()).tickCounter = 0;
                 numberOfTicks = 0;
                 Ingredient clogIngredient = Instantiate(cloggerObject,
                     transform.position + new Vector3(0f, 0.5f, 0f),
                     Quaternion.identity).GetComponent<Ingredient>();
                 clogIngredient.Initialize(IngredientType.Clogger, ingredientsDictionary, this);
+                return;
             }
+            
         }
         grabbablesOnThisHex?.First()?.Tick();
     }

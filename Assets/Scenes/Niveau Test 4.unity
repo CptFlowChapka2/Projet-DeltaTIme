@@ -4155,7 +4155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: extentionSpeed
-      value: 20
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: actionMap.m_Name
@@ -6653,7 +6653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: extentionSpeed
-      value: 20
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: actionMap.m_Name

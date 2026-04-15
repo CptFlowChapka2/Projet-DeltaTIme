@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Timer : MonoBehaviour
+public class LvlInfos : MonoBehaviour
 {
     public float lvlDuration = Mathf.Infinity;
     public float timePerTick = 2f;

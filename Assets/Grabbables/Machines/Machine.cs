@@ -5,21 +5,21 @@ using UnityEditor;
 using UnityEngine;
 
 [Serializable]
-public struct Rule : IEquatable<Rule>
+public struct MachineRule : IEquatable<MachineRule>
 {
     public IngredientType[] inputs;
     public IngredientType[] outputs;
     public int numberOfTicksToPerform;
 
-    //pour pouvoir vérifier si 2 Rule sont égal//
-    public bool Equals(Rule other)
+    //pour pouvoir vérifier si 2 MachineRule sont égal//
+    public bool Equals(MachineRule other)
     {
         return Equals(inputs, other.inputs) && Equals(outputs, other.outputs) && numberOfTicksToPerform == other.numberOfTicksToPerform;
     }
 
     public override bool Equals(object obj)
     {
-        return obj is Rule other && Equals(other);
+        return obj is MachineRule other && Equals(other);
     }
 
     public override int GetHashCode()
@@ -31,10 +31,10 @@ public struct Rule : IEquatable<Rule>
 public class Machine : Grabbable
 {
     public bool debugMode = true;
-    [SerializeField] private Rule[] rules;
+    [SerializeField] private MachineRule[] rules;
     private IngredientsDictionary ingredientsDictionary;
-    private Rule actualRuleToFollow;
-    private Rule lastRuleToFollow;
+    private MachineRule _actualMachineRuleToFollow;
+    private MachineRule _lastMachineRuleToFollow;
     private List<Ingredient> workedIngredients=new List<Ingredient>();
     private bool isWorking = false;
     public int possibleSpeedBoostByEnergizer = 0;
@@ -43,9 +43,9 @@ public class Machine : Grabbable
 
     [SerializeField] public Material popupMaterial;
 
-    private int tickCounter = 0;
+    [HideInInspector]public int tickCounter = 0;
     public int timeToReactivate = 3;
-    private Timer _timer;
+    private LvlInfos _lvlInfos;
     
     
 
@@ -53,7 +53,7 @@ public class Machine : Grabbable
     {
         base.Start();
         ingredientsDictionary = FindAnyObjectByType<IngredientsDictionary>();
-        _timer = actualHex.timer;
+        _lvlInfos = actualHex.lvlInfos;
     }
 
     private void Update()
@@ -80,14 +80,14 @@ public class Machine : Grabbable
         }
 
         AssignRule();
-        if (actualRuleToFollow.Equals(new Rule())) return;
+        if (_actualMachineRuleToFollow.Equals(new MachineRule())) return;
         ApplyRule();
     }
 
     private void ApplyRule()
     {
         tickCounter++;
-        if (tickCounter >= actualRuleToFollow.numberOfTicksToPerform - possibleSpeedBoostByEnergizer)
+        if (tickCounter >= _actualMachineRuleToFollow.numberOfTicksToPerform - possibleSpeedBoostByEnergizer)
         {
             tickCounter = 0;
             // todo pour les variants
@@ -99,17 +99,17 @@ public class Machine : Grabbable
                 } 
             }
             
-            if (actualRuleToFollow.outputs.Contains(IngredientType.None)) return;
-            if (actualRuleToFollow.outputs.Contains(IngredientType.Score))
+            if (_actualMachineRuleToFollow.outputs.Contains(IngredientType.None)) return;
+            if (_actualMachineRuleToFollow.outputs.Contains(IngredientType.Score))
             {
-                foreach (IngredientType score in actualRuleToFollow.outputs)
+                foreach (IngredientType score in _actualMachineRuleToFollow.outputs)
                 { 
-                    _timer.score++;
+                    _lvlInfos.score++;
                 }
                 return;
             }
                 
-            foreach (IngredientType output in actualRuleToFollow.outputs)
+            foreach (IngredientType output in _actualMachineRuleToFollow.outputs)
             {
                 Ingredient outputIngredient = Instantiate(prefabIngredient, transform.position, transform.rotation).GetComponent<Ingredient>();
                 outputIngredient.Initialize(output, ingredientsDictionary, actualHex);
@@ -131,13 +131,13 @@ public class Machine : Grabbable
             }
         }
         
-        actualRuleToFollow = new Rule();
+        _actualMachineRuleToFollow = new MachineRule();
         
-        foreach (Rule rule in rules)
+        foreach (MachineRule rule in rules)
         {
             if (rule.inputs.Contains(IngredientType.None) && ingredientsTypes.Count == 0)
             {
-                actualRuleToFollow = rule;
+                _actualMachineRuleToFollow = rule;
                 break;
             }
 
@@ -147,27 +147,27 @@ public class Machine : Grabbable
             if (ingredientTypes.Count() == rule.inputs.Length && ingredientTypes.Count() == ingredientsTypes.Count &&
                 ingredientsTypes.Count == nextGrabbables.Count)
             {
-                actualRuleToFollow = rule;
+                _actualMachineRuleToFollow = rule;
                 break;
             }
         }
 
-        if (actualRuleToFollow.Equals(new Rule()))
+        if (_actualMachineRuleToFollow.Equals(new MachineRule()))
         {
-            lastRuleToFollow = actualRuleToFollow;
+            _lastMachineRuleToFollow = _actualMachineRuleToFollow;
             return;
         }
         
-        if (!actualRuleToFollow.Equals(lastRuleToFollow))
+        if (!_actualMachineRuleToFollow.Equals(_lastMachineRuleToFollow))
         {
             tickCounter = 0;
             workedIngredients.Clear();
-            if (!(actualRuleToFollow.inputs.Contains(IngredientType.None)))
+            if (!(_actualMachineRuleToFollow.inputs.Contains(IngredientType.None)))
             {
                 nextGrabbables.ForEach(x => workedIngredients.Add((Ingredient)x));  
             }
         }
         
-        lastRuleToFollow = actualRuleToFollow;
+        _lastMachineRuleToFollow = _actualMachineRuleToFollow;
     }
 }

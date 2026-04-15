@@ -23,13 +23,13 @@ public abstract class Hex : MonoBehaviour
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material popupBaseMaterial;
     [HideInInspector]public GridManager gridManager;
-    [HideInInspector]public Timer timer;
+    [HideInInspector]public LvlInfos lvlInfos;
 
     protected virtual void Start()
     {
         gridManager = FindAnyObjectByType<GridManager>();
-        timer = FindAnyObjectByType<Timer>();
-        timer.Tick.AddListener(Tick);
+        lvlInfos = FindAnyObjectByType<LvlInfos>();
+        lvlInfos.Tick.AddListener(Tick);
         grabbers = gridManager.grabbers;
 
         InitializeRelativeCoords();
