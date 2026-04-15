@@ -44,6 +44,8 @@ public class Grabber : MonoBehaviour
         {
             currentGrabbedObject.isGrabbed = false;
             currentGrabbedObject.transform.position = hex.transform.position + new Vector3(0, 0.5f, 0);
+            currentGrabbedObject.beforeGrabVariant = currentGrabbedObject.ActualVariant;
+            currentGrabbedObject.ActualVariant =currentGrabbedObject.variants.Length-1;
             currentGrabbedObject = null;
         }
         
@@ -53,9 +55,8 @@ public class Grabber : MonoBehaviour
     {
         currentGrabbedObject = hex.grabbablesOnThisHex.Last();
         currentGrabbedObject.isGrabbed = true;
-        //currentGrabbedObject.isActive = false;
-        currentGrabbedObject.beforeGrabVariant = currentGrabbedObject.ActualVariant;
-        currentGrabbedObject.ActualVariant =currentGrabbedObject.variants.Length-1;
+        currentGrabbedObject.isActive = false;
+        
         hex.RemoveGrabbable(currentGrabbedObject);
     }
 }
