@@ -13,6 +13,7 @@ public class Ingredient : Grabbable
          variants = dictionary.ingredients[type];
          ActualVariant = 0;
          actualHex = hex;
+         transform.position = actualHex.gameObject.transform.position + new Vector3(0, 0.5f, 0);
     }
 
     protected override void Start()

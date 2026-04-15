@@ -44,8 +44,10 @@ public class Grabber : MonoBehaviour
         {
             currentGrabbedObject.isGrabbed = false;
             currentGrabbedObject.transform.position = hex.transform.position + new Vector3(0, 0.5f, 0);
+            if(currentGrabbedObject.ActualVariant !=currentGrabbedObject.variants.Length-1)
             currentGrabbedObject.beforeGrabVariant = currentGrabbedObject.ActualVariant;
             currentGrabbedObject.ActualVariant =currentGrabbedObject.variants.Length-1;
+            
             currentGrabbedObject = null;
         }
         
