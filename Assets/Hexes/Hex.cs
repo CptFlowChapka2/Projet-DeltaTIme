@@ -157,10 +157,10 @@ public abstract class Hex : MonoBehaviour
     public void ReOrganiseGrabbable()
     {
         grabbablesOnThisHex.TrimExcess();
-        Vector3 a = new Vector3(0, 0.15f, 0);
+        Vector3 a = new Vector3(0, 0.2f, 0f);
         for (int i = 0; i < grabbablesOnThisHex.Count; i++)
         {
-            grabbablesOnThisHex[i].transform.position = transform.position + a;
+            grabbablesOnThisHex[i].transform.position = transform.position + a+new Vector3(0,0,0.5f);
             a += a;
         }
     }
