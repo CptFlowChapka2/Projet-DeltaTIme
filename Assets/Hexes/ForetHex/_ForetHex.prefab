@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4616021794255807028
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045419837451981810, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_Name
+      value: _ForetHex
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 322e0bec561f77b41a6b12cacaf82c3b, type: 2}
+    m_RemovedComponents:
+    - {fileID: 567737932276303864, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2045419837451981810, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9012584330975793429}
+  m_SourcePrefab: {fileID: 100100000, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+--- !u!23 &3267673367902115890 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+  m_PrefabInstance: {fileID: 4616021794255807028}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6660170585190494662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2045419837451981810, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+  m_PrefabInstance: {fileID: 4616021794255807028}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9012584330975793429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6660170585190494662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dbc92c330f74643a9569bc786a6e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloggerHex
+  hexRules: []
+  relativeCoords: {x: 0, y: 0}
+  grabbablesOnThisHex: []
+  grabbers: []
+  state: 1
+  maxNbrOfGrabbable: 3
+  idleMaterial: {fileID: 2100000, guid: 6678c6cf84275954a8faa715624361cc, type: 2}
+  hoveredMaterial: {fileID: 2100000, guid: d7429a42071a51845b4eec2a03c0e53e, type: 2}
+  meshRenderer: {fileID: 3267673367902115890}
+  popupBaseMaterial: {fileID: 0}
+  gridManager: {fileID: 0}
+  lvlInfos: {fileID: 0}
+  cloggerObject: {fileID: 3627994793087617799, guid: 5e6332d21f2956d4ea70ef15e5d8401d, type: 3}
+  numberOfTicksToClog: 2
+  clogType: 101

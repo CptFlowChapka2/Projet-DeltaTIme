@@ -6,13 +6,17 @@ public enum IngredientType
 {
     None = 0,
     Score = 1,
-    A = 2,
-    B = 3,
-    C = 4,
-    D = 5,
-    E = 6,
-    F = 7,
-    Clogger = 100
+    Crabiroche = 2,
+    Magie_en_bouteille = 3,
+    Crabébou = 4,
+    Crabisilice = 5,
+    Crabisilice_Enchanté = 6,
+    Poudre_de_Crabisilice_enchanté = 7,
+    Araignée_Mage=8,
+    Soi_Magique=9,
+    Nué=10,
+    LiquideMagique = 100,
+    Araigné = 101
 }
 
 public class IngredientsDictionary : MonoBehaviour

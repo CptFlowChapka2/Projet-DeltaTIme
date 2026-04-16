@@ -45,8 +45,8 @@ public abstract class Hex : MonoBehaviour
     public int maxNbrOfGrabbable = 3;
     [SerializeField] private Material idleMaterial;
     [SerializeField] private Material hoveredMaterial;
-    [SerializeField] private MeshRenderer meshRenderer;
-    [SerializeField] private Material popupBaseMaterial;
+    [SerializeField] private MeshRenderer meshRenderer; 
+    private Material popupBaseMaterial;
     [HideInInspector]public GridManager gridManager;
     [HideInInspector]public LvlInfos lvlInfos;
     
@@ -61,6 +61,7 @@ public abstract class Hex : MonoBehaviour
         lvlInfos = FindAnyObjectByType<LvlInfos>();
         lvlInfos.Tick.AddListener(Tick);
         grabbers = gridManager.grabbers;
+        popupBaseMaterial = gridManager.popupBaseMat;
 
         InitializeRelativeCoords();
     }
