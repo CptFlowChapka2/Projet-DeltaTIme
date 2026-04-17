@@ -87,7 +87,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81dbc92c330f74643a9569bc786a6e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloggerHex
-  hexRules: []
+  hexRules:
+  - inputs: 650000006500000065000000
+    replacementHex: {fileID: 5482331452799643952, guid: 22524315a222dd24c8690af0973fe409, type: 3}
+    nbOfTicksToReplace: 7
+  - inputs: 0a000000
+    replacementHex: {fileID: 5482331452799643952, guid: 22524315a222dd24c8690af0973fe409, type: 3}
+    nbOfTicksToReplace: 14
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
@@ -96,7 +102,6 @@ MonoBehaviour:
   idleMaterial: {fileID: 2100000, guid: 6678c6cf84275954a8faa715624361cc, type: 2}
   hoveredMaterial: {fileID: 2100000, guid: d7429a42071a51845b4eec2a03c0e53e, type: 2}
   meshRenderer: {fileID: 3267673367902115890}
-  popupBaseMaterial: {fileID: 0}
   gridManager: {fileID: 0}
   lvlInfos: {fileID: 0}
   cloggerObject: {fileID: 3627994793087617799, guid: 5e6332d21f2956d4ea70ef15e5d8401d, type: 3}

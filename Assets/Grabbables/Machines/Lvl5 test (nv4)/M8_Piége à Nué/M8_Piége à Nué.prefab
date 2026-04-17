@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "M8_Pi\xE9ge \xE0 Nu\xE9"
       objectReference: {fileID: 0}
+    - target: {fileID: 5341778612878112200, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
