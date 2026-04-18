@@ -237,17 +237,6 @@
                 },
                 {
                     "name": "",
-                    "id": "25ba71e6-2d04-49f3-8a93-caf848843d54",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Controller",
-                    "action": "Grab",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "2ca258aa-5680-430b-b8be-22978086e309",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",

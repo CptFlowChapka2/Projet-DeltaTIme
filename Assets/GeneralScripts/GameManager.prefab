@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 2807028420444667223}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,6 +319,22 @@ MonoBehaviour:
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: fff2dd3be50884842bceff110ba59be4, type: 2}
+    - Key: 8
+      Value:
+      - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+        material: {fileID: 2100000, guid: 92c17bd5bb52d5a43ba5dbda74834aea, type: 2}
+    - Key: 9
+      Value:
+      - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+        material: {fileID: 2100000, guid: 618d0f7578f9f5945bc4193b101e056e, type: 2}
+    - Key: 10
+      Value:
+      - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+        material: {fileID: 2100000, guid: df6872e50761fbf449bad63fdeca0e19, type: 2}
+    - Key: 101
+      Value:
+      - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+        material: {fileID: 2100000, guid: 3920192151fd288429ec176c5a8e012a, type: 2}
 --- !u!114 &6625698513864669315
 MonoBehaviour:
   m_ObjectHideFlags: 0

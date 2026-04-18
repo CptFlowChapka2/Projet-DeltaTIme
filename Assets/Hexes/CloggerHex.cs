@@ -25,7 +25,8 @@ public class CloggerHex : Hex
             numberOfTicks++;
             if (numberOfTicks >= numberOfTicksToClog)
             {
-                ((Machine)grabbablesOnThisHex.First()).tickCounter = 0;
+                // if(((Machine)grabbablesOnThisHex.First()).isActive)
+                // ((Machine)grabbablesOnThisHex.First()).tickCounter = 0;
                 numberOfTicks = 0;
                 Ingredient clogIngredient = Instantiate(cloggerObject,
                     transform.position + new Vector3(0f, 0.5f, 0f),
