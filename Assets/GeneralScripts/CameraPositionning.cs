@@ -10,6 +10,10 @@ public class CameraPositionning : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, new Vector3 ((p1.position.x + p2.position.x) / 2, transform.position.y, (p1.position.z + p2.position.z) / 2), ref velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, 
+            new Vector3 ((p1.position.x + p2.position.x) / 2,
+                transform.position.y,
+                (-6f) + (p1.position.z + p2.position.z) / 2),
+                ref velocity, smoothTime);
     }
 }
