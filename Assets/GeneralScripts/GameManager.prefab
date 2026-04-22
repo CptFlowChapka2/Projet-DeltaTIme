@@ -335,10 +335,10 @@ MonoBehaviour:
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: 3920192151fd288429ec176c5a8e012a, type: 2}
-    - Key: 101
+    - Key: 11
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-        material: {fileID: 2100000, guid: 3920192151fd288429ec176c5a8e012a, type: 2}
+        material: {fileID: 2100000, guid: eecce3bfd74b0c345a7d64578fe6a40a, type: 2}
 --- !u!114 &6625698513864669315
 MonoBehaviour:
   m_ObjectHideFlags: 0
