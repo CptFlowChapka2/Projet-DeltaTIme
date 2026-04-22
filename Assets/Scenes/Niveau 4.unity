@@ -832,6 +832,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
   m_PrefabInstance: {fileID: 866825349}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &194963940
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1620542186042323500, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.97654
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.95677
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069021732222533038, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: m_Name
+      value: M4_Enchantrice de Crabisilice
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
 --- !u!4 &199929775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -8766,3 +8823,4 @@ SceneRoots:
   - {fileID: 1378828720}
   - {fileID: 1732981303}
   - {fileID: 299447138}
+  - {fileID: 194963940}
