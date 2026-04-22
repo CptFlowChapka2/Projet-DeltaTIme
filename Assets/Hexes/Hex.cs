@@ -47,8 +47,8 @@ public abstract class Hex : MonoBehaviour
     [SerializeField] private Material hoveredMaterial;
     [SerializeField] private MeshRenderer meshRenderer; 
     private Material popupBaseMaterial;
-    [HideInInspector]public GridManager gridManager;
-    [HideInInspector]public LvlInfos lvlInfos;
+    public GridManager gridManager;
+    public LvlInfos lvlInfos;
     
     //Variables liées aux HexRules
     protected HexRule currentRule;

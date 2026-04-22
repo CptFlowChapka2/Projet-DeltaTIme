@@ -12,11 +12,12 @@ public enum IngredientType
     Crabisilice = 5,
     Crabisilice_Enchanté = 6,
     Poudre_de_Crabisilice_enchanté = 7,
-    Araignée_Mage=8,
-    Soi_Magique=9,
-    Nué=10,
+    Araignée_Mage = 8,
+    Soie_Magique = 9,
+    Nuée = 10,
+    Poudre_de_Crabisilice = 11,
     LiquideMagique = 100,
-    Araigné = 101
+    Araignée = 101
 }
 
 public class IngredientsDictionary : MonoBehaviour

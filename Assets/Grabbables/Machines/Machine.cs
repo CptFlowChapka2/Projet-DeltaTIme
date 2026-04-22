@@ -53,7 +53,7 @@ public class Machine : Grabbable
     {
         base.Start();
         ingredientsDictionary = FindAnyObjectByType<IngredientsDictionary>();
-        _lvlInfos = actualHex.lvlInfos;
+        _lvlInfos = FindAnyObjectByType<LvlInfos>();
     }
 
     private void Update()
