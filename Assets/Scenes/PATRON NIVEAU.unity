@@ -3381,6 +3381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 173797762}
+  - component: {fileID: 173797763}
   m_Layer: 5
   m_Name: UILeft
   m_TagString: Untagged
@@ -3401,8 +3402,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 340244934}
-  - {fileID: 1833834772}
   - {fileID: 329080243}
+  - {fileID: 1833834772}
   m_Father: {fileID: 549939783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3410,6 +3411,40 @@ RectTransform:
   m_AnchoredPosition: {x: -706.25, y: -390}
   m_SizeDelta: {x: 507.5, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &173797763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173797761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dcbffa0c98f092419c2119a2d8ae86c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  stack1: {fileID: 1637681425}
+  stack2: {fileID: 780393394}
+  stack3: {fileID: 1729577601}
+  rule1input1: {fileID: 2142041613}
+  rule1input2: {fileID: 317907168}
+  rule1input3: {fileID: 2140328757}
+  rule1output1: {fileID: 974737391}
+  rule1output2: {fileID: 674464063}
+  rule1output3: {fileID: 1874292009}
+  rule2input1: {fileID: 260342539}
+  rule2input2: {fileID: 998950702}
+  rule2input3: {fileID: 1862291904}
+  rule2output1: {fileID: 1646718295}
+  rule2output2: {fileID: 409029431}
+  rule2output3: {fileID: 1775616736}
+  element1: {fileID: 602769301}
+  element2: {fileID: 2085913420}
+  element3: {fileID: 864017872}
+  element4: {fileID: 1716926337}
+  element5: {fileID: 596614464}
+  element6: {fileID: 1531086041}
+  element7: {fileID: 703562355}
 --- !u!1001 &176492097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6978,6 +7013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 360427138}
+  - component: {fileID: 360427139}
   m_Layer: 5
   m_Name: UIRight
   m_TagString: Untagged
@@ -6998,8 +7034,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1075421351}
-  - {fileID: 1160103337}
   - {fileID: 1215544954}
+  - {fileID: 1160103337}
   m_Father: {fileID: 549939783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7007,6 +7043,40 @@ RectTransform:
   m_AnchoredPosition: {x: 703.75, y: -390}
   m_SizeDelta: {x: 502.5, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &360427139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360427137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dcbffa0c98f092419c2119a2d8ae86c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  stack1: {fileID: 1545514870}
+  stack2: {fileID: 533582082}
+  stack3: {fileID: 737818870}
+  rule1input1: {fileID: 315336043}
+  rule1input2: {fileID: 755962341}
+  rule1input3: {fileID: 652107086}
+  rule1output1: {fileID: 583186990}
+  rule1output2: {fileID: 1198907898}
+  rule1output3: {fileID: 1789800990}
+  rule2input1: {fileID: 301631111}
+  rule2input2: {fileID: 2036912755}
+  rule2input3: {fileID: 1649226488}
+  rule2output1: {fileID: 1251036099}
+  rule2output2: {fileID: 522148285}
+  rule2output3: {fileID: 988995739}
+  element1: {fileID: 623349930}
+  element2: {fileID: 1582933099}
+  element3: {fileID: 1905291869}
+  element4: {fileID: 788906999}
+  element5: {fileID: 2052078258}
+  element6: {fileID: 831774384}
+  element7: {fileID: 1307731747}
 --- !u!1001 &363359592
 PrefabInstance:
   m_ObjectHideFlags: 0

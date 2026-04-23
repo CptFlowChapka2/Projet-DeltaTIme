@@ -15,6 +15,7 @@ public abstract class Grabbable : MonoBehaviour
     private int actualVariant;
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private MeshFilter meshFilter;
+    public Sprite idSprite;
     
     public Hex actualHex;
     public bool isGrabbed = false;
@@ -30,6 +31,7 @@ public abstract class Grabbable : MonoBehaviour
             actualVariant = clampValue;
             meshRenderer.material = variants[actualVariant].material;
             meshFilter.mesh = variants[actualVariant].mesh;
+            idSprite = variants[actualVariant].sprite;
         } 
     }
     
