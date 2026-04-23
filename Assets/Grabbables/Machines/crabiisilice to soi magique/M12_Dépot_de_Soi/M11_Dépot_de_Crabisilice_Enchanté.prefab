@@ -11,58 +11,30 @@ PrefabInstance:
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: popupMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: b773f4f2872e9c84da8bb232ae87510a, type: 2}
-    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
-      propertyPath: rules.Array.size
-      value: 2
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: 36e9f0418768749439f581031350027d, type: 2}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: variants.Array.data[0].material
       value: 
-      objectReference: {fileID: 2100000, guid: 1513803e126bbb04398ac683e14061f2, type: 2}
+      objectReference: {fileID: 2100000, guid: aced0797c4f9a84419e22f726a9a6c09, type: 2}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].inputs.Array.size
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
-      propertyPath: rules.Array.data[1].inputs.Array.size
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].outputs.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
-      propertyPath: rules.Array.data[1].outputs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'rules.Array.data[0].inputs.Array.data[0]'
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
-      propertyPath: 'rules.Array.data[1].inputs.Array.data[0]'
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
-      propertyPath: 'rules.Array.data[1].inputs.Array.data[1]'
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
-      propertyPath: 'rules.Array.data[0].outputs.Array.data[0]'
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
-      propertyPath: 'rules.Array.data[1].outputs.Array.data[0]'
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
-      propertyPath: rules.Array.data[0].numberOfTicksToPerform
-      value: 3
+      propertyPath: 'rules.Array.data[0].outputs.Array.data[0]'
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
-      propertyPath: rules.Array.data[1].numberOfTicksToPerform
-      value: 3
+      propertyPath: rules.Array.data[0].numberOfTicksToPerform
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4000476396115700581, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -70,19 +42,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7abb8875feede7a418e089be59bf7ae2, type: 2}
     - target: {fileID: 5341778612878112200, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_Name
-      value: M7_Extracteuse de Soi
+      value: "M11_D\xE9pot_de_Crabisilice_Enchant\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 37.45
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.26
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 4.41
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalRotation.w

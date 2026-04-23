@@ -5,6 +5,7 @@ public class CloggerHex : Hex
 {
     [SerializeField] private GameObject cloggerObject;
     [SerializeField] private int numberOfTicksToClog = 2;
+    [SerializeField] private int numberOfObjectToClog = 2;
     [SerializeField] private IngredientType clogType;
     private IngredientsDictionary ingredientsDictionary;
     private int numberOfTicks;
@@ -20,7 +21,7 @@ public class CloggerHex : Hex
         if (grabbablesOnThisHex.Count == 0) return;
         if (grabbablesOnThisHex.Last() is Ingredient &&
             ((Ingredient)grabbablesOnThisHex.Last()).type == clogType) return;
-        if (grabbablesOnThisHex.First() is Machine)
+        if (grabbablesOnThisHex.First() is not null)
         {
             numberOfTicks++;
             if (numberOfTicks >= numberOfTicksToClog)
@@ -28,10 +29,13 @@ public class CloggerHex : Hex
                 // if(((Machine)grabbablesOnThisHex.First()).isActive)
                 // ((Machine)grabbablesOnThisHex.First()).tickCounter = 0;
                 numberOfTicks = 0;
-                Ingredient clogIngredient = Instantiate(cloggerObject,
-                    transform.position + new Vector3(0f, 0.5f, 0f),
-                    Quaternion.identity).GetComponent<Ingredient>();
-                clogIngredient.Initialize(clogType, ingredientsDictionary, this);
+                for (int i = 0; i < numberOfObjectToClog; i++)
+                {
+                    Ingredient clogIngredient = Instantiate(cloggerObject,
+                        transform.position + new Vector3(0f, 0.5f, 0f),
+                        Quaternion.identity).GetComponent<Ingredient>();
+                    clogIngredient.Initialize(clogType, ingredientsDictionary, this);
+                }
                 return;
             }
             

@@ -122,4 +122,5 @@ MonoBehaviour:
   lvlInfos: {fileID: 0}
   cloggerObject: {fileID: 3627994793087617799, guid: 5e6332d21f2956d4ea70ef15e5d8401d, type: 3}
   numberOfTicksToClog: 2
+  numberOfObjectToClog: 3
   clogType: 101

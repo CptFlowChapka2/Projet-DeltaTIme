@@ -16,6 +16,7 @@ public enum IngredientType
     Soie_Magique = 9,
     Nuée = 10,
     Poudre_de_Crabisilice = 11,
+    Soie=12,
     LiquideMagique = 100,
     Araignée = 101
 }
