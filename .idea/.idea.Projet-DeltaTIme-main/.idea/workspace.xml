@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/IngredientsDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/IngredientsDictionary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Lvl1/Dépôt de Poudre de Crabisilice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Lvl1/Dépôt de Poudre de Crabisilice.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Lvl1/M3_Concasseur/M3_Concasseur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Lvl1/M3_Concasseur/M3_Concasseur.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Lvl1/M4_Dépot_de_Crabisilice/Concasseur de Crabisilice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Lvl1/M4_Dépot_de_Crabisilice/Concasseur de Crabisilice.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Lvl1/M4_Dépot_de_Crabisilice/M4_Dépot de Crabisilice concassée.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Lvl1/M4_Dépot_de_Crabisilice/M4_Dépot de Crabisilice concassée.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Lvl1/M4_Dépot_de_Crabisilice/PopupMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Lvl1/M4_Dépot_de_Crabisilice/PopupMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 4.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +154,7 @@
       <workItem from="1776115837162" duration="679000" />
       <workItem from="1776277365130" duration="4361000" />
       <workItem from="1776434071496" duration="1326000" />
-      <workItem from="1776859681977" duration="3862000" />
+      <workItem from="1776859681977" duration="4592000" />
     </task>
     <servers />
   </component>
