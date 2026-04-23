@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2045419837451981810, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Name
-      value: _CloggerHex
+      value: _LacMagiqueHex
       objectReference: {fileID: 0}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -104,4 +104,5 @@ MonoBehaviour:
   lvlInfos: {fileID: 0}
   cloggerObject: {fileID: 3627994793087617799, guid: 5e6332d21f2956d4ea70ef15e5d8401d, type: 3}
   numberOfTicksToClog: 2
+  numberOfObjectToClog: 1
   clogType: 100
