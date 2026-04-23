@@ -18,7 +18,19 @@ public class CloggerHex : Hex
     
     public override void Tick()
     {
-        if (grabbablesOnThisHex.Count == 0) return;
+        //Base
+        if(grabbablesOnThisHex.Count==0)return;
+        if (grabbablesOnThisHex.First() is Ingredient && hexRules.Length != 0)
+        {
+            VerifyHexRule();
+        }
+        else
+        {
+            tickCounter = 0;
+            lastTickRule = new HexRule();
+        }
+        
+        //end base
         if (grabbablesOnThisHex.Last() is Ingredient &&
             ((Ingredient)grabbablesOnThisHex.Last()).type == clogType) return;
         if (grabbablesOnThisHex.First() is not null)

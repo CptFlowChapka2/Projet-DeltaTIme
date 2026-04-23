@@ -131,10 +131,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4919614783463189550, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5947273728185129341, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.97934
@@ -1517,7 +1513,7 @@ MonoBehaviour:
   grabbers:
   - {fileID: 1991647727}
   - {fileID: 717498320}
-  popupBaseMat: {fileID: 0}
+  popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
 --- !u!4 &908247749
 Transform:
   m_ObjectHideFlags: 0
