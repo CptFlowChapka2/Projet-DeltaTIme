@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NormalHex
   hexRules:
-  - inputs: 0a0000000a0000000a000000
+  - inputs: 650000006500000065000000
     replacementHex: {fileID: 5482331452799643952, guid: 22524315a222dd24c8690af0973fe409, type: 3}
     nbOfTicksToReplace: 10
   relativeCoords: {x: 0, y: 0}
