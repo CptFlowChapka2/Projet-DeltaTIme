@@ -6,6 +6,7 @@ public struct GrabbableVariant
 {
     public Mesh mesh;
     public Material material;
+    public Sprite sprite;
 }
 
 public abstract class Grabbable : MonoBehaviour
