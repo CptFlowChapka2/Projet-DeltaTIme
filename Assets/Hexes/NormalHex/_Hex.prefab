@@ -100,7 +100,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 8833785800546707074}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8527144438738508755}
-  m_Mesh: {fileID: 2534964839176971238, guid: 16f7bce66e19af74cbece0e9254cd642, type: 3}
+  m_Mesh: {fileID: 720404717263258389, guid: a6d73a89f5a239f41a3152ff1ef03181, type: 3}
 --- !u!23 &7878621762305096198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -126,7 +126,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fccca1c433a871943b23ed29051b280b, type: 2}
+  - {fileID: 7867860091168391239, guid: a6d73a89f5a239f41a3152ff1ef03181, type: 3}
+  - {fileID: -7161307099491496168, guid: a6d73a89f5a239f41a3152ff1ef03181, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -197,6 +198,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0f8c8956a24a84a459270ac16bd3fe5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0f8c8956a24a84a459270ac16bd3fe5a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0f8c8956a24a84a459270ac16bd3fe5a, type: 3}
       propertyPath: m_Name
