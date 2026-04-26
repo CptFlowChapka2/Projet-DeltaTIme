@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].numberOfTicksToPerform
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000476396115700581, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
