@@ -125,19 +125,19 @@ public abstract class Hex : MonoBehaviour
         {
             state = HexState.Idle;
         }
-        
-        switch (state)
-        {
-            case HexState.Idle:
-                ChangeMaterial(idleMaterial);
-                break;
-            case HexState.Hovered:
-                ChangeMaterial(hoveredMaterial);
-                break;
-            default:
-                ChangeMaterial(idleMaterial);
-                break;
-        }
+        //todo rewok hover
+        // switch (state)
+        // {
+        //     case HexState.Idle:
+        //         ChangeMaterial(idleMaterial);
+        //         break;
+        //     case HexState.Hovered:
+        //         ChangeMaterial(hoveredMaterial);
+        //         break;
+        //     default:
+        //         ChangeMaterial(idleMaterial);
+        //         break;
+        // }
     }
 
     public virtual void Tick()
