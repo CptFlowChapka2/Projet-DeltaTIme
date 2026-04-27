@@ -1774,7 +1774,7 @@ Transform:
   m_GameObject: {fileID: 1025533191}
   serializedVersion: 2
   m_LocalRotation: {x: 0.54463905, y: 0, z: 0, w: 0.8386706}
-  m_LocalPosition: {x: 8.9, y: 15.16, z: 6.5}
+  m_LocalPosition: {x: 34.5, y: 15.16, z: 1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3296,6 +3296,22 @@ PrefabInstance:
     - target: {fileID: 3069021732222533038, guid: 539c084a0c00fc9488874603219b4059, type: 3}
       propertyPath: m_Name
       value: "M11_D\xE9pot_de_Crabisilice_Enchant\xE9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 539c084a0c00fc9488874603219b4059, type: 3}
+      propertyPath: rules.Array.data[0].inputs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 539c084a0c00fc9488874603219b4059, type: 3}
+      propertyPath: 'rules.Array.data[0].inputs.Array.data[1]'
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 539c084a0c00fc9488874603219b4059, type: 3}
+      propertyPath: 'rules.Array.data[0].inputs.Array.data[2]'
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 539c084a0c00fc9488874603219b4059, type: 3}
+      propertyPath: rules.Array.data[0].numberOfTicksToPerform
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

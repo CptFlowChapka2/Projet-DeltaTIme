@@ -24,7 +24,7 @@ public struct HexRule : IEquatable<HexRule>
 
     public override bool Equals(object obj)
     {
-        return obj is HexRule other && Equals(other);
+        return obj is HexRule other && Equals(other);   
     }
 
     public override int GetHashCode()
