@@ -142,7 +142,8 @@ public class Machine : Grabbable
                 break;
             }
 
-            var intersection = ingredientsTypes.Intersect(rule.inputs.ToList());
+            
+            var intersection =ingredientsTypes.Where(x => rule.inputs.Contains(x)).ToList();
             //Ca doit être exactement la même, mais pas forcément dans le même ordre
             var intersectionIngredientsTypes = intersection.ToList();
             
