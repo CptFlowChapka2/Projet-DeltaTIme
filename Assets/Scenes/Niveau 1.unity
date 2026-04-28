@@ -1310,6 +1310,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "M4_D\xE9pot de Crabisilice concass\xE9e"
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 3b58e51ef9497be4aa30b8e34473066a, type: 3}
+      propertyPath: rules.Array.data[0].inputs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 3b58e51ef9497be4aa30b8e34473066a, type: 3}
+      propertyPath: 'rules.Array.data[0].inputs.Array.data[1]'
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2817,7 +2825,7 @@ PrefabInstance:
       objectReference: {fileID: 1298800720}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: knockingSpeed
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: popupRenderer
@@ -4579,7 +4587,7 @@ PrefabInstance:
       objectReference: {fileID: 467469174}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: knockingSpeed
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: popupRenderer
