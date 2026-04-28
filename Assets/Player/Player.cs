@@ -56,6 +56,16 @@ public class Player : Grabbable
 
     private void Update()
     {
+        if (spinAction.WasPressedThisFrame())
+        {
+            soundManager.playersRotating++;
+        }
+
+        if (spinAction.WasReleasedThisFrame())
+        {
+            soundManager.playersRotating--;
+        }
+        
         GrabRelease();
             
         Vector3 tempArm = armVector;
@@ -139,6 +149,7 @@ public class Player : Grabbable
         if (grabReleaseAction.WasPerformedThisFrame())
         {
             grabber.OnGrabRelease();
+            soundManager.grabRelease.Play();
         }
     }
 

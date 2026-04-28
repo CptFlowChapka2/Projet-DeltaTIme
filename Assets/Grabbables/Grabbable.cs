@@ -21,6 +21,8 @@ public abstract class Grabbable : MonoBehaviour
     public bool isGrabbed = false;
     public bool isActive = true;
     public int beforeGrabVariant;
+    
+    protected SoundManager soundManager;
 
     public int ActualVariant
     {
@@ -37,6 +39,7 @@ public abstract class Grabbable : MonoBehaviour
     
     private void Awake()
     {
+        soundManager = FindAnyObjectByType<SoundManager>();
         if(variants.Length==0)return;
         ActualVariant = 0;
     }
