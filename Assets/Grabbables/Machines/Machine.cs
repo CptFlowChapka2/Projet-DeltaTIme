@@ -10,7 +10,7 @@ public struct MachineRule : IEquatable<MachineRule>
     public IngredientType[] inputs;
     public IngredientType[] outputs;
     public int numberOfTicksToPerform;
-
+    
     //pour pouvoir vérifier si 2 MachineRule sont égal//
     public bool Equals(MachineRule other)
     {
@@ -135,6 +135,7 @@ public class Machine : Grabbable
         
         foreach (MachineRule rule in rules)
         {
+            //prend en priorité les rélge spawner si présente
             if (rule.inputs.Contains(IngredientType.None) && ingredientsTypes.Count == 0)
             {
                 _actualMachineRuleToFollow = rule;
@@ -143,9 +144,11 @@ public class Machine : Grabbable
 
             var intersection = ingredientsTypes.Intersect(rule.inputs.ToList());
             //Ca doit être exactement la même, mais pas forcément dans le même ordre
-            var ingredientTypes = intersection.ToList();
-            if (ingredientTypes.Count() == rule.inputs.Length && ingredientTypes.Count() == ingredientsTypes.Count &&
-                ingredientsTypes.Count == nextGrabbables.Count)
+            var intersectionIngredientsTypes = intersection.ToList();
+            
+            if (intersectionIngredientsTypes.Count() == rule.inputs.Length//verifie que l'on as suffisament pour que la régle fonctionne
+                && intersectionIngredientsTypes.Count() == ingredientsTypes.Count //verifie que on as bien que les ingredient qu'on as
+                && ingredientsTypes.Count == nextGrabbables.Count)
             {
                 _actualMachineRuleToFollow = rule;
                 break;

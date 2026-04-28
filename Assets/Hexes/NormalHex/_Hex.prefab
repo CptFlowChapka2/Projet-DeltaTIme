@@ -53,7 +53,7 @@ MonoBehaviour:
   grabbablesOnThisHex: []
   grabbers: []
   state: 1
-  maxNbrOfGrabbable: 3
+  maxNbrOfGrabbable: 4
   idleMaterial: {fileID: 2100000, guid: fccca1c433a871943b23ed29051b280b, type: 2}
   hoveredMaterial: {fileID: 2100000, guid: fe8a44be32262554db49dfac77f75b27, type: 2}
   meshRenderer: {fileID: 7878621762305096198}
