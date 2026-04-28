@@ -6,26 +6,40 @@ using UnityEngine.Events;
 
 public class LvlInfos : MonoBehaviour
 {
+    private SoundManager soundManager;
     public float lvlDuration = Mathf.Infinity;
     public float timePerTick = 2f;
     private float timer=0;
     private float currentLvlTime;
+    private bool alreadyPlayedSound = false;
 
     public TextMeshProUGUI timeRemaining;
     public TextMeshProUGUI timeBeforeNextTick;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI totalNbrOfTick;
 
-    public UnityEvent Tick=new UnityEvent();
+    public UnityEvent Tick = new UnityEvent();
 
     [HideInInspector] public int score;
     [HideInInspector] public int tNbrTick;
+
+    private void Start()
+    {
+        soundManager = FindAnyObjectByType<SoundManager>();
+    }
+
     private void Update()
     {
         timer += Time.deltaTime;
         currentLvlTime += Time.deltaTime;
+        if (timer >= timePerTick - 0.2f && !alreadyPlayedSound)
+        {
+            alreadyPlayedSound = true;
+            soundManager.tick.Play();
+        }
         if (timer >= timePerTick)
         {
+            alreadyPlayedSound = false;
             tNbrTick += 1;
             timer = 0;
             Tick.Invoke();

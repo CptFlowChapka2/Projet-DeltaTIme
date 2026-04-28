@@ -89,6 +89,8 @@ public class Machine : Grabbable
         tickCounter++;
         if (tickCounter >= _actualMachineRuleToFollow.numberOfTicksToPerform - possibleSpeedBoostByEnergizer)
         {
+            soundManager.numberOfMachinesWorking--;
+            soundManager.finishRecipe.Play();
             tickCounter = 0;
             // todo pour les variants
             if (workedIngredients.Count > 0)
@@ -139,6 +141,7 @@ public class Machine : Grabbable
             if (rule.inputs.Contains(IngredientType.None) && ingredientsTypes.Count == 0)
             {
                 _actualMachineRuleToFollow = rule;
+                soundManager.numberOfMachinesWorking++;
                 break;
             }
 
@@ -152,6 +155,7 @@ public class Machine : Grabbable
                 && ingredientsTypes.Count == nextGrabbables.Count)
             {
                 _actualMachineRuleToFollow = rule;
+                soundManager.numberOfMachinesWorking++;
                 break;
             }
         }
