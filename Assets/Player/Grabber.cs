@@ -15,6 +15,7 @@ public class Grabber : MonoBehaviour
         {
             currentHoveredHexGO = hit.collider.gameObject;
             currentHoveredHex = currentHoveredHexGO.GetComponentInParent<Hex>();
+            Debug.Log("grabber");
         }
 
         if (currentGrabbedObject)

@@ -33,13 +33,16 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("ui");
         hex = grabber.currentHoveredHex;
         if (!hex) return;
         
         hexName.text = hex.hexName;
         //todo éléments de HexRules à afficher
 
-        grabbables = hex.grabbablesOnThisHex;
+        grabbables = new List<Grabbable>(hex.grabbablesOnThisHex);
+        machineUIBox.SetActive(false);
+        
         if (grabbables.Count > 0)
         {
             if (grabbables.First() is Machine)
@@ -50,15 +53,21 @@ public class UIManager : MonoBehaviour
                 //todo infos de machines
                 grabbables.Remove(grabbables.First());
             }
-            else
-            {
-                machineUIBox.SetActive(false);
-            }
             
-            int numberOfEmptySlots = stack.Length - grabbables.Count;
+            int numberOfEmptySlotsInIngredientsUIBox = stack.Length - grabbables.Count;
             for (int i = 0; i < stack.Length; i++)
             {
-                stack[stack.Length - i].enabled = false;
+                if (i >= stack.Length - numberOfEmptySlotsInIngredientsUIBox)
+                {
+                    stack[i].enabled = false;
+                }
+                else
+                {
+                    Image image = stack[i];
+                    image.enabled = true;
+                    Ingredient ingredientToShow = grabbables[i] as Ingredient;
+                    image.sprite = ingredientToShow.variants[ingredientToShow.ActualVariant].sprite;
+                }
             }
             
         }

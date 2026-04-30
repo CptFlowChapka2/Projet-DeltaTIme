@@ -3423,6 +3423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcbffa0c98f092419c2119a2d8ae86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  ingredientsDictionary: {fileID: 1165446271}
   grabber: {fileID: 1991647727}
   stack:
   - {fileID: 1637681425}
@@ -7064,6 +7065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcbffa0c98f092419c2119a2d8ae86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  ingredientsDictionary: {fileID: 1165446271}
   grabber: {fileID: 717498320}
   stack:
   - {fileID: 1545514870}
@@ -23342,6 +23344,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
   m_PrefabInstance: {fileID: 1861044859}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1165446271 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8434706080721891054, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+  m_PrefabInstance: {fileID: 21397030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5bc0957df2edc4bbf428a465791270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IngredientsDictionnary
 --- !u!1001 &1167140048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42039,7 +42052,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1620542186042323500, guid: 90b7f6f2fb6143247871b63c0f4f179a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.717332
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1620542186042323500, guid: 90b7f6f2fb6143247871b63c0f4f179a, type: 3}
       propertyPath: m_LocalPosition.y
