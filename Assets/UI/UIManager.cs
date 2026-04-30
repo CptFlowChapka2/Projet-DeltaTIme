@@ -82,9 +82,8 @@ public class UIManager : MonoBehaviour
             else
             {
                 Image image = stack[i];
-                Ingredient ingredientToShow = grabbables[i] as Ingredient;
                 image.enabled = true;
-                image.sprite = ingredientToShow.variants[ingredientToShow.ActualVariant].sprite;
+                image.sprite = grabbables[i].variants[grabbables[i].ActualVariant].sprite;
             }
         }
     }
