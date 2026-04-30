@@ -59,7 +59,7 @@ public abstract class Hex : MonoBehaviour
     protected virtual void Start()
     {
         gridManager = FindAnyObjectByType<GridManager>();
-        lvlInfos = FindAnyObjectByType<LvlInfos>();
+        lvlInfos = gridManager.LvlInfos;
         lvlInfos.Tick.AddListener(Tick);
         grabbers = gridManager.grabbers;
         popupBaseMaterial = gridManager.popupBaseMat;

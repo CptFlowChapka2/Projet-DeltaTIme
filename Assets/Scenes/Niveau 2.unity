@@ -1159,6 +1159,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+--- !u!114 &412780286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+  m_PrefabInstance: {fileID: 412780285}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee08b42728c8d23458526cab6b702dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
 --- !u!4 &415071524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -2164,6 +2175,7 @@ MonoBehaviour:
   - {fileID: 1991647727}
   - {fileID: 717498320}
   popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
+  LvlInfos: {fileID: 412780286}
 --- !u!4 &908247749
 Transform:
   m_ObjectHideFlags: 0
