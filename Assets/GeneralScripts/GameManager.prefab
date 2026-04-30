@@ -1550,7 +1550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   ingredientsDictionary: {fileID: 8434706080721891054}
-  grabber: {fileID: 0}
   stack:
   - {fileID: 6639206148862912416}
   - {fileID: 4863386037720775805}
@@ -2694,7 +2693,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   ingredientsDictionary: {fileID: 8434706080721891054}
-  grabber: {fileID: 0}
   stack:
   - {fileID: 1077551546766789271}
   - {fileID: 4720737612287327046}
@@ -3293,67 +3291,77 @@ MonoBehaviour:
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: 0468fb0bade6ed14cb6be81ecc125a32, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: f76c197b6c588174897dbfdf017633a7, type: 3}
     - Key: 3
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: 8a24971c5a5f60246b651343d933dbb1, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 91a71d07a81979c4489126319b64eced, type: 3}
     - Key: 4
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: 10406b3e6b8e76e40829f9b4478c4c0c, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 11d63342c0e86f4449613129ec7f473d, type: 3}
     - Key: 5
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: 01704edf3fd48844b9e4e2728dbc6118, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 1ecf57382b92fae4e85a4a94ac91c88e, type: 3}
     - Key: 6
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: d531807dfff7ab94f82857b2b10424ea, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 1488d628f24446e468246349acc2b8a5, type: 3}
     - Key: 7
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: 7f7ba128c6b329640bc0f1fc6959eb8b, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: f84877e9998746f4584e8c84e9d41a11, type: 3}
     - Key: 100
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: fff2dd3be50884842bceff110ba59be4, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 24b10cc3f105f5c48ad9c1eccaf58069, type: 3}
     - Key: 8
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: 92c17bd5bb52d5a43ba5dbda74834aea, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 3593da33274fb234183abea712238b6a, type: 3}
     - Key: 9
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: 618d0f7578f9f5945bc4193b101e056e, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: eb46e96cfd5b0a9468a8a375a1929239, type: 3}
     - Key: 10
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: df6872e50761fbf449bad63fdeca0e19, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 02ebe86428952944c9ca6cfcba18f455, type: 3}
     - Key: 101
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: 3920192151fd288429ec176c5a8e012a, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 16c6fe1e2fc41d249a8d2f85c7b8f287, type: 3}
     - Key: 11
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: eecce3bfd74b0c345a7d64578fe6a40a, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 9a654dc04f220664b98fd7a93970c528, type: 3}
     - Key: 12
       Value:
       - mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
         material: {fileID: 2100000, guid: af152971f29ab434ab05e8e36ea5de3d, type: 2}
-        sprite: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 4f59c563e4bd17d4b938129d163e124b, type: 3}
+    - Key: 0
+      Value:
+      - mesh: {fileID: 0}
+        material: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 6b6960478cc01104da3989f707d25e1d, type: 3}
+    - Key: 1
+      Value:
+      - mesh: {fileID: 0}
+        material: {fileID: 0}
+        sprite: {fileID: 21300000, guid: 31a22e04676adf2439e68c862965060f, type: 3}
 --- !u!114 &6625698513864669315
 MonoBehaviour:
   m_ObjectHideFlags: 0
