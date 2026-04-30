@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private IngredientsDictionary ingredientsDictionary;
-    [SerializeField] private Grabber grabber;
+    private Grabber grabber;
     private Hex hex;
     private List<Grabbable> grabbables;
     
@@ -31,6 +31,18 @@ public class UIManager : MonoBehaviour
     public Image element5;
     public Image element6;
     public Image element7;
+
+    private void Start()
+    {
+        if (this.name == "UILeft")
+        {
+            grabber = FindAnyObjectByType<GridManager>().grabbers[0];
+        }
+        else
+        {
+            grabber = FindAnyObjectByType<GridManager>().grabbers[1];
+        }
+    }
 
     private void Update()
     {
