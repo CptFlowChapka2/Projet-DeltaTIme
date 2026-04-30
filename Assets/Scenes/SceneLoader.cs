@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public SceneRefEncaps menu;
-    public SceneRefEncaps niv1;
+    public SceneRefEncaps currentScene;
+    
 
     AsyncOperation asyncLoad;
     bool bLoadDone=true;
@@ -19,14 +19,23 @@ public class SceneLoader : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            LoadScene(menu);
+            LoadNextSceneInGroup();
         }
-        else if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.L))
         {
-            LoadScene(niv1);
+            LoadPreviousSceneInGroup();
         }
+    }
+
+    public void LoadNextSceneInGroup()
+    {
+        LoadScene(currentScene.nextSceneInGroup);
+    }
+    public void LoadPreviousSceneInGroup()
+    {
+        LoadScene(currentScene.previousSceneInGroup);
     }
 
     public void LoadScene(SceneRefEncaps sceneRefEncaps)
@@ -46,6 +55,7 @@ public class SceneLoader : MonoBehaviour
             // the last 10% can't be multi-threaded
             if (asyncLoad.progress >= 0.9f)
             {
+                currentScene = sceneRefEncaps;
                 asyncLoad.allowSceneActivation = true;
             }
             yield return null;
