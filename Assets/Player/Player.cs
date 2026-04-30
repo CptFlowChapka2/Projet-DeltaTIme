@@ -29,7 +29,6 @@ public class Player : Grabbable
     public Vector3 armVector;
     
     [SerializeField] private GameObject physicalArm;
-    public MeshRenderer popupRenderer;
     public Grabber grabber;
     [SerializeField] private Transform armOrigin;
     
@@ -44,7 +43,6 @@ public class Player : Grabbable
     {
         base.Start();
         grabber.player = this;
-        popupRenderer.gameObject.GetComponent<PopupMover>().playerToFollow = this;
         //transform.position += new Vector3(0, 0.5f, 0);
         armVector = new Vector3(0, 0, 2.5f);
         playerInput = GetComponent<PlayerInput>(); 
@@ -77,7 +75,7 @@ public class Player : Grabbable
                 ActualVariant = 0;
                 armVector = tempArm;
                 grabber.transform.position = transform.position + armVector;
-                UpdatePysicalArm();
+                UpdatePhysicalArm();
                 break;
             case PlayerState.Stunned:
                 ActualVariant = 1;
@@ -193,7 +191,7 @@ public class Player : Grabbable
         Gizmos.DrawWireSphere(transform.position, maxExtentionLength);
     }
 
-    private void UpdatePysicalArm()
+    private void UpdatePhysicalArm()
     {
         physicalArm.transform.localScale = new Vector3(physicalArm.transform.localScale.x, 
                                                     (armVector.magnitude - (Mathf.Abs((armOrigin.position - transform.position).magnitude))) / 2,
