@@ -10,7 +10,7 @@ public class Ingredient : Grabbable
     {
          type = ingredientType;
          dictionary = ingredientsDictionary;
-         variants = dictionary.ingredients[type];
+         variants = dictionary.AskForVariants(ingredientType);
          ActualVariant = 0;
          actualHex = hex;
          transform.position = actualHex.gameObject.transform.position + new Vector3(0, 0.5f, 0);

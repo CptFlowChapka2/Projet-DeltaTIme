@@ -3162,6 +3162,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: lvlDurationWhenRush
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: validIngredientType
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8434706080721891054, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: ingredients._serializedList.Array.data[11].Key
       value: 11

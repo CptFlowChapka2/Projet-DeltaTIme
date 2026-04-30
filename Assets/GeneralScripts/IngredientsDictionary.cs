@@ -23,8 +23,20 @@ public enum IngredientType
 
 public class IngredientsDictionary : MonoBehaviour
 {
+    private LvlInfos _lvlInfos;
+
+    private void Awake()
+    {
+        _lvlInfos = GetComponent<LvlInfos>();
+    }
+
     [SerializedDictionary("Type", "IngredientRenderPrefab")] 
     public SerializedDictionary<IngredientType, GrabbableVariant[]> ingredients =
         new SerializedDictionary<IngredientType, GrabbableVariant[]>();
-    
+
+    public GrabbableVariant[] AskForVariants(IngredientType oi)
+    {
+        _lvlInfos.CheckForValidIngredient(oi);
+        return ingredients[oi];
+    }
 }

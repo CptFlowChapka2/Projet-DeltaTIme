@@ -3375,6 +3375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   lvlDuration: Infinity
+  lvlDurationWhenRush: 180
   timePerTick: 2
   timeRemaining: {fileID: 5119135615603770870}
   timeBeforeNextTick: {fileID: 1642501805486031418}
@@ -3385,6 +3386,9 @@ MonoBehaviour:
       m_Calls: []
   score: 0
   tNbrTick: 0
+  validIngredientHasSpwaned: 0
+  validIngredientType: 0
+  menu: {fileID: 11400000, guid: b8c8ea2e9246c964e9d102194c8dcaed, type: 2}
 --- !u!114 &2807028420444667223
 MonoBehaviour:
   m_ObjectHideFlags: 0

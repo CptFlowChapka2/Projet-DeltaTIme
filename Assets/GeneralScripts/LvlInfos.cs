@@ -8,6 +8,7 @@ public class LvlInfos : MonoBehaviour
 {
     private SoundManager soundManager;
     public float lvlDuration = Mathf.Infinity;
+    public float lvlDurationWhenRush = 180f;
     public float timePerTick = 2f;
     private float timer=0;
     private float currentLvlTime;
@@ -23,6 +24,11 @@ public class LvlInfos : MonoBehaviour
     [HideInInspector] public int score;
     [HideInInspector] public int tNbrTick;
 
+    [SerializeField] private bool validIngredientHasSpwaned = false;
+    [SerializeField] private IngredientType validIngredientType;
+
+   
+
     private void Start()
     {
         soundManager = FindAnyObjectByType<SoundManager>();
@@ -30,6 +36,7 @@ public class LvlInfos : MonoBehaviour
 
     private void Update()
     {
+        
         timer += Time.deltaTime;
         currentLvlTime += Time.deltaTime;
         if (timer >= timePerTick - 0.2f && !alreadyPlayedSound)
@@ -45,6 +52,15 @@ public class LvlInfos : MonoBehaviour
             Tick.Invoke();
         }
 
+        UpdateGeneralInformationText();
+        if (currentLvlTime>lvlDuration)
+        {
+            FindAnyObjectByType<SceneLoader>().LoadNextSceneInGroup();
+        }
+    }
+
+    private void UpdateGeneralInformationText()
+    {
         timeBeforeNextTick.text = "next tick in : \n "+(timePerTick - timer).ToString(CultureInfo.InvariantCulture);
 
         timeRemaining.text ="time in level remaining : \n "+ (lvlDuration - currentLvlTime).ToString(CultureInfo.InvariantCulture);
@@ -53,12 +69,17 @@ public class LvlInfos : MonoBehaviour
         
         scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture);
 
-        if (currentLvlTime>lvlDuration)
+        
+    }
+
+    public void CheckForValidIngredient(IngredientType spawnedIngredient)
+    {
+
+        if (validIngredientHasSpwaned != (validIngredientType == spawnedIngredient))
         {
-            //todo 
+            validIngredientHasSpwaned = true;
+            currentLvlTime = 0;
+            lvlDuration = lvlDurationWhenRush;
         }
     }
-    
-
-  
 }
