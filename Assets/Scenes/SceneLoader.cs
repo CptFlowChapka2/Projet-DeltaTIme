@@ -1,0 +1,55 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class SceneLoader : MonoBehaviour
+{
+    public SceneRefEncaps menu;
+    public SceneRefEncaps niv1;
+
+    AsyncOperation asyncLoad;
+    bool bLoadDone=true;
+    
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            LoadScene(menu);
+        }
+        else if (Input.GetKeyDown(KeyCode.U))
+        {
+            LoadScene(niv1);
+        }
+    }
+
+    public void LoadScene(SceneRefEncaps sceneRefEncaps)
+    {
+        if(asyncLoad is not null&&!asyncLoad.isDone) return;
+        if(SceneManager.GetActiveScene()==SceneManager.GetSceneByName(sceneRefEncaps.name))return;
+        StartCoroutine(LoadYourAsyncScene(sceneRefEncaps));
+    }
+    
+    private IEnumerator LoadYourAsyncScene(SceneRefEncaps sceneRefEncaps)
+    {
+        
+        asyncLoad = SceneManager.LoadSceneAsync(sceneRefEncaps.name,LoadSceneMode.Single);
+        while (!asyncLoad.isDone)
+        {
+            //scene has loaded as much as possible,
+            // the last 10% can't be multi-threaded
+            if (asyncLoad.progress >= 0.9f)
+            {
+                asyncLoad.allowSceneActivation = true;
+            }
+            yield return null;
+        }
+        
+    }
+}
