@@ -32,7 +32,7 @@ public class Machine : Grabbable
 {
     public bool debugMode = true;
     public string machineName;
-    [SerializeField] private MachineRule[] rules;
+    [SerializeField] public MachineRule[] rules;
     private IngredientsDictionary ingredientsDictionary;
     private MachineRule _actualMachineRuleToFollow;
     private MachineRule _lastMachineRuleToFollow;

@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     public GameObject machineUIBox;
     public Image[] rule1Inputs;
     public Image[] rule1Outputs;
+    public Image rule2Arrow;
     public Image[] rule2Inputs;
     public Image[] rule2Outputs;
     [Header("HexRules")]
@@ -33,43 +34,103 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("ui");
+        machineUIBox.SetActive(false);
         hex = grabber.currentHoveredHex;
         if (!hex) return;
         
-        hexName.text = hex.hexName;
-        //todo éléments de HexRules à afficher
+        DisplayHexUI();
 
         grabbables = new List<Grabbable>(hex.grabbablesOnThisHex);
-        machineUIBox.SetActive(false);
         
         if (grabbables.Count > 0)
         {
             if (grabbables.First() is Machine)
             {
-                machineUIBox.SetActive(true);
-                Machine machine = grabbables.First() as Machine;
-                machineName.text = machine.machineName;
-                //todo infos de machines
-                grabbables.Remove(grabbables.First());
+                DisplayMachineUI();
             }
-            
-            int numberOfEmptySlotsInIngredientsUIBox = stack.Length - grabbables.Count;
-            for (int i = 0; i < stack.Length; i++)
+        }
+        
+        DisplayIngredientsUI();
+    }
+
+    private void DisplayHexUI()
+    {
+        hexName.text = hex.hexName;
+        //todo éléments de HexRules à afficher
+    }
+
+    private void DisplayIngredientsUI()
+    {
+        for (int i = 0; i < stack.Length; i++)
+        {
+            if (i >= grabbables.Count)
             {
-                if (i >= stack.Length - numberOfEmptySlotsInIngredientsUIBox)
-                {
-                    stack[i].enabled = false;
-                }
-                else
-                {
-                    Image image = stack[i];
-                    image.enabled = true;
-                    Ingredient ingredientToShow = grabbables[i] as Ingredient;
-                    image.sprite = ingredientToShow.variants[ingredientToShow.ActualVariant].sprite;
-                }
+                stack[i].enabled = false;
+            }
+            else
+            {
+                Image image = stack[i];
+                Ingredient ingredientToShow = grabbables[i] as Ingredient;
+                image.enabled = true;
+                image.sprite = ingredientToShow.variants[ingredientToShow.ActualVariant].sprite;
+            }
+        }
+    }
+
+    private void DisplayMachineUI()
+    {
+        machineUIBox.SetActive(true);
+        Machine machine = grabbables.First() as Machine;
+        machineName.text = machine.machineName;
+                
+        DisplayMachineRule(machine.rules[0], rule1Inputs, rule1Outputs);
+        if (machine.rules.Length == 2)
+        {
+            rule2Arrow.enabled = true;
+            DisplayMachineRule(machine.rules[1], rule2Inputs, rule2Outputs);
+        }
+        else
+        {
+            for (int i = 0; i < rule1Inputs.Length; i++)
+            {
+                rule2Arrow.enabled = false;
+                rule2Inputs[i].enabled = false;
+                rule2Outputs[i].enabled = false;
+            }
+        }
+                
+        grabbables.Remove(grabbables.First());
+    }
+
+    private void DisplayMachineRule(MachineRule machineRule, Image[] inputs, Image[] outputs)
+    {
+        for (int i = 0; i < inputs.Length; i++)
+        {
+            //inputs
+            if (i >= machineRule.inputs.Length)
+            {
+                inputs[i].enabled = false;
+            }
+            else
+            {
+                Image image = inputs[i];
+                IngredientType ingredientTypeToShow = machineRule.inputs[i];
+                inputs[i].enabled = true;
+                image.sprite = ingredientsDictionary.ingredients[ingredientTypeToShow][0].sprite;
             }
             
+            //outputs
+            if (i >= machineRule.outputs.Length)
+            {
+                outputs[i].enabled = false;
+            }
+            else
+            {
+                Image image = outputs[i];
+                IngredientType ingredientTypeToShow = machineRule.outputs[i];
+                outputs[i].enabled = true;
+                image.sprite = ingredientsDictionary.ingredients[ingredientTypeToShow][0].sprite;
+            }
         }
     }
 }

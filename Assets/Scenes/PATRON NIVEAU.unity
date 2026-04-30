@@ -543,6 +543,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8434706080721891054, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: ingredients._serializedList.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434706080721891054, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: ingredients._serializedList.Array.data[14].Key
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434706080721891054, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: ingredients._serializedList.Array.data[13].Value.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434706080721891054, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: ingredients._serializedList.Array.data[14].Value.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8434706080721891054, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: ingredients._serializedList.Array.data[0].Value.Array.data[0].sprite
       value: 
       objectReference: {fileID: 21300000, guid: f76c197b6c588174897dbfdf017633a7, type: 3}
@@ -594,6 +610,14 @@ PrefabInstance:
       propertyPath: ingredients._serializedList.Array.data[12].Value.Array.data[0].sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4f59c563e4bd17d4b938129d163e124b, type: 3}
+    - target: {fileID: 8434706080721891054, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: ingredients._serializedList.Array.data[13].Value.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b6960478cc01104da3989f707d25e1d, type: 3}
+    - target: {fileID: 8434706080721891054, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: ingredients._serializedList.Array.data[14].Value.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 31a22e04676adf2439e68c862965060f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3439,6 +3463,7 @@ MonoBehaviour:
   - {fileID: 974737391}
   - {fileID: 674464063}
   - {fileID: 1874292009}
+  rule2Arrow: {fileID: 1039791321}
   rule2Inputs:
   - {fileID: 260342539}
   - {fileID: 998950702}
@@ -7081,6 +7106,7 @@ MonoBehaviour:
   - {fileID: 583186990}
   - {fileID: 1198907898}
   - {fileID: 1789800990}
+  rule2Arrow: {fileID: 52479108}
   rule2Inputs:
   - {fileID: 301631111}
   - {fileID: 2036912755}
