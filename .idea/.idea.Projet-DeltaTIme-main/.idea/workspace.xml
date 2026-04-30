@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +159,7 @@
       <workItem from="1776949600870" duration="1890000" />
       <workItem from="1777387237137" duration="2074000" />
       <workItem from="1777403684477" duration="4266000" />
-      <workItem from="1777538172588" duration="6825000" />
+      <workItem from="1777538172588" duration="7643000" />
     </task>
     <servers />
   </component>
