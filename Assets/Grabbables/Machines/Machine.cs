@@ -31,6 +31,7 @@ public struct MachineRule : IEquatable<MachineRule>
 public class Machine : Grabbable
 {
     public bool debugMode = true;
+    public string machineName;
     [SerializeField] private MachineRule[] rules;
     private IngredientsDictionary ingredientsDictionary;
     private MachineRule _actualMachineRuleToFollow;

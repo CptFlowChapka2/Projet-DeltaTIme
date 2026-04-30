@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Grabber : MonoBehaviour
 {
-    public GameObject currentHoveredHex = null;
+    public GameObject currentHoveredHexGO = null;
+    public Hex currentHoveredHex = null;
     public Grabbable currentGrabbedObject = null;
     [NonSerialized] public Player player;
 
@@ -12,7 +13,8 @@ public class Grabber : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, -transform.up * 3f, out RaycastHit hit))
         {
-            currentHoveredHex = hit.collider.gameObject;
+            currentHoveredHexGO = hit.collider.gameObject;
+            currentHoveredHex = currentHoveredHexGO.GetComponentInParent<Hex>();
         }
 
         if (currentGrabbedObject)
@@ -23,16 +25,15 @@ public class Grabber : MonoBehaviour
 
     public void OnGrabRelease()
     {
-        Hex hex = currentHoveredHex.GetComponentInParent<Hex>();
-        if (hex is HalfBlockerHex) return;
-        if (!currentGrabbedObject && hex.grabbablesOnThisHex.Count != 0)
+        if (currentHoveredHex is HalfBlockerHex) return;
+        if (!currentGrabbedObject && currentHoveredHex.grabbablesOnThisHex.Count != 0)
         {
-            if(player.isGrabbed && hex.grabbablesOnThisHex.Last() is Player)return;
-            GrabOn(hex);
+            if(player.isGrabbed && currentHoveredHex.grabbablesOnThisHex.Last() is Player)return;
+            GrabOn(currentHoveredHex);
         }
-        else if (currentGrabbedObject &&(hex.grabbablesOnThisHex.Count == 0 || !(!(currentGrabbedObject is Ingredient) && hex.grabbablesOnThisHex.Last() is Ingredient)))
+        else if (currentGrabbedObject &&(currentHoveredHex.grabbablesOnThisHex.Count == 0 || !(!(currentGrabbedObject is Ingredient) && currentHoveredHex.grabbablesOnThisHex.Last() is Ingredient)))
         {
-            ReleaseOn(hex);
+            ReleaseOn(currentHoveredHex);
         }
     }
 

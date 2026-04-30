@@ -3423,21 +3423,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcbffa0c98f092419c2119a2d8ae86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  stack1: {fileID: 1637681425}
-  stack2: {fileID: 780393394}
-  stack3: {fileID: 1729577601}
-  rule1input1: {fileID: 2142041613}
-  rule1input2: {fileID: 317907168}
-  rule1input3: {fileID: 2140328757}
-  rule1output1: {fileID: 974737391}
-  rule1output2: {fileID: 674464063}
-  rule1output3: {fileID: 1874292009}
-  rule2input1: {fileID: 260342539}
-  rule2input2: {fileID: 998950702}
-  rule2input3: {fileID: 1862291904}
-  rule2output1: {fileID: 1646718295}
-  rule2output2: {fileID: 409029431}
-  rule2output3: {fileID: 1775616736}
+  grabber: {fileID: 1991647727}
+  stack:
+  - {fileID: 1637681425}
+  - {fileID: 780393394}
+  - {fileID: 1729577601}
+  machineName: {fileID: 537702932}
+  machineUIBox: {fileID: 329080242}
+  rule1Inputs:
+  - {fileID: 2142041613}
+  - {fileID: 317907168}
+  - {fileID: 2140328757}
+  rule1Outputs:
+  - {fileID: 974737391}
+  - {fileID: 674464063}
+  - {fileID: 1874292009}
+  rule2Inputs:
+  - {fileID: 260342539}
+  - {fileID: 998950702}
+  - {fileID: 1862291904}
+  rule2Outputs:
+  - {fileID: 1646718295}
+  - {fileID: 409029431}
+  - {fileID: 1775616736}
+  hexName: {fileID: 957060025}
   element1: {fileID: 602769301}
   element2: {fileID: 2085913420}
   element3: {fileID: 864017872}
@@ -7055,21 +7064,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcbffa0c98f092419c2119a2d8ae86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  stack1: {fileID: 1545514870}
-  stack2: {fileID: 533582082}
-  stack3: {fileID: 737818870}
-  rule1input1: {fileID: 315336043}
-  rule1input2: {fileID: 755962341}
-  rule1input3: {fileID: 652107086}
-  rule1output1: {fileID: 583186990}
-  rule1output2: {fileID: 1198907898}
-  rule1output3: {fileID: 1789800990}
-  rule2input1: {fileID: 301631111}
-  rule2input2: {fileID: 2036912755}
-  rule2input3: {fileID: 1649226488}
-  rule2output1: {fileID: 1251036099}
-  rule2output2: {fileID: 522148285}
-  rule2output3: {fileID: 988995739}
+  grabber: {fileID: 717498320}
+  stack:
+  - {fileID: 1545514870}
+  - {fileID: 533582082}
+  - {fileID: 737818870}
+  machineName: {fileID: 425351752}
+  machineUIBox: {fileID: 1215544953}
+  rule1Inputs:
+  - {fileID: 315336043}
+  - {fileID: 755962341}
+  - {fileID: 652107086}
+  rule1Outputs:
+  - {fileID: 583186990}
+  - {fileID: 1198907898}
+  - {fileID: 1789800990}
+  rule2Inputs:
+  - {fileID: 301631111}
+  - {fileID: 2036912755}
+  - {fileID: 1649226488}
+  rule2Outputs:
+  - {fileID: 1251036099}
+  - {fileID: 522148285}
+  - {fileID: 988995739}
+  hexName: {fileID: 1456232950}
   element1: {fileID: 623349930}
   element2: {fileID: 1582933099}
   element3: {fileID: 1905291869}

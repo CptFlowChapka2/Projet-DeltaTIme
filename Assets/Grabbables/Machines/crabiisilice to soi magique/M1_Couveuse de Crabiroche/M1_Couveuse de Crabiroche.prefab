@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: machineName
+      value: Couveuse de Crabes de Roche
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: popupMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 03fbd906073153841a915fbf9e6f61c6, type: 2}

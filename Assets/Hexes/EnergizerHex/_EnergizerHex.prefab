@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2045419837451981810, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Name
-      value: EnergizerHex
+      value: _EnergizerHex
       objectReference: {fileID: 0}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -91,12 +91,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8812ecca498dd84468d2ada055bd516c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnergizerHex
+  hexName: Energizer
+  hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
   state: 1
+  maxNbrOfGrabbable: 3
   idleMaterial: {fileID: 2100000, guid: eed4707081ff4394ba33d13a942c9562, type: 2}
   hoveredMaterial: {fileID: 2100000, guid: 0c1507039180d1b438ecf6ee31067b62, type: 2}
   meshRenderer: {fileID: 1530640247853716893}
-  popupBaseMaterial: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
+  gridManager: {fileID: 0}
+  lvlInfos: {fileID: 0}
   speedBoost: 1

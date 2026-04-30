@@ -35,6 +35,7 @@ public struct HexRule : IEquatable<HexRule>
 
 public abstract class Hex : MonoBehaviour
 {
+    public string hexName;
     public HexRule[] hexRules;
     public Vector2Int relativeCoords;
     public List<Grabbable> grabbablesOnThisHex = new List<Grabbable>();
@@ -105,7 +106,7 @@ public abstract class Hex : MonoBehaviour
         
         for (int i = 0; i < grabbers.Length; i++)
         {
-            if (grabbers[i].currentHoveredHex == meshRenderer.gameObject)
+            if (grabbers[i].currentHoveredHexGO == meshRenderer.gameObject)
             {
                 state = HexState.Hovered;
                 isHovered = true;

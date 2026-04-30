@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e372a82f0eb2e42a1ba02e851fc33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NormalHex
+  hexName: Case de Base
   hexRules:
   - inputs: 650000006500000065000000
     replacementHex: {fileID: 5482331452799643952, guid: 22524315a222dd24c8690af0973fe409, type: 3}

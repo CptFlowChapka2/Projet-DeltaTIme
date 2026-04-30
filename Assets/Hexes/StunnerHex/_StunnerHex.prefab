@@ -87,12 +87,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9175bf898aa81741a56429baf6eb090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StunnerHex
+  hexName: Salut
+  hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
   state: 1
+  maxNbrOfGrabbable: 3
   idleMaterial: {fileID: 2100000, guid: 322e0bec561f77b41a6b12cacaf82c3b, type: 2}
   hoveredMaterial: {fileID: 2100000, guid: 2b96e666c09e6f54aa817d0b539e6350, type: 2}
   meshRenderer: {fileID: 3267673367902115890}
-  popupBaseMaterial: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
+  gridManager: {fileID: 0}
+  lvlInfos: {fileID: 0}
   ticksToStun: 4

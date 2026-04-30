@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e422a0b18f2fe489c8e744ee7eefbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlockerHex
+  hexName: Montagne
   hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []

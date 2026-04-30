@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81dbc92c330f74643a9569bc786a6e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloggerHex
+  hexName: Lac Magique
   hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []

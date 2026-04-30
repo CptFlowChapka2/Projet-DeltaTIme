@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81dbc92c330f74643a9569bc786a6e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloggerHex
+  hexName: "For\xEAt"
   hexRules:
   - inputs: 0a0000000a0000000a000000
     replacementHex: {fileID: 5482331452799643952, guid: 22524315a222dd24c8690af0973fe409, type: 3}
