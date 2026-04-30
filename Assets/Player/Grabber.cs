@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -40,7 +41,10 @@ public class Grabber : MonoBehaviour
 
     private void ReleaseOn(Hex hex)
     {
-        if(hex.grabbablesOnThisHex.Count>=hex.maxNbrOfGrabbable) return;
+        if(currentGrabbedObject is Machine && hex.grabbablesOnThisHex.Any(x=>x is Machine)) return;
+        var grabOnHExWithoutMachine = new List<Grabbable>(hex.grabbablesOnThisHex);
+        grabOnHExWithoutMachine.RemoveAll(x=>x is Machine);
+        if(grabOnHExWithoutMachine.Count>=hex.maxNbrOfGrabbable) return;
         hex.AddGrabbable(currentGrabbedObject);
 
         if (hex.grabbablesOnThisHex.Contains(currentGrabbedObject))
