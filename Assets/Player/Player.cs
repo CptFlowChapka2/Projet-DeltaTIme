@@ -24,6 +24,10 @@ public class Player : Grabbable
     private InputAction spinAction;
     private InputAction extendRetractAction;
     private InputAction grabReleaseAction;
+    private InputAction pauseAction;
+    private bool isInPause=false;
+    public GameObject PauseMenu;
+    public Player otherPlayer;
     public Rigidbody rb;
     
     public Vector3 armVector;
@@ -50,10 +54,13 @@ public class Player : Grabbable
         spinAction = playerInput.actions["Spin"];
         extendRetractAction = playerInput.actions["Extend"];
         grabReleaseAction = playerInput.actions["Grab"];
+        pauseAction = playerInput.actions["Pause"];
     }
 
     private void Update()
     {
+        ListenForPause();
+        if(isInPause) return;
         if (spinAction.WasPressedThisFrame())
         {
             soundManager.playersRotating++;
@@ -94,6 +101,7 @@ public class Player : Grabbable
 
     private void FixedUpdate()
     {
+        if(isInPause) return;
         switch (state)
         {
             case PlayerState.Idle:
@@ -185,6 +193,15 @@ public class Player : Grabbable
         rb.angularVelocity = new Vector3(0, spinValue, 0);
     }
 
+    private void ListenForPause()
+    {
+        bool pause = pauseAction.WasPressedThisFrame();
+        if (!pause) return;
+        otherPlayer.isInPause = !otherPlayer.isInPause;
+        isInPause = !isInPause;
+        PauseMenu.SetActive(!PauseMenu.activeSelf);
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -198,6 +215,8 @@ public class Player : Grabbable
                                                     physicalArm.transform.localScale.z);
         physicalArm.transform.position = armOrigin.position + (armVector - (armOrigin.position - transform.position))/2;
     }
+    
+    
     
 }
 

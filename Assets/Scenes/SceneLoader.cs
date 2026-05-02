@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public SceneLoaderEncaps encaps;
     public SceneRefEncaps currentScene;
     
 
@@ -15,6 +16,7 @@ public class SceneLoader : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        encaps.SceneLoader = this;
     }
 
     private void Update()
