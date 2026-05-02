@@ -32,4 +32,6 @@ public class SoundManager : MonoBehaviour
         workingMachines.SetParameter("NumberOfWorkingMachines", numberOfMachinesWorking);
         numberOfMachinesWorking = 0;
     }
+    
+    
 }
