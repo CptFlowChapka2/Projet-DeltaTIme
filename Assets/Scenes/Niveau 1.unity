@@ -2792,7 +2792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: lvlDurationWhenRush
-      value: 10
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: validIngredientType
