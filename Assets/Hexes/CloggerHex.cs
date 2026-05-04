@@ -23,6 +23,7 @@ public class CloggerHex : Hex
         if (hexRules.Length != 0)
         {
             VerifyHexRule();
+            UpdateFeedbackTimer();
         }
         else
         {

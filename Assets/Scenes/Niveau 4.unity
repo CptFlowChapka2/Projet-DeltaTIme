@@ -1484,6 +1484,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
   m_PrefabInstance: {fileID: 1970697987}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &389474377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7959206628883173614, guid: 9bb8f563d5d70264b898a5666fd52003, type: 3}
+  m_PrefabInstance: {fileID: 1122517033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &392432007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -3676,6 +3681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _ForetHex (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9012584330975793429, guid: 9bb8f563d5d70264b898a5666fd52003, type: 3}
+      propertyPath: feedbackTimerDanger
+      value: 
+      objectReference: {fileID: 389474377}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

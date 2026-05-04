@@ -105,5 +105,17 @@ MonoBehaviour:
   idleMaterial: {fileID: 2100000, guid: d4ca6c4707452cf4c96013a9f4a3e57a, type: 2}
   hoveredMaterial: {fileID: 2100000, guid: fd72e2458ef7a18469b1fb7298d9e7c6, type: 2}
   meshRenderer: {fileID: 4404961518762154180}
+  outlineDanger: {fileID: 8771278265267220470}
+  feedbackTimerDanger: {fileID: 9082708175787790360}
   gridManager: {fileID: 0}
   lvlInfos: {fileID: 0}
+--- !u!1 &8771278265267220470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3012410026872884532, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+  m_PrefabInstance: {fileID: 5798364633111601858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9082708175787790360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3349463296004600538, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+  m_PrefabInstance: {fileID: 5798364633111601858}
+  m_PrefabAsset: {fileID: 0}

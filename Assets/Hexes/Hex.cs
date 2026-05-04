@@ -7,7 +7,7 @@ public enum HexState
 {
     None,
     Idle,
-    Hovered
+    Transforming
 }
 
 [Serializable]
@@ -47,6 +47,8 @@ public abstract class Hex : MonoBehaviour
     [SerializeField] private Material idleMaterial;
     [SerializeField] private Material hoveredMaterial;
     [SerializeField] private MeshRenderer meshRenderer; 
+    [SerializeField] private GameObject outlineDanger; 
+    [SerializeField] private GameObject feedbackTimerDanger; 
     private Material popupBaseMaterial;
     public GridManager gridManager;
     public LvlInfos lvlInfos;
@@ -55,6 +57,9 @@ public abstract class Hex : MonoBehaviour
     protected HexRule currentRule;
     protected HexRule lastTickRule;
     protected int tickCounter;
+    
+    protected float timerDanger = 0;
+    protected bool outlineIsVisible;
 
     protected virtual void Start()
     {
@@ -102,45 +107,40 @@ public abstract class Hex : MonoBehaviour
 
     public virtual void OnUpdate()
     {
-        bool isHovered = false;
-        
-        for (int i = 0; i < grabbers.Length; i++)
-        {
-            if (grabbers[i].currentHoveredHexGO == meshRenderer.gameObject)
-            {
-                state = HexState.Hovered;
-                isHovered = true;
-            }
-        }
-
-        if (!isHovered)
-        {
-            state = HexState.Idle;
-        }
-        //todo rewok hover
-        // switch (state)
+        // bool isHovered = false;
+        //
+        // for (int i = 0; i < grabbers.Length; i++)
         // {
-        //     case HexState.Idle:
-        //         ChangeMaterial(idleMaterial);
-        //         break;
-        //     case HexState.Hovered:
-        //         ChangeMaterial(hoveredMaterial);
-        //         break;
-        //     default:
-        //         ChangeMaterial(idleMaterial);
-        //         break;
+        //     if (grabbers[i].currentHoveredHexGO == meshRenderer.gameObject)
+        //     {
+        //         //state = HexState.Hovered;
+        //         isHovered = true;
+        //     }
         // }
+
+        // if (!isHovered)
+        // {
+        //     state = HexState.Idle;
+        // }
+
+        VerifyState();
     }
 
     public virtual void Tick()
     {
-        if(grabbablesOnThisHex.Count==0)return;
+        if (grabbablesOnThisHex.Count == 0)
+        {
+            state = HexState.Idle;
+            return;
+        }
         if (hexRules.Length != 0)
         {
             VerifyHexRule();
+            UpdateFeedbackTimer();
         }
         else
         {
+            state = HexState.Idle;
             tickCounter = 0;
             lastTickRule = new HexRule();
         }
@@ -175,12 +175,14 @@ public abstract class Hex : MonoBehaviour
                 )
             {
                 currentRule = rule;
+                state = HexState.Transforming;
                 break;
             }
         }
 
         if (currentRule.Equals(new HexRule()) || !currentRule.Equals(lastTickRule))
         {
+            state = HexState.Idle;
             tickCounter = 0;
             lastTickRule = currentRule;
             return;
@@ -194,6 +196,53 @@ public abstract class Hex : MonoBehaviour
             }
             Instantiate(currentRule.replacementHex, transform.position, transform.rotation);
             Destroy(gameObject);
+        }
+    }
+    
+    private void VerifyState()
+    {
+        switch (state)
+        {
+            case HexState.Idle:
+                outlineIsVisible = false;
+                outlineDanger.SetActive(false);
+                break;
+            case HexState.Transforming:
+                if (!outlineIsVisible)
+                {
+                    timerDanger += Time.deltaTime;
+                    if (timerDanger >= 1f)
+                    {
+                        outlineIsVisible = true;
+                        outlineDanger.SetActive(true);
+                    }
+                }
+                else
+                {
+                    timerDanger -= Time.deltaTime;
+                    if (timerDanger <= 0)
+                    {
+                        outlineIsVisible = false;
+                        outlineDanger.SetActive(false);
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    protected void UpdateFeedbackTimer()
+    {
+        if (!currentRule.Equals(new HexRule()))
+        {
+            feedbackTimerDanger.SetActive(true);
+            float currentScale = (float)tickCounter / (float)currentRule.nbOfTicksToReplace;
+            feedbackTimerDanger.transform.localScale = new Vector3(currentScale, 1f, currentScale);
+        }
+        else
+        {
+            feedbackTimerDanger.SetActive(false);
         }
     }
 
