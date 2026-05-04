@@ -43,6 +43,8 @@ public class Machine : Grabbable
     [SerializeField] private GameObject prefabIngredient;
 
     [SerializeField] public Material popupMaterial;
+    [SerializeField] public GameObject loadingBarFrame;
+    [SerializeField] public LoadingBar loadingBar;
 
     [HideInInspector]public int tickCounter = 0;
     public int timeToReactivate = 3;
@@ -87,9 +89,11 @@ public class Machine : Grabbable
 
     private void ApplyRule()
     {
+        loadingBar.ExtendLoadingBar();
         tickCounter++;
         if (tickCounter >= _actualMachineRuleToFollow.numberOfTicksToPerform - possibleSpeedBoostByEnergizer)
         {
+            loadingBar.ChangeColor(Color.yellow);
             soundManager.numberOfMachinesWorking--;
             soundManager.finishRecipe.Play();
             tickCounter = 0;
@@ -163,12 +167,20 @@ public class Machine : Grabbable
 
         if (_actualMachineRuleToFollow.Equals(new MachineRule()))
         {
+            //loadingBar update
+            loadingBar.Initialize(0);
+            loadingBarFrame.SetActive(false);
+            
             _lastMachineRuleToFollow = _actualMachineRuleToFollow;
             return;
         }
         
         if (!_actualMachineRuleToFollow.Equals(_lastMachineRuleToFollow))
         {
+            //loadingBar update
+            loadingBarFrame.SetActive(true);
+            loadingBar.Initialize(_actualMachineRuleToFollow.numberOfTicksToPerform);
+            
             tickCounter = 0;
             workedIngredients.Clear();
             if (!(_actualMachineRuleToFollow.inputs.Contains(IngredientType.None)))
