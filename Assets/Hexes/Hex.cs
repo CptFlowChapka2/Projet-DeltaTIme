@@ -135,7 +135,7 @@ public abstract class Hex : MonoBehaviour
     public virtual void Tick()
     {
         if(grabbablesOnThisHex.Count==0)return;
-        if (grabbablesOnThisHex.First() is Ingredient && hexRules.Length != 0)
+        if (hexRules.Length != 0)
         {
             VerifyHexRule();
         }
@@ -151,11 +151,30 @@ public abstract class Hex : MonoBehaviour
     {
         tickCounter++;
         currentRule = new HexRule();
-        for (int i = 0; i < hexRules.Length; i++)
+        
+        List<IngredientType> ingredientsTypes = new List<IngredientType>();
+
+        foreach (Grabbable grabbable in grabbablesOnThisHex)
         {
-            if (hexRules[i].inputs.Contains(((Ingredient)grabbablesOnThisHex.First()).type))
+            if (grabbable is Ingredient)
             {
-                currentRule = hexRules[i];
+                ingredientsTypes.Add(((Ingredient)grabbable).type);
+            }
+        }
+        
+        currentRule = new HexRule();
+
+        foreach (HexRule rule in hexRules)
+        {
+            var intersection =ingredientsTypes.Where(x => rule.inputs.Contains(x)).ToList();
+            //Ca doit être exactement la même, mais pas forcément dans le même ordre
+            var intersectionIngredientsTypes = intersection.ToList();
+            
+            if (intersectionIngredientsTypes.Count() == rule.inputs.Length//verifie que l'on as suffisament pour que la régle fonctionne
+                && intersectionIngredientsTypes.Count() == ingredientsTypes.Count //verifie que on as bien que les ingredient qu'on as
+                )
+            {
+                currentRule = rule;
                 break;
             }
         }

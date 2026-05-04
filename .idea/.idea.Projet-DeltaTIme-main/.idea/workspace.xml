@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/LoadingBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/LoadingBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/PureMachine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/PureMachine.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/CloggerHex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/CloggerHex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/ForetHex/_ForetHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/ForetHex/_ForetHex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +165,7 @@
       <workItem from="1777387237137" duration="2074000" />
       <workItem from="1777403684477" duration="4266000" />
       <workItem from="1777538172588" duration="13561000" />
-      <workItem from="1777891111337" duration="5015000" />
+      <workItem from="1777891111337" duration="10246000" />
     </task>
     <servers />
   </component>

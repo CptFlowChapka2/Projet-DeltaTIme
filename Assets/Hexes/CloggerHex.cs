@@ -20,7 +20,7 @@ public class CloggerHex : Hex
     {
         //Base
         if(grabbablesOnThisHex.Count==0)return;
-        if (grabbablesOnThisHex.First() is Ingredient && hexRules.Length != 0)
+        if (hexRules.Length != 0)
         {
             VerifyHexRule();
         }

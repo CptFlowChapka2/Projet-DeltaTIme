@@ -61,12 +61,12 @@ public class Player : Grabbable
     {
         ListenForPause();
         if(isInPause) return;
-        if (spinAction.WasPressedThisFrame())
+        if (spinAction.WasPressedThisFrame() && soundManager.playersRotating < 2)
         {
             soundManager.playersRotating++;
         }
 
-        if (spinAction.WasReleasedThisFrame())
+        if (spinAction.WasReleasedThisFrame() && soundManager.playersRotating > 0)
         {
             soundManager.playersRotating--;
         }
