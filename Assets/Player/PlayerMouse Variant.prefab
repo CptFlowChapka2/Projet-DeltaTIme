@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.61
+      value: 0.98
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.92
+      value: 4.47
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -238,7 +238,7 @@ MonoBehaviour:
     m_ActionId: 37adb554-4912-4cc0-9bf9-96f7af03477f
     m_ActionName: 'Player2/keyboard/Pause[/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Mouse
+  m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player1/Mouse
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
