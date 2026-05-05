@@ -124,6 +124,12 @@ public abstract class Hex : MonoBehaviour
         // }
 
         VerifyState();
+        if (grabbablesOnThisHex.Count <= 0) return;
+        for (int i = 0; i < grabbablesOnThisHex.Count; i++)
+        {
+            grabbablesOnThisHex[i].gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + (0.5f + 0.5f * i), transform.position.z);
+        }
+        
     }
 
     public virtual void Tick()
