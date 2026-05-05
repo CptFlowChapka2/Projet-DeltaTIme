@@ -127,7 +127,7 @@ public abstract class Hex : MonoBehaviour
         if (grabbablesOnThisHex.Count <= 0) return;
         for (int i = 0; i < grabbablesOnThisHex.Count; i++)
         {
-            grabbablesOnThisHex[i].gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + (0.5f + 0.5f * i), transform.position.z);
+            grabbablesOnThisHex[i].gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + (0.3f + 0.3f * i), transform.position.z);
         }
         
     }
