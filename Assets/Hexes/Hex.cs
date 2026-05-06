@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 public enum HexState
 {
@@ -72,6 +74,26 @@ public abstract class Hex : MonoBehaviour
         InitializeRelativeCoords();
     }
 
+    private static Vector2Int[] odd = new Vector2Int[6]
+    {
+        new Vector2Int(-1, 0),
+        new Vector2Int(1, 0),
+        new Vector2Int(0, -1),
+        new Vector2Int(1, -1),
+        new Vector2Int(0, 1),
+        new Vector2Int(1, 1)
+    };
+    private static Vector2Int[] even = new Vector2Int[6]
+    {
+        new Vector2Int(-1, 0),
+        new Vector2Int(1, 0),
+        new Vector2Int(0, -1),
+        new Vector2Int(-1, -1),
+        new Vector2Int(0, 1),
+        new Vector2Int(-1, 1)
+    };
+
+    private  Vector2Int[] offsetNeighbhor;
     private void InitializeRelativeCoords()
     {
         int relativeX = 0;
@@ -98,6 +120,13 @@ public abstract class Hex : MonoBehaviour
         
         relativeCoords.x = relativeX;
         relativeCoords.y = relativeY;
+
+        gridManager.hexes[relativeCoords.x, relativeCoords.y]=this;
+        offsetNeighbhor = (relativeCoords.y % 2 == 0) switch
+        {
+            true => even,
+            false => odd
+        };
     }
 
     private void Update()
@@ -259,10 +288,53 @@ public abstract class Hex : MonoBehaviour
 
     public virtual void AddGrabbable(Grabbable grabbable)
     {
+        if (grabbablesOnThisHex.Count == maxNbrOfGrabbable)
+        {
+            Overflow(grabbable);
+            return;
+        }
         grabbablesOnThisHex.Add(grabbable);
         grabbablesOnThisHex.TrimExcess();
         grabbable.actualHex = this;
        
+    }
+
+    public GameObject trashHex;
+    public void Overflow(Grabbable grabbable)
+    {
+        //initalise option
+        List<int> availableNeighbor = (new int[6] { 0, 1, 2, 3, 4, 5 }).ToList();
+        //while to find the good one//
+        while (availableNeighbor.Count>0)
+        {
+            int random = Random.Range(0, availableNeighbor.Count - 1);
+            Vector2Int overflowTo = relativeCoords + offsetNeighbhor[random];
+            bool insideX = overflowTo.x >= gridManager.hexes.GetLowerBound(0) &&
+                            overflowTo.x <= gridManager.hexes.GetUpperBound(0);
+            bool insideY = overflowTo.y >= gridManager.hexes.GetLowerBound(1) &&
+                            overflowTo.y <= gridManager.hexes.GetUpperBound(1);
+            if (insideY && insideX)
+            {
+                Hex targetHex= gridManager.hexes[overflowTo.x, overflowTo.y];
+                if (targetHex.grabbablesOnThisHex.Count < targetHex.maxNbrOfGrabbable)
+                {
+                    gridManager.hexes[overflowTo.x, overflowTo.y].AddGrabbable(grabbable);
+                    return;
+                }
+                
+            }
+            availableNeighbor.RemoveAt(random);
+            availableNeighbor.TrimExcess();
+        }
+        //if no good one//
+        Instantiate(trashHex);
+        for (int i = 0; i < grabbablesOnThisHex.Count; i++)
+        {
+            Destroy(grabbablesOnThisHex[i]);
+        }
+        Destroy(gameObject);
+
+
     }
 
     public virtual void RemoveGrabbable(Grabbable grabbable)
@@ -292,3 +364,4 @@ public abstract class Hex : MonoBehaviour
 
    
 }
+

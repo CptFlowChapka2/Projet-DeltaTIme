@@ -115,4 +115,5 @@ MonoBehaviour:
   feedbackTimerDanger: {fileID: 6201525874575531329}
   gridManager: {fileID: 0}
   lvlInfos: {fileID: 0}
+  trashHex: {fileID: 5482331452799643952, guid: e1017c0da15563942aff61caf3d69b11, type: 3}
   speedBoost: 1

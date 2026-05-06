@@ -2746,6 +2746,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2807028420444667223, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_JoinBehavior
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807028420444667223, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_PlayerPrefab
+      value: 
+      objectReference: {fileID: 9172023264891735144, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+    - target: {fileID: 2807028420444667223, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_JoinAction.m_Action.m_Name
+      value: Join
+      objectReference: {fileID: 0}
     - target: {fileID: 4919614783463189550, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -4008,8 +4020,8 @@ SceneRoots:
   - {fileID: 1362122899}
   - {fileID: 1687780486}
   - {fileID: 2055078717}
-  - {fileID: 2468010865620526788}
   - {fileID: 1298800718}
+  - {fileID: 2468010865620526788}
   - {fileID: 833258890}
   - {fileID: 908247749}
   - {fileID: 968227927}

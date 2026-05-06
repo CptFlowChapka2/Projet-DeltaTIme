@@ -1,2 +1,19 @@
 fileFormatVersion: 2
 guid: 98e372a82f0eb2e42a1ba02e851fc33e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - idleMaterial: {instanceID: 0}
+  - hoveredMaterial: {instanceID: 0}
+  - meshRenderer: {instanceID: 0}
+  - outlineDanger: {instanceID: 0}
+  - feedbackTimerDanger: {instanceID: 0}
+  - gridManager: {instanceID: 0}
+  - lvlInfos: {instanceID: 0}
+  - trashHex: {fileID: 5482331452799643952, guid: e1017c0da15563942aff61caf3d69b11, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

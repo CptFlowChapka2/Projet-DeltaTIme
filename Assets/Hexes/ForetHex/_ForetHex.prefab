@@ -123,10 +123,12 @@ MonoBehaviour:
   feedbackTimerDanger: {fileID: 7959206628883173614}
   gridManager: {fileID: 0}
   lvlInfos: {fileID: 0}
+  trashHex: {fileID: 5482331452799643952, guid: e1017c0da15563942aff61caf3d69b11, type: 3}
   cloggerObject: {fileID: 3627994793087617799, guid: 5e6332d21f2956d4ea70ef15e5d8401d, type: 3}
   numberOfTicksToClog: 4
-  numberOfObjectToClog: 3
+  numberOfObjectToClog: 2
   clogType: 101
+  permaClogger: 1
 --- !u!1 &7620475024843042560 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3012410026872884532, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}

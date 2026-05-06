@@ -9,6 +9,7 @@ public class CloggerHex : Hex
     [SerializeField] private IngredientType clogType;
     private IngredientsDictionary ingredientsDictionary;
     private int numberOfTicks;
+    public bool permaClogger = false;
 
     protected override void Start()
     {
@@ -32,8 +33,9 @@ public class CloggerHex : Hex
         }
         
         //end base
-        if (grabbablesOnThisHex.Last() is Ingredient &&
-            ((Ingredient)grabbablesOnThisHex.Last()).type == clogType) return;
+        
+        if (grabbablesOnThisHex.Last() is Ingredient &&(!permaClogger&&
+            ((Ingredient)grabbablesOnThisHex.Last()).type == clogType)) return;
         if (grabbablesOnThisHex.First() is not null)
         {
             numberOfTicks++;

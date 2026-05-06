@@ -519,6 +519,7 @@ MonoBehaviour:
   feedbackTimerDanger: {fileID: 3349463296004600538}
   gridManager: {fileID: 0}
   lvlInfos: {fileID: 0}
+  trashHex: {fileID: 5482331452799643952, guid: e1017c0da15563942aff61caf3d69b11, type: 3}
 --- !u!1 &2065762723515193146
 GameObject:
   m_ObjectHideFlags: 0
