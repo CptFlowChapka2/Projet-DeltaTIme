@@ -288,7 +288,8 @@ public abstract class Hex : MonoBehaviour
 
     public virtual void AddGrabbable(Grabbable grabbable)
     {
-        if (grabbablesOnThisHex.Count == maxNbrOfGrabbable)
+        int totalGrabbables = OnlyIngredientsNumber();
+        if (totalGrabbables == maxNbrOfGrabbable)
         {
             Overflow(grabbable);
             return;
@@ -297,6 +298,13 @@ public abstract class Hex : MonoBehaviour
         grabbablesOnThisHex.TrimExcess();
         grabbable.actualHex = this;
        
+    }
+
+    public int OnlyIngredientsNumber()
+    {
+        int totalgrabables = grabbablesOnThisHex.Count;
+        if (grabbablesOnThisHex.Count>0&&grabbablesOnThisHex.First() is Machine or Player) totalgrabables -= 1;
+        return totalgrabables;
     }
 
     public GameObject trashHex;
@@ -313,16 +321,18 @@ public abstract class Hex : MonoBehaviour
                             overflowTo.x <= gridManager.hexes.GetUpperBound(0);
             bool insideY = overflowTo.y >= gridManager.hexes.GetLowerBound(1) &&
                             overflowTo.y <= gridManager.hexes.GetUpperBound(1);
-            if (insideY && insideX)
+            
+            if (insideY && insideX && gridManager.hexes[overflowTo.x, overflowTo.y] is not null)
             {
                 Hex targetHex= gridManager.hexes[overflowTo.x, overflowTo.y];
-                if (targetHex.grabbablesOnThisHex.Count < targetHex.maxNbrOfGrabbable)
+                if (targetHex.OnlyIngredientsNumber() < targetHex.maxNbrOfGrabbable)
                 {
-                    gridManager.hexes[overflowTo.x, overflowTo.y].AddGrabbable(grabbable);
+                    targetHex.AddGrabbable(grabbable);
                     return;
                 }
                 
             }
+            
             availableNeighbor.RemoveAt(random);
             availableNeighbor.TrimExcess();
         }
