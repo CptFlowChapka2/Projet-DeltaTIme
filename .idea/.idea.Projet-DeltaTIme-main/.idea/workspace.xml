@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Ingredient/PureIngredient.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Ingredient/PureIngredient.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +164,8 @@
       <workItem from="1777403684477" duration="4266000" />
       <workItem from="1777538172588" duration="13561000" />
       <workItem from="1777891111337" duration="16101000" />
-      <workItem from="1777980630187" duration="523000" />
+      <workItem from="1777980630187" duration="1876000" />
+      <workItem from="1778149908243" duration="1056000" />
     </task>
     <servers />
   </component>
