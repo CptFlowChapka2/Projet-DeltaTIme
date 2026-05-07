@@ -76,6 +76,8 @@ public class Machine : Grabbable
         {
             tickCounter++;
             if (tickCounter < timeToReactivate) return;
+            _lastMachineRuleToFollow = new MachineRule();
+            _actualMachineRuleToFollow = new MachineRule();
             isActive = true;
             ActualVariant = beforeGrabVariant;
             tickCounter = 0;

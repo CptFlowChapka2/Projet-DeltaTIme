@@ -62,6 +62,11 @@ public class Grabber : MonoBehaviour
     private void GrabOn(Hex hex)
     {
         currentGrabbedObject = hex.grabbablesOnThisHex.Last();
+        if (currentGrabbedObject is Machine)
+        {
+            Machine currentMachine = currentGrabbedObject as Machine;
+            currentMachine.loadingBarFrame.SetActive(false);
+        }
         currentGrabbedObject.isGrabbed = true;
         currentGrabbedObject.isActive = false;
         
