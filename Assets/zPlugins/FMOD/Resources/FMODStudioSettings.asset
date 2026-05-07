@@ -780,11 +780,7 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  - Desktop/Master
   Banks:
-  - Desktop/FX
-  - Desktop/Music
-  - Desktop/Placeholders
   - FX
   - Music
   - Placeholders

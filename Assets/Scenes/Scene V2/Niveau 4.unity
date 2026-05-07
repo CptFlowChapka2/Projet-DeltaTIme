@@ -2897,8 +2897,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
   grabbers:
-  - {fileID: 1991647727}
   - {fileID: 717498320}
+  - {fileID: 1991647727}
   popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
   LvlInfos: {fileID: 1866025554}
 --- !u!4 &908247749
@@ -7501,6 +7501,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6359404661560659001, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Keyboard
+      objectReference: {fileID: 0}
     - target: {fileID: 6918368824221570355, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: PauseMenu
       value: 
@@ -7582,6 +7586,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6259642269522535382, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Mouse
+      objectReference: {fileID: 0}
     - target: {fileID: 7272740952661141534, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.61

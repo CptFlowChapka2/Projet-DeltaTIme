@@ -144,14 +144,13 @@ public class Machine : Grabbable
         
         foreach (MachineRule rule in rules)
         {
-            //prend en priorité les rélge spawner si présente
+            //prend en priorité les règles spawner si présentes
             if (rule.inputs.Contains(IngredientType.None) && ingredientsTypes.Count == 0)
             {
                 _actualMachineRuleToFollow = rule;
                 soundManager.numberOfMachinesWorking++;
                 break;
             }
-
             
             var intersection =ingredientsTypes.Where(x => rule.inputs.Contains(x)).ToList();
             //Ca doit être exactement la même, mais pas forcément dans le même ordre
@@ -161,9 +160,29 @@ public class Machine : Grabbable
                 && intersectionIngredientsTypes.Count() == ingredientsTypes.Count //verifie que on as bien que les ingredient qu'on as
                 && ingredientsTypes.Count == nextGrabbables.Count)
             {
-                _actualMachineRuleToFollow = rule;
-                soundManager.numberOfMachinesWorking++;
-                break;
+                bool isTheRightRule = true;
+                List<IngredientType> ruleIngredients = new List<IngredientType>(rule.inputs.ToList());
+                while (ruleIngredients.Count > 0)
+                {
+                    if (!intersectionIngredientsTypes.Contains(ruleIngredients.First()))
+                    {
+                        isTheRightRule = false;
+                        ruleIngredients.Clear();
+                    }
+                    else
+                    {
+                        intersectionIngredientsTypes.Remove(intersectionIngredientsTypes.First(x => x == ruleIngredients.First()));
+                        intersectionIngredientsTypes.TrimExcess();
+                        ruleIngredients.RemoveAt(0);
+                        ruleIngredients.TrimExcess();
+                    }
+                }
+                if (isTheRightRule)
+                {
+                    _actualMachineRuleToFollow = rule;
+                    soundManager.numberOfMachinesWorking++;
+                    break;
+                }
             }
         }
 

@@ -6,8 +6,31 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop/FX.bank" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop/FX.bank.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop/Master.bank" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop/Master.bank.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop/Master.strings.bank" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop/Master.strings.bank.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop/Music.bank" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop/Music.bank.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop/Placeholders.bank" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Desktop/Placeholders.bank.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Placeholders.bank.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Placeholders.bank.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M6_Dopeur d'araignée/M6_Dopeur d'araignée.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M6_Dopeur d'araignée/M6_Dopeur d'araignée.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerController Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerController Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerMouse Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerMouse Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +187,7 @@
       <workItem from="1777538172588" duration="13561000" />
       <workItem from="1777891111337" duration="16101000" />
       <workItem from="1777980630187" duration="1876000" />
-      <workItem from="1778149908243" duration="2900000" />
+      <workItem from="1778149908243" duration="7343000" />
     </task>
     <servers />
   </component>

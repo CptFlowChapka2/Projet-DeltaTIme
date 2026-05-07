@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'rules.Array.data[0].inputs.Array.data[0]'
-      value: 101
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'rules.Array.data[0].inputs.Array.data[1]'
-      value: 7
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'rules.Array.data[0].outputs.Array.data[0]'
@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8560154120968043082, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_LocalPosition.z

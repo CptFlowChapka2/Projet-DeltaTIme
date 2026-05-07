@@ -265,9 +265,17 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6918368824221570355}
+    - target: {fileID: 2045901662573077606, guid: a723f219f269cdf45846a08439ac5682, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5486954020817971707, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: m_Name
       value: ArmController
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486954020817971707, guid: a723f219f269cdf45846a08439ac5682, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6163036269804464815, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: player
@@ -324,6 +332,10 @@ PrefabInstance:
     - target: {fileID: 7389352983907942657, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7499603452662678127, guid: a723f219f269cdf45846a08439ac5682, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8613057486370094761, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: m_IsTrigger

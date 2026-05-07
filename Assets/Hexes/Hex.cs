@@ -340,7 +340,7 @@ public abstract class Hex : MonoBehaviour
         Instantiate(trashHex);
         for (int i = 0; i < grabbablesOnThisHex.Count; i++)
         {
-            Destroy(grabbablesOnThisHex[i]);
+            Destroy(grabbablesOnThisHex[i].gameObject);
         }
         Destroy(gameObject);
 
