@@ -72,6 +72,7 @@ public class Machine : Grabbable
 
     public override void Tick()
     {
+        Debug.Log("ticked"+" "+gameObject.name);
         if (!isActive)
         {
             tickCounter++;

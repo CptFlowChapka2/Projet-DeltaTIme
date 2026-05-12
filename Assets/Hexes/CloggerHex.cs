@@ -34,15 +34,22 @@ public class CloggerHex : Hex
         
         //end base
         
-        if (grabbablesOnThisHex.Last() is Ingredient &&(!permaClogger&&
-            ((Ingredient)grabbablesOnThisHex.Last()).type == clogType)) return;
+        if (VerifyAndClocg()) return;
+        grabbablesOnThisHex?.First()?.Tick();
+    }
+
+    private bool VerifyAndClocg()
+    {
+        if (grabbablesOnThisHex.Last() is Ingredient &&(!permaClogger&& ((Ingredient)grabbablesOnThisHex.Last()).type == clogType)) return false;
         if (grabbablesOnThisHex.First() is not null)
         {
+            //contournement , le clogger fait ticker les machine inactive 
+            if(grabbablesOnThisHex.First() is Machine&&
+               !((Machine)grabbablesOnThisHex.First()).isActive)((Machine)
+                grabbablesOnThisHex.First()).Tick();
             numberOfTicks++;
             if (numberOfTicks >= numberOfTicksToClog)
             {
-                // if(((Machine)grabbablesOnThisHex.First()).isActive)
-                // ((Machine)grabbablesOnThisHex.First()).tickCounter = 0;
                 numberOfTicks = 0;
                 for (int i = 0; i < numberOfObjectToClog; i++)
                 {
@@ -51,12 +58,13 @@ public class CloggerHex : Hex
                         Quaternion.identity).GetComponent<Ingredient>();
                     clogIngredient.Initialize(clogType, ingredientsDictionary, this);
                 }
-                return;
+                return true;
             }
             
             
         }
-        grabbablesOnThisHex?.First()?.Tick();
+
+        return false;
     }
 
     public override void RemoveGrabbable(Grabbable grabbable)
