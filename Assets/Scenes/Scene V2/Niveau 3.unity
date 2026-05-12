@@ -408,6 +408,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
   m_PrefabInstance: {fileID: 1473585209}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &178497446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3078631323190466728, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
+  m_PrefabInstance: {fileID: 1298800718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e9efd3aeac57346aeff20ffe4d8819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Grabber
 --- !u!4 &216481803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -1445,7 +1456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
   grabbers:
-  - {fileID: 1298800719}
+  - {fileID: 178497446}
   - {fileID: 2468010865620526790}
   popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
   LvlInfos: {fileID: 21397031}
@@ -2280,17 +2291,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
---- !u!114 &1298800719 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2175706232144867036, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
-  m_PrefabInstance: {fileID: 1298800718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e9efd3aeac57346aeff20ffe4d8819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Grabber
 --- !u!4 &1298800721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7860804802329994235, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
