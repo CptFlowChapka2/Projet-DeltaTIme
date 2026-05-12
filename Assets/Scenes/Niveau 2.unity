@@ -15245,7 +15245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
   grabbers:
   - {fileID: 203073381}
-  - {fileID: 2146549324}
+  - {fileID: 1086727566}
   popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
   LvlInfos: {fileID: 1165446270}
 --- !u!4 &908247749
@@ -15268,6 +15268,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7563654524914433196, guid: 7095f54536ed6c04abb947430847627b, type: 3}
   m_PrefabInstance: {fileID: 1316323040}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &911885568
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1620542186042323500, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.376507
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.071118
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620542186042323500, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069021732222533038, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: m_Name
+      value: M2_Extracteuse de Crabisilice
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
 --- !u!4 &914550668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -18355,6 +18412,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+--- !u!114 &1086727566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3078631323190466728, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
+  m_PrefabInstance: {fileID: 1298800718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e9efd3aeac57346aeff20ffe4d8819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Grabber
 --- !u!1001 &1088261469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38778,17 +38846,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
---- !u!114 &2146549324 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2175706232144867036, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
-  m_PrefabInstance: {fileID: 1298800718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e9efd3aeac57346aeff20ffe4d8819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Grabber
 --- !u!1001 &2468010865620526788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38898,3 +38955,4 @@ SceneRoots:
   - {fileID: 2040831037}
   - {fileID: 464688160}
   - {fileID: 1421528494}
+  - {fileID: 911885568}
