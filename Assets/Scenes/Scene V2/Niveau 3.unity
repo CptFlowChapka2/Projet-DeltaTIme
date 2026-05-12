@@ -1445,8 +1445,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
   grabbers:
-  - {fileID: 2468010865620526790}
   - {fileID: 1298800719}
+  - {fileID: 2468010865620526790}
   popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
   LvlInfos: {fileID: 21397031}
 --- !u!4 &908247749

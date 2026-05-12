@@ -24,13 +24,7 @@ public class UIManager : MonoBehaviour
     public Image[] rule2Outputs;
     [Header("HexRules")]
     public TMP_Text hexName;
-    public Image element1;
-    public Image element2;
-    public Image element3;
-    public Image element4;
-    public Image element5;
-    public Image element6;
-    public Image element7;
+    public Image hexRule;
 
     private void Start()
     {
@@ -68,7 +62,7 @@ public class UIManager : MonoBehaviour
     private void DisplayHexUI()
     {
         hexName.text = hex.hexName;
-        //todo éléments de HexRules à afficher
+        hexRule.sprite = hex.hexUIInfo;
     }
 
     private void DisplayIngredientsUI()

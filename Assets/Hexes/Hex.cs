@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 
@@ -38,6 +39,7 @@ public struct HexRule : IEquatable<HexRule>
 public abstract class Hex : MonoBehaviour
 {
     public string hexName;
+    public Sprite hexUIInfo;
     public HexRule[] hexRules;
     public Vector2Int relativeCoords;
     public List<Grabbable> grabbablesOnThisHex = new List<Grabbable>();

@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloggerHex
   hexName: Lac Magique
+  hexUIInfo: {fileID: 21300000, guid: dc8653fcb29ced84684170b842d9d3f9, type: 3}
   hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
@@ -118,6 +119,7 @@ MonoBehaviour:
   numberOfTicksToClog: 2
   numberOfObjectToClog: 1
   clogType: 100
+  permaClogger: 0
 --- !u!1 &7865485917454419057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3012410026872884532, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}

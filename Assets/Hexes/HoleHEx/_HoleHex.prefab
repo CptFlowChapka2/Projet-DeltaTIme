@@ -95,13 +95,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f68ba620cc8f7429a06f4bf889a3b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HalfBlockerHex
-  hexName: "Case D\xE9sol\xE9"
+  hexName: Crevasse
+  hexUIInfo: {fileID: 21300000, guid: 890521f4f691e234f89088c905ab97e1, type: 3}
   hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
   state: 1
-  maxNbrOfGrabbable: 1
+  maxNbrOfGrabbable: 0
   idleMaterial: {fileID: 2100000, guid: d4ca6c4707452cf4c96013a9f4a3e57a, type: 2}
   hoveredMaterial: {fileID: 2100000, guid: fd72e2458ef7a18469b1fb7298d9e7c6, type: 2}
   meshRenderer: {fileID: 4404961518762154180}

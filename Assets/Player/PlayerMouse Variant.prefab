@@ -145,7 +145,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 792292437903336149, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+    - {fileID: 9172500410545223380, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       insertIndex: -1
@@ -264,10 +266,6 @@ PrefabInstance:
     - target: {fileID: 115498425802377792, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
       propertyPath: m_Name
       value: GrabberMouse
-      objectReference: {fileID: 0}
-    - target: {fileID: 6135125014848952520, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6434234126201781304, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
       propertyPath: m_LocalPosition.x

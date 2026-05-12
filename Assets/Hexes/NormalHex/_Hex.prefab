@@ -500,6 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NormalHex
   hexName: Case de Base
+  hexUIInfo: {fileID: 21300000, guid: 91c964b219e2e5a45b3e3e27711568f3, type: 3}
   hexRules:
   - inputs: 650000006500000065000000
     replacementHex: {fileID: 5482331452799643952, guid: 22524315a222dd24c8690af0973fe409, type: 3}

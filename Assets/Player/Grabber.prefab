@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5041740305350047247}
   m_Layer: 2
   m_Name: Grabber
-  m_TagString: ArmBlocker
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e9efd3aeac57346aeff20ffe4d8819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grabber
+  currentHoveredHexGO: {fileID: 0}
   currentHoveredHex: {fileID: 0}
   currentGrabbedObject: {fileID: 0}
 --- !u!1 &7841324469441209801
