@@ -897,6 +897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "M13_D\xE9pot_de_Bouteille"
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 5283947fb0028ca4f9a3db88190c0eb9, type: 3}
+      propertyPath: rules.Array.data[0].numberOfTicksToPerform
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
