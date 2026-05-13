@@ -114,7 +114,7 @@ public class Player : Grabbable
         switch (state)
         {
             case PlayerState.Idle:
-                Spin1Axis();
+                Spin();
                 break;
             case PlayerState.Stunned:
                 break;
@@ -177,7 +177,7 @@ public class Player : Grabbable
     }
 
     private Vector2 stickInputLastFrame = new Vector2();
-    private void Spin1Axis()
+    private void Spin()
     {
         float spinValue = 0;
         
@@ -198,7 +198,7 @@ public class Player : Grabbable
                 }
                 else
                 {
-                    spinValue = -Time.fixedDeltaTime * rotationSpeed;
+                    spinValue = -(Time.fixedDeltaTime * rotationSpeed);
                 }
             }
         }
