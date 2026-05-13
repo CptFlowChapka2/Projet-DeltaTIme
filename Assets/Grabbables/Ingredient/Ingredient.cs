@@ -5,10 +5,12 @@ public class Ingredient : Grabbable
 {
     public IngredientType type;
     [SerializeField] private SpriteRenderer ingredientStickerRenderer;
-    private IngredientsDictionary dictionary; 
+    private IngredientsDictionary dictionary;
+    private bool wasInit = false;
 
     public void Initialize(IngredientType ingredientType, IngredientsDictionary ingredientsDictionary, Hex hex)
     {
+        wasInit = true;
          type = ingredientType;
          dictionary = ingredientsDictionary;
          variants = dictionary.AskForVariants(ingredientType);
@@ -21,5 +23,9 @@ public class Ingredient : Grabbable
     protected override void Start()
     {
         base.Start();
+        if (!wasInit)
+        { 
+            ingredientStickerRenderer.sprite = idSprite;
+        }
     }
 }

@@ -347,7 +347,7 @@
                     "path": "<Gamepad>/leftStick/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Controller",
                     "action": "Spin",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -369,7 +369,7 @@
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Controller",
                     "action": "Spin",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -380,7 +380,7 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Controller",
                     "action": "Spin",
                     "isComposite": false,
                     "isPartOfComposite": true
