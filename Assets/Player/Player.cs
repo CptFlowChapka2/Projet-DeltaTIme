@@ -21,6 +21,7 @@ public class Player : Grabbable
     [SerializeField] private float maxExtentionLength;
     [SerializeField] private float minExtentionLength;
     public PlayerInput playerInput;
+    private bool controls2D = false;
     private InputAction spinAction;
     private InputAction extendRetractAction;
     private InputAction grabReleaseAction;
@@ -51,7 +52,15 @@ public class Player : Grabbable
         armVector = new Vector3(0, 0, 2.5f);
         playerInput = GetComponent<PlayerInput>(); 
         rb = GetComponent<Rigidbody>();
-        spinAction = playerInput.actions["Spin"];
+        if (playerInput.defaultControlScheme == "Controller")
+        {
+            controls2D = true;
+            spinAction = playerInput.actions["Spin2D"];
+        }
+        else
+        {
+            spinAction = playerInput.actions["Spin"];
+        }
         extendRetractAction = playerInput.actions["Extend"];
         grabReleaseAction = playerInput.actions["Grab"];
         pauseAction = playerInput.actions["Pause"];
@@ -170,26 +179,30 @@ public class Player : Grabbable
     private Vector2 stickInputLastFrame = new Vector2();
     private void Spin1Axis()
     {
-        bool controlMode = playerInput.currentActionMap.name.Equals("AnyPlayer/controller");
-        float spinValue=0;
-        if (controlMode)
+        float spinValue = 0;
+        
+        if (!controls2D)
         {
-            Vector2 thisFrameRead = spinAction.ReadValue<Vector2>() ;
-            if (thisFrameRead == Vector2.zero)
-            {
-                spinValue = 0;
-                rb.angularVelocity = new Vector3(0, spinValue, 0);
-                return;
-            }
-            
-            //thisFrameRead = Vector2.MoveTowards(stickInputLastFrame, thisFrameRead, (Time.fixedDeltaTime * rotationSpeed));
-            spinValue = -Vector2.SignedAngle(stickInputLastFrame, thisFrameRead)*(Time.deltaTime * rotationSpeed);
-            stickInputLastFrame = thisFrameRead;
-        }
-        else
-        { 
             spinValue = spinAction.ReadValue<float>() * Time.fixedDeltaTime * rotationSpeed;
         }
+        else
+        {
+            Vector2 inputVector = spinAction.ReadValue<Vector2>();
+            if (inputVector != Vector2.zero)
+            {
+                Vector3 projectedVector = new Vector3(inputVector.x, 0, inputVector.y);
+                float incidenceAngle = Vector3.SignedAngle(armVector, projectedVector, Vector3.up);
+                if (incidenceAngle > 0)
+                {
+                    spinValue = Time.fixedDeltaTime * rotationSpeed;
+                }
+                else
+                {
+                    spinValue = -Time.fixedDeltaTime * rotationSpeed;
+                }
+            }
+        }
+        
         rb.angularVelocity = new Vector3(0, spinValue, 0);
     }
 

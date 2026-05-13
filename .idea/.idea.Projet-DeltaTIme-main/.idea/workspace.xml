@@ -6,24 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/CameraPositionning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/CameraPositionning.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/ForetHex/_ForetHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/ForetHex/_ForetHex.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/HalfBlockerHex/_HalfBlockerHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/HalfBlockerHex/_HalfBlockerHex.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/HoleHEx/_HoleHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/HoleHEx/_HoleHex.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/LacMagiqueHex/_LacMagiqueHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/LacMagiqueHex/_LacMagiqueHex.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/TrashHEx/_TrashHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/TrashHEx/_TrashHex.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerController Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerController Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerMouse Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerMouse Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PATRON NIVEAU.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PATRON NIVEAU.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene V2/Niveau 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene V2/Niveau 2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene V2/Niveau 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene V2/Niveau 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene V2/Niveau 4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene V2/Niveau 4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerInputActions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

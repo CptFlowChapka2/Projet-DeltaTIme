@@ -7,6 +7,15 @@
             "id": "02ea2448-e698-40bf-9006-0b31264aabcb",
             "actions": [
                 {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "32702e6b-8ece-4e52-8671-b003ac06f34c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Grab",
                     "type": "Button",
                     "id": "c99895cf-7591-436b-a3e6-681fc5615737",
@@ -34,10 +43,10 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "32702e6b-8ece-4e52-8671-b003ac06f34c",
-                    "expectedControlType": "",
+                    "name": "Spin2D",
+                    "type": "PassThrough",
+                    "id": "5984eb94-741f-4b66-b56b-4a927a446803",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -199,6 +208,83 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "1D Axis",
+                    "id": "fb22f63e-832d-4463-a093-8f8891914799",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spin2D",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "f08da844-9559-4204-9f0b-f1961ae70f2c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Mouse",
+                    "action": "Spin2D",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "6044d8c3-631a-4a2a-9420-ef20dcb55ebd",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Mouse",
+                    "action": "Spin2D",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "531e8a94-ceb4-4164-bc7d-c29dedcb474a",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Spin2D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "a1feabee-3ad4-448b-8b6a-e0f0788e4809",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spin2D",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "a8c61cfd-2505-4b87-a991-09e97e50132b",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Spin2D",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "de5d7064-1a4e-4722-972c-8915a84c51f3",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Spin2D",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "28c7dbd8-1982-47a6-8c5d-e72f75734b0e",
                     "path": "<Keyboard>/p",
@@ -227,18 +313,18 @@
             "id": "3814bb5c-54eb-410e-a12d-fc06c91d1dc4",
             "actions": [
                 {
-                    "name": "Grab",
+                    "name": "Pause",
                     "type": "Button",
-                    "id": "72b820ab-9608-4196-a2f8-4f056086c6d8",
+                    "id": "37adb554-4912-4cc0-9bf9-96f7af03477f",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pause",
+                    "name": "Grab",
                     "type": "Button",
-                    "id": "37adb554-4912-4cc0-9bf9-96f7af03477f",
+                    "id": "72b820ab-9608-4196-a2f8-4f056086c6d8",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -258,6 +344,15 @@
                     "type": "PassThrough",
                     "id": "e850f53f-e04b-4a4e-b921-b7b5524e0b21",
                     "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Spin2D",
+                    "type": "PassThrough",
+                    "id": "4f6e3f02-f0f4-4282-b5d7-43070bcd9be7",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -347,7 +442,7 @@
                     "path": "<Gamepad>/leftStick/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Controller",
+                    "groups": "",
                     "action": "Spin",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -369,7 +464,7 @@
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Controller",
+                    "groups": "",
                     "action": "Spin",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -380,8 +475,85 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Controller",
+                    "groups": "",
                     "action": "Spin",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "6bf63c54-25a0-4339-9c3b-120dd426e031",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spin2D",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "060c99e1-42d8-4e77-aa5b-22dca070e474",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Spin2D",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "c44b4342-3ac0-44a8-9e83-c51cc548a491",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Spin2D",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "7848c056-919f-408f-9fc9-8c10e32d6228",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Spin2D",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "66358792-f497-456c-9fec-a0c7cb69e87b",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spin2D",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "3ba674e6-4477-4401-9fec-f38d55625ece",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Spin2D",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "b373ef3d-5f68-4ef2-ad95-b28fe9fa0033",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Spin2D",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
