@@ -74,6 +74,11 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
   m_PrefabInstance: {fileID: 8677189576062136219}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3353802546626910919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6260153391563453788, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+  m_PrefabInstance: {fileID: 8677189576062136219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5883296537340191407 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3012410026872884532, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -102,14 +107,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnergizerHex
   hexName: Energizer
+  hexUIInfo: {fileID: 0}
   hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
+  isHovered: 0
   state: 1
   maxNbrOfGrabbable: 3
-  idleMaterial: {fileID: 2100000, guid: eed4707081ff4394ba33d13a942c9562, type: 2}
-  hoveredMaterial: {fileID: 2100000, guid: 0c1507039180d1b438ecf6ee31067b62, type: 2}
+  hoveringOutline: {fileID: 3353802546626910919}
   meshRenderer: {fileID: 1530640247853716893}
   outlineDanger: {fileID: 5883296537340191407}
   feedbackTimerDanger: {fileID: 6201525874575531329}

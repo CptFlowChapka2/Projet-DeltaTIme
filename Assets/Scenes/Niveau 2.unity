@@ -15244,8 +15244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
   grabbers:
-  - {fileID: 203073381}
   - {fileID: 1086727566}
+  - {fileID: 203073381}
   popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
   LvlInfos: {fileID: 1165446270}
 --- !u!4 &908247749
@@ -38981,6 +38981,6 @@ SceneRoots:
   - {fileID: 968227927}
   - {fileID: 872540902}
   - {fileID: 2040831037}
+  - {fileID: 911885568}
   - {fileID: 464688160}
   - {fileID: 1421528494}
-  - {fileID: 911885568}

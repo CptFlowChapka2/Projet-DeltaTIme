@@ -14,8 +14,11 @@ public class Grabber : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, -transform.up * 3f, out RaycastHit hit))
         {
+            if (currentHoveredHex) currentHoveredHex.isHovered = false;
+            
             currentHoveredHexGO = hit.collider.gameObject;
             currentHoveredHex = currentHoveredHexGO.GetComponentInParent<Hex>();
+            currentHoveredHex.isHovered = true;
         }
 
         if (currentGrabbedObject)
