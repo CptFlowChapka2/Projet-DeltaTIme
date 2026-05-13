@@ -73,6 +73,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7401489805556634640}
   m_SourcePrefab: {fileID: 100100000, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+--- !u!1 &474960153189717918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6260153391563453788, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+  m_PrefabInstance: {fileID: 5798364633111601858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &4404961518762154180 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -101,10 +106,10 @@ MonoBehaviour:
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
+  isHovered: 0
   state: 1
   maxNbrOfGrabbable: 0
-  idleMaterial: {fileID: 2100000, guid: d4ca6c4707452cf4c96013a9f4a3e57a, type: 2}
-  hoveredMaterial: {fileID: 2100000, guid: fd72e2458ef7a18469b1fb7298d9e7c6, type: 2}
+  hoveringOutline: {fileID: 474960153189717918}
   meshRenderer: {fileID: 4404961518762154180}
   outlineDanger: {fileID: 8771278265267220470}
   feedbackTimerDanger: {fileID: 9082708175787790360}

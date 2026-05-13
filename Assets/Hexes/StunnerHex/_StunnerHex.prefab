@@ -69,6 +69,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2340722781016191022}
   m_SourcePrefab: {fileID: 100100000, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+--- !u!1 &1652802418750822248 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6260153391563453788, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+  m_PrefabInstance: {fileID: 4616021794255807028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &3267673367902115890 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -92,14 +97,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StunnerHex
   hexName: Salut
+  hexUIInfo: {fileID: 0}
   hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
+  isHovered: 0
   state: 1
   maxNbrOfGrabbable: 3
-  idleMaterial: {fileID: 2100000, guid: 322e0bec561f77b41a6b12cacaf82c3b, type: 2}
-  hoveredMaterial: {fileID: 2100000, guid: 2b96e666c09e6f54aa817d0b539e6350, type: 2}
+  hoveringOutline: {fileID: 1652802418750822248}
   meshRenderer: {fileID: 3267673367902115890}
   outlineDanger: {fileID: 7620475024843042560}
   feedbackTimerDanger: {fileID: 7959206628883173614}
