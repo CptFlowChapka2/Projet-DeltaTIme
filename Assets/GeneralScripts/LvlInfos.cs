@@ -54,7 +54,7 @@ public class LvlInfos : MonoBehaviour
         }
 
         UpdateGeneralInformationText();
-        if (currentLvlTime>lvlDuration||score>=neededscore)
+        if (currentLvlTime>lvlDuration||(neededscore!=-1&&score>=neededscore))
         {
             FindAnyObjectByType<SceneLoader>().LoadNextSceneInGroup();
         }
