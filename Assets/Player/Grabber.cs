@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Grabber : MonoBehaviour
@@ -12,13 +13,14 @@ public class Grabber : MonoBehaviour
 
     private void Update()
     {
-        if (Physics.Raycast(transform.position, -transform.up * 3f, out RaycastHit hit))
+        if (Physics.Raycast(transform.position, -transform.up * 3f, out RaycastHit hit,math.INFINITY,-1,QueryTriggerInteraction.Ignore))
         {
             if (currentHoveredHex) currentHoveredHex.isHovered = false;
             
             currentHoveredHexGO = hit.collider.gameObject;
             currentHoveredHex = currentHoveredHexGO.GetComponentInParent<Hex>();
-            currentHoveredHex.isHovered = true;
+            
+            currentHoveredHex.isHovered= true;
         }
 
         if (currentGrabbedObject)
