@@ -22,6 +22,7 @@ public class LvlInfos : MonoBehaviour
     public UnityEvent Tick = new UnityEvent();
 
     [HideInInspector] public int score;
+     public int neededscore=-1;
     [HideInInspector] public int tNbrTick;
 
     [SerializeField] private bool validIngredientHasSpwaned = false;
@@ -53,7 +54,7 @@ public class LvlInfos : MonoBehaviour
         }
 
         UpdateGeneralInformationText();
-        if (currentLvlTime>lvlDuration)
+        if (currentLvlTime>lvlDuration||score>=neededscore)
         {
             FindAnyObjectByType<SceneLoader>().LoadNextSceneInGroup();
         }
@@ -67,7 +68,16 @@ public class LvlInfos : MonoBehaviour
         
         totalNbrOfTick.text ="Total Nbr Of Tick : \n "+ (tNbrTick).ToString(CultureInfo.InvariantCulture);
         
-        scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture);
+       
+        if (neededscore != -1)
+        {
+            scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture)+"/"+(neededscore).ToString(CultureInfo.InvariantCulture);
+        }
+        else
+        {
+            scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture);
+        }
+        
 
         
     }
