@@ -131,7 +131,7 @@ MonoBehaviour:
   lvlInfos: {fileID: 0}
   trashHex: {fileID: 5482331452799643952, guid: e1017c0da15563942aff61caf3d69b11, type: 3}
   cloggerObject: {fileID: 3627994793087617799, guid: 5e6332d21f2956d4ea70ef15e5d8401d, type: 3}
-  numberOfTicksToClog: 4
+  numberOfTicksToClog: 5
   numberOfObjectToClog: 2
   clogType: 101
   permaClogger: 1
