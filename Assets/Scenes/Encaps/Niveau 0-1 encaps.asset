@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e12d095656f5874398b408a996c17ac, type: 3}
   m_Name: Niveau 0-1 encaps
   m_EditorClassIdentifier: Assembly-CSharp::SceneRefEncaps
-  name: Niveau 0-1
+  sceneName: Niveau 0-1
   previousSceneInGroup: {fileID: 11400000}
   nextSceneInGroup: {fileID: 11400000, guid: 441a12ab87214a245b3cac99c4658e37, type: 2}

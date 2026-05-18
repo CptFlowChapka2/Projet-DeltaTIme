@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e12d095656f5874398b408a996c17ac, type: 3}
   m_Name: Menu encaps
   m_EditorClassIdentifier: Assembly-CSharp::SceneRefEncaps
-  name: Main Menu
+  sceneName: Main Menu
   previousSceneInGroup: {fileID: 11400000}
   nextSceneInGroup: {fileID: 11400000, guid: f63a4ac5d8930b843a84a271e70776e6, type: 2}

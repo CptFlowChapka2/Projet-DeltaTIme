@@ -43,14 +43,14 @@ public class SceneLoader : MonoBehaviour
     public void LoadScene(SceneRefEncaps sceneRefEncaps)
     {
         if(asyncLoad is not null&&!asyncLoad.isDone) return;
-        if(SceneManager.GetActiveScene()==SceneManager.GetSceneByName(sceneRefEncaps.name))return;
+        if(SceneManager.GetActiveScene()==SceneManager.GetSceneByName(sceneRefEncaps.sceneName))return;
         StartCoroutine(LoadYourAsyncScene(sceneRefEncaps));
     }
     
     private IEnumerator LoadYourAsyncScene(SceneRefEncaps sceneRefEncaps)
     {
         
-        asyncLoad = SceneManager.LoadSceneAsync(sceneRefEncaps.name,LoadSceneMode.Single);
+        asyncLoad = SceneManager.LoadSceneAsync(sceneRefEncaps.sceneName,LoadSceneMode.Single);
         while (!asyncLoad.isDone)
         {
             //scene has loaded as much as possible,

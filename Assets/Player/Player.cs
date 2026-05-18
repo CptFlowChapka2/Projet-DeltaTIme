@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 using static System.MathF;
 
 public enum PlayerState
@@ -44,6 +45,9 @@ public class Player : Grabbable
     [NonSerialized] public bool knockedRight = false;
     private float timerKnocked = 0;
 
+    private InputActionMap startInputActionMap;
+    private InputActionMap UIInputActionMap;
+
     protected override void Start()
     {
         base.Start();
@@ -52,7 +56,13 @@ public class Player : Grabbable
         armVector = new Vector3(0, 0, 2.5f);
         playerInput = GetComponent<PlayerInput>(); 
         rb = GetComponent<Rigidbody>();
-        if (playerInput.defaultControlScheme == "Controller")
+        startInputActionMap = playerInput.currentActionMap;
+        playerInput.SwitchCurrentActionMap("UI");
+        UIInputActionMap=playerInput.currentActionMap;
+        playerInput.currentActionMap = startInputActionMap;
+        playerInput.uiInputModule = FindAnyObjectByType<InputSystemUIInputModule>();
+        
+        if (playerInput.GetDevice<Gamepad>() is not null)
         {
             controls2D = true;
             spinAction = playerInput.actions["Spin2D"];
@@ -213,6 +223,14 @@ public class Player : Grabbable
         otherPlayer.isInPause = !otherPlayer.isInPause;
         isInPause = !isInPause;
         PauseMenu.SetActive(!PauseMenu.activeSelf);
+        playerInput.currentActionMap = isInPause switch {
+            true => UIInputActionMap,
+            false => startInputActionMap
+        };
+        otherPlayer.playerInput.currentActionMap = isInPause switch {
+                    true => UIInputActionMap,
+                    false => startInputActionMap
+        };
     }
 
     private void OnDrawGizmos()
