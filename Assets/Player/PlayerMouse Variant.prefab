@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.98
+      value: 31.96
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.47
+      value: 1.61
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -221,24 +221,84 @@ MonoBehaviour:
     m_ActionName: 'PlayerKeyboard/Spin[/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 55dc20a8-7daf-4636-985d-3eb20bb9cc12
-    m_ActionName: AnyPlayer/controller/Grab
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2b97e7e4-3f89-42b5-b2ea-5e4712fadac0
-    m_ActionName: AnyPlayer/controller/Spin
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a3c0e6d3-f446-4717-941d-afb122f0a85e
-    m_ActionName: AnyPlayer/controller/Extend
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 32702e6b-8ece-4e52-8671-b003ac06f34c
     m_ActionName: 'Player1/Mouse/Pause[/Keyboard/enter]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 37adb554-4912-4cc0-9bf9-96f7af03477f
     m_ActionName: 'Player2/keyboard/Pause[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5984eb94-741f-4b66-b56b-4a927a446803
+    m_ActionName: 'Player1/Mouse/Spin2D[/XInputControllerWindows/leftStick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4f6e3f02-f0f4-4282-b5d7-43070bcd9be7
+    m_ActionName: 'Player2/keyboard/Spin2D[/XInputControllerWindows/leftStick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: de5c5b93-4127-4a55-b244-fd4eb24e6155
+    m_ActionName: 'AnyPlayer/Pause[/Keyboard/p,/XInputControllerWindows/start]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c668bf57-1ee5-42e8-9553-c07361f5592b
+    m_ActionName: 'AnyPlayer/Spin[/Keyboard/a,/Keyboard/d,/Mouse/leftButton,/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0afb04d4-790a-40f6-a48d-2e5cfd386af3
+    m_ActionName: 'AnyPlayer/Spin2D[/XInputControllerWindows/leftStick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ebb0e2ee-6f29-4cb5-82fa-cbd5639f8fb1
+    m_ActionName: 'AnyPlayer/Extend[/Keyboard/s,/Keyboard/w,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/rightTrigger,/Mouse/scroll/y]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 806263d8-aeb6-4f83-af20-fdabb877520a
+    m_ActionName: 'AnyPlayer/Grab[/Keyboard/e,/XInputControllerWindows/buttonSouth,/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b77857c6-c74d-4d47-8d9c-48d8c87ba307
+    m_ActionName: 'UI/Navigate[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 472534a4-8f46-4d0d-b6a6-7b3b7c371455
+    m_ActionName: 'UI/Submit[/Keyboard/enter,/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 91520e41-b955-4547-b1da-cc665741af9f
+    m_ActionName: 'UI/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 47b57b95-2d2f-44e2-8685-0a8830befff5
+    m_ActionName: 'UI/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fad238a7-9b1b-4255-88c2-d2cdbdc15c1f
+    m_ActionName: 'UI/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 021fd55c-59b6-4d5d-afd1-aa7581cdb5e0
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8bce0730-ed27-4e36-970c-11c7ed73d9ba
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a4d21338-5ab2-47f1-bb4a-94a27313fed4
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f48da5d0-011d-4c2d-806a-c8c3042a6272
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9219a8fd-cf0a-4a4c-a633-348cc160a1d7
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a8f28fb2-555a-4b02-b5d0-d653cebe85da
+    m_ActionName: 'UI/UnPause[/XInputControllerWindows/start,/Keyboard/p]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player1/Mouse
@@ -359,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 6470175115837651341, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: a45bad161d9f0f844a8392dd5032025f, type: 2}
+      objectReference: {fileID: 2100000, guid: a9d3d10901f514a4fbdf72c08ad462f2, type: 2}
     - target: {fileID: 7235420837653209423, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: player
       value: 
