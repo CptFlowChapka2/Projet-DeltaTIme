@@ -13,6 +13,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: a45bad161d9f0f844a8392dd5032025f, type: 2}
     - target: {fileID: 5558544586297471677, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: AnyPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558544586297471677, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Player2|Keyboard|Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558544586297471677, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 26
       objectReference: {fileID: 0}
