@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e12d095656f5874398b408a996c17ac, type: 3}
-  m_Name: Niveau 4-1 encaps
+  m_Name: Niveau 4-2 encaps
   m_EditorClassIdentifier: Assembly-CSharp::SceneRefEncaps
   sceneName: Niveau 4-2
-  previousSceneInGroup: {fileID: 11400000}
-  nextSceneInGroup: {fileID: 11400000, guid: 6003cc8ca26ba51499e1a85749b124fa, type: 2}
+  previousSceneInGroup: {fileID: 11400000, guid: f9484753cef76a244b72033c90624d0b, type: 2}
+  nextSceneInGroup: {fileID: 11400000}
