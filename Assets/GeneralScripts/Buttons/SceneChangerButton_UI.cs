@@ -38,28 +38,28 @@ public enum ButtonAction
     LoadPrecise=2
     
 }
-[CustomEditor(typeof(SceneChangerButton_UI))]
-public class SceneChangerButton_UI_Inspector : Editor
-{
-    
-    
-    SerializedProperty m_TargetScene;
-    SerializedProperty m_SceneLoader;
-    SerializedProperty m_ActionMode;
-
-    private void OnEnable()
-    {
-        m_ActionMode = serializedObject.FindProperty("action");
-        m_SceneLoader=serializedObject.FindProperty("SceneLoaderEncaps");
-        m_TargetScene=serializedObject.FindProperty("targetScene");
-    }
-
-    public override void OnInspectorGUI()
-    {
-        EditorGUILayout.PropertyField(m_SceneLoader);
-        EditorGUILayout.PropertyField(m_ActionMode);
-        if(m_ActionMode.enumValueIndex==2)
-            EditorGUILayout.PropertyField(m_TargetScene);
-        serializedObject.ApplyModifiedProperties();
-    }
-}
+// [CustomEditor(typeof(SceneChangerButton_UI))]
+// public class SceneChangerButton_UI_Inspector : Editor
+// {
+//     
+//     
+//     SerializedProperty m_TargetScene;
+//     SerializedProperty m_SceneLoader;
+//     SerializedProperty m_ActionMode;
+//
+//     private void OnEnable()
+//     {
+//         m_ActionMode = serializedObject.FindProperty("action");
+//         m_SceneLoader=serializedObject.FindProperty("SceneLoaderEncaps");
+//         m_TargetScene=serializedObject.FindProperty("targetScene");
+//     }
+//
+//     public override void OnInspectorGUI()
+//     {
+//         EditorGUILayout.PropertyField(m_SceneLoader);
+//         EditorGUILayout.PropertyField(m_ActionMode);
+//         if(m_ActionMode.enumValueIndex==2)
+//             EditorGUILayout.PropertyField(m_TargetScene);
+//         serializedObject.ApplyModifiedProperties();
+//     }
+// }

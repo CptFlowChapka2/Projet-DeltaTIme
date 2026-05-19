@@ -1,11 +1,9 @@
 using System;
 using System.Linq;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
-using static System.MathF;
+
 
 public enum PlayerState
 {
@@ -185,8 +183,7 @@ public class Player : Grabbable
         armMagnitude = Mathf.Clamp(armMagnitude, minExtentionLength, maxExtentionLength);
         tempArm = transform.forward * armMagnitude;
     }
-
-    private Vector2 stickInputLastFrame = new Vector2();
+    
     private void Spin()
     {
         float spinValue = 0;
@@ -233,11 +230,11 @@ public class Player : Grabbable
         };
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, maxExtentionLength);
-    }
+    // private void OnDrawGizmos()
+    // {
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawWireSphere(transform.position, maxExtentionLength);
+    // }
 
     private void UpdatePhysicalArm()
     {
