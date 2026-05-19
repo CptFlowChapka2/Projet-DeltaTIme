@@ -54,6 +54,7 @@ public class Player : Grabbable
         armVector = new Vector3(0, 0, 2.5f);
         playerInput = GetComponent<PlayerInput>(); 
         rb = GetComponent<Rigidbody>();
+        
         startInputActionMap = playerInput.currentActionMap;
         playerInput.SwitchCurrentActionMap("UI");
         UIInputActionMap=playerInput.currentActionMap;
