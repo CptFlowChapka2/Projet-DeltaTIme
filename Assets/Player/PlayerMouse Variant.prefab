@@ -299,7 +299,7 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a8f28fb2-555a-4b02-b5d0-d653cebe85da
     m_ActionName: 'UI/UnPause[/XInputControllerWindows/start,/Keyboard/p]'
-  m_NeverAutoSwitchControlSchemes: 1
+  m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Player1|Mouse|Controller
   m_DefaultActionMap: AnyPlayer
   m_SplitScreenIndex: -1
