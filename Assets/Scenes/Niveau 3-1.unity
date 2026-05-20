@@ -7580,6 +7580,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
   m_PrefabInstance: {fileID: 1653195213}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &446316678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4595015926332228562, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+  m_PrefabInstance: {fileID: 590031090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &449267263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15239,7 +15244,7 @@ MonoBehaviour:
   - {fileID: 346608833}
   - {fileID: 1298800719}
   popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
-  LvlInfos: {fileID: 0}
+  LvlInfos: {fileID: 1954767032}
 --- !u!4 &908247749
 Transform:
   m_ObjectHideFlags: 0
@@ -22771,7 +22776,7 @@ PrefabInstance:
     - target: {fileID: 6918368824221570355, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: PauseMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 446316678}
     - target: {fileID: 6918368824221570355, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: otherPlayer
       value: 
@@ -35001,6 +35006,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+--- !u!114 &1954767032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+  m_PrefabInstance: {fileID: 590031090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee08b42728c8d23458526cab6b702dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
 --- !u!1001 &1955021389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38909,7 +38925,7 @@ PrefabInstance:
     - target: {fileID: 7635919991480573654, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
       propertyPath: PauseMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 446316678}
     - target: {fileID: 7635919991480573654, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
       propertyPath: otherPlayer
       value: 
