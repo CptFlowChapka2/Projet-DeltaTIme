@@ -11,7 +11,7 @@ public class LvlInfos : MonoBehaviour
     public float lvlDuration = Mathf.Infinity;
     public float lvlDurationWhenRush = 180f;
     public float timePerTick = 2f;
-    private float timer=0;
+    [HideInInspector] public float timer=0;
     private float currentLvlTime;
     private bool alreadyPlayedSound = false;
 

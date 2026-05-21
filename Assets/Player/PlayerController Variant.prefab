@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[25].m_ActionName
       value: 'UI/UnPause[/XInputControllerWindows/start,/Keyboard/p]'
       objectReference: {fileID: 0}
+    - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: playerID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.08

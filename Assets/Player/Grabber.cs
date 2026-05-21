@@ -15,11 +15,20 @@ public class Grabber : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, -transform.up * 3f, out RaycastHit hit,math.INFINITY,-1,QueryTriggerInteraction.Ignore))
         {
-            if (currentHoveredHex) currentHoveredHex.isHovered = false;
+            if (currentHoveredHex)
+            {
+                currentHoveredHex.isHovered = false;
+                currentHoveredHex.isPlayerHovering[player.playerID] = false;
+            }
             
             currentHoveredHexGO = hit.collider.gameObject;
             currentHoveredHex = currentHoveredHexGO.GetComponentInParent<Hex>();
-            if (currentHoveredHex is not null) currentHoveredHex.isHovered= true;
+            
+            if (currentHoveredHex is not null)
+            {
+                currentHoveredHex.isHovered = true;
+                currentHoveredHex.isPlayerHovering[player.playerID] = true;
+            }
         }
 
         if (currentGrabbedObject)
@@ -33,7 +42,7 @@ public class Grabber : MonoBehaviour
         if (currentHoveredHex is HalfBlockerHex) return;
         if (!currentGrabbedObject && currentHoveredHex.grabbablesOnThisHex.Count != 0)
         {
-            if(player.isGrabbed && currentHoveredHex.grabbablesOnThisHex.Last() is Player)return;
+            if(player.isGrabbed && currentHoveredHex.grabbablesOnThisHex.Last() is Player) return;
             GrabOn(currentHoveredHex);
         }
         else if (currentGrabbedObject &&(currentHoveredHex.grabbablesOnThisHex.Count == 0 || !(!(currentGrabbedObject is Ingredient) && currentHoveredHex.grabbablesOnThisHex.Last() is Ingredient)))

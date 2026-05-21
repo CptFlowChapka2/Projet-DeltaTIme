@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _ForetHex
       objectReference: {fileID: 0}
+    - target: {fileID: 4395981186445047683, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: hex
+      value: 
+      objectReference: {fileID: 9012584330975793429}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Materials.Array.size
       value: 3
@@ -81,11 +85,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 9012584330975793429}
   m_SourcePrefab: {fileID: 100100000, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
---- !u!1 &1652802418750822248 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6260153391563453788, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
-  m_PrefabInstance: {fileID: 4616021794255807028}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &3267673367902115890 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -120,10 +119,11 @@ MonoBehaviour:
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
+  isPlayerHovering: 
   isHovered: 0
   state: 1
   maxNbrOfGrabbable: 3
-  hoveringOutline: {fileID: 1652802418750822248}
+  hoveringOutline: {fileID: 9011367247155778999}
   meshRenderer: {fileID: 3267673367902115890}
   outlineDanger: {fileID: 7620475024843042560}
   feedbackTimerDanger: {fileID: 7959206628883173614}
@@ -145,3 +145,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3349463296004600538, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
   m_PrefabInstance: {fileID: 4616021794255807028}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9011367247155778999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4395981186445047683, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+  m_PrefabInstance: {fileID: 4616021794255807028}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e85d6c95738fe5a47b157a96ed493877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineColorChanger

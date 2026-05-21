@@ -46,10 +46,11 @@ public abstract class Hex : MonoBehaviour
     //public Vector3 boundsCenter;
 
     public Grabber[] grabbers;
+    public bool[] isPlayerHovering;
     public bool isHovered = false;
     public HexState state = HexState.Idle;
     public int maxNbrOfGrabbable = 3;
-    [SerializeField] private GameObject hoveringOutline;
+    [SerializeField] private OutlineColorChanger hoveringOutline;
     [SerializeField] private MeshRenderer meshRenderer; 
     [SerializeField] private GameObject outlineDanger; 
     [SerializeField] private GameObject feedbackTimerDanger; 
@@ -138,15 +139,6 @@ public abstract class Hex : MonoBehaviour
 
     public virtual void OnUpdate()
     {
-        if (isHovered)
-        {
-            hoveringOutline.SetActive(true);
-        }
-        else
-        {
-            hoveringOutline.SetActive(false);
-        }
-
         VerifyState();
         if (grabbablesOnThisHex.Count <= 0) return;
         for (int i = 0; i < grabbablesOnThisHex.Count; i++)

@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/blue.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/blue.mat.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/_BlockerHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/BlockerHex/_BlockerHex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/EnergizerHex/_EnergizerHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/EnergizerHex/_EnergizerHex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/ForetHex/_ForetHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/ForetHex/_ForetHex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/HalfBlockerHex/_HalfBlockerHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/HalfBlockerHex/_HalfBlockerHex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/HoleHEx/_HoleHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/HoleHEx/_HoleHex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/LacMagiqueHex/_LacMagiqueHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/LacMagiqueHex/_LacMagiqueHex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/StunnerHex/_StunnerHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/StunnerHex/_StunnerHex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/TrashHEx/_TrashHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/TrashHEx/_TrashHex.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerController Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerController Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,6 +183,7 @@
       <workItem from="1778489796641" duration="2133000" />
       <workItem from="1778588021120" duration="2174000" />
       <workItem from="1778679044210" duration="760000" />
+      <workItem from="1779365576160" duration="7108000" />
     </task>
     <servers />
   </component>

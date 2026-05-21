@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _LacMagiqueHex
       objectReference: {fileID: 0}
+    - target: {fileID: 4395981186445047683, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: hex
+      value: 
+      objectReference: {fileID: 2280847511283318989}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -77,11 +81,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2280847511283318989}
   m_SourcePrefab: {fileID: 100100000, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
---- !u!1 &1299679260595239961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6260153391563453788, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
-  m_PrefabInstance: {fileID: 4965758661149329733}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &3008290138724463427 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -110,10 +109,11 @@ MonoBehaviour:
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
+  isPlayerHovering: 
   isHovered: 0
   state: 1
   maxNbrOfGrabbable: 3
-  hoveringOutline: {fileID: 1299679260595239961}
+  hoveringOutline: {fileID: 8784344364378455750}
   meshRenderer: {fileID: 3008290138724463427}
   outlineDanger: {fileID: 7865485917454419057}
   feedbackTimerDanger: {fileID: 7865485917454419057}
@@ -130,3 +130,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3012410026872884532, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
   m_PrefabInstance: {fileID: 4965758661149329733}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8784344364378455750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4395981186445047683, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+  m_PrefabInstance: {fileID: 4965758661149329733}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e85d6c95738fe5a47b157a96ed493877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineColorChanger

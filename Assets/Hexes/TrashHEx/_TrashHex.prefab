@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _TrashHex
       objectReference: {fileID: 0}
+    - target: {fileID: 4395981186445047683, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: hex
+      value: 
+      objectReference: {fileID: 7401489805556634640}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -73,11 +77,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7401489805556634640}
   m_SourcePrefab: {fileID: 100100000, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
---- !u!1 &474960153189717918 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6260153391563453788, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
-  m_PrefabInstance: {fileID: 5798364633111601858}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &4404961518762154180 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -106,16 +105,28 @@ MonoBehaviour:
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
+  isPlayerHovering: 
   isHovered: 0
   state: 1
   maxNbrOfGrabbable: 1
-  hoveringOutline: {fileID: 474960153189717918}
+  hoveringOutline: {fileID: 7887567047554848065}
   meshRenderer: {fileID: 4404961518762154180}
   outlineDanger: {fileID: 8771278265267220470}
   feedbackTimerDanger: {fileID: 9082708175787790360}
   gridManager: {fileID: 0}
   lvlInfos: {fileID: 0}
   trashHex: {fileID: 5482331452799643952}
+--- !u!114 &7887567047554848065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4395981186445047683, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+  m_PrefabInstance: {fileID: 5798364633111601858}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e85d6c95738fe5a47b157a96ed493877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineColorChanger
 --- !u!1 &8771278265267220470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3012410026872884532, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}

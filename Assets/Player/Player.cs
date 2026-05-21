@@ -15,6 +15,7 @@ public enum PlayerState
 
 public class Player : Grabbable
 {
+    [SerializeField] public int playerID;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float extentionSpeed;
     [SerializeField] private float maxExtentionLength;
