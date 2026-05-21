@@ -25,7 +25,7 @@ public class Player : Grabbable
     private InputAction extendRetractAction;
     private InputAction grabReleaseAction;
     private InputAction pauseAction;
-    private bool isInPause=false;
+    [HideInInspector]public bool isInPause=false;
     public GameObject PauseMenu;
     public Player otherPlayer;
     public Rigidbody rb;
@@ -43,8 +43,8 @@ public class Player : Grabbable
     [NonSerialized] public bool knockedRight = false;
     private float timerKnocked = 0;
 
-    private InputActionMap startInputActionMap;
-    private InputActionMap UIInputActionMap;
+    [HideInInspector]public InputActionMap startInputActionMap;
+    [HideInInspector]public InputActionMap UIInputActionMap;
 
     protected override void Start()
     {

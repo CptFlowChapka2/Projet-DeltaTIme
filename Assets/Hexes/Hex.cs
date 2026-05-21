@@ -332,11 +332,11 @@ public abstract class Hex : MonoBehaviour
             availableNeighbor.TrimExcess();
         }
         //if no good one//
-        Instantiate(trashHex);
-        for (int i = 0; i < grabbablesOnThisHex.Count; i++)
+        foreach (Grabbable x in grabbablesOnThisHex)
         {
-            Destroy(grabbablesOnThisHex[i].gameObject);
+            Destroy(x.gameObject);
         }
+        Instantiate(trashHex, transform.position, transform.rotation);
         Destroy(gameObject);
 
 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
@@ -27,11 +28,13 @@ public class LvlInfos : MonoBehaviour
 
     [SerializeField] private bool validIngredientHasSpwaned = false;
     [SerializeField] private IngredientType validIngredientType;
+    private Player[] _players;
 
    
 
     private void Start()
     {
+        _players = FindObjectsByType<Player>(FindObjectsSortMode.None);
         soundManager = FindAnyObjectByType<SoundManager>();
     }
 
@@ -54,9 +57,15 @@ public class LvlInfos : MonoBehaviour
         }
 
         UpdateGeneralInformationText();
+        
         if (currentLvlTime>lvlDuration||(neededscore!=-1&&score>=neededscore))
         {
-            FindAnyObjectByType<SceneLoader>().LoadNextSceneInGroup();
+            _players[0].PauseMenu.SetActive(true);
+            foreach (Player player in _players)
+            {
+                player.isInPause = true;
+                player.playerInput.currentActionMap = player.UIInputActionMap;
+            }
         }
     }
 

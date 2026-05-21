@@ -24,6 +24,9 @@ public abstract class Grabbable : MonoBehaviour
     
     protected SoundManager soundManager;
 
+    private float maxTimer = 1f;
+    private float time;
+
     public int ActualVariant
     {
         get => actualVariant;
@@ -51,6 +54,20 @@ public abstract class Grabbable : MonoBehaviour
             transform.position = hit.collider.gameObject.transform.position + new Vector3(0, 0.5f, 0);
             if(actualHex is null)  actualHex = hit.collider.gameObject.GetComponentInParent<Hex>();
             actualHex.AddGrabbable(this) ;
+        }
+    }
+
+    private void Update()
+    {
+        if (!isGrabbed && actualHex == null)
+        {
+            meshRenderer.enabled = false;
+            time -= Time.deltaTime;
+            if(time<=0)Destroy(gameObject);
+        }
+        else if(meshRenderer.enabled is false)
+        {
+            meshRenderer.enabled = true;
         }
     }
 
