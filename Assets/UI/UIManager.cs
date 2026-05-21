@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private IngredientsDictionary ingredientsDictionary;
+    [SerializeField] private LvlInfos lvlInfos;
     private Grabber grabber;
     private Hex hex;
     private List<Grabbable> grabbables;
@@ -25,6 +26,10 @@ public class UIManager : MonoBehaviour
     [Header("HexRules")]
     public TMP_Text hexName;
     public Image hexRule;
+    [Header("Outline")]
+    public GameObject[] outlineA;
+    public GameObject[] outlineB;
+    private bool whatPhase;
 
     private void Start()
     {
@@ -57,6 +62,39 @@ public class UIManager : MonoBehaviour
         }
         
         DisplayIngredientsUI();
+        DisplayOutline();
+    }
+
+    private void DisplayOutline()
+    {
+        if (((lvlInfos.timer > 0.5f && lvlInfos.timer <= 1) 
+             || (lvlInfos.timer > 1.5f) && (lvlInfos.timer <= 2))
+            && whatPhase == false)
+        {
+            whatPhase = true;
+            foreach (GameObject img in outlineA)
+            {
+                img.SetActive(true);
+            }
+            foreach (GameObject img in outlineB)
+            {
+                img.SetActive(false);
+            }
+        }
+        else if (((lvlInfos.timer <= 0.5f)
+                  || (lvlInfos.timer > 1) && (lvlInfos.timer <= 1.5f)) 
+                 && whatPhase == true)
+        {
+            whatPhase = false;
+            foreach (GameObject img in outlineB)
+            {
+                img.SetActive(true);
+            }
+            foreach (GameObject img in outlineA)
+            {
+                img.SetActive(false);
+            }
+        }
     }
 
     private void DisplayHexUI()
