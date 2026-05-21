@@ -25,7 +25,6 @@ public class BlockerDetector : MonoBehaviour
         GameObject obj = other.gameObject;
         if (obj.CompareTag("ArmBlocker") && obj != selfArm)
         {
-            soundManager.collision.Play();
             Knock();
         }
     }

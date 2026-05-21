@@ -400,6 +400,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 7635919991480573654}
+    - target: {fileID: 760830687994296454, guid: a723f219f269cdf45846a08439ac5682, type: 3}
+      propertyPath: maxTimer
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2045901662573077606, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -416,6 +420,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 7635919991480573654}
+    - target: {fileID: 6163036269804464815, guid: a723f219f269cdf45846a08439ac5682, type: 3}
+      propertyPath: maxTimer
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 6470175115837651341, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

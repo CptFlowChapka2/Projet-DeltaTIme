@@ -8,10 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1395230294797083009, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: maxTimer
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2238842785818374819, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a45bad161d9f0f844a8392dd5032025f, type: 2}
+    - target: {fileID: 5500119042501440424, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: maxTimer
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 5558544586297471677, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_DefaultActionMap
       value: AnyPlayer

@@ -200,7 +200,7 @@ public class Player : Grabbable
             {
                 Vector3 projectedVector = new Vector3(inputVector.x, 0, inputVector.y);
                 float incidenceAngle = Vector3.SignedAngle(armVector, projectedVector, Vector3.up);
-                if (incidenceAngle > 0)
+                if (incidenceAngle > 0.05)
                 {
                     spinValue = Time.fixedDeltaTime * rotationSpeed;
                 }
