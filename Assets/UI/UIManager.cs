@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text hexName;
     public Image hexRule;
     [Header("Outline")]
+    public Image[] newOutline;
     public GameObject[] outlineA;
     public GameObject[] outlineB;
     private bool whatPhase;
@@ -67,34 +68,44 @@ public class UIManager : MonoBehaviour
 
     private void DisplayOutline()
     {
-        if (((lvlInfos.timer > 0.5f && lvlInfos.timer <= 1) 
-             || (lvlInfos.timer > 1.5f) && (lvlInfos.timer <= 2))
-            && whatPhase == false)
+        // if (((lvlInfos.timer > 0.5f && lvlInfos.timer <= 1) 
+        //      || (lvlInfos.timer > 1.5f) && (lvlInfos.timer <= 2))
+        //     && whatPhase == false)
+        // {
+        //     whatPhase = true;
+        //     foreach (GameObject img in outlineA)
+        //     {
+        //         img.SetActive(true);
+        //     }
+        //     foreach (GameObject img in outlineB)
+        //     {
+        //         img.SetActive(false);
+        //     }
+        // }
+        // else if (((lvlInfos.timer <= 0.5f)
+        //           || (lvlInfos.timer > 1) && (lvlInfos.timer <= 1.5f)) 
+        //          && whatPhase == true)
+        // {
+        //     whatPhase = false;
+        //     foreach (GameObject img in outlineB)
+        //     {
+        //         img.SetActive(true);
+        //     }
+        //     foreach (GameObject img in outlineA)
+        //     {
+        //         img.SetActive(false);
+        //     }
+        // }
+
+        foreach (Image img in newOutline)
         {
-            whatPhase = true;
-            foreach (GameObject img in outlineA)
-            {
-                img.SetActive(true);
-            }
-            foreach (GameObject img in outlineB)
-            {
-                img.SetActive(false);
-            }
+            float alphaValue = Mathf.Clamp(Mathf.Abs(1 - hex.lvlInfos.timer), 0, 0.5f);
+            Color color = img.color;
+            color.a = alphaValue;
+            img.color = color;
         }
-        else if (((lvlInfos.timer <= 0.5f)
-                  || (lvlInfos.timer > 1) && (lvlInfos.timer <= 1.5f)) 
-                 && whatPhase == true)
-        {
-            whatPhase = false;
-            foreach (GameObject img in outlineB)
-            {
-                img.SetActive(true);
-            }
-            foreach (GameObject img in outlineA)
-            {
-                img.SetActive(false);
-            }
-        }
+        
+        
     }
 
     private void DisplayHexUI()
