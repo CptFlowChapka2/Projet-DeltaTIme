@@ -46,7 +46,7 @@ public abstract class Hex : MonoBehaviour
     //public Vector3 boundsCenter;
 
     public Grabber[] grabbers;
-    public bool[] isPlayerHovering;
+    [HideInInspector][NonSerialized]public bool[] isPlayerHovering=new []{false,false};
     public bool isHovered = false;
     public HexState state = HexState.Idle;
     public int maxNbrOfGrabbable = 3;
