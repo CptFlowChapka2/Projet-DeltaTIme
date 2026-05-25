@@ -16,10 +16,12 @@ public enum PlayerState
 public class Player : Grabbable
 {
     [SerializeField] public int playerID;
-    [SerializeField] private float rotationSpeed;
+    [SerializeField] private float minRotationSpeed;
+    [SerializeField] private float maxRotationSpeed;
     [SerializeField] private float extentionSpeed;
     [SerializeField] private float maxExtentionLength;
     [SerializeField] private float minExtentionLength;
+    private float currentRotationSpeed;
     public PlayerInput playerInput;
     private bool controls2D = false;
     private InputAction spinAction;
@@ -141,7 +143,7 @@ public class Player : Grabbable
                 }
                 else
                 {
-                    Vector3 decceleration = new Vector3(0, rotationSpeed / 90, 0);
+                    Vector3 decceleration = new Vector3(0, minRotationSpeed / 90, 0);
                     if (rb.angularVelocity.y > 0)
                     {
                         rb.angularVelocity -= decceleration;
@@ -183,6 +185,7 @@ public class Player : Grabbable
         float extendValue = extendRetractAction.ReadValue<float>() * Time.deltaTime * extentionSpeed; 
         float armMagnitude = armVector.magnitude + extendValue;
         armMagnitude = Mathf.Clamp(armMagnitude, minExtentionLength, maxExtentionLength);
+        currentRotationSpeed = minRotationSpeed + ((maxRotationSpeed - minRotationSpeed) * ((maxExtentionLength - armMagnitude) / (maxExtentionLength - minExtentionLength)));
         tempArm = transform.forward * armMagnitude;
     }
     
@@ -192,7 +195,7 @@ public class Player : Grabbable
         
         if (!controls2D)
         {
-            spinValue = spinAction.ReadValue<float>() * Time.fixedDeltaTime * rotationSpeed;
+            spinValue = spinAction.ReadValue<float>() * Time.fixedDeltaTime * currentRotationSpeed;
         }
         else
         {
@@ -204,11 +207,11 @@ public class Player : Grabbable
                 
                 if (incidenceAngle > 1)
                 {
-                    spinValue = Time.fixedDeltaTime * rotationSpeed;
+                    spinValue = Time.fixedDeltaTime * currentRotationSpeed;
                 }
                 else if (incidenceAngle < -1)
                 {
-                    spinValue = -(Time.fixedDeltaTime * rotationSpeed);
+                    spinValue = -(Time.fixedDeltaTime * currentRotationSpeed);
                 }
             }
         }

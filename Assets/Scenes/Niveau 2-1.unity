@@ -22796,6 +22796,14 @@ PrefabInstance:
       propertyPath: otherPlayer
       value: 
       objectReference: {fileID: 2468010865620526790}
+    - target: {fileID: 6918368824221570355, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
+      propertyPath: maxRotationSpeed
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918368824221570355, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
+      propertyPath: minRotationSpeed
+      value: 105
+      objectReference: {fileID: 0}
     - target: {fileID: 7860804802329994235, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.89
@@ -38894,6 +38902,14 @@ PrefabInstance:
       propertyPath: otherPlayer
       value: 
       objectReference: {fileID: 1298800722}
+    - target: {fileID: 7635919991480573654, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
+      propertyPath: maxRotationSpeed
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635919991480573654, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
+      propertyPath: minRotationSpeed
+      value: 105
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
