@@ -6,68 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Juste Papier.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Juste Papier.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sticker crabe de roche.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Sticker crabe de roche.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/OutlineColorChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/OutlineColorChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau forêt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau forêt.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau lac magique 1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau lac magique 1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau trash hex.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau trash hex.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau trou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau trou.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau vide.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau vide.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau web hex.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bandeau web hex.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/hex ui bleu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/hex ui bleu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/hex ui rouge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/hex ui rouge.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/machine ui bleu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/machine ui bleu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/machine ui rouge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/machine ui rouge.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker araignée enchantée.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker araignée enchantée.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker araignée.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker araignée.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker crabebou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker crabebou.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker crabisilice enchantée.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker crabisilice enchantée.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker crabisilice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker crabisilice.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker fleche active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker fleche active.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker flèche.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker flèche.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker magie embouteillée.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker magie embouteillée.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker magie liquide.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker magie liquide.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker nuée.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker nuée.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker player.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker player.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker poudre de crabisilice enchantée.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker poudre de crabisilice enchantée.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker poudre de crabisilice.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker poudre de crabisilice.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker score.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker score.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker soie enchantée.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker soie enchantée.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker soie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/sticker soie.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/vertical ui bleu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/vertical ui bleu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/vertical ui rouge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/vertical ui rouge.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +173,7 @@
       <workItem from="1778679044210" duration="760000" />
       <workItem from="1779365576160" duration="11156000" />
       <workItem from="1779436412048" duration="1541000" />
-      <workItem from="1779737209160" duration="2457000" />
+      <workItem from="1779737209160" duration="5535000" />
     </task>
     <servers />
   </component>

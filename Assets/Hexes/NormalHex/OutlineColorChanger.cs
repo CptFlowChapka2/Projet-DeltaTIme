@@ -5,73 +5,52 @@ public class OutlineColorChanger : MonoBehaviour
 {
     [SerializeField] private Hex hex;
     
+    [SerializeField] private Sprite outlinePMouseSprite;
     [SerializeField] private Color outlinePMouseColor;
+    [SerializeField] private Sprite outlinePKeyboardSprite;
     [SerializeField] private Color outlinePKeyboardColor;
+    [SerializeField] private Sprite outlineAllPlayersSprite;
     [SerializeField] private Color outlineAllPlayersColor;
+    [SerializeField] private SpriteRenderer outlineSpriteRenderer;
     
-    [SerializeField] public MeshRenderer[] meshesToChangeA;
-    [SerializeField] public MeshRenderer[] meshesToChangeB;
-
-    private bool isActivated;
-    public Color currentColor = new Color();
+    private Sprite currentSprite = null;
+    private Color currentColor = new Color();
 
     private void Update()
     {
         if (hex.isHovered)
         {
-            isActivated = true;
+            outlineSpriteRenderer.enabled = true;
+            
             if (hex.isPlayerHovering[0])
             {
                 if (hex.isPlayerHovering[1])
                 {
+                    currentSprite = outlineAllPlayersSprite;
                     currentColor = outlineAllPlayersColor;
                 }
                 else
                 {
+                    currentSprite = outlinePMouseSprite;
                     currentColor = outlinePMouseColor;
                 }
             }
             else
             {
+                currentSprite = outlinePKeyboardSprite;
                 currentColor = outlinePKeyboardColor;
             }
-
-            if ((hex.lvlInfos.timer > 0.5f && hex.lvlInfos.timer <= 1) || (hex.lvlInfos.timer > 1.5f && hex.lvlInfos.timer <= 2))
-            {
-                foreach (MeshRenderer mesh in meshesToChangeA)
-                {
-                    mesh.enabled = true;
-                    mesh.material.color = currentColor;
-                }
-                foreach (MeshRenderer mesh in meshesToChangeB)
-                {
-                    mesh.enabled = false;
-                }
-            }
-            else
-            {
-                foreach (MeshRenderer mesh in meshesToChangeB)
-                {
-                    mesh.enabled = true;
-                    mesh.material.color = currentColor;
-                }
-                foreach (MeshRenderer mesh in meshesToChangeA)
-                {
-                    mesh.enabled = false;
-                }
-            }
+            
+            outlineSpriteRenderer.sprite = currentSprite;
+            
+            float alphaValue = Mathf.Clamp(Mathf.Abs(1 - hex.lvlInfos.timer), 0.1f, 0.9f);
+            currentColor.a = alphaValue;
+            
+            outlineSpriteRenderer.color = currentColor;
         }
-        else if (isActivated)
+        else
         {
-            isActivated = false;
-            foreach (MeshRenderer mesh in meshesToChangeA)
-            {
-                mesh.enabled = false;
-            }
-            foreach (MeshRenderer mesh in meshesToChangeB)
-            {
-                mesh.enabled = false;
-            }
+            outlineSpriteRenderer.enabled = false;
         }
     }
 }
