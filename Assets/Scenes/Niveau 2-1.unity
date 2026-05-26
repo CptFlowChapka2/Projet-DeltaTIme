@@ -538,6 +538,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: neededScore
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8434706080721891054, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: ingredients._serializedList.Array.data[0].Value.Array.data[0].sprite
       value: 
@@ -551,11 +555,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
---- !u!1 &21397031 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4595015926332228562, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
-  m_PrefabInstance: {fileID: 21397030}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &22469803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22791,7 +22790,7 @@ PrefabInstance:
     - target: {fileID: 6918368824221570355, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: PauseMenu
       value: 
-      objectReference: {fileID: 21397031}
+      objectReference: {fileID: 2102969355}
     - target: {fileID: 6918368824221570355, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: otherPlayer
       value: 
@@ -38254,6 +38253,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+--- !u!1 &2102969355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4595015926332228562, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+  m_PrefabInstance: {fileID: 21397030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2104757217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4677836678887715317, guid: c3fabfa6a57bce441846a33beed78c79, type: 3}
@@ -38897,7 +38901,7 @@ PrefabInstance:
     - target: {fileID: 7635919991480573654, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
       propertyPath: PauseMenu
       value: 
-      objectReference: {fileID: 21397031}
+      objectReference: {fileID: 2102969355}
     - target: {fileID: 7635919991480573654, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
       propertyPath: otherPlayer
       value: 

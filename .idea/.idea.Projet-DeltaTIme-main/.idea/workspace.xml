@@ -6,11 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/OutlineColorChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/OutlineColorChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 2-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 2-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HexBoxUI2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HexBoxUI2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HexBoxUIOutline2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HexBoxUIOutline2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MachineBoxUI2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MachineBoxUI2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MachineBoxUIOutline2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MachineBoxUIOutline2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/StackBoxUI2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/StackBoxUI2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/StackBoxUIOutline2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/StackBoxUIOutline2.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +183,7 @@
       <workItem from="1778679044210" duration="760000" />
       <workItem from="1779365576160" duration="11156000" />
       <workItem from="1779436412048" duration="1541000" />
-      <workItem from="1779737209160" duration="5535000" />
+      <workItem from="1779737209160" duration="9078000" />
     </task>
     <servers />
   </component>

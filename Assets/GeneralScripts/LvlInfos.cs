@@ -22,8 +22,8 @@ public class LvlInfos : MonoBehaviour
 
     public UnityEvent Tick = new UnityEvent();
 
-    [HideInInspector] public int score;
-     public int neededscore=-1;
+    public int score;
+    public int neededScore=-1;
     [HideInInspector] public int tNbrTick;
 
     [SerializeField] private bool validIngredientHasSpwaned = false;
@@ -58,7 +58,7 @@ public class LvlInfos : MonoBehaviour
 
         UpdateGeneralInformationText();
         
-        if (currentLvlTime>lvlDuration||(neededscore!=-1&&score>=neededscore))
+        if (currentLvlTime>lvlDuration||(neededScore!=-1&&score>=neededScore))
         {
             _players[0].PauseMenu.SetActive(true);
             foreach (Player player in _players)
@@ -78,14 +78,14 @@ public class LvlInfos : MonoBehaviour
         totalNbrOfTick.text ="Total Nbr Of Tick : \n "+ (tNbrTick).ToString(CultureInfo.InvariantCulture);
         
        
-        if (neededscore != -1)
-        {
-            scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture)+"/"+(neededscore).ToString(CultureInfo.InvariantCulture);
-        }
-        else
-        {
-            scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture);
-        }
+        // if (neededScore != -1)
+        // {
+        //     scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture)+"/"+(neededScore).ToString(CultureInfo.InvariantCulture);
+        // }
+        // else
+        // {
+        //     scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture);
+        // }
         
 
         
