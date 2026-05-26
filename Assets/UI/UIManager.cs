@@ -27,9 +27,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text hexName;
     public Image hexRule;
     [Header("Outline")]
-    public Image[] newOutline;
-    public GameObject[] outlineA;
-    public GameObject[] outlineB;
+    public CanvasRenderer[] outline;
     private bool whatPhase;
 
     private void Start()
@@ -97,12 +95,10 @@ public class UIManager : MonoBehaviour
         //     }
         // }
 
-        foreach (Image img in newOutline)
+        foreach (CanvasRenderer img in outline)
         {
-            float alphaValue = Mathf.Clamp(Mathf.Abs(1 - hex.lvlInfos.timer), 0, 0.5f);
-            Color color = img.color;
-            color.a = alphaValue;
-            img.color = color;
+            float alphaValue = Mathf.Clamp(Mathf.Abs(1 - hex.lvlInfos.timer), 0, 0.9f);
+            img.SetAlpha(alphaValue);
         }
         
         
