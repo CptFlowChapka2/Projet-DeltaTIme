@@ -4988,7 +4988,7 @@ MonoBehaviour:
       Value:
       - mesh: {fileID: 8691780276856062721, guid: 49506e3b8e704e94790d857a9d0ed4e9, type: 3}
         material: {fileID: 2100000, guid: 92c17bd5bb52d5a43ba5dbda74834aea, type: 2}
-        sprite: {fileID: 21300000, guid: 3593da33274fb234183abea712238b6a, type: 3}
+        sprite: {fileID: 21300000, guid: 1c3e475d0254449499b6d9deea925bec, type: 3}
     - Key: 9
       Value:
       - mesh: {fileID: 8691780276856062721, guid: 49506e3b8e704e94790d857a9d0ed4e9, type: 3}
@@ -5003,7 +5003,7 @@ MonoBehaviour:
       Value:
       - mesh: {fileID: 8691780276856062721, guid: 49506e3b8e704e94790d857a9d0ed4e9, type: 3}
         material: {fileID: 2100000, guid: 3920192151fd288429ec176c5a8e012a, type: 2}
-        sprite: {fileID: 21300000, guid: 16c6fe1e2fc41d249a8d2f85c7b8f287, type: 3}
+        sprite: {fileID: 21300000, guid: 516b256786215b14c972631994c19972, type: 3}
     - Key: 11
       Value:
       - mesh: {fileID: 8691780276856062721, guid: 49506e3b8e704e94790d857a9d0ed4e9, type: 3}
@@ -5051,7 +5051,7 @@ MonoBehaviour:
   neededScore: -1
   tNbrTick: 0
   validIngredientHasSpwaned: 0
-  validIngredientType: 7
+  validIngredientType: 9
 --- !u!114 &2807028420444667223
 MonoBehaviour:
   m_ObjectHideFlags: 0
