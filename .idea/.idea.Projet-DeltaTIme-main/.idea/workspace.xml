@@ -7,7 +7,7 @@
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/TimeDisplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/TimeDisplayer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +171,7 @@
       <workItem from="1779365576160" duration="11156000" />
       <workItem from="1779436412048" duration="1541000" />
       <workItem from="1779737209160" duration="9785000" />
-      <workItem from="1779872164659" duration="3712000" />
+      <workItem from="1779872164659" duration="5941000" />
     </task>
     <servers />
   </component>
