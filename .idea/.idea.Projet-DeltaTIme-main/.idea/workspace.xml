@@ -8,19 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 2-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 2-1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/HexBoxUI2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/HexBoxUI2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/HexBoxUIOutline2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/HexBoxUIOutline2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/MachineBoxUI2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/MachineBoxUI2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/MachineBoxUIOutline2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/MachineBoxUIOutline2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/StackBoxUI2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/StackBoxUI2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/StackBoxUIOutline2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/StackBoxUIOutline2.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +170,8 @@
       <workItem from="1778679044210" duration="760000" />
       <workItem from="1779365576160" duration="11156000" />
       <workItem from="1779436412048" duration="1541000" />
-      <workItem from="1779737209160" duration="9078000" />
+      <workItem from="1779737209160" duration="9785000" />
+      <workItem from="1779872164659" duration="3712000" />
     </task>
     <servers />
   </component>

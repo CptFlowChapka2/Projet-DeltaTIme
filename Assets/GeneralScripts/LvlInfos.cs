@@ -71,11 +71,11 @@ public class LvlInfos : MonoBehaviour
 
     private void UpdateGeneralInformationText()
     {
-        timeBeforeNextTick.text = "next tick in : \n "+(timePerTick - timer).ToString(CultureInfo.InvariantCulture);
-
-        timeRemaining.text ="time in level remaining : \n "+ (lvlDuration - currentLvlTime).ToString(CultureInfo.InvariantCulture);
-        
-        totalNbrOfTick.text ="Total Nbr Of Tick : \n "+ (tNbrTick).ToString(CultureInfo.InvariantCulture);
+        // timeBeforeNextTick.text = "next tick in : \n "+(timePerTick - timer).ToString(CultureInfo.InvariantCulture);
+        //
+        // timeRemaining.text ="time in level remaining : \n "+ (lvlDuration - currentLvlTime).ToString(CultureInfo.InvariantCulture);
+        //
+        // totalNbrOfTick.text ="Total Nbr Of Tick : \n "+ (tNbrTick).ToString(CultureInfo.InvariantCulture);
         
        
         // if (neededScore != -1)
