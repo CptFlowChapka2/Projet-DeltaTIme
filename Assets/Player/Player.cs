@@ -29,8 +29,7 @@ public class Player : Grabbable
     private InputAction grabReleaseAction;
     private InputAction pauseAction;
     [HideInInspector]public bool isInPause=false;
-    public GameObject PauseMenu;
-    public Player otherPlayer;
+    
     public Rigidbody rb;
     
     public Vector3 armVector;
@@ -48,6 +47,8 @@ public class Player : Grabbable
 
     [HideInInspector]public InputActionMap startInputActionMap;
     [HideInInspector]public InputActionMap UIInputActionMap;
+
+    private PauseHandler _pauseHandler;
 
     protected override void Start()
     {
@@ -76,6 +77,9 @@ public class Player : Grabbable
         extendRetractAction = playerInput.actions["Extend"];
         grabReleaseAction = playerInput.actions["Grab"];
         pauseAction = playerInput.actions["Pause"];
+
+        _pauseHandler = FindAnyObjectByType<PauseHandler>();
+        _pauseHandler.PauseCalled.AddListener(ReceivePause);
     }
 
     private void Update()
@@ -223,16 +227,15 @@ public class Player : Grabbable
     {
         bool pause = pauseAction.WasPressedThisFrame();
         if (!pause) return;
-        otherPlayer.isInPause = !otherPlayer.isInPause;
+       _pauseHandler.PauseCalled.Invoke();
+    }
+
+    private void ReceivePause()
+    {
         isInPause = !isInPause;
-        PauseMenu.SetActive(!PauseMenu.activeSelf);
         playerInput.currentActionMap = isInPause switch {
             true => UIInputActionMap,
             false => startInputActionMap
-        };
-        otherPlayer.playerInput.currentActionMap = isInPause switch {
-                    true => UIInputActionMap,
-                    false => startInputActionMap
         };
     }
 #if UNITY_EDITOR

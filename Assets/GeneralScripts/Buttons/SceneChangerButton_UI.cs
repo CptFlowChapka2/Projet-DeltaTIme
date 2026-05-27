@@ -7,6 +7,12 @@ public class SceneChangerButton_UI : MonoBehaviour
     public SceneRefEncaps targetScene;
     public SceneLoaderEncaps SceneLoaderEncaps;
     public ButtonAction action;
+    private PauseHandler _pauseHandler;
+
+    private void Start()
+    {
+        _pauseHandler = FindAnyObjectByType<PauseHandler>();
+    }
 
 
     public void OnButtonClic()
@@ -23,6 +29,9 @@ public class SceneChangerButton_UI : MonoBehaviour
             case ButtonAction.LoadPrecise:
                 SceneLoaderEncaps.SceneLoader.LoadScene(targetScene);
                 break;
+            case ButtonAction.Pause:
+                _pauseHandler.PauseCalled.Invoke();
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -35,7 +44,8 @@ public enum ButtonAction
 {
     Next=0,
     Previous=1,
-    LoadPrecise=2
+    LoadPrecise=2,
+    Pause=3,
     
 }
 #if UNITY_EDITOR 

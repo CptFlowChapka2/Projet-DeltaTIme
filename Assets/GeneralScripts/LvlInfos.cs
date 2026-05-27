@@ -28,21 +28,27 @@ public class LvlInfos : MonoBehaviour
 
     [SerializeField] private bool validIngredientHasSpwaned = false;
     [SerializeField] private IngredientType validIngredientType;
-    private Player[] _players;
+   
 
+    private PauseHandler _pauseHandler;
+
+    private float timeMod = 1f;
    
 
     private void Start()
     {
-        _players = FindObjectsByType<Player>(FindObjectsSortMode.None);
         soundManager = FindAnyObjectByType<SoundManager>();
+        _pauseHandler = GetComponent<PauseHandler>();
+        _pauseHandler.PauseCalled.AddListener(ReceivePause);
     }
+    
 
     private void Update()
     {
+        float timeModer = timeMod = Time.deltaTime;
         
-        timer += Time.deltaTime;
-        currentLvlTime += Time.deltaTime;
+        timer +=timeModer;
+        currentLvlTime += timeModer;
         if (timer >= timePerTick - 0.2f && !alreadyPlayedSound)
         {
             alreadyPlayedSound = true;
@@ -60,12 +66,7 @@ public class LvlInfos : MonoBehaviour
         
         if (currentLvlTime>lvlDuration||(neededScore!=-1&&score>=neededScore))
         {
-            _players[0].PauseMenu.SetActive(true);
-            foreach (Player player in _players)
-            {
-                player.isInPause = true;
-                player.playerInput.currentActionMap = player.UIInputActionMap;
-            }
+            _pauseHandler.PauseCalled.Invoke();
         }
     }
 
@@ -100,5 +101,15 @@ public class LvlInfos : MonoBehaviour
             currentLvlTime = 0;
             lvlDuration = lvlDurationWhenRush;
         }
+    }
+
+    public void ReceivePause()
+    {
+        timeMod = timeMod switch
+        {
+            1=>0,
+            0=>1,
+            _ => throw new ArgumentOutOfRangeException()
+        };
     }
 }

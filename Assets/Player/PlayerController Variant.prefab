@@ -200,9 +200,17 @@ PrefabInstance:
       propertyPath: playerID
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: maxRotationSpeed
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186779415735191296, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: minRotationSpeed
+      value: 105
+      objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.08
+      value: 30.939999
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -210,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.47
+      value: 29.53
       objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalRotation.w
