@@ -14,7 +14,7 @@ public class PauseHandler : MonoBehaviour
       PauseCalled.AddListener(ReceivePause);
    }
 
-   private void ReceivePause()
+   public void ReceivePause()
    {
       PauseObject.SetActive(!PauseObject.activeSelf);
    }

@@ -206,7 +206,6 @@ public class Player : Grabbable
         {
             
             Vector2 inputVector = spinAction.ReadValue<Vector2>();
-            Debug.Log(inputVector);
             if (inputVector != Vector2.zero)
             {
                 Vector3 projectedVector = new Vector3(inputVector.x, 0, inputVector.y);
@@ -233,7 +232,7 @@ public class Player : Grabbable
        _pauseHandler.PauseCalled.Invoke();
     }
 
-    private void ReceivePause()
+    public void ReceivePause()
     {
         isInPause = !isInPause;
         playerInput.currentActionMap = isInPause switch {
