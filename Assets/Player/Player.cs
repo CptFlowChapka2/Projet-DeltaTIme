@@ -86,6 +86,7 @@ public class Player : Grabbable
     {
         ListenForPause();
         if(isInPause) return;
+        
         if (spinAction.WasPressedThisFrame() && soundManager.playersRotating < 2)
         {
             soundManager.playersRotating++;
@@ -203,7 +204,9 @@ public class Player : Grabbable
         }
         else
         {
+            
             Vector2 inputVector = spinAction.ReadValue<Vector2>();
+            Debug.Log(inputVector);
             if (inputVector != Vector2.zero)
             {
                 Vector3 projectedVector = new Vector3(inputVector.x, 0, inputVector.y);
