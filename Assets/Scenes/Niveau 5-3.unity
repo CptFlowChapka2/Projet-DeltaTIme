@@ -11600,6 +11600,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c0045527ab690d4f88cc27930842069, type: 3}
+--- !u!114 &695028154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8909495567034702468, guid: 1c0045527ab690d4f88cc27930842069, type: 3}
+  m_PrefabInstance: {fileID: 695028153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d1f5d6079baa744b4e3c6407ee52cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
 --- !u!4 &695671465 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1197093582984123191, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
@@ -15532,6 +15543,7 @@ MonoBehaviour:
   - {fileID: 1298800719}
   popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
   LvlInfos: {fileID: 21397031}
+  soundManager: {fileID: 695028154}
 --- !u!4 &908247749
 Transform:
   m_ObjectHideFlags: 0
@@ -23062,7 +23074,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7860804802329994235, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.939999
+      value: 30.84
       objectReference: {fileID: 0}
     - target: {fileID: 7860804802329994235, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23070,7 +23082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7860804802329994235, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 29.53
+      value: 29.37
       objectReference: {fileID: 0}
     - target: {fileID: 7860804802329994235, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -39211,11 +39223,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7272740952661141534, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.13
+      value: 27.97
       objectReference: {fileID: 0}
     - target: {fileID: 7272740952661141534, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 7272740952661141534, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
       propertyPath: m_LocalPosition.z

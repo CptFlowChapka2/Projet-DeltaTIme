@@ -34,15 +34,16 @@ public class CloggerHex : Hex
         
         //end base
         
-        if (VerifyAndClocg()) return;
+        if (VerifyAndClog()) return;
         grabbablesOnThisHex?.First()?.Tick();
     }
 
-    private bool VerifyAndClocg()
+    private bool VerifyAndClog()
     {
         if (grabbablesOnThisHex.Last() is Ingredient &&(!permaClogger&& ((Ingredient)grabbablesOnThisHex.Last()).type == clogType)) return false;
         if (grabbablesOnThisHex.First() is not null)
         {
+            FeedbackClogging();
             //contournement , le clogger fait ticker les machine inactive 
             if(grabbablesOnThisHex.First() is Machine&&
                !((Machine)grabbablesOnThisHex.First()).isActive)((Machine)
@@ -50,6 +51,7 @@ public class CloggerHex : Hex
             numberOfTicks++;
             if (numberOfTicks >= numberOfTicksToClog)
             {
+                StopFeedbackClogging();
                 numberOfTicks = 0;
                 for (int i = 0; i < numberOfObjectToClog; i++)
                 {
@@ -67,6 +69,30 @@ public class CloggerHex : Hex
         return false;
     }
 
+    private void FeedbackClogging()
+    {
+        if (clogType == IngredientType.Araignée)
+        {
+            soundManager.forestTilesActivated++;
+        }
+        else if (clogType == IngredientType.LiquideMagique)
+        {
+            soundManager.lakeTilesActivated++;
+        }
+    }
+    
+    private void StopFeedbackClogging()
+    {
+        if (clogType == IngredientType.Araignée)
+        {
+            soundManager.forestTilesActivated--;
+        }
+        else if (clogType == IngredientType.LiquideMagique)
+        {
+            soundManager.lakeTilesActivated--;
+        }
+    }
+    
     public override void RemoveGrabbable(Grabbable grabbable)
     {
         if(grabbablesOnThisHex.First().Equals(grabbable))numberOfTicks = 0;

@@ -57,6 +57,7 @@ public abstract class Hex : MonoBehaviour
     private Material popupBaseMaterial;
     public GridManager gridManager;
     public LvlInfos lvlInfos;
+    public SoundManager soundManager;
     
     //Variables liées aux HexRules
     protected HexRule currentRule;
@@ -73,6 +74,7 @@ public abstract class Hex : MonoBehaviour
         lvlInfos.Tick.AddListener(Tick);
         grabbers = gridManager.grabbers;
         popupBaseMaterial = gridManager.popupBaseMat;
+        soundManager = gridManager.soundManager;
 
         InitializeRelativeCoords();
     }

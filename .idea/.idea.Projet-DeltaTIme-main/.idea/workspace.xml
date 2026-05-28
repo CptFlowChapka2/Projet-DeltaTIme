@@ -6,8 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/TimeDisplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/TimeDisplayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/SoundManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/SoundManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/Machine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/CloggerHex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/CloggerHex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/GridManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 0-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 0-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 0-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 0-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 0-3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 0-3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 0-4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 0-4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 2-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 2-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 2-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 2-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 2-3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 2-3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 3-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 3-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 3-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 3-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 3-3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 3-3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 4-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 4-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 4-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 4-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 5-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 5-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 5-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 5-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 5-3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 5-3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +75,18 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Buils test\Projet DeltaTIme.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\matth\OneDrive\Documents\Cours ICAN\_Année 2 Semestre 2\PROJET\Buils test" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.6f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\matth\OneDrive\Documents\Cours ICAN\_Année 2 Semestre 2\PROJET\Projet-DeltaTIme-main&quot; -debugCodeOptimization" />
@@ -171,7 +207,8 @@
       <workItem from="1779365576160" duration="11156000" />
       <workItem from="1779436412048" duration="1541000" />
       <workItem from="1779737209160" duration="9785000" />
-      <workItem from="1779872164659" duration="5941000" />
+      <workItem from="1779872164659" duration="9841000" />
+      <workItem from="1779963711030" duration="1359000" />
     </task>
     <servers />
   </component>

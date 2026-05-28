@@ -55,7 +55,7 @@ public class Player : Grabbable
         base.Start();
         grabber.player = this;
         //transform.position += new Vector3(0, 0.5f, 0);
-        armVector = new Vector3(0, 0, 2.5f);
+        armVector = new Vector3(0, 0, 3f);
         playerInput = GetComponent<PlayerInput>(); 
         rb = GetComponent<Rigidbody>();
         
@@ -87,16 +87,8 @@ public class Player : Grabbable
         ListenForPause();
         if(isInPause) return;
         
-        if (spinAction.WasPressedThisFrame() && soundManager.playersRotating < 2)
-        {
-            soundManager.playersRotating++;
-        }
+        UpdateMovementSounds();
 
-        if (spinAction.WasReleasedThisFrame() && soundManager.playersRotating > 0)
-        {
-            soundManager.playersRotating--;
-        }
-        
         GrabRelease();
             
         Vector3 tempArm = armVector;
@@ -122,6 +114,29 @@ public class Player : Grabbable
                     state = PlayerState.Idle;
                 }
                 break;
+        }
+    }
+
+    private void UpdateMovementSounds()
+    {
+        if (spinAction.WasPressedThisFrame() && soundManager.playersRotating < 2)
+        {
+            soundManager.playersRotating++;
+        }
+
+        if (spinAction.WasReleasedThisFrame() && soundManager.playersRotating > 0)
+        {
+            soundManager.playersRotating--;
+        }
+        
+        if (extendRetractAction.WasPressedThisFrame() && soundManager.playersExtending < 2)
+        {
+            soundManager.playersExtending++;
+        }
+
+        if (extendRetractAction.WasReleasedThisFrame() && soundManager.playersExtending > 0)
+        {
+            soundManager.playersExtending--;
         }
     }
 
@@ -204,7 +219,6 @@ public class Player : Grabbable
         }
         else
         {
-            
             Vector2 inputVector = spinAction.ReadValue<Vector2>();
             if (inputVector != Vector2.zero)
             {

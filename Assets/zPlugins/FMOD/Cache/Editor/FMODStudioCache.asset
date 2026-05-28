@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8476220638844682831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LacMagiqueProducing/LakeTilesActivated
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: LakeTilesActivated
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 3188110047
+    data2: 2675496537
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6512782789287650986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/NewWorkingMachine/NumberOfWorkingMachines
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: NumberOfWorkingMachines
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 516463151
+    data2: 2740287645
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5795705192804699567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +63,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Placeholders.bank
   Name: Placeholders
   StudioPath: bank:/Placeholders
-  lastModified: 639149551060000000
+  lastModified: 639137635094560481
   FileSizes: []
   Exists: 1
 --- !u!114 &-5565251454674282510
@@ -96,6 +144,85 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2960690098047708399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ForetProducing/ForestTilesActivated
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: ForestTilesActivated
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 2343186091
+    data2: 4251523439
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2461223911976556513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NewWorkingMachine
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/NewWorkingMachine
+  Guid:
+    Data1: 1000699633
+    Data2: 1188858350
+    Data3: -646196042
+    Data4: 665050774
+  Banks:
+  - {fileID: 4384719233189785050}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6512782789287650986}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1482181126149747150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Scoring
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Scoring
+  Guid:
+    Data1: -700465330
+    Data2: 1197151241
+    Data3: -1053744225
+    Data4: -1287892204
+  Banks:
+  - {fileID: 4384719233189785050}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-396209951477314100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,13 +276,19 @@ MonoBehaviour:
   - {fileID: 5441800565650234344}
   - {fileID: 8580240426373858206}
   - {fileID: -5565251454674282510}
+  - {fileID: 2174172743164756342}
+  - {fileID: 4389570565296821108}
+  - {fileID: -1482181126149747150}
+  - {fileID: 6478573568228306833}
+  - {fileID: 2219564421452844559}
+  - {fileID: -2461223911976556513}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2993860550895887398}
   StringsBanks:
   - {fileID: 6998373313492933676}
   cacheVersion: 131857
-  cacheTime: 639149551060000000
+  cacheTime: 639155669519640037
   SerializableEventsDict:
   - key: event:/Tick
     index: 0
@@ -169,6 +302,18 @@ MonoBehaviour:
     index: 4
   - key: event:/Collide
     index: 5
+  - key: event:/LacMagiqueProducing
+    index: 6
+  - key: event:/ForetProducing
+    index: 7
+  - key: event:/Scoring
+    index: 8
+  - key: event:/ExtensionPlayer
+    index: 9
+  - key: event:/Clic
+    index: 10
+  - key: event:/NewWorkingMachine
+    index: 11
 --- !u!114 &1493843971170430513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +342,85 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 14630
+--- !u!114 &1980979443214217231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ExtensionPlayer/PlayersExtending
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: PlayersExtending
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1244980474
+    data2: 2131035743
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &2174172743164756342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LacMagiqueProducing
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/LacMagiqueProducing
+  Guid:
+    Data1: -1014881787
+    Data2: 1262183491
+    Data3: -1862655353
+    Data4: 1456679641
+  Banks:
+  - {fileID: 4384719233189785050}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8476220638844682831}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8587
+--- !u!114 &2219564421452844559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Clic
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Clic
+  Guid:
+    Data1: -1085745513
+    Data2: 1167764164
+    Data3: -634893143
+    Data4: 255838416
+  Banks:
+  - {fileID: 4384719233189785050}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2993860550895887398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +436,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639149551060000000
+  lastModified: 639155669519630030
   FileSizes: []
   Exists: 1
 --- !u!114 &4384719233189785050
@@ -230,9 +454,37 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/FX.bank
   Name: FX
   StudioPath: bank:/FX
-  lastModified: 639149551060000000
+  lastModified: 639155669519519036
   FileSizes: []
   Exists: 1
+--- !u!114 &4389570565296821108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ForetProducing
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ForetProducing
+  Guid:
+    Data1: -1528220116
+    Data2: 1287352739
+    Data3: 1522291101
+    Data4: 299136093
+  Banks:
+  - {fileID: 4384719233189785050}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2960690098047708399}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10072
 --- !u!114 &5441800565650234344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,6 +536,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6478573568228306833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ExtensionPlayer
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ExtensionPlayer
+  Guid:
+    Data1: 709235796
+    Data2: 1292541228
+    Data3: -1329819487
+    Data4: 23387672
+  Banks:
+  - {fileID: 4384719233189785050}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1980979443214217231}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1581
 --- !u!114 &6998373313492933676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,10 +579,10 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639149551060000000
+  lastModified: 639155669519640037
   FileSizes:
   - Name: 
-    Value: 1382
+    Value: 1806
   Exists: 1
 --- !u!114 &8580240426373858206
 MonoBehaviour:
@@ -346,6 +626,6 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639149551060000000
+  lastModified: 639137635094540420
   FileSizes: []
   Exists: 1

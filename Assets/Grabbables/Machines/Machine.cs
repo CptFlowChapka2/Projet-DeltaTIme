@@ -111,6 +111,7 @@ public class Machine : Grabbable
             if (_actualMachineRuleToFollow.outputs.Contains(IngredientType.None)) return;
             if (_actualMachineRuleToFollow.outputs.Contains(IngredientType.Score))
             {
+                soundManager.scoring.Play();
                 foreach (IngredientType score in _actualMachineRuleToFollow.outputs)
                 { 
                     _lvlInfos.score++;
