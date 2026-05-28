@@ -74,9 +74,10 @@ public abstract class Hex : MonoBehaviour
         lvlInfos.Tick.AddListener(Tick);
         grabbers = gridManager.grabbers;
         popupBaseMaterial = gridManager.popupBaseMat;
-        soundManager = gridManager.soundManager;
 
         InitializeRelativeCoords();
+        
+        soundManager = gridManager.soundManager;
     }
 
     private static Vector2Int[] odd = new Vector2Int[6]
@@ -104,8 +105,8 @@ public abstract class Hex : MonoBehaviour
         int relativeX = 0;
         int relativeY = 0;
 
-        float stepsX = transform.position.x;
-        float stepsY = transform.position.z;
+        float stepsX = transform.localPosition.x;
+        float stepsY = transform.localPosition.z;
 
         for (int i = 0; i < 25; i++)
         {
