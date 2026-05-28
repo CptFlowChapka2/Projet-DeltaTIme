@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Placeholders.bank
   Name: Placeholders
   StudioPath: bank:/Placeholders
-  lastModified: 639149551060000000
+  lastModified: 639155117400872468
   FileSizes: []
   Exists: 1
 --- !u!114 &-5565251454674282510
@@ -155,7 +155,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 6998373313492933676}
   cacheVersion: 131857
-  cacheTime: 639149551060000000
+  cacheTime: 639155117400872468
   SerializableEventsDict:
   - key: event:/Tick
     index: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639149551060000000
+  lastModified: 639155117400862466
   FileSizes: []
   Exists: 1
 --- !u!114 &4384719233189785050
@@ -230,7 +230,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/FX.bank
   Name: FX
   StudioPath: bank:/FX
-  lastModified: 639149551060000000
+  lastModified: 639155117400862466
   FileSizes: []
   Exists: 1
 --- !u!114 &5441800565650234344
@@ -299,7 +299,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639149551060000000
+  lastModified: 639155117400862466
   FileSizes:
   - Name: 
     Value: 1382
@@ -346,6 +346,6 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639149551060000000
+  lastModified: 639155117400872468
   FileSizes: []
   Exists: 1
