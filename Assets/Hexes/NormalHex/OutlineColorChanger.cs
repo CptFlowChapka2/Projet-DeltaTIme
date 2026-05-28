@@ -43,7 +43,7 @@ public class OutlineColorChanger : MonoBehaviour
             
             outlineSpriteRenderer.sprite = currentSprite;
             
-            float alphaValue = Mathf.Clamp(Mathf.Abs(1 - hex.lvlInfos.timer), 0.1f, 0.9f);
+            float alphaValue = Mathf.Clamp(Mathf.Abs(1 - hex.lvlInfos.timer), 0.6f, 1f);
             currentColor.a = alphaValue;
             
             outlineSpriteRenderer.color = currentColor;

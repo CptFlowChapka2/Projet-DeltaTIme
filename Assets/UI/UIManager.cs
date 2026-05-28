@@ -97,7 +97,7 @@ public class UIManager : MonoBehaviour
 
         foreach (CanvasRenderer img in outline)
         {
-            float alphaValue = Mathf.Clamp(Mathf.Abs(1 - hex.lvlInfos.timer), 0.1f, 0.9f);
+            float alphaValue = Mathf.Clamp(Mathf.Abs(1 - hex.lvlInfos.timer), 0.6f, 1f);
             img.SetAlpha(alphaValue);
         }
         
