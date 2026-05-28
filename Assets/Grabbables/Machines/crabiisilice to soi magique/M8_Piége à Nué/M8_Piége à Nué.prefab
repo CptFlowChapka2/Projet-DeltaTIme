@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1403122597488939936, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.48
+      objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: machineName
       value: "Pi\xE8ge \xE0 Nu\xE9e"
@@ -19,11 +23,11 @@ PrefabInstance:
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: variants.Array.data[0].mesh
       value: 
-      objectReference: {fileID: -8448265200531296115, guid: d3b312db3666a994589f3e284c3aee1f, type: 3}
+      objectReference: {fileID: -8448265200531296115, guid: f5478f9bada58cd49b6ee20b09578d0d, type: 3}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: variants.Array.data[0].material
       value: 
-      objectReference: {fileID: 8377922602766896567, guid: d3b312db3666a994589f3e284c3aee1f, type: 3}
+      objectReference: {fileID: 2100000, guid: 38927752b476d0343a07bdd5b7f1ec23, type: 2}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].inputs.Array.size
       value: 3
@@ -55,7 +59,7 @@ PrefabInstance:
     - target: {fileID: 4000476396115700581, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 7abb8875feede7a418e089be59bf7ae2, type: 2}
+      objectReference: {fileID: 2100000, guid: 38927752b476d0343a07bdd5b7f1ec23, type: 2}
     - target: {fileID: 5341778612878112200, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_Name
       value: "M8_Pi\xE9ge \xE0 Nu\xE9"
@@ -107,7 +111,7 @@ PrefabInstance:
     - target: {fileID: 8605430290017097707, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -8448265200531296115, guid: d3b312db3666a994589f3e284c3aee1f, type: 3}
+      objectReference: {fileID: -8448265200531296115, guid: f5478f9bada58cd49b6ee20b09578d0d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
