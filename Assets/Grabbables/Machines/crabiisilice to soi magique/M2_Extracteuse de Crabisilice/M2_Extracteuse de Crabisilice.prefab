@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: 4000476396115700581, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 7abb8875feede7a418e089be59bf7ae2, type: 2}
+      objectReference: {fileID: 2100000, guid: 5f38f3759b9313446aa0428b0c8eff8a, type: 2}
     - target: {fileID: 5341778612878112200, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: m_Name
       value: M2_Extracteuse de Crabisilice
