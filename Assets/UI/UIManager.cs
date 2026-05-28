@@ -25,6 +25,8 @@ public class UIManager : MonoBehaviour
     public Image[] rule2Outputs;
     [Header("HexRules")]
     public TMP_Text hexName;
+    public Image hexUIBox;
+    public Sprite[] hexVariants;
     public Image hexRule;
     [Header("Outline")]
     public CanvasRenderer[] outline;
@@ -108,6 +110,32 @@ public class UIManager : MonoBehaviour
     {
         hexName.text = hex.hexName;
         hexRule.sprite = hex.hexUIInfo;
+
+        switch (hexName.text)
+        {
+            case "Crevasse":
+                hexUIBox.sprite = hexVariants[0];
+                break;
+            case "Case de Base":
+                hexUIBox.sprite = hexVariants[1];
+                break;
+            case "Forêt":
+                hexUIBox.sprite = hexVariants[2];
+                break;
+            case "Lac Magique":
+                hexUIBox.sprite = hexVariants[3];
+                break;
+            case "Montagne":
+                hexUIBox.sprite = hexVariants[4];
+                break;
+            case "Case entoilée":
+                hexUIBox.sprite = hexVariants[5];
+                break;
+            case "Case Désolée":
+                hexUIBox.sprite = hexVariants[6];
+                break;
+                
+        }
     }
 
     private void DisplayIngredientsUI()

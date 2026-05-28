@@ -333,8 +333,6 @@ public abstract class Hex : MonoBehaviour
         }
         Instantiate(trashHex, transform.position, transform.rotation);
         Destroy(gameObject);
-
-
     }
 
     public virtual void RemoveGrabbable(Grabbable grabbable)

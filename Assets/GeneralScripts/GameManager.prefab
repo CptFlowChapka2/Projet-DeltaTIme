@@ -2208,6 +2208,15 @@ MonoBehaviour:
   - {fileID: 3249408280429985277}
   - {fileID: 2505229138122525428}
   hexName: {fileID: 848239155667640258}
+  hexUIBox: {fileID: 4089034785430618848}
+  hexVariants:
+  - {fileID: 21300000, guid: ccd9630ae742d1c4c909aeac0a2ac770, type: 3}
+  - {fileID: 21300000, guid: 21b51b1d010c7a4448ef6952f7ee41f4, type: 3}
+  - {fileID: 21300000, guid: 04c98099c2e01a9418d951f8d4988d98, type: 3}
+  - {fileID: 21300000, guid: fa4c99975029b484798a6fe8d6c708c5, type: 3}
+  - {fileID: 21300000, guid: d0ce3936a99f9924a862170b60698388, type: 3}
+  - {fileID: 21300000, guid: b71986c5bce6ca64d907510eb79aecc2, type: 3}
+  - {fileID: 21300000, guid: c049a23d59e703b40834e19eea73cd7f, type: 3}
   hexRule: {fileID: 3298362037680633969}
   outline:
   - {fileID: 7083919650426422659}
@@ -4148,6 +4157,15 @@ MonoBehaviour:
   - {fileID: 4086356253304710669}
   - {fileID: 134460833779984622}
   hexName: {fileID: 1769399968254766796}
+  hexUIBox: {fileID: 1713839137485991592}
+  hexVariants:
+  - {fileID: 21300000, guid: 6d83e8a9733de8945835f5ff3d425d79, type: 3}
+  - {fileID: 21300000, guid: 287cf1f954002a845a1ee27972ee8dda, type: 3}
+  - {fileID: 21300000, guid: 2a77f44961d5ad84f9ea53b39067cba0, type: 3}
+  - {fileID: 21300000, guid: e4a157a8f02d4e94ea52d3b68e2ab6cb, type: 3}
+  - {fileID: 21300000, guid: 3d01e9af97bc5ec4f954decb45f9e23d, type: 3}
+  - {fileID: 21300000, guid: dd2ab19b698cd0d4a94da486a6d18894, type: 3}
+  - {fileID: 21300000, guid: f48d4fb480af5b24296e26b12dcc63ad, type: 3}
   hexRule: {fileID: 6627689487783730353}
   outline:
   - {fileID: 7295312203913416908}

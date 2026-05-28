@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/HalfBlockerHex/_HalfBlockerHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/HalfBlockerHex/_HalfBlockerHex.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/NormalHex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/NormalHex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/TrashHEx/_TrashHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/TrashHEx/_TrashHex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
