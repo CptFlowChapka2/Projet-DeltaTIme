@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M10_Dépot_de_Crabisilice/M4_Dépot de Crabisilice concassée.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M10_Dépot_de_Crabisilice/M4_Dépot de Crabisilice concassée.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M11_Dépot_de_Crabisilice_Enchanté/M11_Dépot_de_Crabisilice_Enchanté.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M11_Dépot_de_Crabisilice_Enchanté/M11_Dépot_de_Crabisilice_Enchanté.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M12_Dépot_de_Soi/M11_Dépot_de_Soi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M12_Dépot_de_Soi/M11_Dépot_de_Soi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M13_Dépot_de_Bouteille/M13_Dépot_de_Bouteille.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M13_Dépot_de_Bouteille/M13_Dépot_de_Bouteille.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M2_Extracteuse de Crabisilice/M2_Extracteuse de Crabisilice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M2_Extracteuse de Crabisilice/M2_Extracteuse de Crabisilice.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M3_Embouteilleuse  de magie/M3_Embouteilleuse  de magie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M3_Embouteilleuse  de magie/M3_Embouteilleuse  de magie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M4_Enchantrice de Crabisilice/M4_Enchantrice de Crabisilice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M4_Enchantrice de Crabisilice/M4_Enchantrice de Crabisilice.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M5_Concasseur/M5_Concasseur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M5_Concasseur/M5_Concasseur.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M6_Dopeur d'araignée/M6_Dopeur d'araignée.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M6_Dopeur d'araignée/M6_Dopeur d'araignée.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M7_Extracteuse de Soi/M7_Extracteuse de Soi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M7_Extracteuse de Soi/M7_Extracteuse de Soi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M8_Piége à Nué/M8_Piége à Nué.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M8_Piége à Nué/M8_Piége à Nué.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M9_Dépot de Soie Magique/M9_Dépot de Soie Magique.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Machines/crabiisilice to soi magique/M9_Dépot de Soie Magique/M9_Dépot de Soie Magique.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GeneralScripts/FenêtreEntière.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GeneralScripts/FenêtreEntière.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/CloggerHex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/CloggerHex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/LacMagiqueHex/_LacMagiqueHex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/LacMagiqueHex/_LacMagiqueHex.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +188,7 @@
       <workItem from="1779436412048" duration="1541000" />
       <workItem from="1779737209160" duration="9785000" />
       <workItem from="1779872164659" duration="9841000" />
-      <workItem from="1779963711030" duration="2009000" />
+      <workItem from="1779963711030" duration="3937000" />
     </task>
     <servers />
   </component>

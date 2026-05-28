@@ -7,6 +7,7 @@ public class CloggerHex : Hex
     [SerializeField] private int numberOfTicksToClog = 2;
     [SerializeField] private int numberOfObjectToClog = 2;
     [SerializeField] private IngredientType clogType;
+    [SerializeField] private ParticleSystem particles;
     private IngredientsDictionary ingredientsDictionary;
     private int numberOfTicks;
     public bool permaClogger = false;
@@ -15,6 +16,7 @@ public class CloggerHex : Hex
     {
         base.Start();
         ingredientsDictionary = FindAnyObjectByType<IngredientsDictionary>();
+        particles.Stop();
     }
     
     public override void Tick()
@@ -79,18 +81,22 @@ public class CloggerHex : Hex
         {
             soundManager.lakeTilesActivated++;
         }
+        
+        particles.Play();
     }
     
     private void StopFeedbackClogging()
     {
-        if (clogType == IngredientType.Araignée)
+        if (clogType == IngredientType.Araignée && soundManager.forestTilesActivated > 0)
         {
             soundManager.forestTilesActivated--;
         }
-        else if (clogType == IngredientType.LiquideMagique)
+        else if (clogType == IngredientType.LiquideMagique && soundManager.lakeTilesActivated > 0)
         {
             soundManager.lakeTilesActivated--;
         }
+        
+        particles.Stop();
     }
     
     public override void RemoveGrabbable(Grabbable grabbable)
