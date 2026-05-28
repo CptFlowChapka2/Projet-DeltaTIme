@@ -39,7 +39,7 @@ PrefabInstance:
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: variants.Array.data[0].mesh
       value: 
-      objectReference: {fileID: -1230832213447598219, guid: 492c35ee8c4cca44fbbfc46e1fdf6673, type: 3}
+      objectReference: {fileID: -4420530465902008808, guid: 4b46c8022fcfc0d409051ca831d6d6bb, type: 3}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: variants.Array.data[1].mesh
       value: 
@@ -47,7 +47,7 @@ PrefabInstance:
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: variants.Array.data[0].material
       value: 
-      objectReference: {fileID: 2463431453837764731, guid: 492c35ee8c4cca44fbbfc46e1fdf6673, type: 3}
+      objectReference: {fileID: 7718359129458662834, guid: 4b46c8022fcfc0d409051ca831d6d6bb, type: 3}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].inputs.Array.size
       value: 1
