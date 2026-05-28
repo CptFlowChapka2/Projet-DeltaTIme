@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "M4_D\xE9pot de Crabisilice concass\xE9e"
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 3b58e51ef9497be4aa30b8e34473066a, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: c2ce3e70ea6734541a59c609be9c5349, type: 2}
     - target: {fileID: 6283111161050997507, guid: 3b58e51ef9497be4aa30b8e34473066a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -375,6 +379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "M13_D\xE9pot_de_Bouteille"
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 5283947fb0028ca4f9a3db88190c0eb9, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: c2ce3e70ea6734541a59c609be9c5349, type: 2}
     - target: {fileID: 6283111161050997507, guid: 5283947fb0028ca4f9a3db88190c0eb9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -436,6 +444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "M11_D\xE9pot_de_Soi"
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 539c084a0c00fc9488874603219b4059, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: c2ce3e70ea6734541a59c609be9c5349, type: 2}
     - target: {fileID: 6283111161050997507, guid: 539c084a0c00fc9488874603219b4059, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -497,6 +509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M2_Extracteuse de Crabisilice
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: 5f38f3759b9313446aa0428b0c8eff8a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -554,6 +570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M7_Extracteuse de Soi
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 86a4d4d68be182246afe9fc5b169524f, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: dafe0f5d8133ac14586c7e5f111fba89, type: 2}
     - target: {fileID: 6283111161050997507, guid: 86a4d4d68be182246afe9fc5b169524f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -712,6 +732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "M6_Dopeur d'araign\xE9e"
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: cd8e61aafaecb9444ad21f2c8ec68043, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: e2fc4d680e0d99e4cb99949bdd2a5ccc, type: 2}
     - target: {fileID: 6283111161050997507, guid: cd8e61aafaecb9444ad21f2c8ec68043, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -773,6 +797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M5_Concasseur
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 8302bf12cf9747c4089fabecc1d7ce96, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: 0de2d3cd5126f1d4489e5115bd2fb3ab, type: 2}
     - target: {fileID: 6283111161050997507, guid: 8302bf12cf9747c4089fabecc1d7ce96, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -834,6 +862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "M11_D\xE9pot_de_Crabisilice_Enchant\xE9"
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 8ba1c099373625b4f92fbdf974ecf6f0, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: c2ce3e70ea6734541a59c609be9c5349, type: 2}
     - target: {fileID: 6283111161050997507, guid: 8ba1c099373625b4f92fbdf974ecf6f0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -899,6 +931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M1_Couveuse de Crabiroche
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 90b7f6f2fb6143247871b63c0f4f179a, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: 47689d2f13d9a714d8f9d1bacd9975f0, type: 2}
     - target: {fileID: 6283111161050997507, guid: 90b7f6f2fb6143247871b63c0f4f179a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1056,6 +1092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M3_Embouteilleuse  de magie
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: cea8d868e01415742bf99a8cba8bd3ba, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: 50c9f49ec9387834e91138ca8ce992de, type: 2}
     - target: {fileID: 6283111161050997507, guid: cea8d868e01415742bf99a8cba8bd3ba, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1117,6 +1157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "M9_D\xE9pot de Soie Magique"
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 541baf5935ed3504fa1eaafb2a06179d, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: c2ce3e70ea6734541a59c609be9c5349, type: 2}
     - target: {fileID: 6283111161050997507, guid: 541baf5935ed3504fa1eaafb2a06179d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1380,6 +1424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M4_Enchantrice de Crabisilice
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
+      propertyPath: variants.Array.data[0].material
+      value: 
+      objectReference: {fileID: 2100000, guid: c9be9a0f8a4d5cc4fb2fcc7c9a5c2a55, type: 2}
     - target: {fileID: 6283111161050997507, guid: 4748381e0ee3beb41ac0206842541cd3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
