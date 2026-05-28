@@ -546,6 +546,10 @@ PrefabInstance:
       propertyPath: lvlDurationWhenRush
       value: 598
       objectReference: {fileID: 0}
+    - target: {fileID: 7230883955173505495, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

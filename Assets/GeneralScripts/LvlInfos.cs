@@ -33,6 +33,9 @@ public class LvlInfos : MonoBehaviour
     private PauseHandler _pauseHandler;
 
     private float timeMod = 1f;
+
+    private bool hasFinishedMinimumScore=false;
+    
    
 
     private void Start()
@@ -45,10 +48,11 @@ public class LvlInfos : MonoBehaviour
 
     private void Update()
     {
-        float timeModer = timeMod = Time.deltaTime;
+        float timeModer = timeMod * Time.deltaTime;
         
         timer +=timeModer;
         currentLvlTime += timeModer;
+        if(timeModer==0) return;
         if (timer >= timePerTick - 0.2f && !alreadyPlayedSound)
         {
             alreadyPlayedSound = true;
@@ -62,31 +66,34 @@ public class LvlInfos : MonoBehaviour
             Tick.Invoke();
         }
 
-        UpdateGeneralInformationText();
         
-        if (currentLvlTime>lvlDuration||(neededScore!=-1&&score>=neededScore))
+        
+        if (currentLvlTime>lvlDuration||(hasFinishedMinimumScore&&neededScore!=-1&&score>=neededScore))
         {
-            _pauseHandler.PauseCalled.Invoke();
+            hasFinishedMinimumScore = true;
+            _pauseHandler.PauseCalled.Invoke(PauseState.lvlFinished);
         }
+        
+        
     }
 
-    private void UpdateGeneralInformationText()
+   [Obsolete] private void UpdateGeneralInformationText()
     {
-        // timeBeforeNextTick.text = "next tick in : \n "+(timePerTick - timer).ToString(CultureInfo.InvariantCulture);
-        //
-        // timeRemaining.text ="time in level remaining : \n "+ (lvlDuration - currentLvlTime).ToString(CultureInfo.InvariantCulture);
-        //
-        // totalNbrOfTick.text ="Total Nbr Of Tick : \n "+ (tNbrTick).ToString(CultureInfo.InvariantCulture);
+        timeBeforeNextTick.text = "next tick in : \n "+(timePerTick - timer).ToString(CultureInfo.InvariantCulture);
+        
+        timeRemaining.text ="time in level remaining : \n "+ (lvlDuration - currentLvlTime).ToString(CultureInfo.InvariantCulture);
+        
+        totalNbrOfTick.text ="Total Nbr Of Tick : \n "+ (tNbrTick).ToString(CultureInfo.InvariantCulture);
         
        
-        // if (neededScore != -1)
-        // {
-        //     scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture)+"/"+(neededScore).ToString(CultureInfo.InvariantCulture);
-        // }
-        // else
-        // {
-        //     scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture);
-        // }
+        if (neededScore != -1)
+        {
+            scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture)+"/"+(neededScore).ToString(CultureInfo.InvariantCulture);
+        }
+        else
+        {
+            scoreText.text ="Score : \n "+ (score).ToString(CultureInfo.InvariantCulture);
+        }
         
 
         
@@ -103,7 +110,7 @@ public class LvlInfos : MonoBehaviour
         }
     }
 
-    public void ReceivePause()
+    public void ReceivePause(PauseState pState)
     {
         timeMod = timeMod switch
         {

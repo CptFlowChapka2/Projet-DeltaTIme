@@ -243,10 +243,11 @@ public class Player : Grabbable
     {
         bool pause = pauseAction.WasPressedThisFrame();
         if (!pause) return;
-       _pauseHandler.PauseCalled.Invoke();
+       
+       _pauseHandler.PauseCalled.Invoke(PauseState.noInfo);
     }
 
-    public void ReceivePause()
+    public void ReceivePause(PauseState pState)
     {
         isInPause = !isInPause;
         playerInput.currentActionMap = isInPause switch {
