@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: variants.Array.data[0].material
       value: 
-      objectReference: {fileID: -376870415205657054, guid: 7031a98313e0d024094f8dbf36b7d154, type: 3}
+      objectReference: {fileID: 2100000, guid: 0de2d3cd5126f1d4489e5115bd2fb3ab, type: 2}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: rules.Array.data[0].inputs.Array.size
       value: 1
