@@ -24,30 +24,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-6512782789287650986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/NewWorkingMachine/NumberOfWorkingMachines
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: NumberOfWorkingMachines
-  StudioPath: 
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 516463151
-    data2: 2740287645
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-5795705192804699567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +39,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Placeholders.bank
   Name: Placeholders
   StudioPath: bank:/Placeholders
-  lastModified: 639149551060000000
+  lastModified: 639137635094560481
   FileSizes: []
   Exists: 1
 --- !u!114 &-5565251454674282510
@@ -168,34 +144,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-2461223911976556513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NewWorkingMachine
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/NewWorkingMachine
-  Guid:
-    Data1: 1000699633
-    Data2: 1188858350
-    Data3: -646196042
-    Data4: 665050774
-  Banks:
-  - {fileID: 4384719233189785050}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -6512782789287650986}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-1482181126149747150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,14 +229,13 @@ MonoBehaviour:
   - {fileID: -1482181126149747150}
   - {fileID: 6478573568228306833}
   - {fileID: 2219564421452844559}
-  - {fileID: -2461223911976556513}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2993860550895887398}
   StringsBanks:
   - {fileID: 6998373313492933676}
   cacheVersion: 131857
-  cacheTime: 639155693620000000
+  cacheTime: 639155741814437601
   SerializableEventsDict:
   - key: event:/Tick
     index: 0
@@ -312,8 +259,6 @@ MonoBehaviour:
     index: 9
   - key: event:/Clic
     index: 10
-  - key: event:/NewWorkingMachine
-    index: 11
 --- !u!114 &1493843971170430513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +286,7 @@ MonoBehaviour:
   - {fileID: -4136535300666960215}
   MinDistance: 1
   MaxDistance: 20
-  Length: 14630
+  Length: 14000
 --- !u!114 &1980979443214217231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,7 +381,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639149551060000000
+  lastModified: 639155741814422206
   FileSizes: []
   Exists: 1
 --- !u!114 &4384719233189785050
@@ -454,7 +399,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/FX.bank
   Name: FX
   StudioPath: bank:/FX
-  lastModified: 639155693620000000
+  lastModified: 639155741814355456
   FileSizes: []
   Exists: 1
 --- !u!114 &4389570565296821108
@@ -579,10 +524,10 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639155693620000000
+  lastModified: 639155741814437601
   FileSizes:
   - Name: 
-    Value: 1806
+    Value: 1758
   Exists: 1
 --- !u!114 &8580240426373858206
 MonoBehaviour:
@@ -626,6 +571,6 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639149551060000000
+  lastModified: 639137635094540420
   FileSizes: []
   Exists: 1

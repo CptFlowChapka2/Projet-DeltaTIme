@@ -47,11 +47,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1000699633
-      Data2: 1188858350
-      Data3: -646196042
-      Data4: 665050774
-    Path: event:/NewWorkingMachine
+      Data1: 2006984099
+      Data2: 1276897023
+      Data3: 53210559
+      Data4: -1878949269
+    Path: event:/WorkingMachine
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
@@ -508,7 +508,10 @@ MonoBehaviour:
   foretProd: {fileID: 5221302991988921268}
   scoring: {fileID: 1680947818334011130}
   playersRotating: 0
+  playersExtending: 0
   numberOfMachinesWorking: 0
+  lakeTilesActivated: 0
+  forestTilesActivated: 0
 --- !u!1 &4961382044676105679
 GameObject:
   m_ObjectHideFlags: 0
