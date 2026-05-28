@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.48
       objectReference: {fileID: 0}
+    - target: {fileID: 1403122597488939936, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403122597488939936, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403122597488939936, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403122597488939936, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1403122597488939936, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2587932422291969390, guid: f659b8689f93a264a98fad06fceff5ea, type: 3}
       propertyPath: machineName
       value: "Pi\xE8ge \xE0 Nu\xE9e"
