@@ -11,7 +11,7 @@ public class PauseHandler : MonoBehaviour
    public GameObject ResumeButton;
 
    private bool hasTerminated;
-   private bool hasFinished;
+   public bool hasFinished;
 
 
    private void Start()

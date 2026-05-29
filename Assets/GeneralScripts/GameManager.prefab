@@ -5211,6 +5211,7 @@ MonoBehaviour:
   PauseObject: {fileID: 4595015926332228562}
   NextButton: {fileID: 7200193558301244248}
   ResumeButton: {fileID: 4789947346858263793}
+  hasFinished: 1
 --- !u!114 &5203157354553503947
 MonoBehaviour:
   m_ObjectHideFlags: 0
