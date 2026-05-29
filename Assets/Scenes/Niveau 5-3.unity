@@ -13097,11 +13097,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1620542186042323500, guid: cea8d868e01415742bf99a8cba8bd3ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.91
+      value: 25.66
       objectReference: {fileID: 0}
     - target: {fileID: 1620542186042323500, guid: cea8d868e01415742bf99a8cba8bd3ba, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1620542186042323500, guid: cea8d868e01415742bf99a8cba8bd3ba, type: 3}
       propertyPath: m_LocalRotation.x
@@ -13109,7 +13109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1620542186042323500, guid: cea8d868e01415742bf99a8cba8bd3ba, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620542186042323500, guid: cea8d868e01415742bf99a8cba8bd3ba, type: 3}
       propertyPath: m_LocalRotation.z
@@ -13121,7 +13121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1620542186042323500, guid: cea8d868e01415742bf99a8cba8bd3ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1620542186042323500, guid: cea8d868e01415742bf99a8cba8bd3ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -18264,6 +18264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: M2_Extracteuse de Crabisilice
       objectReference: {fileID: 0}
+    - target: {fileID: 4853959601896217864, guid: adff0ebd9bcc15e4aa596bcc83bc27a8, type: 3}
+      propertyPath: variants.Array.data[0].mesh
+      value: 
+      objectReference: {fileID: -8344823704121574938, guid: 50e5499b0c34dfb468b56708ff19865d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
