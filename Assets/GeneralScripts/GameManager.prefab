@@ -5050,7 +5050,7 @@ MonoBehaviour:
       Value:
       - mesh: {fileID: 8691780276856062721, guid: 49506e3b8e704e94790d857a9d0ed4e9, type: 3}
         material: {fileID: 2100000, guid: 0468fb0bade6ed14cb6be81ecc125a32, type: 2}
-        sprite: {fileID: 21300000, guid: f76c197b6c588174897dbfdf017633a7, type: 3}
+        sprite: {fileID: 21300000, guid: 0a7246a6a79de1c479d09b48c72d7b7b, type: 3}
     - Key: 3
       Value:
       - mesh: {fileID: 8691780276856062721, guid: 49506e3b8e704e94790d857a9d0ed4e9, type: 3}
@@ -5065,7 +5065,7 @@ MonoBehaviour:
       Value:
       - mesh: {fileID: 8691780276856062721, guid: 49506e3b8e704e94790d857a9d0ed4e9, type: 3}
         material: {fileID: 2100000, guid: 01704edf3fd48844b9e4e2728dbc6118, type: 2}
-        sprite: {fileID: 21300000, guid: 1ecf57382b92fae4e85a4a94ac91c88e, type: 3}
+        sprite: {fileID: 21300000, guid: 7eae0dc4d875a5d4ab03e9d5d6319b75, type: 3}
     - Key: 6
       Value:
       - mesh: {fileID: 8691780276856062721, guid: 49506e3b8e704e94790d857a9d0ed4e9, type: 3}
@@ -5134,7 +5134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   lvlDuration: Infinity
-  lvlDurationWhenRush: 468
+  lvlDurationWhenRush: 598
   timePerTick: 2
   timer: 0
   timeRemaining: {fileID: 5119135615603770870}
@@ -5145,7 +5145,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   score: 0
-  neededScore: -1
+  neededScore: 7
   tNbrTick: 0
   validIngredientHasSpwaned: 0
   validIngredientType: 9
