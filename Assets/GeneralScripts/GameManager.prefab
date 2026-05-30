@@ -9136,7 +9136,7 @@ PrefabInstance:
     - target: {fileID: 95629773529644589, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
       propertyPath: m_PointAction
       value: 
-      objectReference: {fileID: -8219156087375137524, guid: a1529d48a2d1df3459d9e05f778da5a3, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 95629773529644589, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
       propertyPath: m_CancelAction
       value: 
