@@ -494,6 +494,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 297042001109106946, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 734
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016764952520810515, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -475
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024573475918535925, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -210
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875030565309168032, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c7c4eed79629cd74f8ebf15804e03638, type: 3}
+    - target: {fileID: 3435527961560703836, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -730
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595015926332228562, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4919614783463189550, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -536,6 +560,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5947273728185129341, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168679632698408250, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a834a8ee92da8a441becde340de2a047, type: 3}
+    - target: {fileID: 7200193558301244248, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
