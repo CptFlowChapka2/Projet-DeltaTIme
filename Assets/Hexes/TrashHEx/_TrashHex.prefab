@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HalfBlockerHex
   hexName: "Case D\xE9sol\xE9e"
-  hexUIInfo: {fileID: 21300000, guid: 91d539e5e6de9f341b85d5c8bb26855e, type: 3}
+  hexUIInfo: {fileID: 21300000, guid: 69cc1480ea08a87429ae8f6d3167d752, type: 3}
   hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []

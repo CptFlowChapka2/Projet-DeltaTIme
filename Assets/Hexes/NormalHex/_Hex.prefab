@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NormalHex
   hexName: Case de Base
-  hexUIInfo: {fileID: 21300000, guid: 91c964b219e2e5a45b3e3e27711568f3, type: 3}
+  hexUIInfo: {fileID: 21300000, guid: 80bd84710a446f74f9f9b64361cae24e, type: 3}
   hexRules:
   - inputs: 650000006500000065000000
     replacementHex: {fileID: 5482331452799643952, guid: 22524315a222dd24c8690af0973fe409, type: 3}
@@ -612,6 +612,7 @@ MonoBehaviour:
   feedbackTimerDanger: {fileID: 3349463296004600538}
   gridManager: {fileID: 0}
   lvlInfos: {fileID: 0}
+  soundManager: {fileID: 0}
   trashHex: {fileID: 5482331452799643952, guid: e1017c0da15563942aff61caf3d69b11, type: 3}
 --- !u!1 &2065762723515193146
 GameObject:

@@ -4948,7 +4948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloggerHex
   hexName: Lac Magique
-  hexUIInfo: {fileID: 21300000, guid: dc8653fcb29ced84684170b842d9d3f9, type: 3}
+  hexUIInfo: {fileID: 21300000, guid: 4a95e7f465076d14ea3f333f0d0dbff6, type: 3}
   hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []

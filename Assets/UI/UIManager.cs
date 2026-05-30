@@ -24,7 +24,6 @@ public class UIManager : MonoBehaviour
     public Image[] rule2Inputs;
     public Image[] rule2Outputs;
     [Header("HexRules")]
-    public TMP_Text hexName;
     public Image hexUIBox;
     public Sprite[] hexVariants;
     public Image hexRule;
@@ -68,74 +67,16 @@ public class UIManager : MonoBehaviour
 
     private void DisplayOutline()
     {
-        // if (((lvlInfos.timer > 0.5f && lvlInfos.timer <= 1) 
-        //      || (lvlInfos.timer > 1.5f) && (lvlInfos.timer <= 2))
-        //     && whatPhase == false)
-        // {
-        //     whatPhase = true;
-        //     foreach (GameObject img in outlineA)
-        //     {
-        //         img.SetActive(true);
-        //     }
-        //     foreach (GameObject img in outlineB)
-        //     {
-        //         img.SetActive(false);
-        //     }
-        // }
-        // else if (((lvlInfos.timer <= 0.5f)
-        //           || (lvlInfos.timer > 1) && (lvlInfos.timer <= 1.5f)) 
-        //          && whatPhase == true)
-        // {
-        //     whatPhase = false;
-        //     foreach (GameObject img in outlineB)
-        //     {
-        //         img.SetActive(true);
-        //     }
-        //     foreach (GameObject img in outlineA)
-        //     {
-        //         img.SetActive(false);
-        //     }
-        // }
-
         foreach (CanvasRenderer img in outline)
         {
             float alphaValue = Mathf.Clamp(Mathf.Abs(1 - hex.lvlInfos.timer), 0.6f, 1f);
             img.SetAlpha(alphaValue);
         }
-        
-        
     }
 
     private void DisplayHexUI()
     {
-        hexName.text = hex.hexName;
         hexRule.sprite = hex.hexUIInfo;
-
-        // switch (hexName.text)
-        // {
-        //     case "Crevasse":
-        //         hexUIBox.sprite = hexVariants[0];
-        //         break;
-        //     case "Case de Base":
-        //         hexUIBox.sprite = hexVariants[1];
-        //         break;
-        //     case "Forêt":
-        //         hexUIBox.sprite = hexVariants[2];
-        //         break;
-        //     case "Lac Magique":
-        //         hexUIBox.sprite = hexVariants[3];
-        //         break;
-        //     case "Montagne":
-        //         hexUIBox.sprite = hexVariants[4];
-        //         break;
-        //     case "Case entoilée":
-        //         hexUIBox.sprite = hexVariants[5];
-        //         break;
-        //     case "Case Désolée":
-        //         hexUIBox.sprite = hexVariants[6];
-        //         break;
-        //         
-        // }
     }
 
     private void DisplayIngredientsUI()

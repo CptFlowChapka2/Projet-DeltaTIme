@@ -100,12 +100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HalfBlockerHex
   hexName: Crevasse
-  hexUIInfo: {fileID: 21300000, guid: 890521f4f691e234f89088c905ab97e1, type: 3}
+  hexUIInfo: {fileID: 21300000, guid: 4abcaf126556ea44697db48c1e13a92a, type: 3}
   hexRules: []
   relativeCoords: {x: 0, y: 0}
   grabbablesOnThisHex: []
   grabbers: []
-  isPlayerHovering: 
   isHovered: 0
   state: 1
   maxNbrOfGrabbable: 0
@@ -115,6 +114,7 @@ MonoBehaviour:
   feedbackTimerDanger: {fileID: 9082708175787790360}
   gridManager: {fileID: 0}
   lvlInfos: {fileID: 0}
+  soundManager: {fileID: 0}
   trashHex: {fileID: 5482331452799643952}
 --- !u!114 &7887567047554848065 stripped
 MonoBehaviour:
