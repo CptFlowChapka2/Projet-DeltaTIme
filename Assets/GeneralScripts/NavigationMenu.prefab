@@ -2312,7 +2312,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3693666382003979789, guid: db80e919375028442b3357a685055a80, type: 3}
       propertyPath: m_Name
-      value: PreviousButton
+      value: ReloadButton
       objectReference: {fileID: 0}
     - target: {fileID: 3998298443155224244, guid: db80e919375028442b3357a685055a80, type: 3}
       propertyPath: m_Sprite
