@@ -538,10 +538,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4595015926332228562, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4693461258529083937, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -22901,6 +22897,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21397031}
     - target: {fileID: 6918368824221570355, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
+      propertyPath: isInPause
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918368824221570355, guid: 378d3bcbc1192b64fa7b24f528687cdd, type: 3}
       propertyPath: otherPlayer
       value: 
       objectReference: {fileID: 2468010865620526790}
@@ -38884,6 +38884,10 @@ PrefabInstance:
       propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 21397031}
+    - target: {fileID: 7635919991480573654, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
+      propertyPath: isInPause
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7635919991480573654, guid: 743ed8195af1778468208aaa9af7194f, type: 3}
       propertyPath: otherPlayer
       value: 

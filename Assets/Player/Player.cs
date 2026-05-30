@@ -28,7 +28,7 @@ public class Player : Grabbable
     private InputAction extendRetractAction;
     private InputAction grabReleaseAction;
     private InputAction pauseAction;
-    [HideInInspector]public bool isInPause=false;
+    public bool isInPause=false;
     
     public Rigidbody rb;
     

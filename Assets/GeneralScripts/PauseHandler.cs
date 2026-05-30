@@ -17,6 +17,8 @@ public class PauseHandler : MonoBehaviour
    private void Start()
    {
       PauseCalled.AddListener(ReceivePause);
+      if(hasFinished)NextButton.SetActive(true);
+      if(hasTerminated)NextButton.SetActive(false);
    }
 
    public void ReceivePause(PauseState pState)
