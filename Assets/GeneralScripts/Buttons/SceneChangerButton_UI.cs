@@ -32,6 +32,9 @@ public class SceneChangerButton_UI : MonoBehaviour
             case ButtonAction.Pause:
                 _pauseHandler.PauseCalled.Invoke(PauseState.noInfo);
                 break;
+            case ButtonAction.Reload:
+                SceneLoaderEncaps.SceneLoader.LoadScene(SceneLoaderEncaps.SceneLoader.currentScene);
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -46,6 +49,7 @@ public enum ButtonAction
     Previous=1,
     LoadPrecise=2,
     Pause=3,
+    Reload=4
     
 }
 #if UNITY_EDITOR 

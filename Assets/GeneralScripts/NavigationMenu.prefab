@@ -2324,7 +2324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4640082181632804921, guid: db80e919375028442b3357a685055a80, type: 3}
       propertyPath: action
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5720552539559910902, guid: db80e919375028442b3357a685055a80, type: 3}
       propertyPath: m_TargetGraphic
