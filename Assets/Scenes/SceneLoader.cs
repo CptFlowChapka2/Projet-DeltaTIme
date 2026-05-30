@@ -46,6 +46,12 @@ public class SceneLoader : MonoBehaviour
         if(SceneManager.GetActiveScene()==SceneManager.GetSceneByName(sceneRefEncaps.sceneName))return;
         StartCoroutine(LoadYourAsyncScene(sceneRefEncaps));
     }
+
+    public void ReloadScene()
+    {
+        if(asyncLoad is not null&&!asyncLoad.isDone) return;
+        StartCoroutine(LoadYourAsyncScene(currentScene));
+    }
     
     private IEnumerator LoadYourAsyncScene(SceneRefEncaps sceneRefEncaps)
     {

@@ -33,7 +33,7 @@ public class SceneChangerButton_UI : MonoBehaviour
                 _pauseHandler.PauseCalled.Invoke(PauseState.noInfo);
                 break;
             case ButtonAction.Reload:
-                SceneLoaderEncaps.SceneLoader.LoadScene(SceneLoaderEncaps.SceneLoader.currentScene);
+                SceneLoaderEncaps.SceneLoader.ReloadScene();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
