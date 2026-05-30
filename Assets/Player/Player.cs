@@ -28,7 +28,7 @@ public class Player : Grabbable
     private InputAction extendRetractAction;
     private InputAction grabReleaseAction;
     private InputAction pauseAction;
-    public bool isInPause=false;
+   public bool isInPause=false;
     
     public Rigidbody rb;
     
@@ -80,6 +80,9 @@ public class Player : Grabbable
 
         _pauseHandler = FindAnyObjectByType<PauseHandler>();
         _pauseHandler.PauseCalled.AddListener(ReceivePause);
+        isInPause = false;
+        UpdatePhysicalArm();
+        ReceivePause(PauseState.noInfo);
     }
 
     private void Update()

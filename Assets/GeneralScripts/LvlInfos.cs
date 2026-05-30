@@ -43,6 +43,7 @@ public class LvlInfos : MonoBehaviour
         soundManager = FindAnyObjectByType<SoundManager>();
         _pauseHandler = GetComponent<PauseHandler>();
         _pauseHandler.PauseCalled.AddListener(ReceivePause);
+        timeMod = 0f;
     }
     
 

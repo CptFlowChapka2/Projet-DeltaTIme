@@ -17,7 +17,6 @@ public class SceneChangerButton_UI : MonoBehaviour
 
     public void OnButtonClic()
     {
-        Debug.Log("button presed");
         switch (action)
         {
             case ButtonAction.Next:
