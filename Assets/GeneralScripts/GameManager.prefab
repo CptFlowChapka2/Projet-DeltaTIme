@@ -5120,7 +5120,7 @@ MonoBehaviour:
       Value:
       - mesh: {fileID: 0}
         material: {fileID: 0}
-        sprite: {fileID: 21300000, guid: 31a22e04676adf2439e68c862965060f, type: 3}
+        sprite: {fileID: 21300000, guid: c0b3f6206c66d3b4f8a2d26e7a00d9c8, type: 3}
 --- !u!114 &6625698513864669315
 MonoBehaviour:
   m_ObjectHideFlags: 0
