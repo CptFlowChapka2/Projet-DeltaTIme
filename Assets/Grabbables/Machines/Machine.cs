@@ -49,6 +49,8 @@ public class Machine : Grabbable
     [HideInInspector]public int tickCounter = 0;
     public int timeToReactivate = 3;
     private LvlInfos _lvlInfos;
+
+    public Animator thisAnimator;
     
     
 
@@ -83,9 +85,17 @@ public class Machine : Grabbable
             tickCounter = 0;
             return;
         }
+        
 
         AssignRule();
-        if (_actualMachineRuleToFollow.Equals(new MachineRule())) return;
+        if (_actualMachineRuleToFollow.Equals(new MachineRule()))
+        {
+            thisAnimator.SetBool("Is working",false);
+            return;
+        }
+        
+        thisAnimator.SetBool("Is working",true);
+       
         ApplyRule();
     }
 
@@ -107,6 +117,7 @@ public class Machine : Grabbable
                     actualHex.DestroyGrabbables(grabbable);
                 } 
             }
+            thisAnimator.SetBool("Is working",false);
             
             if (_actualMachineRuleToFollow.outputs.Contains(IngredientType.None)) return;
             if (_actualMachineRuleToFollow.outputs.Contains(IngredientType.Score))
@@ -121,7 +132,7 @@ public class Machine : Grabbable
                 
             foreach (IngredientType output in _actualMachineRuleToFollow.outputs)
             {
-                Ingredient outputIngredient = Instantiate(prefabIngredient, transform.position, transform.rotation).GetComponent<Ingredient>();
+                Ingredient outputIngredient = Instantiate(prefabIngredient, transform.position, Quaternion.identity).GetComponent<Ingredient>();
                 outputIngredient.Initialize(output, ingredientsDictionary, actualHex);
                 //l'ingredient qui vient de spawn applique son Start de grabble donc s'ajoute lui même à la hex//
             }

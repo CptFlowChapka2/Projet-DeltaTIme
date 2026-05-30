@@ -454,7 +454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6620469454325185818
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4747,6 +4747,7 @@ MonoBehaviour:
   PauseObject: {fileID: 4595015926332228562}
   NextButton: {fileID: 7200193558301244248}
   ResumeButton: {fileID: 4789947346858263793}
+  BackgroundImage: {fileID: 381220064758927752}
   hasFinished: 1
 --- !u!114 &5203157354553503947
 MonoBehaviour:
@@ -8655,7 +8656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6193341157728040575, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6539484377454733208, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
       propertyPath: m_SizeDelta.x
