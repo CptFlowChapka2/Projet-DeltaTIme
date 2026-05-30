@@ -614,6 +614,10 @@ PrefabInstance:
       propertyPath: neededscore
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7017406576461820883, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d934c5ffaf27884db4dc7bff11fec3b, type: 3}
     - target: {fileID: 7200193558301244248, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: m_IsActive
       value: 0
