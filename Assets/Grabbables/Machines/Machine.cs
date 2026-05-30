@@ -37,6 +37,7 @@ public class Machine : Grabbable
     private MachineRule _actualMachineRuleToFollow;
     private MachineRule _lastMachineRuleToFollow;
     private List<Ingredient> workedIngredients=new List<Ingredient>();
+    private List<Animator> workedIngredientsAnim=new List<Animator>();
     private bool isWorking = false;
     public int possibleSpeedBoostByEnergizer = 0;
 
@@ -91,10 +92,15 @@ public class Machine : Grabbable
         if (_actualMachineRuleToFollow.Equals(new MachineRule()))
         {
             thisAnimator.SetBool("Is working",false);
+            if(workedIngredientsAnim.Count>=0)
+            workedIngredientsAnim.ForEach(x=> x.SetBool("IsWorkedOn",false));
+               
             return;
         }
         
         thisAnimator.SetBool("Is working",true);
+        if(workedIngredientsAnim.Count>=0)
+        workedIngredientsAnim.ForEach(x=> x.SetBool("IsWorkedOn",true));
        
         ApplyRule();
     }
@@ -216,9 +222,12 @@ public class Machine : Grabbable
             
             tickCounter = 0;
             workedIngredients.Clear();
+            workedIngredientsAnim.Clear();
             if (!(_actualMachineRuleToFollow.inputs.Contains(IngredientType.None)))
             {
                 nextGrabbables.ForEach(x => workedIngredients.Add((Ingredient)x));  
+                nextGrabbables.ForEach(x => workedIngredientsAnim.Add(((Ingredient)x).thisAnimator));  
+                
             }
         }
         

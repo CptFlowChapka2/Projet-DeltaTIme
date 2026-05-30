@@ -6,6 +6,7 @@ public class Ingredient : Grabbable
     public IngredientType type;
     [SerializeField] private SpriteRenderer ingredientStickerRenderer;
     private IngredientsDictionary dictionary;
+    public Animator thisAnimator;
     private bool wasInit = false;
 
     public void Initialize(IngredientType ingredientType, IngredientsDictionary ingredientsDictionary, Hex hex)
