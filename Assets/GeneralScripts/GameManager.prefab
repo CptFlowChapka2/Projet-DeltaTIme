@@ -8889,7 +8889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8772210678567583665, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 631
+      value: 945
       objectReference: {fileID: 0}
     - target: {fileID: 9133109564577606905, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
       propertyPath: m_Sprite
