@@ -15,6 +15,8 @@ public class SoundManager : MonoBehaviour
     public StudioEventEmitter lacMagiqueProd;
     public StudioEventEmitter foretProd;
     public StudioEventEmitter scoring;
+    public StudioEventEmitter win;
+    public StudioEventEmitter lose;
 
     public float playersRotating = 0;
     public float playersExtending = 0;

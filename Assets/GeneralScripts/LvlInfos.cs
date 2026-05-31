@@ -75,6 +75,7 @@ public class LvlInfos : MonoBehaviour
         
         if (!hasFinishedMinimumScore&&neededScore!=-1&&score>=neededScore)
         {
+            soundManager.win.Play();
             hasFinishedMinimumScore = true;
             _pauseHandler.PauseCalled.Invoke(PauseState.lvlFinished);
         }
@@ -82,6 +83,7 @@ public class LvlInfos : MonoBehaviour
 
         if (!hasSurpassMaxTime&& currentLvlTime > lvlDuration )
         {
+            soundManager.lose.Play();
             hasSurpassMaxTime = true;
             timeUpScore.text =score.ToString() ;
             lvlDuration = Mathf.Infinity;

@@ -60,8 +60,6 @@ public enum ButtonAction
 [CustomEditor(typeof(SceneChangerButton_UI))]
 public class SceneChangerButton_UI_Inspector : Editor
 {
-    
-    
     SerializedProperty m_TargetScene;
     SerializedProperty m_SceneLoader;
     SerializedProperty m_ActionMode;

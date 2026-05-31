@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8902307551334513982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Win
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Win
+  Guid:
+    Data1: -1877192817
+    Data2: 1077507991
+    Data3: 1568602764
+    Data4: -1738926065
+  Banks:
+  - {fileID: 4384719233189785050}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8476220638844682831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24,6 +51,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-6955835407566570786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lose
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Lose
+  Guid:
+    Data1: 900073832
+    Data2: 1324348165
+    Data3: -1948265298
+    Data4: 924167685
+  Banks:
+  - {fileID: 4384719233189785050}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5795705192804699567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,13 +283,15 @@ MonoBehaviour:
   - {fileID: -1482181126149747150}
   - {fileID: 6478573568228306833}
   - {fileID: 2219564421452844559}
+  - {fileID: -6955835407566570786}
+  - {fileID: -8902307551334513982}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2993860550895887398}
   StringsBanks:
   - {fileID: 6998373313492933676}
   cacheVersion: 131857
-  cacheTime: 639155741814437601
+  cacheTime: 639158545572401769
   SerializableEventsDict:
   - key: event:/Tick
     index: 0
@@ -259,6 +315,10 @@ MonoBehaviour:
     index: 9
   - key: event:/Clic
     index: 10
+  - key: event:/Lose
+    index: 11
+  - key: event:/Win
+    index: 12
 --- !u!114 &1493843971170430513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,7 +441,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639155741814422206
+  lastModified: 639158545572381129
   FileSizes: []
   Exists: 1
 --- !u!114 &4384719233189785050
@@ -399,7 +459,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/FX.bank
   Name: FX
   StudioPath: bank:/FX
-  lastModified: 639155741814355456
+  lastModified: 639158545572340810
   FileSizes: []
   Exists: 1
 --- !u!114 &4389570565296821108
@@ -524,10 +584,10 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639155741814437601
+  lastModified: 639158545572401769
   FileSizes:
   - Name: 
-    Value: 1758
+    Value: 1848
   Exists: 1
 --- !u!114 &8580240426373858206
 MonoBehaviour:
