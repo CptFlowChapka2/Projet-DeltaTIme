@@ -538,6 +538,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: neededScore
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: lvlDurationWhenRush
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: validIngredientType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15184,6 +15196,7 @@ MonoBehaviour:
   - {fileID: 1298800719}
   popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
   LvlInfos: {fileID: 1165446270}
+  soundManager: {fileID: 0}
 --- !u!4 &908247749
 Transform:
   m_ObjectHideFlags: 0

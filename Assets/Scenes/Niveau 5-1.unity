@@ -586,6 +586,10 @@ PrefabInstance:
       propertyPath: lvlDurationWhenRush
       value: 598
       objectReference: {fileID: 0}
+    - target: {fileID: 6971181428418542979, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: BackgroundImage
+      value: 
+      objectReference: {fileID: 21397032}
     - target: {fileID: 7200193558301244248, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -606,6 +610,11 @@ PrefabInstance:
 --- !u!1 &21397031 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4595015926332228562, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+  m_PrefabInstance: {fileID: 21397030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &21397032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8505137576369459888, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
   m_PrefabInstance: {fileID: 21397030}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &22469803
@@ -39352,8 +39361,8 @@ SceneRoots:
   - {fileID: 121658157}
   - {fileID: 1025533194}
   - {fileID: 539381273}
-  - {fileID: 21397030}
   - {fileID: 695028153}
+  - {fileID: 21397030}
   - {fileID: 1091540552}
   - {fileID: 2055078717}
   - {fileID: 2468010865620526788}

@@ -9,10 +9,17 @@ public class PauseHandler : MonoBehaviour
    public GameObject PauseObject;
    public GameObject NextButton;
    public GameObject ResumeButton;
-   public GameObject BackgroundImage;
+
+   public GameObject WinSceenImage;
+   public GameObject LooseSceenImage;
+   public GameObject TimeUpSceenImage;
+   public GameObject TimeUpScore;
+   public GameObject GeneralInfoImage;
+   
 
    private bool hasTerminated;
    public bool hasFinished;
+   public bool hasTimeUp;
 
 
    private void Start()
@@ -24,12 +31,49 @@ public class PauseHandler : MonoBehaviour
 
    public void ReceivePause(PauseState pState)
    {
-      if (pState == PauseState.lvlFinished) hasTerminated = true;
-      if (pState == PauseState.lvlTerminated) hasTerminated = true;
+      switch (pState)
+      {
+         case PauseState.lvlFinished:
+            hasFinished = true;
+            break;
+         case PauseState.lvlTerminated:
+            hasTerminated = true;
+            break;
+         case PauseState.lvlTimeUp:
+            hasTimeUp = true;
+            break;
+         case PauseState.noInfo:
+            break;
+         default:
+            throw new ArgumentOutOfRangeException(nameof(pState), pState, null);
+      }
+
       PauseObject.SetActive(!PauseObject.activeSelf);
-      BackgroundImage.SetActive(!BackgroundImage.activeSelf);
-      if(hasFinished)NextButton.SetActive(true);
-      if(hasTerminated)NextButton.SetActive(false);
+      if (hasTerminated)
+      {
+         
+         ResumeButton.SetActive(false);
+         GeneralInfoImage.SetActive(false);
+         LooseSceenImage.SetActive(true);
+         
+      }
+      if(hasFinished)
+      {
+         NextButton.SetActive(true);
+         GeneralInfoImage.SetActive(false);
+         WinSceenImage.SetActive(true);
+         LooseSceenImage.SetActive(false);
+         
+         
+      }
+
+      if (hasTimeUp)
+      {
+         WinSceenImage.SetActive(false);
+         LooseSceenImage.SetActive(false);
+         TimeUpSceenImage.SetActive(true);
+         TimeUpScore.SetActive(true);
+      }
    }
    
 }
@@ -39,4 +83,5 @@ public enum PauseState
   noInfo=0,
   lvlTerminated=1,
   lvlFinished=2,
+  lvlTimeUp=3,
 }

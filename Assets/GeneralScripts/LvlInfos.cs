@@ -4,6 +4,7 @@ using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class LvlInfos : MonoBehaviour
 {
@@ -35,6 +36,9 @@ public class LvlInfos : MonoBehaviour
     private float timeMod = 1f;
 
     private bool hasFinishedMinimumScore=false;
+    private bool hasSurpassMaxTime=false;
+
+    public Text timeUpScore;
     
    
 
@@ -69,10 +73,20 @@ public class LvlInfos : MonoBehaviour
 
         
         
-        if (currentLvlTime>lvlDuration||(hasFinishedMinimumScore&&neededScore!=-1&&score>=neededScore))
+        if (!hasFinishedMinimumScore&&neededScore!=-1&&score>=neededScore)
         {
             hasFinishedMinimumScore = true;
             _pauseHandler.PauseCalled.Invoke(PauseState.lvlFinished);
+        }
+        
+
+        if (!hasSurpassMaxTime&& currentLvlTime > lvlDuration )
+        {
+            hasSurpassMaxTime = true;
+            timeUpScore.text =score.ToString() ;
+            lvlDuration = Mathf.Infinity;
+            _pauseHandler.PauseCalled.Invoke(PauseState.lvlTimeUp);
+
         }
         
         
