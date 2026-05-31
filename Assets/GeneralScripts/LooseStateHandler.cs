@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class LooseStateHandler : MonoBehaviour
 
     private void Update()
     {
-        if(CriticalObjects.Any(x=>x.HasALlMissing())) _pauseHandler.PauseCalled.Invoke(PauseState.lvlTerminated);
+        if(CriticalObjects.Any(x=>x.IsInvalide())) _pauseHandler.PauseCalled.Invoke(PauseState.lvlTerminated);
     }
 
     private void Start()
@@ -32,10 +33,24 @@ public struct NeededObject
 {
     public GameObject[] GameObjects;
 
-    public bool HasALlMissing()
+    public bool allOrAny;
+    
+    public bool IsInvalide()
+    {
+        return allOrAny switch {
+            true => HasALlMissing(),
+            false => HasANyMissing()
+        };
+    }
+    
+    private bool HasALlMissing()
     {
         return GameObjects.All(go => go == null);
     }
 
+    private bool HasANyMissing()
+    {
+        return GameObjects.Any(go => go == null);
+    }
     
 }
