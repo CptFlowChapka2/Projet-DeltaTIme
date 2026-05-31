@@ -11,25 +11,25 @@ public class PauseHandler : MonoBehaviour
    public GameObject ResumeButton;
    public GameObject BackgroundImage;
 
-   public bool levelHasOfficiallyEnded;
-   public bool hasWon;
+   private bool hasTerminated;
+   public bool hasFinished;
 
 
    private void Start()
    {
       PauseCalled.AddListener(ReceivePause);
-      if(levelHasOfficiallyEnded)NextButton.SetActive(false);
-      if(hasWon)NextButton.SetActive(true);
+      if(hasFinished)NextButton.SetActive(true);
+      if(hasTerminated)NextButton.SetActive(false);
    }
 
    public void ReceivePause(PauseState pState)
    {
-      if (pState == PauseState.lvlFinished) levelHasOfficiallyEnded = true;
-      if (pState == PauseState.lvlTerminated) levelHasOfficiallyEnded = true;
+      if (pState == PauseState.lvlFinished) hasTerminated = true;
+      if (pState == PauseState.lvlTerminated) hasTerminated = true;
       PauseObject.SetActive(!PauseObject.activeSelf);
       BackgroundImage.SetActive(!BackgroundImage.activeSelf);
-      if(levelHasOfficiallyEnded)NextButton.SetActive(false);
-      if(hasWon)NextButton.SetActive(true);
+      if(hasFinished)NextButton.SetActive(true);
+      if(hasTerminated)NextButton.SetActive(false);
    }
    
 }

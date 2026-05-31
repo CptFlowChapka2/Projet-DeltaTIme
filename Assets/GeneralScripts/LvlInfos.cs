@@ -66,16 +66,15 @@ public class LvlInfos : MonoBehaviour
             timer = 0;
             Tick.Invoke();
         }
+
         
-        if (!_pauseHandler.hasWon && currentLvlTime>lvlDuration) //lose
+        
+        if (currentLvlTime>lvlDuration||(hasFinishedMinimumScore&&neededScore!=-1&&score>=neededScore))
         {
-            _pauseHandler.PauseCalled.Invoke(PauseState.lvlTerminated);
-        }
-        else if (!_pauseHandler.hasWon && neededScore != -1 && score >= neededScore) //win
-        {
-            _pauseHandler.hasWon = true;
+            hasFinishedMinimumScore = true;
             _pauseHandler.PauseCalled.Invoke(PauseState.lvlFinished);
         }
+        
         
     }
 
