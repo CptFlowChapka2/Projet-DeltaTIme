@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/TimeDisplayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/TimeDisplayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
