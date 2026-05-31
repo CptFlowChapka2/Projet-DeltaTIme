@@ -8,15 +8,18 @@ public class SceneChangerButton_UI : MonoBehaviour
     public SceneLoaderEncaps SceneLoaderEncaps;
     public ButtonAction action;
     private PauseHandler _pauseHandler;
+    private SoundManager _soundManager;
 
     private void Start()
     {
         _pauseHandler = FindAnyObjectByType<PauseHandler>();
+        _soundManager = FindAnyObjectByType<SoundManager>();
     }
 
 
     public void OnButtonClic()
     {
+        _soundManager.clic.Play();
         switch (action)
         {
             case ButtonAction.Next:
