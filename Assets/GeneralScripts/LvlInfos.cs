@@ -73,7 +73,7 @@ public class LvlInfos : MonoBehaviour
 
         
         
-        if (!hasFinishedMinimumScore&&neededScore!=-1&&score>=neededScore)
+        if (!hasFinishedMinimumScore && neededScore != -1 && score >= neededScore) //win
         {
             soundManager.win.Play();
             hasFinishedMinimumScore = true;
@@ -81,17 +81,21 @@ public class LvlInfos : MonoBehaviour
         }
         
 
-        if (!hasSurpassMaxTime&& currentLvlTime > lvlDuration )
+        if (!hasSurpassMaxTime && currentLvlTime > lvlDuration) //overtime
         {
-            soundManager.lose.Play();
             hasSurpassMaxTime = true;
-            timeUpScore.text =score.ToString() ;
-            lvlDuration = Mathf.Infinity;
-            _pauseHandler.PauseCalled.Invoke(PauseState.lvlTimeUp);
-
+            if (hasFinishedMinimumScore) //mode infini
+            {
+                timeUpScore.text = score.ToString() ;
+                lvlDuration = Mathf.Infinity;
+                _pauseHandler.PauseCalled.Invoke(PauseState.lvlTimeUp);
+            }
+            else //lose
+            {
+                soundManager.lose.Play();
+                _pauseHandler.PauseCalled.Invoke(PauseState.lvlTerminated);
+            }
         }
-        
-        
     }
 
    [Obsolete] private void UpdateGeneralInformationText()
