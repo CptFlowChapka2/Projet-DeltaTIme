@@ -71,16 +71,12 @@ public class LvlInfos : MonoBehaviour
             Tick.Invoke();
         }
 
-        
-        
-        if (!hasFinishedMinimumScore && neededScore != -1 && score >= neededScore) //win
-        {
-            soundManager.win.Play();
-            hasFinishedMinimumScore = true;
-            _pauseHandler.PauseCalled.Invoke(PauseState.lvlFinished);
-        }
-        
+        VerifyWinCon();
+        VerifyOvertime();
+    }
 
+    private void VerifyOvertime()
+    {
         if (!hasSurpassMaxTime && currentLvlTime > lvlDuration) //overtime
         {
             hasSurpassMaxTime = true;
@@ -98,7 +94,17 @@ public class LvlInfos : MonoBehaviour
         }
     }
 
-   [Obsolete] private void UpdateGeneralInformationText()
+    private void VerifyWinCon()
+    {
+        if (!hasFinishedMinimumScore && neededScore != -1 && score >= neededScore) //win
+        {
+            soundManager.win.Play();
+            hasFinishedMinimumScore = true;
+            _pauseHandler.PauseCalled.Invoke(PauseState.lvlFinished);
+        }
+    }
+
+    [Obsolete] private void UpdateGeneralInformationText()
     {
         timeBeforeNextTick.text = "next tick in : \n "+(timePerTick - timer).ToString(CultureInfo.InvariantCulture);
         
