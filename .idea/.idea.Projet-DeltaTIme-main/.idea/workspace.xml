@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="" />
+    <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,7 +184,7 @@
       <workItem from="1779872164659" duration="9841000" />
       <workItem from="1779963711030" duration="3937000" />
       <workItem from="1780057948394" duration="1819000" />
-      <workItem from="1780170219617" duration="718000" />
+      <workItem from="1780170219617" duration="1840000" />
     </task>
     <servers />
   </component>
