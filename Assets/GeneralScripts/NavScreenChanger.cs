@@ -22,7 +22,7 @@ public class NavScreenChanger : MonoBehaviour
         else
         {
             loseScreen.SetActive(true);
-            lockedInEndState = false;
+            lockedInEndState = true;
         }
     }
 }
