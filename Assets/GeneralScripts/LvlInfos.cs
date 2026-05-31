@@ -26,7 +26,7 @@ public class LvlInfos : MonoBehaviour
     public int neededScore=-1;
     [HideInInspector] public int tNbrTick;
 
-    [SerializeField] private bool validIngredientHasSpwaned = false;
+    [SerializeField] public bool validIngredientHasSpawned = false;
     [SerializeField] private IngredientType validIngredientType;
    
 
@@ -103,9 +103,9 @@ public class LvlInfos : MonoBehaviour
     public void CheckForValidIngredient(IngredientType spawnedIngredient)
     {
 
-        if (validIngredientHasSpwaned != (validIngredientType == spawnedIngredient))
+        if (validIngredientHasSpawned != (validIngredientType == spawnedIngredient))
         {
-            validIngredientHasSpwaned = true;
+            validIngredientHasSpawned = true;
             currentLvlTime = 0;
             lvlDuration = lvlDurationWhenRush;
         }
