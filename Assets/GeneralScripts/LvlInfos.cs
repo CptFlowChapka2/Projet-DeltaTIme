@@ -128,9 +128,9 @@ public class LvlInfos : MonoBehaviour
 
     public void CheckForValidIngredient(IngredientType spawnedIngredient)
     {
-
-        if (validIngredientHasSpawned != (validIngredientType == spawnedIngredient))
+        if (!validIngredientHasSpawned && validIngredientType == spawnedIngredient) //le premier objet de score apparait
         {
+            soundManager.marginStart.Play();
             validIngredientHasSpawned = true;
             currentLvlTime = 0;
             lvlDuration = lvlDurationWhenRush;

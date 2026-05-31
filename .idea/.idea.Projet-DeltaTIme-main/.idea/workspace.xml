@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/FX.bank" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FMOD Build/Desktop/Master.strings.bank" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/LvlInfos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/SoundManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/SoundManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

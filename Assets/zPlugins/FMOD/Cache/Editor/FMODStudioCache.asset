@@ -51,6 +51,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-7859553585490723131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MarginStart
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/MarginStart
+  Guid:
+    Data1: 204221159
+    Data2: 1251291720
+    Data3: -187166814
+    Data4: -376297110
+  Banks:
+  - {fileID: 4384719233189785050}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6955835407566570786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +120,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Placeholders.bank
   Name: Placeholders
   StudioPath: bank:/Placeholders
-  lastModified: 639149551060000000
+  lastModified: 639137635094560481
   FileSizes: []
   Exists: 1
 --- !u!114 &-5565251454674282510
@@ -285,13 +312,14 @@ MonoBehaviour:
   - {fileID: 2219564421452844559}
   - {fileID: -6955835407566570786}
   - {fileID: -8902307551334513982}
+  - {fileID: -7859553585490723131}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2993860550895887398}
   StringsBanks:
   - {fileID: 6998373313492933676}
   cacheVersion: 131857
-  cacheTime: 639158568900000000
+  cacheTime: 639158578276447301
   SerializableEventsDict:
   - key: event:/Tick
     index: 0
@@ -441,7 +469,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639149551060000000
+  lastModified: 639158578276437039
   FileSizes: []
   Exists: 1
 --- !u!114 &4384719233189785050
@@ -459,7 +487,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/FX.bank
   Name: FX
   StudioPath: bank:/FX
-  lastModified: 639158568900000000
+  lastModified: 639158578276391962
   FileSizes: []
   Exists: 1
 --- !u!114 &4389570565296821108
@@ -584,10 +612,10 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639158568900000000
+  lastModified: 639158578276447301
   FileSizes:
   - Name: 
-    Value: 1848
+    Value: 1890
   Exists: 1
 --- !u!114 &8580240426373858206
 MonoBehaviour:
@@ -631,6 +659,6 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639149551060000000
+  lastModified: 639137635094540420
   FileSizes: []
   Exists: 1

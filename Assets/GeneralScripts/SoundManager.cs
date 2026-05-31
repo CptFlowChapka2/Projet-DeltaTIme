@@ -17,6 +17,7 @@ public class SoundManager : MonoBehaviour
     public StudioEventEmitter scoring;
     public StudioEventEmitter win;
     public StudioEventEmitter lose;
+    public StudioEventEmitter marginStart;
 
     public float playersRotating = 0;
     public float playersExtending = 0;
