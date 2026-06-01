@@ -102,7 +102,9 @@ public class Player : Grabbable
             case PlayerState.Idle:
                 ActualVariant = 0;
                 armVector = tempArm;
-                grabber.transform.position = transform.position + armVector;
+                grabber.transform.position =new Vector3
+                    (transform.position.x,transform.position.y+armOrigin.transform.localPosition.y,transform.position.z)  + armVector;
+                
                 UpdatePhysicalArm();
                 break;
             case PlayerState.Stunned:
@@ -268,10 +270,10 @@ public class Player : Grabbable
 
     private void UpdatePhysicalArm()
     {
-        physicalArm.transform.localScale = new Vector3(physicalArm.transform.localScale.x, 
-                                                    (armVector.magnitude - (Mathf.Abs((armOrigin.position - transform.position).magnitude))) / 2,
-                                                    physicalArm.transform.localScale.z);
-        physicalArm.transform.position = armOrigin.position + (armVector - (armOrigin.position - transform.position))/2;
+        var test =(armVector.magnitude - Mathf.Abs((armOrigin.position - transform.position).magnitude)/2f)*0.1f;
+        physicalArm.transform.localScale = new Vector3(physicalArm.transform.localScale.x,physicalArm.transform.localScale.y , test);
+        physicalArm.transform.position = armOrigin.position + (armVector );
+        //physicalArm.transform.position = armOrigin.position + (armVector - (armOrigin.position - transform.position))/2;
     }
     
     

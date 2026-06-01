@@ -57,9 +57,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7023395950768905411}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.18, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8973566411438633416}
@@ -71,7 +71,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7023395950768905411}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 2534964839176971238, guid: 78732006049f54a42ba6908a6e00da28, type: 3}
 --- !u!23 &3574796184170298609
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -185,13 +185,14 @@ MonoBehaviour:
   isGrabbed: 0
   isActive: 1
   beforeGrabVariant: 0
-  rotationSpeed: 105
+  playerID: 0
+  minRotationSpeed: 0
+  maxRotationSpeed: 0
   extentionSpeed: 6
   maxExtentionLength: 4.8
   minExtentionLength: 1.4
   playerInput: {fileID: 5558544586297471677}
-  PauseMenu: {fileID: 0}
-  otherPlayer: {fileID: 0}
+  isInPause: 0
   rb: {fileID: 0}
   armVector: {x: 0, y: 0, z: 0}
   physicalArm: {fileID: 792292437903336149}
@@ -200,6 +201,18 @@ MonoBehaviour:
   state: 1
   maxTimerWhenKnocked: 0.15
   knockingSpeed: 1
+  startInputActionMap:
+    m_Name: 
+    m_Id: 
+    m_Asset: {fileID: 0}
+    m_Actions: []
+    m_Bindings: []
+  UIInputActionMap:
+    m_Name: 
+    m_Id: 
+    m_Asset: {fileID: 0}
+    m_Actions: []
+    m_Bindings: []
 --- !u!54 &2071911846455893952
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -278,24 +291,84 @@ MonoBehaviour:
     m_ActionName: 'PlayerKeyboard/Spin[/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 55dc20a8-7daf-4636-985d-3eb20bb9cc12
-    m_ActionName: AnyPlayer/controller/Grab
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2b97e7e4-3f89-42b5-b2ea-5e4712fadac0
-    m_ActionName: AnyPlayer/controller/Spin
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a3c0e6d3-f446-4717-941d-afb122f0a85e
-    m_ActionName: AnyPlayer/controller/Extend
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 32702e6b-8ece-4e52-8671-b003ac06f34c
     m_ActionName: 'Player1/Mouse/Pause[/Keyboard/enter]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 37adb554-4912-4cc0-9bf9-96f7af03477f
     m_ActionName: 'Player2/keyboard/Pause[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5984eb94-741f-4b66-b56b-4a927a446803
+    m_ActionName: Player1/Mouse/Spin2D
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4f6e3f02-f0f4-4282-b5d7-43070bcd9be7
+    m_ActionName: Player2/keyboard/Spin2D
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: de5c5b93-4127-4a55-b244-fd4eb24e6155
+    m_ActionName: 'AnyPlayer/Pause[/Keyboard/p]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c668bf57-1ee5-42e8-9553-c07361f5592b
+    m_ActionName: 'AnyPlayer/Spin[/Keyboard/a,/Keyboard/d,/Mouse/leftButton,/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0afb04d4-790a-40f6-a48d-2e5cfd386af3
+    m_ActionName: AnyPlayer/Spin2D
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ebb0e2ee-6f29-4cb5-82fa-cbd5639f8fb1
+    m_ActionName: 'AnyPlayer/Extend[/Keyboard/s,/Keyboard/w,/Mouse/scroll/y]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 806263d8-aeb6-4f83-af20-fdabb877520a
+    m_ActionName: 'AnyPlayer/Grab[/Keyboard/e,/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b77857c6-c74d-4d47-8d9c-48d8c87ba307
+    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 472534a4-8f46-4d0d-b6a6-7b3b7c371455
+    m_ActionName: 'UI/Submit[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 91520e41-b955-4547-b1da-cc665741af9f
+    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 47b57b95-2d2f-44e2-8685-0a8830befff5
+    m_ActionName: 'UI/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fad238a7-9b1b-4255-88c2-d2cdbdc15c1f
+    m_ActionName: 'UI/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 021fd55c-59b6-4d5d-afd1-aa7581cdb5e0
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8bce0730-ed27-4e36-970c-11c7ed73d9ba
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a4d21338-5ab2-47f1-bb4a-94a27313fed4
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f48da5d0-011d-4c2d-806a-c8c3042a6272
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9219a8fd-cf0a-4a4c-a633-348cc160a1d7
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a8f28fb2-555a-4b02-b5d0-d653cebe85da
+    m_ActionName: 'UI/UnPause[/Keyboard/p]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player2/keyboard
@@ -313,6 +386,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 8186779415735191296}
+    - target: {fileID: 979399155909224559, guid: a723f219f269cdf45846a08439ac5682, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -8803937527578110353, guid: be737bcb48ee4224b94d7dc1e5ea1ff4, type: 3}
     - target: {fileID: 2045901662573077606, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -339,11 +416,19 @@ PrefabInstance:
       objectReference: {fileID: 8186779415735191296}
     - target: {fileID: 7389352983907942657, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389352983907942657, guid: a723f219f269cdf45846a08439ac5682, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389352983907942657, guid: a723f219f269cdf45846a08439ac5682, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7389352983907942657, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.45
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: 7389352983907942657, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: m_LocalPosition.y
@@ -351,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7389352983907942657, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.72000027
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7389352983907942657, guid: a723f219f269cdf45846a08439ac5682, type: 3}
       propertyPath: m_LocalRotation.w
@@ -420,13 +505,33 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 2637222070340754074, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637222070340754074, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637222070340754074, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637222070340754074, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637222070340754074, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6135125014848952520, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6434234126201781304, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.1263
+      value: 2.47
       objectReference: {fileID: 0}
     - target: {fileID: 6434234126201781304, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -434,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6434234126201781304, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.34206
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6434234126201781304, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -464,6 +569,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8080518514178814430, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4493585093827132993, guid: 3c3f4ae6fbb62fe45924c2f82ccde4fe, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
