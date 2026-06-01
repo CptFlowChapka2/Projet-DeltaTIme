@@ -45,6 +45,7 @@ public abstract class Grabbable : MonoBehaviour
         soundManager = FindAnyObjectByType<SoundManager>();
         if(variants.Length==0)return;
         ActualVariant = 0;
+        variants[^1].mesh = variants[0].mesh;
     }
 
     protected virtual void Start()
