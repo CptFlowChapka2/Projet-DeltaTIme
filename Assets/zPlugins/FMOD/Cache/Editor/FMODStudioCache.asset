@@ -319,7 +319,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 6998373313492933676}
   cacheVersion: 131857
-  cacheTime: 639159160774619269
+  cacheTime: 639159200403703820
   SerializableEventsDict:
   - key: event:/Tick
     index: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
   Path: Assets/FMOD Build/Desktop/FX.bank
   Name: FX
   StudioPath: bank:/FX
-  lastModified: 639159160774619269
+  lastModified: 639159200403703820
   FileSizes: []
   Exists: 1
 --- !u!114 &4389570565296821108
