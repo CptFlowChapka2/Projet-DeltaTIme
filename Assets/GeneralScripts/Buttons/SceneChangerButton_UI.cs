@@ -37,6 +37,9 @@ public class SceneChangerButton_UI : MonoBehaviour
             case ButtonAction.Reload:
                 SceneLoaderEncaps.SceneLoader.ReloadScene();
                 break;
+            case ButtonAction.Quit:
+                Application.Quit();
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -47,12 +50,12 @@ public class SceneChangerButton_UI : MonoBehaviour
 
 public enum ButtonAction
 {
-    Next=0,
-    Previous=1,
-    LoadPrecise=2,
-    Pause=3,
-    Reload=4
-    
+    Next = 0,
+    Previous = 1,
+    LoadPrecise = 2,
+    Pause = 3,
+    Reload = 4,
+    Quit = 5
 }
 #if UNITY_EDITOR 
 
