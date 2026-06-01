@@ -41,7 +41,6 @@ public class SoundManager : MonoBehaviour
 
         float newExtendingBuffer = Mathf.MoveTowards(playersExtendingBuffer,
             playersExtending, Mathf.Clamp((playersExtending - playersExtendingBuffer) * 0.1f, 0.05f, Mathf.Infinity));
-        Debug.Log(newExtendingBuffer);
         extensionPlayer.SetParameter("PlayersExtending",newExtendingBuffer );
         playersExtendingBuffer = newExtendingBuffer;
     }
