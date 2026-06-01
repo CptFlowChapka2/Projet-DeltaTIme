@@ -82,7 +82,7 @@ public class LvlInfos : MonoBehaviour
             hasSurpassMaxTime = true;
             if (hasFinishedMinimumScore) //mode infini
             {
-                timeUpScore.text = score.ToString() ;
+                timeUpScore.text = "SCORE : " + score.ToString() ;
                 lvlDuration = Mathf.Infinity;
                 _pauseHandler.PauseCalled.Invoke(PauseState.lvlTimeUp);
             }
