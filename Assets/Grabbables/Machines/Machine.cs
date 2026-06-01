@@ -99,8 +99,11 @@ public class Machine : Grabbable
         }
         
         thisAnimator.SetBool("Is working",true);
-        if(workedIngredientsAnim.Count>=0)
-        workedIngredientsAnim.ForEach(x=> x.SetBool("IsWorkedOn",true));
+        if (workedIngredientsAnim.Count >= 0)
+        {
+            workedIngredientsAnim.ForEach(x=> x.SetBool("IsWorkedOn",true));  
+        }
+        
        
         ApplyRule();
     }
@@ -121,7 +124,10 @@ public class Machine : Grabbable
                 foreach (Grabbable grabbable in workedIngredients)
                 {
                     actualHex.DestroyGrabbables(grabbable);
+                    
                 } 
+                workedIngredients.Clear();
+                workedIngredientsAnim.Clear();
             }
             thisAnimator.SetBool("Is working",false);
             
