@@ -17988,6 +17988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuitButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3202312915622167013, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8dd5f10fdf07ed742a6d98e50d1c7805, type: 3}
     - target: {fileID: 4247936549535516594, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18039,6 +18043,10 @@ PrefabInstance:
     - target: {fileID: 6193341157728040575, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
       propertyPath: m_Name
       value: NavigationMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6586738522094993256, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
+      propertyPath: action
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7210237158371453272, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
       propertyPath: m_AnchoredPosition.x
