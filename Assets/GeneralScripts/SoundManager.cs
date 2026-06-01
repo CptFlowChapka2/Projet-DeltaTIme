@@ -21,6 +21,7 @@ public class SoundManager : MonoBehaviour
 
     public float playersRotating = 0;
     public float playersExtending = 0;
+    public float playersExtendingBuffer = 0;
     public float numberOfMachinesWorking = 0;
     public float lakeTilesActivated = 0;
     public float forestTilesActivated = 0;
@@ -37,7 +38,12 @@ public class SoundManager : MonoBehaviour
     private void Update()
     {
         rotationPlayer.SetParameter("PlayersRotating", playersRotating);
-        extensionPlayer.SetParameter("PlayersExtending", playersExtending);
+
+        float newExtendingBuffer = Mathf.MoveTowards(playersExtendingBuffer,
+            playersExtending, Mathf.Clamp((playersExtending - playersExtendingBuffer) * 0.1f, 0.05f, Mathf.Infinity));
+        Debug.Log(newExtendingBuffer);
+        extensionPlayer.SetParameter("PlayersExtending",newExtendingBuffer );
+        playersExtendingBuffer = newExtendingBuffer;
     }
     
     public void UpdateOnTick()
