@@ -141,9 +141,11 @@ public abstract class Hex : MonoBehaviour
     {
         VerifyState();
         if (grabbablesOnThisHex.Count <= 0) return;
+        float offsetWithPlayer = 0;
         for (int i = 0; i < grabbablesOnThisHex.Count; i++)
         {
-            grabbablesOnThisHex[i].gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + (0.3f + 0.3f * i), transform.position.z);
+            grabbablesOnThisHex[i].gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + (0.3f + offsetWithPlayer + 0.3f * i), transform.position.z);
+            if (grabbablesOnThisHex[i] is Player) offsetWithPlayer = 0.8f;
         }
         
     }
