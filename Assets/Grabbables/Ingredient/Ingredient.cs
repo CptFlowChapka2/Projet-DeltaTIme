@@ -11,7 +11,7 @@ public class Ingredient : Grabbable
 
     public void Initialize(IngredientType ingredientType, IngredientsDictionary ingredientsDictionary, Hex hex)
     {
-        wasInit = true;
+         wasInit = true;
          type = ingredientType;
          dictionary = ingredientsDictionary;
          variants = dictionary.AskForVariants(ingredientType);
