@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 1876660642919818969, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -1729334925081772681, guid: 49fbff5a7ff67074dac874ee0d384cd6, type: 3}
+      objectReference: {fileID: -1729334925081772681, guid: 032277cdfd3be074e8df68bda1fb6afc, type: 3}
     - target: {fileID: 2045419837451981810, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Name
       value: _BlockerHex
@@ -91,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3638886f4fe3b41439109b8be3bab296, type: 2}
+      objectReference: {fileID: 2100000, guid: 8bcf89966e5b9e14f9df975e6ce6d7c7, type: 2}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
