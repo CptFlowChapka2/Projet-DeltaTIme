@@ -11105,7 +11105,7 @@ PrefabInstance:
     - target: {fileID: 4378965160454549965, guid: 5e6332d21f2956d4ea70ef15e5d8401d, type: 3}
       propertyPath: variants.Array.data[0].mesh
       value: 
-      objectReference: {fileID: 8691780276856062721, guid: 49506e3b8e704e94790d857a9d0ed4e9, type: 3}
+      objectReference: {fileID: 6405055333489277325, guid: 7224b8443326c7340a8c1cab9aef217a, type: 3}
     - target: {fileID: 4378965160454549965, guid: 5e6332d21f2956d4ea70ef15e5d8401d, type: 3}
       propertyPath: variants.Array.data[0].sprite
       value: 
@@ -11296,7 +11296,7 @@ PrefabInstance:
     - target: {fileID: 4378965160454549965, guid: 5e6332d21f2956d4ea70ef15e5d8401d, type: 3}
       propertyPath: variants.Array.data[0].mesh
       value: 
-      objectReference: {fileID: 8691780276856062721, guid: 49506e3b8e704e94790d857a9d0ed4e9, type: 3}
+      objectReference: {fileID: 6405055333489277325, guid: 7224b8443326c7340a8c1cab9aef217a, type: 3}
     - target: {fileID: 4378965160454549965, guid: 5e6332d21f2956d4ea70ef15e5d8401d, type: 3}
       propertyPath: variants.Array.data[0].sprite
       value: 
