@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e12d095656f5874398b408a996c17ac, type: 3}
   m_Name: ControlsScene
   m_EditorClassIdentifier: Assembly-CSharp::SceneRefEncaps
-  sceneName: Cheat scene
+  sceneName: ControlsScene
   previousSceneInGroup: {fileID: 11400000, guid: b8c8ea2e9246c964e9d102194c8dcaed, type: 2}
   nextSceneInGroup: {fileID: 11400000, guid: b8c8ea2e9246c964e9d102194c8dcaed, type: 2}

@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5558544586297471677, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5558544586297471677, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_ActionEvents.Array.data[6].m_ActionId

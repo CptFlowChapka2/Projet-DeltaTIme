@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    [SerializeField] private bool isInMenu = false;
+    
     public StudioEventEmitter grabRelease;
     public StudioEventEmitter rotationPlayer;
     public StudioEventEmitter tick;
@@ -31,12 +33,14 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
+        if (isInMenu) return;
         lvlInfos = FindAnyObjectByType<LvlInfos>();
         lvlInfos.Tick.AddListener(UpdateOnTick);
     }
 
     private void Update()
     {
+        if (isInMenu) return;
         rotationPlayer.SetParameter("PlayersRotating", playersRotating);
 
         float newExtendingBuffer = Mathf.MoveTowards(playersExtendingBuffer,
@@ -47,6 +51,7 @@ public class SoundManager : MonoBehaviour
     
     public void UpdateOnTick()
     {
+        if (isInMenu) return;
         workingMachines.SetParameter("NumberOfWorkingMachines", numberOfMachinesWorking);
         lacMagiqueProd.SetParameter("LakeTilesActivated", lakeTilesActivated);
         foretProd.SetParameter("ForestTilesActivated", forestTilesActivated);

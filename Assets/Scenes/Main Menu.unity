@@ -1039,6 +1039,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8909495567034702468, guid: 1c0045527ab690d4f88cc27930842069, type: 3}
+      propertyPath: isInMenu
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7316,8 +7320,8 @@ GameObject:
   m_Component:
   - component: {fileID: 388088014}
   - component: {fileID: 388088013}
-  - component: {fileID: 388088012}
   - component: {fileID: 388088015}
+  - component: {fileID: 388088016}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7325,14 +7329,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &388088012
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388088011}
-  m_Enabled: 1
 --- !u!20 &388088013
 Camera:
   m_ObjectHideFlags: 0
@@ -7411,7 +7407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: a1529d48a2d1df3459d9e05f778da5a3, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 978977741}
   m_DeviceLostEvent:
@@ -7429,6 +7425,20 @@ MonoBehaviour:
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &388088016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388088011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1001 &390360761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18133,7 +18143,8 @@ PrefabInstance:
       propertyPath: targetScene
       value: 
       objectReference: {fileID: 11400000, guid: 04f87ab3649969d4fb14d99f247167f1, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2948004761390893259, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2035554239932016413, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}
     - {fileID: 1039960973627362426, guid: 97505027211aebd45b7c9f1fda3202fa, type: 3}

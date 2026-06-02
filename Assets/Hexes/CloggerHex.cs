@@ -22,7 +22,11 @@ public class CloggerHex : Hex
     public override void Tick()
     {
         //Base
-        if(grabbablesOnThisHex.Count==0)return;
+        if (grabbablesOnThisHex.Count == 0)
+        {
+            StopFeedbackClogging();
+            return;
+        }
         if (hexRules.Length != 0)
         {
             VerifyHexRule();
@@ -64,10 +68,7 @@ public class CloggerHex : Hex
                 }
                 return true;
             }
-            
-            
         }
-
         return false;
     }
 
