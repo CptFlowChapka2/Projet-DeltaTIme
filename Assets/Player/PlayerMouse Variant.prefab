@@ -379,6 +379,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrabberMouse
       objectReference: {fileID: 0}
+    - target: {fileID: 777819004929434521, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 777819004929434521, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 777819004929434521, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 777819004929434521, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095402112021332374, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a9d3d10901f514a4fbdf72c08ad462f2, type: 2}
     - target: {fileID: 2637222070340754074, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -399,10 +419,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 3440053533481370617, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440053533481370617, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440053533481370617, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440053533481370617, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440053533481370617, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440053533481370617, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440053533481370617, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440053533481370617, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440053533481370617, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4166835421616730220, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 462b74d47d0ebf143b275909a090d54d, type: 2}
+    - target: {fileID: 5041740305350047247, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+      propertyPath: shadow
+      value: 
+      objectReference: {fileID: 8708199716546608968}
     - target: {fileID: 6434234126201781304, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.7263
@@ -468,6 +528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e9efd3aeac57346aeff20ffe4d8819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grabber
+--- !u!1 &8708199716546608968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5621754432360097843, guid: e544bba921c50ab449cc63591f4eb52d, type: 3}
+  m_PrefabInstance: {fileID: 3953534163028006779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4861481045874787816
 PrefabInstance:
   m_ObjectHideFlags: 0

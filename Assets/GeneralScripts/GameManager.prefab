@@ -4892,7 +4892,7 @@ MonoBehaviour:
   TimeUpSceenImage: {fileID: 3396917595157971865}
   TimeUpScore: {fileID: 2568561938641815638}
   GeneralInfoImage: {fileID: 4423778163577586137}
-  hasFinished: 1
+  hasFinished: 0
   hasTimeUp: 0
 --- !u!114 &5203157354553503947
 MonoBehaviour:

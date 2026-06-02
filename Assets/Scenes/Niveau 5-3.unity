@@ -526,6 +526,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5203157354553503947, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: actionMapUI.m_Id
+      value: 10a194f6-2151-42dd-88be-d00763dc509c
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203157354553503947, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: actionMapUI.m_Name
+      value: Action Map UI
+      objectReference: {fileID: 0}
     - target: {fileID: 5947273728185129341, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.97934
@@ -564,6 +572,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5947273728185129341, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971181428418542979, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: hasFinished
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7168679632698408250, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}

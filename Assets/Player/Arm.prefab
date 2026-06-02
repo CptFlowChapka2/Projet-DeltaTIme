@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2995703235505733155}
   - component: {fileID: 760830687994296454}
   - component: {fileID: 4040513056268858249}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: colliderD
-  m_TagString: ArmBlocker
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045901662573077606}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.62, y: 0, z: -7.01}
   m_LocalScale: {x: 0.1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 6.5706787}
+  m_Center: {x: 0, y: 0, z: -0.029829025}
 --- !u!114 &760830687994296454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +70,8 @@ MonoBehaviour:
   isRightCollider: 1
   selfArm: {fileID: 5486954020817971707}
   player: {fileID: 0}
+  timer: 0.8
+  maxTimer: 0.8
 --- !u!54 &4040513056268858249
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -253,9 +255,9 @@ GameObject:
   - component: {fileID: 1525890272286671593}
   - component: {fileID: 6163036269804464815}
   - component: {fileID: 5993837953126422194}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: colliderG
-  m_TagString: ArmBlocker
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,8 +270,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7499603452662678127}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.46, y: 0, z: -7.19}
   m_LocalScale: {x: 0.1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -294,8 +296,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 6.581066}
+  m_Center: {x: 0, y: 0, z: 0.071475506}
 --- !u!114 &6163036269804464815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +313,8 @@ MonoBehaviour:
   isRightCollider: 0
   selfArm: {fileID: 5486954020817971707}
   player: {fileID: 0}
+  timer: 0.8
+  maxTimer: 0.8
 --- !u!54 &5993837953126422194
 Rigidbody:
   m_ObjectHideFlags: 0

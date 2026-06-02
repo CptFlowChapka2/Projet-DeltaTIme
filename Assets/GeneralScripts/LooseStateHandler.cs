@@ -2,16 +2,23 @@ using System;
 using System.Diagnostics;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 public class LooseStateHandler : MonoBehaviour
 {
     public NeededObject[] CriticalObjects;
     private PauseHandler _pauseHandler;
+    private bool criticalSituationReached = false;
 
 
     private void Update()
     {
-        if(CriticalObjects.Any(x=>x.IsInvalide())) _pauseHandler.PauseCalled.Invoke(PauseState.lvlTerminated);
+        if (CriticalObjects.Any(x => x.IsInvalide()) && !criticalSituationReached)
+        {
+            _pauseHandler.PauseCalled.Invoke(PauseState.lvlTerminated);
+            criticalSituationReached = true;
+        }
     }
 
     private void Start()

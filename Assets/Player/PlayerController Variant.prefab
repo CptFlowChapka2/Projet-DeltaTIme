@@ -269,6 +269,10 @@ PrefabInstance:
       value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 6505548833786062350, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6505548833786062350, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.5
       objectReference: {fileID: 0}
@@ -332,6 +336,22 @@ PrefabInstance:
       propertyPath: variants.Array.data[1].material
       value: 
       objectReference: {fileID: 2100000, guid: 25ca5860ab9e87f42966e272522f43c2, type: 2}
+    - target: {fileID: 8366087157569330957, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366087157569330957, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366087157569330957, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8366087157569330957, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8973566411438633416, guid: 041d421ba12769c44a5b663a3d190ce5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.84

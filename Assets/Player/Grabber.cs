@@ -10,10 +10,13 @@ public class Grabber : MonoBehaviour
     public Hex currentHoveredHex = null;
     public Grabbable currentGrabbedObject = null;
     [NonSerialized] public Player player;
+    [SerializeField] private GameObject shadow;
+    private float offsetHeight = 0.6f;
 
     private void Update()
     {
-        if (Physics.Raycast(transform.position, -transform.up * 3f, out RaycastHit hit,math.INFINITY,-1,QueryTriggerInteraction.Ignore))
+        ShadowPlacement();
+        if (Physics.Raycast(transform.position, -transform.up * 3f, out RaycastHit hit,Mathf.Infinity,-1,QueryTriggerInteraction.Ignore))
         {
             if (currentHoveredHex)
             {
@@ -35,6 +38,20 @@ public class Grabber : MonoBehaviour
         {
             currentGrabbedObject.transform.position = transform.position + new Vector3(0, 0.5f, 0);
         }
+    }
+
+    private void ShadowPlacement()
+    {
+        if (player.isGrabbed)
+        {
+            offsetHeight = 1.2f;
+        }
+        else
+        {
+            offsetHeight = 0.6f;
+        }
+
+        shadow.transform.position = new Vector3(transform.position.x, transform.position.y - offsetHeight, transform.position.z);
     }
 
     public void OnGrabRelease()

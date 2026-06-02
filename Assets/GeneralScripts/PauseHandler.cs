@@ -51,11 +51,9 @@ public class PauseHandler : MonoBehaviour
       PauseObject.SetActive(!PauseObject.activeSelf);
       if (hasTerminated)
       {
-         
          ResumeButton.SetActive(false);
          GeneralInfoImage.SetActive(false);
          LooseSceenImage.SetActive(true);
-         
       }
       if(hasFinished)
       {
@@ -63,8 +61,6 @@ public class PauseHandler : MonoBehaviour
          GeneralInfoImage.SetActive(false);
          WinSceenImage.SetActive(true);
          LooseSceenImage.SetActive(false);
-         
-         
       }
 
       if (hasTimeUp)

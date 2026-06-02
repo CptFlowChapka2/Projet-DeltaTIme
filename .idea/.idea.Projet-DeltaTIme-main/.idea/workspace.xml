@@ -6,8 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/GridManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/Hex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/CameraPositionning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/CameraPositionning.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/LooseStateHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/LooseStateHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/NavigationMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/NavigationMenu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/PauseHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/PauseHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ArmMat 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ArmMat 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/ArmMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/ArmMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Grabber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Grabber.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerController Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerController Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerMouse Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerMouse Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cheat scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cheat scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ControlsScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ControlsScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Niveau 5-3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Niveau 5-3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/zPlugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,6 +204,7 @@
       <workItem from="1780170219617" duration="1840000" />
       <workItem from="1780234792975" duration="878000" />
       <workItem from="1780315773985" duration="4145000" />
+      <workItem from="1780387650749" duration="4025000" />
     </task>
     <servers />
   </component>
