@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 1876660642919818969, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -406118470284401988, guid: 6befa4c8029b9794e9916d835e4b17a5, type: 3}
+      objectReference: {fileID: 3395023058828471604, guid: 7676f6f03c088f84c8e12f18f30caf9c, type: 3}
     - target: {fileID: 2045419837451981810, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Name
       value: _BlockerHex
@@ -86,12 +86,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 7867860091168391239, guid: 6befa4c8029b9794e9916d835e4b17a5, type: 3}
+      objectReference: {fileID: 2100000, guid: fb78bc33322a7d340948f4ac84d6cd48, type: 2}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e422a0b18f2fe489c8e744ee7eefbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlockerHex
-  hexName: Montagne
   hexUIInfo: {fileID: 21300000, guid: 16c400a3dc5957f43b0175fe86904451, type: 3}
   hexRules: []
   relativeCoords: {x: 0, y: 0}

@@ -518,6 +518,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -730
       objectReference: {fileID: 0}
+    - target: {fileID: 4595015926332228562, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4919614783463189550, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -15581,7 +15585,6 @@ MonoBehaviour:
   grabbers:
   - {fileID: 346608833}
   - {fileID: 1298800719}
-  popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
   LvlInfos: {fileID: 21397031}
   soundManager: {fileID: 695028154}
 --- !u!4 &908247749

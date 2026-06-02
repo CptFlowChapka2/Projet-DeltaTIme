@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: 1876660642919818969, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 2036512458724685694, guid: 4520d2919916c694d940708e2ec8ec5e, type: 3}
+      objectReference: {fileID: 3602089720262483442, guid: f295e2011f73d9a449a8caa725fc969a, type: 3}
     - target: {fileID: 2045419837451981810, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: m_Name
       value: _HalfBlockerHex
@@ -73,9 +73,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7401489805556634640}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 8470153948022179834, guid: 4520d2919916c694d940708e2ec8ec5e, type: 3}
+      objectReference: {fileID: 2100000, guid: 49ec7494d7f100143a30e9410236b6b1, type: 2}
     - target: {fileID: 7878621762305096198, guid: dcb952da2c249eb4ebca9e0c024b192a, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -111,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f68ba620cc8f7429a06f4bf889a3b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HalfBlockerHex
-  hexName: "Case Entoil\xE9e"
   hexUIInfo: {fileID: 21300000, guid: 5774ec8c49b6778469a7a52ce8b3f781, type: 3}
   hexRules: []
   relativeCoords: {x: 0, y: 0}

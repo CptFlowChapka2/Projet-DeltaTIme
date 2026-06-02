@@ -53,7 +53,6 @@ public abstract class Hex : MonoBehaviour
     [SerializeField] private MeshRenderer meshRenderer; 
     [SerializeField] private GameObject outlineDanger; 
     [SerializeField] private GameObject feedbackTimerDanger; 
-    private Material popupBaseMaterial;
     public GridManager gridManager;
     public LvlInfos lvlInfos;
     public SoundManager soundManager;
@@ -72,7 +71,6 @@ public abstract class Hex : MonoBehaviour
         lvlInfos = gridManager.LvlInfos;
         lvlInfos.Tick.AddListener(Tick);
         grabbers = gridManager.grabbers;
-        popupBaseMaterial = gridManager.popupBaseMat;
 
         InitializeRelativeCoords();
         

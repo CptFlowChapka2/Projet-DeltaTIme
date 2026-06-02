@@ -591,7 +591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e372a82f0eb2e42a1ba02e851fc33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NormalHex
-  hexName: Case de Base
   hexUIInfo: {fileID: 21300000, guid: 80bd84710a446f74f9f9b64361cae24e, type: 3}
   hexRules:
   - inputs: 650000006500000065000000
@@ -1686,7 +1685,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 8833785800546707074}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8527144438738508755}
-  m_Mesh: {fileID: 720404717263258389, guid: a6d73a89f5a239f41a3152ff1ef03181, type: 3}
+  m_Mesh: {fileID: 6764393683630513534, guid: dd105e8f2c8e677429e681192d21e99d, type: 3}
 --- !u!23 &7878621762305096198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1712,8 +1711,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7867860091168391239, guid: a6d73a89f5a239f41a3152ff1ef03181, type: 3}
-  - {fileID: 2100000, guid: ead20b652ea97664a8b7e2c3ffb22164, type: 2}
+  - {fileID: 2100000, guid: 2f98cd970456d1a4a9f7cc8e39bba848, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1787,7 +1785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 0f8c8956a24a84a459270ac16bd3fe5a, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0f8c8956a24a84a459270ac16bd3fe5a, type: 3}
       propertyPath: m_Name
