@@ -615,6 +615,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
+      propertyPath: neededScore
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625698513864669315, guid: c3cc900e318c79b4b871bdc1e54031a3, type: 3}
       propertyPath: neededscore
       value: 2
       objectReference: {fileID: 0}
@@ -15585,7 +15589,6 @@ MonoBehaviour:
   grabbers:
   - {fileID: 346608833}
   - {fileID: 1510627670}
-  popupBaseMat: {fileID: 2100000, guid: f7249b27cc9fe674db7ec8bedae5cbf9, type: 2}
   LvlInfos: {fileID: 1165446270}
   soundManager: {fileID: 695028154}
 --- !u!4 &908247749
