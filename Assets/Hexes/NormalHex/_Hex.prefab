@@ -420,8 +420,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7c94fe28053a51a44931657286fd58ab, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e157a6e757b92d947a35901b33aab418, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1524,11 +1524,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineColorChanger
   hex: {fileID: 567737932276303864}
-  outlinePMouseSprite: {fileID: 21300000, guid: 499d41469791f9a47b628c4cd2ce8fca, type: 3}
+  outlineSprite: {fileID: 21300000, guid: e157a6e757b92d947a35901b33aab418, type: 3}
   outlinePMouseColor: {r: 1, g: 0, b: 0, a: 1}
-  outlinePKeyboardSprite: {fileID: 21300000, guid: 7c94fe28053a51a44931657286fd58ab, type: 3}
   outlinePKeyboardColor: {r: 0, g: 0, b: 1, a: 1}
-  outlineAllPlayersSprite: {fileID: 21300000, guid: 1e057e5bf10be8f489991e606d732811, type: 3}
   outlineAllPlayersColor: {r: 1, g: 0, b: 1, a: 1}
   outlineSpriteRenderer: {fileID: 8776841541888719839}
 --- !u!1 &6715920890464777338

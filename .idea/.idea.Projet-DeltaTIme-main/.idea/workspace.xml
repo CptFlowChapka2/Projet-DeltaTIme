@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="43b17075-a48d-4a4e-b0e9-883138774a37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet-DeltaTIme-main/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/NavigationMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/NavigationMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralScripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralScripts/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Grabbables/Ingredient/PureIngredient.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grabbables/Ingredient/PureIngredient.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hexes/CloggerHex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/CloggerHex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerController Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerController Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/PlayerMouse Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/PlayerMouse Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cheat scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cheat scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ControlsScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ControlsScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Encaps/ControlsScene.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Encaps/ControlsScene.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/OutlineColorChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/OutlineColorChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hexes/NormalHex/_Hex.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +189,7 @@
       <workItem from="1780170219617" duration="1840000" />
       <workItem from="1780234792975" duration="878000" />
       <workItem from="1780315773985" duration="4145000" />
-      <workItem from="1780387650749" duration="6232000" />
+      <workItem from="1780387650749" duration="7375000" />
     </task>
     <servers />
   </component>
